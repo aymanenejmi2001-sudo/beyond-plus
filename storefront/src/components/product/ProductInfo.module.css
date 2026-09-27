@@ -127,8 +127,6 @@
 .wish { flex-shrink: 0; display: grid; place-items: center; width: 4rem; height: 4rem; margin: -.4rem -.8rem 0 0; background: none; border: 0; color: rgb(var(--c-fg)); cursor: pointer; }
 .wish[aria-pressed="true"] { color: rgb(var(--c-bordeaux)); }
 .rating { display: inline-block; font-size: 1.3rem; text-decoration: underline; margin-bottom: .4rem; }
-.sizeFit { display: flex; justify-content: space-between; gap: 1.2rem; font-size: 1.2rem; color: rgb(var(--c-fg-2)); margin-top: .8rem; }
-.sizeFit button { background: none; border: 0; padding: 0; font: inherit; color: rgb(var(--c-fg)); text-decoration: underline; cursor: pointer; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; }
 .reassure { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; padding: 0; margin: 0 0 2.4rem; font-size: 1.2rem; color: rgb(var(--c-fg-2)); }
 .reassure li::before { content: "✓"; margin-right: .5rem; color: rgb(var(--c-fg)); }
 .reassure a { text-decoration: underline; }

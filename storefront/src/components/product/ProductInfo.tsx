@@ -167,12 +167,6 @@ export function ProductInfo({ product, trail = [] }: { product: Product; trail?:
                   onOpenGuide={() => setGuideOpen(true)}
                 />
               ))}
-              {inStockSizes.length > 0 && (
-                <p className={styles.sizeFit}>
-                  <span>Disponible en {inStockSizes.join(", ")}</span>
-                  <button type="button" onClick={() => setGuideOpen(true)}>Size &amp; fit</button>
-                </p>
-              )}
             </div>
 
             <div className={styles.purchase} ref={purchaseRef}><AddToCart product={product} variant={variant} onChooseSize={chooseSize} /></div>
