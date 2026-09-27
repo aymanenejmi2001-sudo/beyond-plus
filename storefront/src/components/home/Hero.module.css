@@ -87,12 +87,3 @@
   .dot[data-active="true"] .fill { animation: none; transform: scaleX(1); }
 }
 
-.pause {
-  position: absolute; right: 4vw; bottom: 8.4rem; z-index: 3;
-  display: grid; place-items: center; width: 4.4rem; height: 4.4rem; padding: 0;
-  background: rgba(0, 0, 0, .28); color: #fff; border: 1px solid rgba(255, 255, 255, .45); border-radius: 50%;
-  cursor: pointer; transition: background-color .2s;
-}
-.pause:hover { background: rgba(0, 0, 0, .5); }
-.pause:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
-.pause:disabled { display: none; }

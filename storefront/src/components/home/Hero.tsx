@@ -81,13 +81,6 @@ export function Hero() {
         </div>
       ))}
 
-      <button type="button" className={styles.pause} onClick={() => setPaused(p => !p)} aria-label={paused ? "Reprendre le défilement" : "Mettre le défilement en pause"} disabled={reducedMotion}>
-        {paused ? (
-          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 2.5v9l7.5-4.5z" fill="currentColor" /></svg>
-        ) : (
-          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 2.5h2v9H4zM8 2.5h2v9H8z" fill="currentColor" /></svg>
-        )}
-      </button>
       <div className={styles.nav}>
         {SLIDES.map((s, i) => (
           <button

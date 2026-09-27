@@ -6,6 +6,7 @@ import { COMMERCE, optionLabel } from "@/data/commerce";
 import { useEffect, useRef, useState } from "react";
 import type { Product } from "@/lib/shopify/types";
 import { ecommerce, lineItem, track } from "@/lib/commerce/track";
+import { discountFor, readOffer, type StoredOffer } from "@/lib/commerce/offer-shared";
 import { useCart } from "./CartProvider";
 import { useBodyLock } from "@/lib/hooks/useBodyLock";
 import { formatMoney } from "@/lib/shopify/money";
@@ -54,6 +55,12 @@ export function CartDrawer() {
   const picks = suggestions.filter((p) => !inCart.has(p.handle)).slice(0, 3);
 
   const empty = cart.lines.length === 0;
+  // First-order offer revealed by the scratch card: shown here as an estimate,
+  // the server applies it when the order is placed.
+  const [offer, setOffer] = useState<StoredOffer | null>(null);
+  useEffect(() => { if (isOpen) setOffer(readOffer()); }, [isOpen]);
+  const subtotal = Number(cart.cost.subtotalAmount.amount);
+  const discount = offer ? discountFor(subtotal, offer.percent) : 0;
 
   return (
     <>
@@ -194,10 +201,22 @@ export function CartDrawer() {
               <span className={styles.subtotalLabel}>Sous-total</span>
               <span>{formatMoney(cart.cost.subtotalAmount)}</span>
             </div>
+            {discount > 0 && (
+              <div className={styles.shipping}>
+                <span>Remise première commande ({offer!.percent} %)</span>
+                <span>−{formatMoney({ amount: String(discount), currencyCode: "MAD" })}</span>
+              </div>
+            )}
             <div className={styles.shipping}>
               <span>Livraison</span>
               <span>Offerte</span>
             </div>
+            {discount > 0 && (
+              <div className={styles.subtotal}>
+                <span className={styles.subtotalLabel}>Total</span>
+                <span>{formatMoney({ amount: String(subtotal - discount), currencyCode: "MAD" })}</span>
+              </div>
+            )}
             <p className={styles.note}>
               {COMMERCE.shipping}
             </p>
