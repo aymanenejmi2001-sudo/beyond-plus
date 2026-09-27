@@ -24,7 +24,8 @@ export const orderNumber = (id: string) => `BP-${id.replace(/-/g, "").slice(0, 6
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://beyondplusmaroc.com";
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
 
-export async function notifyOrder(order: { id: string; lines: Line[]; total: number; firstName: string; city: string; phone: string; address: string; email?: string }) {
+type Offer = { percent: number; discount: number };
+export async function notifyOrder(order: { id: string; lines: Line[]; total: number; offer?: Offer; firstName: string; city: string; phone: string; address: string; email?: string }) {
   const pass = process.env.SMTP_PASSWORD;
   if (!pass) return false;
   const user = process.env.SMTP_USER || "hello@beyondplusmaroc.com";
@@ -49,7 +50,8 @@ export async function notifyOrder(order: { id: string; lines: Line[]; total: num
     "",
     ...rows,
     "",
-    `Total articles : ${order.total} DH (livraison gratuite)`,
+    ...(order.offer ? [`Remise première commande (${order.offer.percent} %) : −${order.offer.discount} DH`] : []),
+    `Total à encaisser : ${order.total} DH (livraison gratuite)`,
     "",
     "À faire : appeler le client pour confirmer pointure et livraison avant l’envoi.",
     `Suivi : ${SITE}/admin/radar/commandes`,
@@ -61,7 +63,7 @@ export async function notifyOrder(order: { id: string; lines: Line[]; total: num
       <a href="tel:${esc(tel)}">${esc(order.phone)}</a> · <a href="https://wa.me/${esc(wa)}">WhatsApp</a><br>
       ${esc(order.address)}, ${esc(order.city)}</p>
     <table style="border-collapse:collapse;width:100%">${order.lines.map((l) => `<tr><td style="padding:8px 0;border-top:1px solid #eee"><a href="${SITE}/products/${esc(l.merchandise.product.handle)}">${esc(l.merchandise.product.title)}</a><br><span style="color:#666">Pointure ${esc(l.merchandise.title)} × ${l.quantity}</span></td><td style="padding:8px 0;border-top:1px solid #eee;text-align:right;white-space:nowrap">${Math.round(Number(l.cost.totalAmount.amount))} DH</td></tr>`).join("")}
-    <tr><td style="padding:12px 0;border-top:2px solid #111"><strong>Total</strong> (livraison gratuite)</td><td style="padding:12px 0;border-top:2px solid #111;text-align:right"><strong>${order.total} DH</strong></td></tr></table>
+    ${order.offer ? `<tr><td style="padding:8px 0;border-top:1px solid #eee">Remise première commande (${order.offer.percent} %)</td><td style="padding:8px 0;border-top:1px solid #eee;text-align:right">−${order.offer.discount} DH</td></tr>` : ""}<tr><td style="padding:12px 0;border-top:2px solid #111"><strong>Total</strong> (livraison gratuite)</td><td style="padding:12px 0;border-top:2px solid #111;text-align:right"><strong>${order.total} DH</strong></td></tr></table>
     <p style="color:#666">À faire : appeler le client pour confirmer pointure et livraison avant l’envoi.</p>
     <p><a href="${SITE}/admin/radar/commandes">Voir toutes les demandes</a></p></div>`;
   await transport.sendMail({
@@ -87,7 +89,7 @@ async function productJpeg(url?: string): Promise<Buffer | null> {
 }
 
 /** Confirmation for the customer: received, not yet confirmed (we call first). */
-export async function notifyCustomer(order: { id: string; lines: Line[]; total: number; firstName: string; city: string; address: string; phone: string; email: string }) {
+export async function notifyCustomer(order: { id: string; lines: Line[]; total: number; offer?: Offer; firstName: string; city: string; address: string; phone: string; email: string }) {
   const mail = transport();
   if (!mail) return false;
   const num = orderNumber(order.id);
@@ -128,7 +130,8 @@ export async function notifyCustomer(order: { id: string; lines: Line[]; total: 
   <tr><td style="padding:30px 32px 12px;font-size:12px;letter-spacing:2px;font-weight:700">VOS PAIRES</td></tr>
   <tr><td style="padding:0 32px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${items}</table></td></tr>
   <tr><td style="padding:6px 32px 0"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;border-collapse:collapse">
-    <tr><td style="padding:10px 0;color:${MUTED}">Sous-total</td><td align="right" style="padding:10px 0">${dh(order.total)}</td></tr>
+    <tr><td style="padding:10px 0;color:${MUTED}">Sous-total</td><td align="right" style="padding:10px 0">${dh(order.total + (order.offer?.discount ?? 0))}</td></tr>
+    ${order.offer ? `<tr><td style="padding:10px 0;color:${MUTED}">Remise première commande (${order.offer.percent} %)</td><td align="right" style="padding:10px 0">−${dh(order.offer.discount)}</td></tr>` : ""}
     <tr><td style="padding:10px 0;color:${MUTED};border-bottom:1px solid #e3e3e0">Livraison</td><td align="right" style="padding:10px 0;border-bottom:1px solid #e3e3e0;color:${BORDEAUX};font-weight:700">Gratuite</td></tr>
     <tr><td style="padding:14px 0;font-size:17px;font-weight:700">Total</td><td align="right" style="padding:14px 0;font-size:20px;font-weight:700">${dh(order.total)}</td></tr>
     <tr><td colspan="2" style="padding:0 0 4px;font-size:12px;color:${MUTED}">Aucun paiement en ligne : le mode de paiement est convenu lors de notre appel.</td></tr></table></td></tr>
@@ -146,7 +149,7 @@ export async function notifyCustomer(order: { id: string; lines: Line[]; total: 
     <a href="${SITE}" style="color:#fff">beyondplusmaroc.com</a> · hello@beyondplusmaroc.com · +212 669 866 831<br>
     <span style="color:#8a8a8a">Réplique qualité Master Copy, sans affiliation avec les marques citées. <a href="${SITE}/qualite-transparence" style="color:#8a8a8a">Qualité et transparence</a></span></td></tr>
 </table></td></tr></table></body></html>`;
-  const text = [`Merci, ${order.firstName}. Votre commande ${num} est bien reçue.`, "", ...order.lines.map((l) => `• ${l.merchandise.product.title}, pointure ${l.merchandise.title} × ${l.quantity} : ${dh(Math.round(Number(l.cost.totalAmount.amount)))}`), "", `Total : ${dh(order.total)} (livraison gratuite)`, `Livraison : ${order.address}, ${order.city}`, "", `Prochaine étape : nous vous appelons au ${order.phone} pour confirmer avant l’envoi.`, "Échange de pointure sous 3 jours après la livraison.", SITE].join("\n");
+  const text = [`Merci, ${order.firstName}. Votre commande ${num} est bien reçue.`, "", ...order.lines.map((l) => `• ${l.merchandise.product.title}, pointure ${l.merchandise.title} × ${l.quantity} : ${dh(Math.round(Number(l.cost.totalAmount.amount)))}`), "", ...(order.offer ? [`Remise première commande (${order.offer.percent} %) : −${dh(order.offer.discount)}`] : []), `Total : ${dh(order.total)} (livraison gratuite)`, `Livraison : ${order.address}, ${order.city}`, "", `Prochaine étape : nous vous appelons au ${order.phone} pour confirmer avant l’envoi.`, "Échange de pointure sous 3 jours après la livraison.", SITE].join("\n");
   await mail.t.sendMail({ from: `"BEYOND PLUS" <${mail.user}>`, replyTo: mail.user, to: order.email, subject: `Commande ${num} reçue, merci ${order.firstName}`, text, html, attachments });
   return true;
 }

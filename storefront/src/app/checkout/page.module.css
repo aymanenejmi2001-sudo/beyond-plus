@@ -75,3 +75,4 @@
 .confirmedBody { max-width: 48rem; font-size: var(--text-body); line-height: var(--leading-prose); color: rgb(var(--c-fg-2)); }
 .orderNumber { font-size: var(--text-label); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: rgb(var(--c-fg-2)); }
 @media (max-width: 749px) { .summary { grid-row: 1; } }
+.offerRemove { margin-left: .8rem; padding: 0; background: none; border: 0; font: inherit; font-size: 1.2rem; color: rgb(var(--c-fg-2)); text-decoration: underline; cursor: pointer; }

@@ -10,6 +10,7 @@ import { COMMERCE, optionLabel } from "@/data/commerce";
 import { cartInput, cartSignature } from "@/lib/commerce/quote";
 import { ecommerce, lineItem, track } from "@/lib/commerce/track";
 import styles from "./page.module.css";
+import { clearOffer, discountFor, readOffer, type StoredOffer } from "@/lib/commerce/offer-shared";
 
 type Placed = { id: string; phone: string; notified: boolean; recorded: boolean; text: string };
 const PLACED_KEY = "beyond.order.placed";
@@ -21,6 +22,11 @@ export function CheckoutView() {
   const [error, setError] = useState("");
   const [placed, setPlaced] = useState<Placed | null>(null);
   const started = useRef(false);
+  const [offer, setOffer] = useState<StoredOffer | null>(null);
+  useEffect(() => { setOffer(readOffer()); }, []);
+  const subtotalDh = Number(cart.cost.totalAmount.amount);
+  const discount = offer ? discountFor(subtotalDh, offer.percent) : 0;
+  const totalLabel = `${Math.round(subtotalDh - discount)} DH`;
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) => setForm((f) => ({ ...f, [k]: e.target.value }));
   useEffect(() => {
     try { const saved = JSON.parse(sessionStorage.getItem(PLACED_KEY) ?? "null"); if (saved?.id) setPlaced(saved); } catch { /* nothing saved */ }
@@ -37,19 +43,20 @@ export function CheckoutView() {
     if (!PHONE.test(form.phone.trim())) { setError("Vérifiez votre numéro de téléphone (ex. 06 12 34 56 78)."); return; }
     setBusy(true);
     try {
-      const response = await fetch("/api/requests", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: crypto.randomUUID(), lines: cartInput(cart.lines), signature, firstName: form.firstName.trim(), phone: form.phone.trim(), city: form.city.trim(), address: form.address.trim(), email: form.email.trim() }) });
+      const response = await fetch("/api/requests", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: crypto.randomUUID(), lines: cartInput(cart.lines), signature, offer: offer?.code, firstName: form.firstName.trim(), phone: form.phone.trim(), city: form.city.trim(), address: form.address.trim(), email: form.email.trim() }) });
       const result = await response.json();
-      if (!response.ok) { if (result.lines) replaceLines(result.lines); throw new Error(result.error); }
+      if (!response.ok) { if (result.lines) replaceLines(result.lines); if (result.offerInvalid) { clearOffer(); setOffer(null); } throw new Error(result.error); }
+      if (result.discount) clearOffer();
       // Fallback text, used only if the shop could not be notified by e-mail.
       const text = [
         `Commande BEYOND PLUS ${result.id}`, COMMERCE.nature,
         ...result.lines.map((l: typeof cart.lines[number]) => `• ${l.merchandise.product.title}, ${l.merchandise.selectedOptions.map(o => `${optionLabel(o.name)} ${o.value}`).join(", ")} × ${l.quantity} : ${formatMoney(l.cost.totalAmount)}`),
-        `Total : ${result.total} DH (livraison gratuite)`,
+        ...(result.discount ? [`Remise première commande : −${result.discount} DH`] : []), `Total : ${result.total} DH (livraison gratuite)`,
         `${form.firstName.trim()}, ${form.phone.trim()}`, `${form.address.trim()}, ${form.city.trim()}`,
       ].join("\n");
       const next: Placed = { id: result.id, phone: form.phone.trim(), notified: Boolean(result.notified), recorded: Boolean(result.recorded), text };
       setPlaced(next);
-      track("purchase", undefined, { ecommerce: ecommerce((result.lines as typeof cart.lines).map(lineItem), { transaction_id: String(result.id), value: Number(result.total), shipping: 0 }) });
+      track("purchase", undefined, { ecommerce: ecommerce((result.lines as typeof cart.lines).map(lineItem), { transaction_id: String(result.id), value: Number(result.total), shipping: 0, ...(result.discount ? { coupon: "FIRST_ORDER", discount: Number(result.discount) } : {}) }) });
       if (next.notified || next.recorded) clear();
       try { sessionStorage.setItem(PLACED_KEY, JSON.stringify(next)); } catch { /* shown in memory */ }
     } catch (e) { setError(e instanceof Error ? e.message : "Impossible d’envoyer la commande. Votre panier est conservé, réessayez."); }
@@ -79,7 +86,7 @@ export function CheckoutView() {
         <p><Link href="/policies/refund">Livraison et retours</Link> · <Link href="/policies/terms">Conditions de vente</Link> · <Link href="/policies/privacy">Confidentialité</Link></p>
         {notice && <p role="status">{notice}</p>}
         {error && <p role="alert">{error}</p>}
-        <Button type="submit" disabled={busy} variant="editorial">{busy ? "Envoi de la commande…" : `Confirmer la commande · ${formatMoney(cart.cost.totalAmount)}`}</Button>
+        <Button type="submit" disabled={busy} variant="editorial">{busy ? "Envoi de la commande…" : `Confirmer la commande · ${offer ? totalLabel : formatMoney(cart.cost.totalAmount)}`}</Button>
         <p style={{ color: "rgb(var(--c-fg-2))" }}>Nous vous appelons pour confirmer avant l’envoi. Rien n’est expédié sans votre accord.</p>
       </form>
     </div>
@@ -89,7 +96,7 @@ export function CheckoutView() {
         <div><p className={styles.summaryTitle}><Link href={`/products/${line.merchandise.product.handle}`}>{line.merchandise.product.title}</Link></p><p className={styles.summaryVariant}>{line.merchandise.selectedOptions.map(o => `${optionLabel(o.name)} : ${o.value}`).join(" · ")}</p><p className={styles.summaryQty}>Quantité {line.quantity}</p></div>
         <span className={styles.summaryPrice}>{formatMoney(line.cost.totalAmount)}</span>
       </div>)}
-      <div className={styles.totals}><div className={styles.totalRow}><span>Livraison sous 12 à 48 h après confirmation</span><span>Gratuite</span></div><div className={`${styles.totalRow} ${styles.grandTotal}`}><span>Total</span><span>{formatMoney(cart.cost.totalAmount)}</span></div></div>
+      <div className={styles.totals}><div className={styles.totalRow}><span>Livraison sous 12 à 48 h après confirmation</span><span>Gratuite</span></div>{offer && discount > 0 && <div className={styles.totalRow}><span>Remise première commande ({offer.percent} %) <button type="button" className={styles.offerRemove} onClick={() => { clearOffer(); setOffer(null); }}>Retirer</button></span><span>−{discount} DH</span></div>}<div className={`${styles.totalRow} ${styles.grandTotal}`}><span>Total</span><span>{offer ? totalLabel : formatMoney(cart.cost.totalAmount)}</span></div></div>
       <Button variant="text" onClick={open}>Modifier le panier</Button>
     </div>
   </div>;

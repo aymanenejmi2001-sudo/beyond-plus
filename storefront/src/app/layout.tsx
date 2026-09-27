@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { archivo, syne } from "./fonts";
 import { CartProvider } from "@/components/cart/CartProvider";
 import { CartDrawer } from "@/components/cart/CartDrawer";
+import { ScratchCard } from "@/components/offer/ScratchCard";
+import { offerSecret } from "@/lib/commerce/offer";
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -85,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <main id="main">{children}</main>
             <Footer />
             <CartDrawer />
+            {offerSecret() && <ScratchCard />}
           </CartProvider>
       </body>
     </html>

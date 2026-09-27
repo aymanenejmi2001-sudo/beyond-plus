@@ -94,3 +94,22 @@ export async function saveEvent(kind: string, payload: unknown, id: string = ran
   queue = operation.catch(() => undefined);
   return operation;
 }
+
+/** Marks a first-order offer as used. False when it was already used. */
+export async function claimOffer(offerId: string, orderId: string): Promise<boolean> {
+  const row = { id: offerId, kind: "offer_used", created_at: new Date().toISOString(), payload: { order: orderId } };
+  if (blobConfigured()) {
+    try {
+      await blobPut(`commerce/offer_used/${offerId}.json`, JSON.stringify(row), { access: "private", addRandomSuffix: false, allowOverwrite: false, contentType: "application/json" });
+      return true;
+    } catch (e) {
+      if (/already exists/i.test(String(e))) return false;
+      throw e;
+    }
+  }
+  if (process.env.VERCEL) throw new Error("Remise indisponible pour le moment.");
+  const rows = await readRows();
+  if (rows.some((r) => r.kind === "offer_used" && r.id === offerId)) return false;
+  await saveEvent("offer_used", row.payload, offerId);
+  return true;
+}
