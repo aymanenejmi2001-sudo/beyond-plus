@@ -19,6 +19,8 @@ import { SizeGuide } from "./SizeGuide";
 import { StickyBuyBar } from "./StickyBuyBar";
 import { NotifyMe } from "./NotifyMe";
 import { reviewsFor } from "@/data/reviews";
+import { useOffer } from "@/lib/hooks/useOffer";
+import { discountFor } from "@/lib/commerce/offer-shared";
 
 const SERVICES: string[] = [];
 
@@ -36,6 +38,7 @@ export function ProductInfo({ product, trail = [] }: { product: Product; trail?:
   const [guideOpen, setGuideOpen] = useState(false);
   const purchaseRef = useRef<HTMLDivElement>(null);
   const reviews = reviewsFor(product.handle);
+  const offer = useOffer();
   const inStockSizes = product.variants.filter((v) => v.availableForSale).map((v) => v.title);
   const [selection, setSelection] = useState<OptionSelection>({});
   const [sizeHint, setSizeHint] = useState(false);
@@ -142,6 +145,11 @@ export function ProductInfo({ product, trail = [] }: { product: Product; trail?:
                 </>
               )}
             </div>
+            {offer && !product.previewOnly && (
+              <p className={styles.offerPrice}>
+                {formatMoney({ amount: String(Number(price.amount) - discountFor(Number(price.amount), offer.percent)), currencyCode: price.currencyCode })} avec ta remise première commande (−{offer.percent} %)
+              </p>
+            )}
 
             {reviews.average !== null && (
               <a href="#reviews-title" className={styles.rating}>{reviews.average.toFixed(1)} / 5 · {reviews.list.length} avis</a>

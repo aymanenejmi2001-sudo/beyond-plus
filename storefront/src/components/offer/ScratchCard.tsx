@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { CloseIcon } from "@/components/ui/icons";
-import { OFFER_KEY, OFFER_SEEN_KEY, readOffer, type StoredOffer } from "@/lib/commerce/offer-shared";
+import { OFFER_EVENT, OFFER_KEY, OFFER_SEEN_KEY, readOffer, type StoredOffer } from "@/lib/commerce/offer-shared";
 import { promotion, track } from "@/lib/commerce/track";
 import styles from "./ScratchCard.module.css";
 
@@ -62,6 +62,7 @@ export function ScratchCard() {
       const stored: StoredOffer = { code: o.code, percent: o.percent, expiresAt: o.expiresAt };
       try { localStorage.setItem(OFFER_KEY, JSON.stringify(stored)); } catch { /* shown, not saved */ }
       setRevealed(stored);
+      window.dispatchEvent(new Event(OFFER_EVENT));
       track("select_promotion", undefined, { ecommerce: PROMO });
     } catch {
       setError("La surprise n’a pas pu être chargée. Réessayez plus tard.");
