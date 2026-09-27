@@ -3,23 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import type { DropStatus } from "@/data/drops";
 import type { ShopifyImage } from "@/lib/shopify/types";
 import { promotion, track } from "@/lib/commerce/track";
 import { useDropClock } from "./useDropClock";
 import { Countdown } from "./Countdown";
+import { statusAt, STATUS_LABEL, type LaunchInfo } from "./types";
 import styles from "./Drop.module.css";
 
 interface Props {
-  slug: string; eyebrow: string; title: string; subtitle: string; launchAt: string; dateLabel: string;
-  fixedStatus: DropStatus | null; image: ShopifyImage | null; serverNow: number;
+  slug: string; eyebrow: string; title: string; subtitle: string; image: ShopifyImage | null;
+  launch: LaunchInfo | null; location: string; serverNow: number;
 }
 
-// Homepage block for the featured drop (data/merchandising.ts → featuredDrop).
-export function DropFeature({ slug, eyebrow, title, subtitle, launchAt, dateLabel, fixedStatus, image, serverNow }: Props) {
+// One drop or edit, as a promotion tile (used on the /drops hub).
+export function DropFeature({ slug, eyebrow, title, subtitle, image, launch, location, serverNow }: Props) {
   const now = useDropClock(serverNow);
-  const status = fixedStatus ?? (now >= Date.parse(launchAt) ? "live" : "upcoming");
-  const promo = promotion({ id: slug, name: `${eyebrow} ${title}`, creative: image?.url, location: "home_featured_drop" });
+  const status = statusAt(launch, now);
+  const promo = promotion({ id: slug, name: `${eyebrow} ${title}`, creative: image?.url, location });
   const ref = useRef<HTMLElement>(null);
   useEffect(() => {
     const el = ref.current;
@@ -31,25 +31,23 @@ export function DropFeature({ slug, eyebrow, title, subtitle, launchAt, dateLabe
     return () => io.disconnect();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
-  if (status === "archived") return null;
+  const cta = status === "available" ? "SHOP THE EDIT" : status === "live" ? "SHOP THE DROP" : status === "upcoming" ? "DISCOVER THE DROP" : "VOIR";
   return (
     <section ref={ref} className={styles.feature} aria-labelledby={`drop-${slug}`}>
       <div className={styles.featureMedia}>
-        {image && <Image src={image.url} alt={image.altText ?? title} fill sizes="(min-width: 990px) 50vw, 100vw" className={styles.featureImage} />}
+        {image && <Image src={image.url} alt={image.altText ?? title} fill sizes="(min-width: 750px) 50vw, 100vw" className={styles.featureImage} />}
       </div>
       <div className={styles.featureCopy}>
-        <p className={styles.eyebrow}>{eyebrow} · {status === "live" ? "LIVE" : "COMING SOON"}</p>
+        <p className={styles.eyebrow}>{eyebrow} · {STATUS_LABEL[status]}</p>
         <h2 id={`drop-${slug}`} className={styles.title}>{title}</h2>
         <p className={styles.subtitle}>{subtitle}</p>
-        {status === "upcoming" && (
+        {launch && status === "upcoming" && (
           <p className={styles.when}>
-            <span>{dateLabel}</span>
-            <Countdown launchAt={launchAt} now={now} className={styles.countdown} />
+            <span>{launch.dateLabel}</span>
+            <Countdown launchAt={launch.launchAt} now={now} className={styles.countdown} />
           </p>
         )}
-        <Link href={`/drops/${slug}`} className={styles.cta} onClick={() => track("select_promotion", undefined, { ecommerce: promo })}>
-          {status === "live" ? "SHOP THE DROP" : "DISCOVER THE DROP"}
-        </Link>
+        <Link href={`/drops/${slug}`} className={styles.cta} onClick={() => track("select_promotion", undefined, { ecommerce: promo })}>{cta}</Link>
       </div>
     </section>
   );

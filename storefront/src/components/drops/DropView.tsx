@@ -1,44 +1,45 @@
 "use client";
 
 import Image from "next/image";
-import type { DropStatus } from "@/data/drops";
 import type { Product, ShopifyImage } from "@/lib/shopify/types";
 import { ProductCard } from "@/components/product/ProductCard";
+import { COMMERCE } from "@/data/commerce";
 import { useDropClock } from "./useDropClock";
 import { Countdown } from "./Countdown";
+import { statusAt, STATUS_LABEL, type LaunchInfo } from "./types";
 import styles from "./Drop.module.css";
-import { COMMERCE } from "@/data/commerce";
 
 interface Props {
-  eyebrow: string; title: string; subtitle: string; note: string; launchAt: string; dateLabel: string;
-  fixedStatus: DropStatus | null; image: ShopifyImage | null; products: Product[]; serverNow: number;
+  eyebrow: string; title: string; subtitle: string; note: string; image: ShopifyImage | null;
+  products: Product[]; launch: LaunchInfo | null; serverNow: number;
 }
 
-export function DropView({ eyebrow, title, subtitle, note, launchAt, dateLabel, fixedStatus, image, products, serverNow }: Props) {
+export function DropView({ eyebrow, title, subtitle, note, image, products, launch, serverNow }: Props) {
   const now = useDropClock(serverNow);
-  const status = fixedStatus ?? (now >= Date.parse(launchAt) ? "live" : "upcoming");
-  const live = status === "live";
+  const status = statusAt(launch, now);
+  const shop = status === "available" || status === "live";
+  const shopLabel = status === "available" ? "SHOP THE EDIT" : "SHOP THE DROP";
   return (
     <>
       <section className={styles.hero}>
         <div className={styles.heroMedia}>
-          {image && <Image src={image.url} alt={image.altText ?? title} fill priority sizes="(min-width: 990px) 55vw, 100vw" className={styles.heroImage} />}
+          {image && <Image src={image.url} alt={image.altText ?? title} fill priority sizes="(min-width: 750px) 55vw, 100vw" className={styles.heroImage} />}
         </div>
         <div className={styles.heroCopy}>
-          <p className={styles.eyebrow}>{eyebrow} · {live ? "LIVE" : status === "archived" ? "ARCHIVE" : "COMING SOON"}</p>
+          <p className={styles.eyebrow}>{eyebrow} · {STATUS_LABEL[status]}</p>
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.subtitle}>{subtitle}</p>
           <dl className={styles.meta}>
-            <div><dt>Lancement</dt><dd>{dateLabel}</dd></div>
+            {launch && <div><dt>Lancement</dt><dd>{launch.dateLabel}</dd></div>}
             <div><dt>Paires</dt><dd>{products.length}</dd></div>
           </dl>
-          {status === "upcoming" && <Countdown launchAt={launchAt} now={now} className={styles.countdown} />}
-          <a href="#drop-products" className={styles.cta}>{live ? "SHOP THE DROP" : "VOIR LES PAIRES"}</a>
+          {launch && status === "upcoming" && <Countdown launchAt={launch.launchAt} now={now} className={styles.countdown} />}
+          <a href="#drop-products" className={styles.cta}>{shop ? shopLabel : "VOIR LES PAIRES"}</a>
         </div>
       </section>
 
-      <section id="drop-products" className={styles.products} aria-label={live ? "Shop the drop" : "Aperçu des paires"}>
-        <p className={styles.productsHead}>{live ? "SHOP THE DROP" : "COMING SOON · APERÇU"}</p>
+      <section id="drop-products" className={styles.products} aria-label={shop ? shopLabel : "Aperçu des paires"}>
+        <p className={styles.productsHead}>{shop ? shopLabel : "COMING SOON · APERÇU"}</p>
         <div className="beyond-product-selection">
           {products.map((p) => <ProductCard key={p.id} product={p} layout="editorial" sizes="(min-width: 750px) 25vw, 50vw" />)}
         </div>
@@ -46,7 +47,7 @@ export function DropView({ eyebrow, title, subtitle, note, launchAt, dateLabel, 
 
       <section className={styles.note}>
         <p>{note}</p>
-        <p className={styles.small}>{COMMERCE.nature}. Paires déjà présentes dans la sélection BEYOND PLUS. {COMMERCE.shipping}</p>
+        <p className={styles.small}>{COMMERCE.nature}. {COMMERCE.shipping}</p>
       </section>
     </>
   );

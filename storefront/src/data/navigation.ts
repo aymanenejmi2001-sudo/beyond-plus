@@ -13,6 +13,7 @@ export const MAIN_MENU: MenuItem[] = [
    {title:"Icons",href:"/collections/icons"} ] }] },
  { title:"Femme", href:"/collections/femme", type:"link" },
  { title:"Homme", href:"/collections/homme", type:"link" },
+ { title:"Drops", href:"/drops", type:"link" },
  { title:"L’univers", href:"/about", type:"link" }
 ];
 export const FOOTER_MENUS = [
