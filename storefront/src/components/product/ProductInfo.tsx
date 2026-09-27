@@ -10,7 +10,7 @@ import { SizeSelector } from "./SizeSelector";
 import { AddToCart } from "./AddToCart";
 import { Accordion } from "./Accordion";
 import styles from "./ProductInfo.module.css";
-import { track } from "@/lib/commerce/track";
+import { ecommerce, productItem, track } from "@/lib/commerce/track";
 import { COMMERCE } from "@/data/commerce";
 import { useCart } from "@/components/cart/CartProvider";
 import { useStoredList, RECENT_KEY } from "@/lib/hooks/useStoredList";
@@ -24,11 +24,14 @@ const SERVICES: string[] = [];
 
 export function ProductInfo({ product, trail = [] }: { product: Product; trail?: { title: string; href: string }[] }) {
   const { add: remember } = useStoredList(RECENT_KEY, 8);
+  const viewed = useRef<string | null>(null);
   useEffect(() => {
-    track("view_product", product.handle);
-    track("view_item", product.handle, { value: Number(product.priceRange.minVariantPrice.amount) });
     remember(product.handle);
-  }, [product.handle, product.priceRange.minVariantPrice.amount, remember]);
+    if (viewed.current === product.handle) return; // once per product shown
+    viewed.current = product.handle;
+    track("view_product", product.handle);
+    track("view_item", product.handle, { ecommerce: ecommerce([productItem(product)]) });
+  }, [product, remember]);
   const { addLine } = useCart();
   const [guideOpen, setGuideOpen] = useState(false);
   const purchaseRef = useRef<HTMLDivElement>(null);
@@ -56,7 +59,7 @@ export function ProductInfo({ product, trail = [] }: { product: Product; trail?:
     setSizeHint(true);
     const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     box.scrollIntoView({ block: "center", behavior: still ? "auto" : "smooth" });
-    box.querySelector<HTMLInputElement>("input:not(:disabled)")?.focus({ preventScroll: true });
+    box.querySelector<HTMLInputElement>("input:not(:disabled):not([data-unavailable])")?.focus({ preventScroll: true });
   };
 
   const m = product.merch;
@@ -143,7 +146,6 @@ export function ProductInfo({ product, trail = [] }: { product: Product; trail?:
             {reviews.average !== null && (
               <a href="#reviews-title" className={styles.rating}>{reviews.average.toFixed(1)} / 5 · {reviews.list.length} avis</a>
             )}
-            <p className={styles.delivery}>Livraison gratuite partout au Maroc · 12 à 48 h après confirmation</p>
 
             <div className={styles.options} ref={optionsRef} data-hint={sizeHint && !variant ? "" : undefined}>
               {product.options.map((option) => (
@@ -169,7 +171,7 @@ export function ProductInfo({ product, trail = [] }: { product: Product; trail?:
             {variant && !variant.availableForSale && !product.previewOnly && <NotifyMe handle={product.handle} size={variant.title} />}
 
             <ul className={styles.reassure}>
-              <li>Livraison gratuite</li>
+              <li>Livraison gratuite au Maroc</li>
               <li>12 à 48 h après confirmation</li>
               <li><Link href="/policies/refund">Échange de pointure sous 3 jours</Link></li>
             </ul>

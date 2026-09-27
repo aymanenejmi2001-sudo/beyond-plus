@@ -5,7 +5,7 @@ import Link from "next/link";
 import { COMMERCE, optionLabel } from "@/data/commerce";
 import { useEffect, useRef, useState } from "react";
 import type { Product } from "@/lib/shopify/types";
-import { track } from "@/lib/commerce/track";
+import { ecommerce, lineItem, track } from "@/lib/commerce/track";
 import { useCart } from "./CartProvider";
 import { useBodyLock } from "@/lib/hooks/useBodyLock";
 import { formatMoney } from "@/lib/shopify/money";
@@ -32,7 +32,14 @@ export function CartDrawer() {
 
   const refreshRef = useRef(refresh);
   useEffect(() => { refreshRef.current = refresh; }, [refresh]);
-  useEffect(() => { if (isOpen) { track("open_cart"); void refreshRef.current().catch(() => undefined); } }, [isOpen]);
+  const cartRef = useRef(cart);
+  useEffect(() => { cartRef.current = cart; }, [cart]);
+  useEffect(() => {
+    if (!isOpen) return;
+    const c = cartRef.current;
+    track("view_cart", undefined, { ecommerce: ecommerce(c.lines.map(lineItem), { value: Number(c.cost.totalAmount.amount) }), items_count: c.totalQuantity });
+    void refreshRef.current().catch(() => undefined);
+  }, [isOpen]);
 
   // "Vous aimerez aussi": 3 in-stock pairs close to the last one added.
   const anchor = (cart.lines.find((l) => l.id === lastAddedId) ?? cart.lines[cart.lines.length - 1])?.merchandise.product.handle;
@@ -153,7 +160,7 @@ export function CartDrawer() {
                       <button
                         type="button"
                         className={styles.remove}
-                        onClick={() => { track("remove_from_cart", line.merchandise.product.handle); removeLine(line.id); }}
+                        onClick={() => { track("remove_from_cart", line.merchandise.product.handle, { ecommerce: ecommerce([lineItem(line)]) }); removeLine(line.id); }}
                       >
                         Retirer
                       </button>
@@ -197,7 +204,7 @@ export function CartDrawer() {
             {/* → window.location.href = cart.checkoutUrl (Storefront Cart API)
                 at go-live. Until then, /checkout reviews the same lines and
                 confirms the order locally. */}
-            <LinkButton href="/checkout" variant="editorial" block onClick={close}>
+            <LinkButton href="/checkout" variant="editorial" block onClick={() => { track("begin_checkout", undefined, { ecommerce: ecommerce(cart.lines.map(lineItem), { value: Number(cart.cost.totalAmount.amount) }) }); close(); }}>
               Commander
             </LinkButton>
           </footer>

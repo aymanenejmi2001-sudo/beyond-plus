@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/Button";
 import { CartIcon } from "@/components/ui/icons";
 import { swatchColor } from "@/lib/swatches";
 import { WishlistButton } from "./WishlistButton";
-import { track } from "@/lib/commerce/track";
+import { ecommerce, productItem, track } from "@/lib/commerce/track";
 import styles from "./ProductCard.module.css";
 
 interface Props {
@@ -121,7 +121,7 @@ export function ProductCard({
     return (
       <article className={`${styles.card} ${styles.editorial}`}>
         <div className={styles.mediaWrap}>
-        <Link href={href} className={styles.media} aria-label={product.title} onClick={() => track("select_item", product.handle)}>
+        <Link href={href} className={styles.media} aria-label={product.title} onClick={() => track("select_item", product.handle, { ecommerce: ecommerce([productItem(product)]) })}>
           {first && (
             <Image
               className={`${styles.image} ${styles.imageFirst}`}
@@ -264,7 +264,7 @@ export function ProductCard({
                       data-selected={selection.Size === value}
                       data-available={available}
                       disabled={!available}
-                      onClick={() => setSelection((s) => ({ ...s, Size: value }))}
+                      onClick={() => { track("select_size", product.handle, { size: value, list: "card" }); setSelection((s) => ({ ...s, Size: value })); }}
                     >
                       {value}
                     </button>

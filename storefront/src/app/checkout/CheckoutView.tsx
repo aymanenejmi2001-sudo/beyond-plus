@@ -8,7 +8,7 @@ import { Button, LinkButton } from "@/components/ui/Button";
 import { whatsappUrl } from "@/data/store";
 import { COMMERCE, optionLabel } from "@/data/commerce";
 import { cartInput, cartSignature } from "@/lib/commerce/quote";
-import { track } from "@/lib/commerce/track";
+import { ecommerce, lineItem, track } from "@/lib/commerce/track";
 import styles from "./page.module.css";
 
 type Placed = { id: string; phone: string; notified: boolean; recorded: boolean; text: string };
@@ -23,7 +23,6 @@ export function CheckoutView() {
   const started = useRef(false);
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) => setForm((f) => ({ ...f, [k]: e.target.value }));
   useEffect(() => {
-    track("begin_checkout");
     try { const saved = JSON.parse(sessionStorage.getItem(PLACED_KEY) ?? "null"); if (saved?.id) setPlaced(saved); } catch { /* nothing saved */ }
   }, []);
   useEffect(() => {
@@ -50,6 +49,7 @@ export function CheckoutView() {
       ].join("\n");
       const next: Placed = { id: result.id, phone: form.phone.trim(), notified: Boolean(result.notified), recorded: Boolean(result.recorded), text };
       setPlaced(next);
+      track("purchase", undefined, { ecommerce: ecommerce((result.lines as typeof cart.lines).map(lineItem), { transaction_id: String(result.id), value: Number(result.total), shipping: 0 }) });
       if (next.notified || next.recorded) clear();
       try { sessionStorage.setItem(PLACED_KEY, JSON.stringify(next)); } catch { /* shown in memory */ }
     } catch (e) { setError(e instanceof Error ? e.message : "Impossible d’envoyer la commande. Votre panier est conservé, réessayez."); }

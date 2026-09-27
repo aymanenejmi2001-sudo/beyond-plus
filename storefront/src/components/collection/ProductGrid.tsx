@@ -1,6 +1,6 @@
 "use client";
 
-import { track } from "@/lib/commerce/track";
+import { productItem, track } from "@/lib/commerce/track";
 
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -62,7 +62,7 @@ interface GridProps {
 }
 
 export function ProductGrid({ products, page = 1, basePath }: GridProps) {
-  useEffect(() => { track("view_item_list", undefined, { list: basePath ?? "", count: products.length }); }, [basePath, products.length]);
+  useEffect(() => { track("view_item_list", undefined, { ecommerce: { items: products.slice(0, 48).map((p) => productItem(p)), item_list_id: basePath ?? "" } }); }, [basePath, products]);
   const [filters, setFilters] = useState<FacetState>({});
   const [sort, setSort] = useState<SortKey>("featured");
   const [dense, setDense] = useState(false);

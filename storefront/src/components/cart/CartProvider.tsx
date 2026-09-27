@@ -14,7 +14,7 @@ import type { Cart, CartLine, Product, ProductVariant } from "@/lib/shopify/type
 import { addMoney, money, multiplyMoney } from "@/lib/shopify/money";
 
 import { cartInput, cartSignature } from "@/lib/commerce/quote";
-import { track } from "@/lib/commerce/track";
+import { ecommerce, productItem, track } from "@/lib/commerce/track";
 
 const STORAGE_KEY = "beyondplus.cart.v1";
 const CURRENCY = "MAD";
@@ -171,7 +171,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const addLine = useCallback(
     (product: Product, variant: ProductVariant, quantity = 1) => {
-      track("add_to_cart", product.handle, { size: variant.title, value: Number(variant.price.amount) * quantity });
+      track("add_to_cart", product.handle, { ecommerce: ecommerce([productItem(product, variant, quantity)]) });
       dispatch({ type: "add", product, variant, quantity });
       setLastAddedId(lineId(variant.id));
       setOpen(true);
