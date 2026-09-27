@@ -2,7 +2,7 @@
 .sheet {
   position: fixed; z-index: 60; left: 0; right: 0; bottom: 0;
   display: grid; gap: 1.2rem; padding: 2.4rem 2rem calc(2rem + env(safe-area-inset-bottom));
-  background: linear-gradient(180deg, #1c2230, #10141c); color: #fff;
+  background: #0b0b0c; color: #fff;
   box-shadow: 0 -1rem 4rem rgba(0, 0, 0, .25);
   animation: rise .35s ease both;
 }
@@ -15,7 +15,7 @@
 .close { position: absolute; top: .4rem; right: .4rem; display: grid; place-items: center; width: 4.4rem; height: 4.4rem; background: none; border: 0; color: inherit; cursor: pointer; }
 .eyebrow { font-size: 1.1rem; letter-spacing: var(--tracking-eyebrow, .14em); font-weight: 500; }
 .title { font-size: 2rem; line-height: 1.2; letter-spacing: -.02em; padding-right: 3.2rem; }
-.card { position: relative; height: 16rem; border-radius: 1.4rem; background: #232a39; box-shadow: inset 0 0 0 .1rem rgba(255, 255, 255, .08); overflow: hidden; }
+.card { position: relative; height: 16rem; border-radius: 1.4rem; background: #1a1a1b; box-shadow: inset 0 0 0 .1rem rgba(255, 255, 255, .08); overflow: hidden; }
 .result { position: absolute; inset: 0; display: grid; place-items: center; padding: 1.6rem; text-align: center; }
 .amount { font-size: 2rem; font-weight: 600; letter-spacing: -.01em; color: #e2c46e; }
 .placeholder { font-size: 1.1rem; letter-spacing: var(--tracking-eyebrow, .14em); color: rgba(255, 255, 255, .5); }
