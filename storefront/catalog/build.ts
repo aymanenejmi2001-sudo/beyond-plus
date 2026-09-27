@@ -52,7 +52,7 @@ async function main() {
   const prevFull: { sourceUrl: string; publishable: boolean }[] = JSON.parse(await readFile(root + "data/products.json", "utf8").catch(() => "[]"));
   const liveSupplier = new Set(prevFull.filter((p) => p.publishable).map((p) => p.sourceUrl.split("/").pop()!));
   // Manual curation (catalog/curation.json), kept by the Curateur agent.
-  type Curation = { add: { handle: string; style?: string; collections?: string[]; reason?: string }[]; remove: { slug: string; reason?: string }[] };
+  type Curation = { add: { handle: string; style?: string; collections?: string[]; reason?: string; price?: number }[]; remove: { slug: string; reason?: string }[] };
   const curation: Curation = JSON.parse(await readFile(root + "curation.json", "utf8").catch(() => '{"add":[],"remove":[]}'));
   const curatedRemove = new Set(curation.remove.map((r) => r.slug));
   const MIN_NEW_IMAGES = 4;
@@ -129,7 +129,7 @@ async function main() {
       silhouette: fam?.id ?? "legacy", styleFamily, ...copy,
       sourceUrl: c.sourceUrl, sourceType: c.sourceType, sourceName: c.sourceName, sourceProductCode: c.sourceProductCode,
       releaseYear: null, retailPrice: null, marketReferencePrice: null,
-      priceMAD: c.priceMAD ?? 0, compareAtPriceMAD: c.compareAtMAD, currency: "MAD",
+      priceMAD: cur?.price ?? c.priceMAD ?? 0, compareAtPriceMAD: c.compareAtMAD, currency: "MAD",
       sizes: c.sizes, availableSizes: c.availableSizes,
       images, heroImage: images[0]?.file ?? null, gallery: images.map((i) => i.file!).filter(Boolean),
       tags: [brand, model, COLOR_LABEL[cf], styleFamily].map((t) => t.toLowerCase()),

@@ -1,5 +1,5 @@
 {
-  "_doc": "Curation manuelle du catalogue, tenue par l'agent Curateur. add = produits du fournisseur à ajouter (handle fournisseur, 4 photos minimum). remove = pages produit du site à retirer (slug du site) : l'adresse redirige vers la page du modèle. Toujours indiquer la raison.",
+  "_doc": "Curation manuelle du catalogue, tenue par l'agent Curateur. add = produits du fournisseur à ajouter (handle fournisseur, 4 photos minimum). remove = pages produit du site à retirer (slug du site) : l'adresse redirige vers la page du modèle. Toujours indiquer la raison. price (facultatif) = prix de vente en DH imposé à la place du prix fournisseur.",
   "add": [
     {
       "handle": "adidas-handball-spezial-silver-green-magic-mauve",
@@ -41,6 +41,15 @@
         "retro-runners"
       ],
       "reason": "26/09 : Gel-NYC vert Ivy, coloris absent des concurrents marocains (remplace la 2002R Rain Cloud : 1 photo rejetée, 3 restantes)"
+    },
+    {
+      "handle": "on-cloudtilt-year-of-the-snake",
+      "style": "technical",
+      "collections": [
+        "tech-runners"
+      ],
+      "price": 760,
+      "reason": "27/09 : sélection running itsu.ma, seul modèle manquant disponible chez le fournisseur avec 4 photos, prix aligné (760 DH)"
     }
   ],
   "remove": [

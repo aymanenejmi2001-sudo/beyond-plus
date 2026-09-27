@@ -61,7 +61,7 @@ Aucun produit supprimé. Les produits masqués restent dans `catalog/data/produc
 | Mizuno MXR | EXPERIMENTAL | 0 | 0 | NO_AUTHORIZED_SOURCE |
 | adidas Taekwondo | EXPERIMENTAL | 0 | 0 | NO_AUTHORIZED_SOURCE |
 | Nike Shox | EXPERIMENTAL | 0 | 0 | NO_AUTHORIZED_SOURCE |
-| Nike Dunk Low | CORE | 33 | 6 | SUPPLIER_AUTHORIZED |
+| Nike Dunk Low | CORE | 34 | 6 | SUPPLIER_AUTHORIZED |
 | Jordan Air Jordan 1 | CORE | 108 | 6 | SUPPLIER_AUTHORIZED |
 | Nike Air Force 1 | CORE | 20 | 4 | SUPPLIER_AUTHORIZED |
 | New Balance 550 | CORE | 10 | 4 | SUPPLIER_AUTHORIZED |
@@ -173,6 +173,7 @@ Aucun produit supprimé. Les produits masqués restent dans `catalog/data/produc
 - PUMA Cali Cali Emboss, 500 DH, score 46, images < 1400 px
 - Adidas Falcon, 670 DH, score 36
 - ASICS Gel-Nimbus 10.1 "Ocean Haze", 750 DH, score 38, images < 1400 px
+- On Cloudtilt Year of the snake, 760 DH, score 55, images < 1400 px
 
 ## Limites
 
