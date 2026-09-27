@@ -7,11 +7,11 @@ import { OFFER_EVENT, OFFER_KEY, OFFER_SEEN_KEY, readOffer, type StoredOffer } f
 import { promotion, track } from "@/lib/commerce/track";
 import styles from "./ScratchCard.module.css";
 
-// First-order scratch card. Shown once per session, after ~10 s or a little
+// First-order scratch card. Shown once per session, 4 s after arrival or a little
 // scroll, never on checkout/admin, never if an offer is already saved. The
 // amount is unknown to the page until the card is scratched: it comes from the
 // server (/api/offer), which also signs the code applied at checkout.
-const DELAY = 10_000;
+const DELAY = 4_000;
 const SCROLL = 600;
 const REVEAL_AT = 0.45;
 const PROMO = promotion({ id: "first-order-scratch", name: "Surprise première commande", location: "scratch_card" });
@@ -79,14 +79,25 @@ export function ScratchCard() {
     const { width, height } = canvas.getBoundingClientRect();
     canvas.width = width * dpr; canvas.height = height * dpr;
     ctx.scale(dpr, dpr);
+    // Gold foil: metallic gradient, fine grain, a few brushed strokes, label.
     const g = ctx.createLinearGradient(0, 0, width, height);
-    g.addColorStop(0, "#5b1a24"); g.addColorStop(1, "#2a0c11");
+    g.addColorStop(0, "#a8832f"); g.addColorStop(.35, "#d9b865"); g.addColorStop(.55, "#c9a44f"); g.addColorStop(1, "#9a7428");
     ctx.fillStyle = g; ctx.fillRect(0, 0, width, height);
-    ctx.fillStyle = "rgba(255,255,255,.9)";
-    ctx.font = "500 12px system-ui, sans-serif";
-    ctx.textAlign = "center";
-    ctx.fillText("GRATTE ICI", width / 2, height / 2 + 4);
+    for (let i = 0; i < (width * height) / 18; i++) {
+      ctx.fillStyle = Math.random() > .5 ? "rgba(255,245,210,.10)" : "rgba(80,55,10,.10)";
+      ctx.fillRect(Math.random() * width, Math.random() * height, 1, 1);
+    }
+    ctx.strokeStyle = "rgba(90,62,12,.16)"; ctx.lineWidth = 14; ctx.lineCap = "round";
+    const cx = width / 2, cy = height / 2;
+    for (let k = -3; k <= 3; k++) {
+      ctx.beginPath(); ctx.moveTo(cx + k * 16 - 10, cy + 26); ctx.lineTo(cx + k * 16 + 12, cy - 26); ctx.stroke();
+    }
+    ctx.fillStyle = "rgba(255,250,235,.92)";
+    ctx.font = `600 ${Math.round(Math.min(26, width / 11))}px system-ui, sans-serif`;
+    ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText("GRATTE ICI", cx, cy);
     ctx.globalCompositeOperation = "destination-out";
+    ctx.strokeStyle = "#000"; // opaque: the eraser removes the foil completely
 
     let drawing = false, last: [number, number] | null = null, moves = 0;
     const at = (e: PointerEvent): [number, number] => { const r = canvas.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };

@@ -2,25 +2,26 @@
 .sheet {
   position: fixed; z-index: 60; left: 0; right: 0; bottom: 0;
   display: grid; gap: 1.2rem; padding: 2.4rem 2rem calc(2rem + env(safe-area-inset-bottom));
-  background: rgb(var(--c-bg)); color: rgb(var(--c-fg));
-  border-top: .1rem solid rgb(var(--c-border)); box-shadow: 0 -1rem 4rem rgba(0, 0, 0, .12);
+  background: linear-gradient(180deg, #1c2230, #10141c); color: #fff;
+  box-shadow: 0 -1rem 4rem rgba(0, 0, 0, .25);
   animation: rise .35s ease both;
 }
 .sheet:focus { outline: none; }
 @media (min-width: 750px) {
-  .sheet { left: 2.4rem; right: auto; bottom: 2.4rem; width: 36rem; border: .1rem solid rgb(var(--c-border)); }
+  .sheet { left: 2.4rem; right: auto; bottom: 2.4rem; width: 38rem; border-radius: .6rem; }
 }
 @keyframes rise { from { transform: translateY(2rem); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .sheet { animation: none; } }
 .close { position: absolute; top: .4rem; right: .4rem; display: grid; place-items: center; width: 4.4rem; height: 4.4rem; background: none; border: 0; color: inherit; cursor: pointer; }
 .eyebrow { font-size: 1.1rem; letter-spacing: var(--tracking-eyebrow, .14em); font-weight: 500; }
 .title { font-size: 2rem; line-height: 1.2; letter-spacing: -.02em; padding-right: 3.2rem; }
-.card { position: relative; height: 11rem; background: rgb(var(--c-media)); overflow: hidden; }
+.card { position: relative; height: 16rem; border-radius: 1.4rem; background: #232a39; box-shadow: inset 0 0 0 .1rem rgba(255, 255, 255, .08); overflow: hidden; }
 .result { position: absolute; inset: 0; display: grid; place-items: center; padding: 1.6rem; text-align: center; }
-.amount { font-size: 1.8rem; font-weight: 500; letter-spacing: -.01em; }
-.placeholder { font-size: 1.1rem; letter-spacing: var(--tracking-eyebrow, .14em); color: rgb(var(--c-fg-2)); }
-.canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; cursor: crosshair; }
-.text { font-size: 1.3rem; color: rgb(var(--c-fg-2)); }
-.alt { justify-self: start; padding: 0; min-height: 4.4rem; background: none; border: 0; font: inherit; font-size: 1.2rem; color: rgb(var(--c-fg)); text-decoration: underline; cursor: pointer; }
-.cta { min-height: 4.8rem; background: rgb(var(--c-fg)); color: rgb(var(--c-bg)); border: 0; font: inherit; font-size: 1.2rem; letter-spacing: var(--tracking-eyebrow, .14em); text-transform: uppercase; cursor: pointer; }
-.error { font-size: 1.2rem; color: rgb(var(--c-error)); }
+.amount { font-size: 2rem; font-weight: 600; letter-spacing: -.01em; color: #e2c46e; }
+.placeholder { font-size: 1.1rem; letter-spacing: var(--tracking-eyebrow, .14em); color: rgba(255, 255, 255, .5); }
+.canvas { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 1.4rem; touch-action: none; cursor: crosshair; }
+.text { font-size: 1.3rem; color: rgba(255, 255, 255, .7); }
+.alt { justify-self: start; padding: 0; min-height: 4.4rem; background: none; border: 0; font: inherit; font-size: 1.2rem; color: #fff; text-decoration: underline; cursor: pointer; }
+.cta { min-height: 4.8rem; background: #e2c46e; color: #111; border-radius: .4rem; border: 0; font: inherit; font-size: 1.2rem; letter-spacing: var(--tracking-eyebrow, .14em); text-transform: uppercase; cursor: pointer; }
+.error { font-size: 1.2rem; color: #ff9a9a; }
+.sheet :focus-visible { outline: 2px solid #e2c46e; outline-offset: 2px; }
