@@ -1,0 +1,30 @@
+/* Zenith ticker: an oversized wordmark scrolling above a short manifesto line.
+   Two counter-running rows give the band depth without any extra decoration. */
+
+.section {
+  padding-block: 4.8rem 4rem;
+  background-color: rgb(var(--c-bg-2));
+  overflow: hidden;
+}
+
+.word {
+  display: block;
+  flex-shrink: 0;
+  padding-right: 6rem;
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 11vw, 15rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: var(--display-tracking);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.description {
+  max-width: 49.8rem;
+  margin: 3.2rem auto 0;
+  text-align: center;
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-prose);
+  color: rgb(var(--c-fg-2));
+}

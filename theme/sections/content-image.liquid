@@ -1,0 +1,21 @@
+<div class="page-narrow content-image">
+  <div class="content-image__media media" data-reveal="frame">
+    {%- render 'media-image', image: section.settings.image, fallback: 'beyond-6.jpg', sizes: '(min-width: 750px) 90vw, 100vw', alt: section.settings.alt -%}
+  </div>
+</div>
+
+{% stylesheet %}
+.content-image { padding-bottom: 4rem; }
+.content-image__media { aspect-ratio: 16 / 9; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Image pleine largeur",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "alt", "label": "Texte alternatif", "default": "La boutique BEYOND PLUS" }
+  ],
+  "presets": [ { "name": "Image pleine largeur" } ]
+}
+{% endschema %}

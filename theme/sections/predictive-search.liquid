@@ -1,0 +1,35 @@
+{%- if predictive_search.performed -%}
+  {%- if predictive_search.resources.products.size > 0 -%}
+    <div class="predictive-results">
+      {%- for product in predictive_search.resources.products limit: 8 -%}
+        <a href="{{ product.url }}" class="predictive-results__item">
+          <div class="predictive-results__media media">
+            {%- if product.featured_image -%}
+              {{ product.featured_image | image_url: width: 360 | image_tag: loading: 'lazy', sizes: '180px', widths: '180, 360', alt: product.title }}
+            {%- endif -%}
+          </div>
+          <p class="card__vendor">{{ product.vendor }}</p>
+          <p class="predictive-results__title">{{ product.title | escape }}</p>
+          {% render 'price', product: product %}
+        </a>
+      {%- endfor -%}
+    </div>
+    <div class="predictive-results__all">
+      <a href="{{ routes.search_url }}?q={{ predictive_search.terms | url_encode }}&type=product" class="button button--outline">
+        {%- assign label = 'sections.search.view_all' | t -%}
+        {%- render 'button-label', text: label -%}
+      </a>
+    </div>
+  {%- else -%}
+    <p class="predictive-results__empty">{{ 'sections.search.no_results' | t: terms: predictive_search.terms }}</p>
+  {%- endif -%}
+{%- endif -%}
+
+{% stylesheet %}
+.predictive-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.4rem 1.6rem; padding-top: 2.4rem; }
+@media (min-width: 750px) { .predictive-results { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.predictive-results__media { aspect-ratio: 3 / 4; margin-bottom: 0.8rem; }
+.predictive-results__title, .predictive-results .price { font-size: var(--text-body-sm); margin-top: 0.2rem; }
+.predictive-results__all { margin-top: 2.4rem; }
+.predictive-results__empty { padding-top: 2.4rem; color: rgb(var(--c-fg-2)); }
+{% endstylesheet %}

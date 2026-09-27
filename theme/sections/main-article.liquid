@@ -1,0 +1,21 @@
+<article class="page-narrow article">
+  <header class="page-header">
+    <nav class="breadcrumb" aria-label="{{ 'general.breadcrumb' | t }}"><a href="{{ blog.url }}">{{ blog.title }}</a><span class="breadcrumb__sep">/</span><span aria-current="page">{{ article.title }}</span></nav>
+    <p class="eyebrow" style="margin-top: 2rem;">{{ article.published_at | date: format: 'date' }}</p>
+    <h1 class="display-3" style="margin-top: 1.2rem;">{{ article.title }}</h1>
+  </header>
+  {%- if article.image -%}
+    <div class="article__media media">{{ article.image | image_url: width: 2000 | image_tag: widths: '750, 1100, 1500, 2000', sizes: '(min-width: 960px) 960px, 100vw', alt: article.title }}</div>
+  {%- endif -%}
+  <div class="rte article__content">{{ article.content }}</div>
+</article>
+
+{% stylesheet %}
+.article { padding-bottom: 8rem; }
+.article__media { aspect-ratio: 16 / 9; margin-block: 3.2rem; }
+.article__content { max-width: 62rem; margin-top: 3.2rem; }
+{% endstylesheet %}
+
+{% schema %}
+{ "name": "Article", "settings": [] }
+{% endschema %}

@@ -1,0 +1,40 @@
+/* Zenith: 30px tall, #0d0d0d on white text, continuous left→right ticker. */
+
+.bar {
+  position: relative;
+  height: var(--announcement-height);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgb(13, 13, 13);
+  color: rgb(255, 255, 255);
+  font-size: var(--text-body);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: ticker var(--ticker-duration, 100s) linear infinite;
+}
+.bar:hover .track { animation-play-state: paused; }
+
+.line { display: flex; flex-shrink: 0; }
+
+.block {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding-inline: 1.2rem;
+  white-space: nowrap;
+}
+.sep { opacity: 0.4; }
+
+@keyframes ticker {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none; }
+  .bar { justify-content: center; }
+}

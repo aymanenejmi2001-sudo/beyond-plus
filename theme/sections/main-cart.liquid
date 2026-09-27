@@ -1,0 +1,31 @@
+<div class="page-narrow cart-page" data-cart-page>
+  <div class="page-header"><h1 class="page-header__title">{{ 'sections.cart.title' | t }}</h1></div>
+  {%- if cart.empty? -%}
+    <p class="prose muted">{{ 'sections.cart.empty' | t }}</p>
+    <p style="margin-top: 2.4rem;">{% assign label = 'sections.cart.continue' | t %}{% render 'editorial-link', url: routes.all_products_collection_url, label: label %}</p>
+  {%- else -%}
+    <form action="{{ routes.cart_url }}" method="post">
+      <ul class="cart-page__lines">
+        {%- for item in cart.items -%}{% render 'cart-line', item: item %}{%- endfor -%}
+      </ul>
+      <div class="cart-page__footer">
+        <div class="cart-page__subtotal"><span class="label">{{ 'sections.cart.subtotal' | t }}</span><span>{{ cart.total_price | money }}</span></div>
+        <p class="cart-page__note">{{ settings.cart_note }}</p>
+        <button type="submit" name="checkout" class="button button--editorial">{% assign label = 'sections.cart.checkout' | t %}{% render 'button-label', text: label %}</button>
+      </div>
+    </form>
+  {%- endif -%}
+</div>
+
+{% stylesheet %}
+.cart-page { padding-bottom: 8rem; }
+.cart-page__lines { border-top: 0.1rem solid rgb(var(--c-border)); }
+.cart-page .cart-line { padding-inline: 0; }
+.cart-page__subtotal { display: flex; align-items: baseline; justify-content: space-between; }
+.cart-page__note { font-size: var(--text-body-xs); color: rgb(var(--c-fg-2)); }
+.cart-page__footer { display: flex; flex-direction: column; gap: 1.6rem; max-width: 46rem; margin: 3.2rem 0 0 auto; }
+{% endstylesheet %}
+
+{% schema %}
+{ "name": "Panier", "settings": [] }
+{% endschema %}

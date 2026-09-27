@@ -1,0 +1,41 @@
+.catalog { width: 100%; max-width: 192rem; margin-inline: auto; }
+.catalog__head { padding-inline: 2rem; }
+@media (min-width: 990px) { .catalog__head { padding-inline: 2.4rem; } }
+.catalog__row { display: flex; align-items: baseline; justify-content: space-between; gap: 2.4rem; margin-block: 2.4rem 2rem; }
+.catalog__row .page-header__title { margin: 0; }
+.catalog__description { max-width: 46rem; font-size: var(--text-body-sm); line-height: var(--leading-prose); color: rgb(var(--c-fg-2)); text-align: right; }
+@media (max-width: 989px) { .catalog__description { display: none; } }
+collection-grid { display: block; padding-inline: var(--catalog-gutter); padding-bottom: 8rem; }
+collection-grid[aria-busy="true"] { opacity: 0.5; transition: opacity var(--dur-default); }
+
+.facets { --rail-inset: 2rem; padding: 1.6rem var(--rail-inset) 0.8rem; }
+@media (min-width: 990px) { .facets { --rail-inset: 2.4rem; } }
+.facets__group + .facets__group { margin-top: 1.4rem; }
+.facets__summary { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; cursor: pointer; list-style: none; font-size: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; }
+.facets__summary::-webkit-details-marker { display: none; }
+.facets__summary svg { opacity: 0.45; transform: rotate(-90deg); transition: transform var(--dur-default); }
+.facets__group[open] .facets__summary svg { transform: none; }
+.facets__list { display: flex; align-items: center; gap: 0.8rem; overflow-x: auto; margin-inline: calc(var(--rail-inset) * -1); padding-inline: var(--rail-inset); }
+.facets__chip { display: inline-flex; align-items: center; flex-shrink: 0; padding: 0.9rem 1.5rem; border: 0.1rem solid rgb(var(--c-interface)); border-radius: 0.5rem; white-space: nowrap; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; transition: background-color var(--dur-short), border-color var(--dur-short), color var(--dur-short); }
+.facets__chip:hover { border-color: rgb(var(--c-fg)); }
+.facets__chip[aria-pressed="true"] { background-color: rgb(var(--c-fg)); border-color: rgb(var(--c-fg)); color: rgb(var(--c-bg)); }
+.facets__count { margin-left: 0.6rem; opacity: 0.45; }
+.facets__toolbar { display: flex; align-items: center; justify-content: flex-end; gap: 1.6rem; min-height: 3.2rem; margin-top: 1.6rem; padding-bottom: 0.8rem; }
+.facets__result { margin-right: auto; font-size: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: rgb(var(--c-fg-2)); }
+.facets__reset { font-size: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; text-decoration: underline; text-underline-offset: 0.4rem; color: rgb(var(--c-fg-2)); }
+.facets__density { display: none; gap: 0.4rem; }
+@media (min-width: 990px) { .facets__density { display: flex; } }
+.facets__density button { display: grid; place-items: center; width: 3rem; height: 3rem; background: none; border: none; cursor: pointer; color: rgb(var(--c-fg-2)); }
+.facets__density button[aria-pressed="true"] { color: rgb(var(--c-fg)); }
+.facets__sort { display: flex; align-items: center; gap: 0.8rem; font-size: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: rgb(var(--c-fg-2)); }
+.facets__sort select { appearance: none; padding: 0; background: none; border: none; cursor: pointer; font-size: 1.2rem; font-weight: 600; text-transform: none; letter-spacing: normal; color: rgb(var(--c-fg)); }
+
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--catalog-gutter); }
+@media (min-width: 750px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 990px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1600px) { .grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+@media (min-width: 750px) { .grid[data-dense="true"] { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 990px) { .grid[data-dense="true"] { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+@media (min-width: 1600px) { .grid[data-dense="true"] { grid-template-columns: repeat(7, minmax(0, 1fr)); } }
+.grid-empty { padding-block: 10rem 14rem; text-align: center; }
+.grid-more { display: flex; justify-content: center; padding-top: 6.4rem; }

@@ -1,0 +1,154 @@
+/* ============================================================================
+   Product gallery — the signature interaction, measured on Almost Gods.
+
+   Desktop: the gallery is a two-column flex-wrap rail. The FIRST image takes
+   the left column and is `position: sticky; top: 0`; every following image is
+   pushed into the right column. The opening plate therefore locks to the top
+   of the viewport while the rest of the series runs past it.
+
+   There is no JavaScript in this. It is native sticky positioning, which is
+   exactly why the reference feels so smooth — the browser composites it, so it
+   holds 60fps under any scroll speed and needs no scroll listener.
+
+   Mobile: the same images become a full-bleed horizontal swipe carousel.
+   ========================================================================= */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+}
+
+.item {
+  position: relative;
+  flex: 0 0 50%;
+  width: 50%;
+  overflow: hidden;
+  background-color: rgb(var(--c-media));
+  cursor: zoom-in;
+}
+
+/* Every plate is a 140% portrait box — the same ratio as the catalogue card,
+   so the whole storefront shares one image rhythm. */
+.item::before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8%;
+  mix-blend-mode: multiply;
+}
+
+@media (min-width: 990px) {
+  /* Plate 1 — pinned to the top of the left column for the whole gallery. */
+  .item:first-child {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  /* Plates 2+ occupy a full flex line but hold their image in the right
+     column, so they file past the pinned plate instead of under it. Their
+     left half must stay transparent — otherwise the placeholder ground would
+     paint a grey slab beside the pinned plate. */
+  .item:not(:first-child):not(:nth-child(2)) {
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: transparent;
+  }
+  .item:not(:first-child):not(:nth-child(2))::before { padding-bottom: 50%; }
+  .item:not(:first-child):not(:nth-child(2))::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 50%;
+    background-color: rgb(var(--c-media));
+  }
+  .item:not(:first-child):not(:nth-child(2)) img {
+    left: 50%;
+    width: 50%;
+    z-index: 1;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .item img { transition: var(--transition-image); }
+  .item:hover img { transform: scale(1.02); }
+}
+
+/* ---- Mobile: full-bleed swipe carousel ----------------------------------- */
+@media (max-width: 989px) {
+  .gallery {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .gallery::-webkit-scrollbar { display: none; }
+
+  .item {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: center;
+    cursor: default;
+  }
+}
+
+.counter {
+  display: none;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 1.2rem 0 0;
+}
+@media (max-width: 989px) { .counter { display: flex; } }
+
+.dot {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: rgb(var(--c-interface));
+  transition: background-color var(--dur-default);
+}
+.dot[data-active="true"] { background-color: rgb(var(--c-fg)); }
+
+/* ---- Lightbox ------------------------------------------------------------ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: grid;
+  place-items: center;
+  padding: 2.4rem;
+  background-color: rgba(var(--c-bg), 0.98);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur-default) ease-in-out, visibility var(--dur-default) ease-in-out;
+}
+.lightbox[data-open="true"] { opacity: 1; visibility: visible; }
+
+.lightboxImage {
+  max-width: min(100%, 88rem);
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  padding: 0.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

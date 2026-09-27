@@ -1,0 +1,1 @@
+{"version":"0.0.1","configurations":[{"name":"storefront","runtimeExecutable":"npm","runtimeArgs":["--prefix","storefront","run","start","--","-p","4333"],"port":4333},{"name":"storefront-qa","runtimeExecutable":"npm","runtimeArgs":["--prefix","storefront","run","start","--","-p","4334"],"port":4334}]}

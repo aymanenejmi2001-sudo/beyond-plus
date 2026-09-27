@@ -1,0 +1,122 @@
+/* Zenith .button — the signature interaction is a vertical label roll:
+   the label is duplicated below itself via ::after and both slide up 100%. */
+
+.button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+  min-height: 3.2rem;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  border-radius: var(--radius-button);
+  transition:
+    color 0.45s var(--ease-out-quart),
+    background-color 0.45s var(--ease-out-quart),
+    border-color 0.45s var(--ease-out-quart);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  overflow: hidden;
+}
+
+.label {
+  position: relative;
+  display: block;
+  transform: translateZ(0);
+  transform-style: preserve-3d;
+  transition: var(--transition-label);
+}
+.duplicate {
+  position: absolute;
+  inset: 100% auto auto 0;
+  white-space: nowrap;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover .label { transform: translate3d(0, -100%, 0); }
+}
+
+/* ---- Variants ---------------------------------------------------------- */
+
+.primary {
+  padding: 0.7rem 2.4rem;
+  color: rgb(var(--c-button-text));
+  background-color: rgb(var(--c-button));
+}
+@media (min-width: 750px) { .primary { padding: 0.7rem 4rem; } }
+
+.secondary {
+  padding: 0.7rem 2.4rem;
+  color: rgb(var(--c-button-secondary-text));
+  background-color: rgb(var(--c-button-secondary));
+}
+@media (min-width: 750px) { .secondary { padding: 0.7rem 4rem; } }
+
+/* Zenith hero/spotlight CTA: white pill on imagery */
+.invert {
+  padding: 0.7rem 2.4rem;
+  color: rgb(13, 13, 13);
+  background-color: rgb(255, 255, 255);
+}
+@media (min-width: 750px) { .invert { padding: 0.7rem 4rem; } }
+
+.outline {
+  padding: 0.6rem 1.2rem;
+  color: rgb(var(--c-fg));
+  background-color: transparent;
+  border: 0.1rem solid rgb(var(--c-fg));
+}
+
+/* Almost Gods PDP add-to-cart: full width, square, no radius */
+.editorial {
+  width: 100%;
+  min-height: 5.2rem;
+  padding: 0 3.2rem;
+  border-radius: 0;
+  color: rgb(var(--c-button-text));
+  background-color: rgb(var(--c-button));
+  font-size: var(--text-body-sm);
+  letter-spacing: 0.02em;
+}
+.editorial:disabled { background-color: rgba(var(--c-fg), 0.2); }
+
+/* Text-only tertiary link (Zenith "View blog", AG "SIZE GUIDE") */
+.text {
+  min-height: 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: rgb(var(--c-fg));
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 0.1rem;
+}
+.text .duplicate { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  .text:hover { opacity: var(--hover-opacity); }
+  .text:hover .label { transform: none; }
+}
+
+.block { width: 100%; }
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.editorial:disabled { opacity: 1; }

@@ -1,0 +1,25 @@
+{
+  "type": "header",
+  "name": "En-tête",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "a1": { "type": "announcement", "settings": { "text": "BEYOND PLUS" } },
+        "a2": { "type": "announcement", "settings": { "text": "SNEAKER CULTURE" } },
+        "a3": { "type": "announcement", "settings": { "text": "GO BEYOND." } }
+      },
+      "block_order": ["a1", "a2", "a3"],
+      "settings": { "duration": 100 }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "card": { "type": "mega_card", "settings": { "menu_item": "Sneakers", "heading": "New In", "link": "shopify://collections/all" } }
+      },
+      "block_order": ["card"],
+      "settings": { "menu": "main-menu", "highlight_title": "Sale", "cta_label": "Contact", "cta_link": "/pages/contact" }
+    }
+  },
+  "order": ["announcement-bar", "header"]
+}

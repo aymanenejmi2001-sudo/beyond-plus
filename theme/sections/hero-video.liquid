@@ -1,0 +1,50 @@
+<section class="hero">
+  <div class="hero__media">
+    {%- if section.settings.video != blank -%}
+      {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, controls: false, preload: 'metadata', class: 'hero__video', data-hero-video: '' }}
+    {%- else -%}
+      {%- render 'media-image', image: section.settings.poster, fallback: 'beyond-1.jpg', class: 'hero__video', priority: true, sizes: '100vw' -%}
+    {%- endif -%}
+    <span class="hero__scrim" style="opacity: {{ section.settings.overlay | divided_by: 100.0 }};" aria-hidden="true"></span>
+  </div>
+  <div class="hero__content container">
+    <div class="hero__headings">
+      {%- if section.settings.eyebrow != blank -%}<p class="hero__eyebrow" data-reveal="up"><span>{{ section.settings.eyebrow }}</span></p>{%- endif -%}
+      <h1 class="display-1" data-reveal="up"><span>{{ section.settings.heading }}</span></h1>
+    </div>
+    <div class="hero__info">
+      {%- if section.settings.text != blank -%}<p class="hero__text">{{ section.settings.text }}</p>{%- endif -%}
+      {%- if section.settings.link_label != blank -%}{% render 'editorial-link', url: section.settings.link, label: section.settings.link_label, on_image: true %}{%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.hero { position: relative; min-height: calc(100svh - 9.8rem); background-color: rgb(var(--c-bg-3)); }
+.hero__media { position: absolute; inset: 0; overflow: hidden; }
+.hero__video { width: 100%; height: 100%; object-fit: cover; }
+.hero__scrim { position: absolute; inset: 0; background-color: rgb(var(--c-overlay)); }
+.hero__content { position: relative; z-index: 1; display: grid; grid-template-rows: auto 1fr auto; justify-items: center; min-height: calc(100svh - 9.8rem); padding: 7.8rem 1.2rem 2rem; text-align: center; color: rgb(255, 255, 255); }
+.hero__headings { max-width: 56rem; display: flex; flex-direction: column; gap: 1.6rem; align-items: center; }
+.hero__eyebrow { font-size: var(--text-eyebrow); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; opacity: 0.85; }
+.hero__info { grid-row: 3; display: flex; flex-direction: column; align-items: center; gap: 2rem; }
+.hero__text { max-width: 42rem; line-height: var(--leading-prose); opacity: 0.9; }
+.hero{background:#702735}.hero__media{left:45%}.hero__headings{align-items:flex-start;max-width:55%}.hero__headings h1{font-size:clamp(8rem,11vw,18rem);line-height:.9;max-width:6ch;letter-spacing:-.06em}.hero__content{justify-items:start;text-align:left;padding:8rem 4vw 4rem}.hero__info{align-items:flex-start}.hero__video{object-position:50% 60%}@media(max-width:749px){.hero__media{left:0}.hero__scrim{opacity:.3!important}.hero__content{padding:8rem 2rem 4rem}.hero__headings{max-width:100%}.hero__headings h1{font-size:20vw}}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Vidéo d'accueil",
+  "settings": [
+    { "type": "video", "id": "video", "label": "Vidéo", "info": "Lecture automatique, en boucle, sans son. Téléverser votre film BEYOND PLUS." },
+    { "type": "image_picker", "id": "poster", "label": "Image (si pas de vidéo)" },
+    { "type": "range", "id": "overlay", "label": "Assombrissement", "min": 0, "max": 60, "step": 5, "unit": "%", "default": 15 },
+    { "type": "text", "id": "eyebrow", "label": "Surtitre", "default": "BEYOND PLUS / SNEAKER CULTURE" },
+    { "type": "text", "id": "heading", "label": "Titre", "default": "Go beyond." },
+    { "type": "text", "id": "text", "label": "Texte", "default": "Tout commence par une paire. La suite vous appartient." },
+    { "type": "text", "id": "link_label", "label": "Lien — texte", "default": "Découvrir la collection" },
+    { "type": "url", "id": "link", "label": "Lien" }
+  ],
+  "presets": [ { "name": "Vidéo d'accueil" } ]
+}
+{% endschema %}

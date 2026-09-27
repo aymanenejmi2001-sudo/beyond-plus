@@ -1,0 +1,462 @@
+[
+  {
+    "id": "asics-gel-1130",
+    "brand": "ASICS",
+    "model": "Gel-1130",
+    "tier": "CORE",
+    "styleFamily": "retro-runner",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "asics-gel-kayano-14",
+    "brand": "ASICS",
+    "model": "Gel-Kayano 14",
+    "tier": "CORE",
+    "styleFamily": "y2k-runner",
+    "matched": 13,
+    "kept": 5,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "asics-gel-nyc",
+    "brand": "ASICS",
+    "model": "Gel-NYC",
+    "tier": "CORE",
+    "styleFamily": "retro-runner",
+    "matched": 12,
+    "kept": 5,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "adidas-samba-og",
+    "brand": "adidas",
+    "model": "Samba",
+    "tier": "CORE",
+    "styleFamily": "terrace",
+    "matched": 10,
+    "kept": 4,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "adidas-handball-spezial",
+    "brand": "adidas",
+    "model": "Handball Spezial",
+    "tier": "CORE",
+    "styleFamily": "terrace",
+    "matched": 12,
+    "kept": 5,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "adidas-gazelle-indoor",
+    "brand": "adidas",
+    "model": "Gazelle Indoor",
+    "tier": "CORE",
+    "styleFamily": "terrace",
+    "matched": 6,
+    "kept": 4,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nb-530",
+    "brand": "New Balance",
+    "model": "530",
+    "tier": "CORE",
+    "styleFamily": "y2k-runner",
+    "matched": 4,
+    "kept": 3,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nb-9060",
+    "brand": "New Balance",
+    "model": "9060",
+    "tier": "CORE",
+    "styleFamily": "y2k-runner",
+    "matched": 5,
+    "kept": 3,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "puma-speedcat",
+    "brand": "PUMA",
+    "model": "Speedcat OG",
+    "tier": "CORE",
+    "styleFamily": "low-profile",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "nike-vomero-5",
+    "brand": "Nike",
+    "model": "Zoom Vomero 5",
+    "tier": "CORE",
+    "styleFamily": "y2k-runner",
+    "matched": 9,
+    "kept": 5,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nike-p-6000",
+    "brand": "Nike",
+    "model": "P-6000",
+    "tier": "CORE",
+    "styleFamily": "y2k-runner",
+    "matched": 4,
+    "kept": 3,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nb-204l",
+    "brand": "New Balance",
+    "model": "204L",
+    "tier": "RISING",
+    "styleFamily": "low-profile",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "nike-total-90",
+    "brand": "Nike",
+    "model": "Total 90",
+    "tier": "RISING",
+    "styleFamily": "low-profile",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "saucony-progrid-omni-9",
+    "brand": "Saucony",
+    "model": "ProGrid Omni 9",
+    "tier": "RISING",
+    "styleFamily": "retro-runner",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "saucony-progrid-triumph-4",
+    "brand": "Saucony",
+    "model": "ProGrid Triumph 4",
+    "tier": "RISING",
+    "styleFamily": "retro-runner",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "salomon-xt-6",
+    "brand": "Salomon",
+    "model": "XT-6",
+    "tier": "RISING",
+    "styleFamily": "technical",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "salomon-xt-whisper",
+    "brand": "Salomon",
+    "model": "XT-Whisper",
+    "tier": "RISING",
+    "styleFamily": "technical",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "vans-old-skool",
+    "brand": "Vans",
+    "model": "Old Skool",
+    "tier": "RISING",
+    "styleFamily": "skate",
+    "matched": 3,
+    "kept": 2,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "vans-knu-skool",
+    "brand": "Vans",
+    "model": "Knu Skool",
+    "tier": "RISING",
+    "styleFamily": "skate",
+    "matched": 2,
+    "kept": 2,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "vans-authentic",
+    "brand": "Vans",
+    "model": "Authentic",
+    "tier": "RISING",
+    "styleFamily": "skate",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "jordan-4",
+    "brand": "Jordan",
+    "model": "Air Jordan 4 Retro",
+    "tier": "RISING",
+    "styleFamily": "basketball-retro",
+    "matched": 10,
+    "kept": 4,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "jordan-5",
+    "brand": "Jordan",
+    "model": "Air Jordan 5 Retro",
+    "tier": "RISING",
+    "styleFamily": "basketball-retro",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "jordan-11",
+    "brand": "Jordan",
+    "model": "Air Jordan 11 Retro",
+    "tier": "RISING",
+    "styleFamily": "basketball-retro",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "mizuno-mxr",
+    "brand": "Mizuno",
+    "model": "MXR",
+    "tier": "EXPERIMENTAL",
+    "styleFamily": "retro-runner",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "adidas-taekwondo",
+    "brand": "adidas",
+    "model": "Taekwondo",
+    "tier": "EXPERIMENTAL",
+    "styleFamily": "low-profile",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "nike-shox",
+    "brand": "Nike",
+    "model": "Shox",
+    "tier": "EXPERIMENTAL",
+    "styleFamily": "y2k-runner",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "nike-dunk-low",
+    "brand": "Nike",
+    "model": "Dunk Low",
+    "tier": "CORE",
+    "styleFamily": "basketball-retro",
+    "matched": 34,
+    "kept": 6,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "jordan-1",
+    "brand": "Jordan",
+    "model": "Air Jordan 1",
+    "tier": "CORE",
+    "styleFamily": "basketball-retro",
+    "matched": 108,
+    "kept": 6,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nike-air-force-1",
+    "brand": "Nike",
+    "model": "Air Force 1",
+    "tier": "CORE",
+    "styleFamily": "icon",
+    "matched": 20,
+    "kept": 4,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nb-550",
+    "brand": "New Balance",
+    "model": "550",
+    "tier": "CORE",
+    "styleFamily": "basketball-retro",
+    "matched": 10,
+    "kept": 4,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "adidas-campus-00s",
+    "brand": "adidas",
+    "model": "Campus 00s",
+    "tier": "CORE",
+    "styleFamily": "skate",
+    "matched": 4,
+    "kept": 4,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "adidas-superstar",
+    "brand": "adidas",
+    "model": "Superstar",
+    "tier": "RISING",
+    "styleFamily": "icon",
+    "matched": 8,
+    "kept": 3,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "adidas-stan-smith",
+    "brand": "adidas",
+    "model": "Stan Smith",
+    "tier": "RISING",
+    "styleFamily": "icon",
+    "matched": 7,
+    "kept": 2,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "adidas-forum-low",
+    "brand": "adidas",
+    "model": "Forum Low",
+    "tier": "RISING",
+    "styleFamily": "basketball-retro",
+    "matched": 6,
+    "kept": 3,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "converse-chuck",
+    "brand": "Converse",
+    "model": "Chuck Taylor",
+    "tier": "RISING",
+    "styleFamily": "skate",
+    "matched": 19,
+    "kept": 3,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nb-1000",
+    "brand": "New Balance",
+    "model": "1000",
+    "tier": "RISING",
+    "styleFamily": "y2k-runner",
+    "matched": 5,
+    "kept": 2,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nb-1906r",
+    "brand": "New Balance",
+    "model": "1906R",
+    "tier": "RISING",
+    "styleFamily": "y2k-runner",
+    "matched": 2,
+    "kept": 2,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nb-860",
+    "brand": "New Balance",
+    "model": "860v2",
+    "tier": "EXPERIMENTAL",
+    "styleFamily": "y2k-runner",
+    "matched": 2,
+    "kept": 2,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nike-air-max-dn",
+    "brand": "Nike",
+    "model": "Air Max Dn",
+    "tier": "RISING",
+    "styleFamily": "y2k-runner",
+    "matched": 3,
+    "kept": 3,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "asics-gel-quantum",
+    "brand": "ASICS",
+    "model": "Gel-Quantum",
+    "tier": "EXPERIMENTAL",
+    "styleFamily": "technical",
+    "matched": 5,
+    "kept": 2,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nike-air-humara",
+    "brand": "Nike",
+    "model": "Air Humara",
+    "tier": "EXPERIMENTAL",
+    "styleFamily": "technical",
+    "matched": 0,
+    "kept": 0,
+    "status": "NO_AUTHORIZED_SOURCE"
+  },
+  {
+    "id": "adidas-adistar-byd",
+    "brand": "adidas",
+    "model": "Adistar BYD",
+    "tier": "EXPERIMENTAL",
+    "styleFamily": "technical",
+    "matched": 3,
+    "kept": 2,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "adidas-adizero-evo",
+    "brand": "adidas",
+    "model": "Adizero Evo SL",
+    "tier": "RISING",
+    "styleFamily": "racing",
+    "matched": 2,
+    "kept": 2,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "nike-zoomx-invincible",
+    "brand": "Nike",
+    "model": "ZoomX Invincible",
+    "tier": "EXPERIMENTAL",
+    "styleFamily": "technical",
+    "matched": 8,
+    "kept": 2,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "on-cloud",
+    "brand": "On",
+    "model": "",
+    "tier": "RISING",
+    "styleFamily": "technical",
+    "matched": 8,
+    "kept": 4,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "puma-cali",
+    "brand": "PUMA",
+    "model": "Cali",
+    "tier": "EXPERIMENTAL",
+    "styleFamily": "icon",
+    "matched": 2,
+    "kept": 2,
+    "status": "SUPPLIER_AUTHORIZED"
+  }
+]

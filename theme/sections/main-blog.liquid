@@ -1,0 +1,32 @@
+<div class="page-width">
+  <header class="page-header"><h1 class="page-header__title">{{ blog.title }}</h1></header>
+  {%- paginate blog.articles by 12 -%}
+    <ul class="journal">
+      {%- for article in blog.articles -%}
+        <li>
+          <a href="{{ article.url }}" class="journal__item">
+            <div class="journal__media media">
+              {%- if article.image -%}{{ article.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '400, 800, 1200', sizes: '(min-width: 750px) 33vw, 100vw', alt: article.title }}{%- else -%}{{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}{%- endif -%}
+            </div>
+            <p class="eyebrow journal__date">{{ article.published_at | date: format: 'date' }}</p>
+            <h2 class="display-4">{{ article.title }}</h2>
+            <p class="journal__excerpt muted">{{ article.excerpt_or_content | strip_html | truncate: 140 }}</p>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+    {%- if paginate.pages > 1 -%}{{ paginate | default_pagination }}{%- endif -%}
+  {%- endpaginate -%}
+</div>
+
+{% stylesheet %}
+.journal { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4rem 2.4rem; padding-bottom: 8rem; }
+@media (min-width: 750px) { .journal { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.journal__media { aspect-ratio: 4 / 5; margin-bottom: 1.6rem; }
+.journal__date { margin-bottom: 0.8rem; }
+.journal__excerpt { margin-top: 0.8rem; font-size: var(--text-body-sm); line-height: var(--leading-prose); }
+{% endstylesheet %}
+
+{% schema %}
+{ "name": "Journal", "settings": [] }
+{% endschema %}

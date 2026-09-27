@@ -1,0 +1,74 @@
+{%- comment -%}
+  Outputs a CSS colour for a colour option value. Uses Shopify's native swatch
+  when the merchant has set one; otherwise matches keywords, because each brand
+  names its colours its own way (English, Italian, French, codes).
+  Usage: {% capture c %}{% render 'swatch-color', value: value %}{% endcapture %}
+{%- endcomment -%}
+{%- liquid
+  assign n = value | append: '' | downcase | strip
+  assign c = ''
+
+  if value.swatch.color
+    assign c = value.swatch.color
+  elsif n contains 'off white' or n contains 'off-white' or n contains 'offwhite' or n contains 'panna' or n contains 'ecru' or n contains 'écru' or n contains 'ivory' or n contains 'ivoire' or n contains 'cream' or n contains 'crème'
+    assign c = '#f3ede1'
+  elsif n contains 'bianco' or n contains 'white' or n contains 'blanc'
+    assign c = '#f2f2f2'
+  elsif n contains 'nero' or n contains 'black' or n contains 'noir' or n contains 'antracite'
+    assign c = '#161616'
+  elsif n contains 'denim' or n contains 'jean'
+    assign c = '#3c5a8c'
+  elsif n contains 'navy' or n contains 'night blue' or n contains 'marine' or n contains 'blu notte'
+    assign c = '#1f2a44'
+  elsif n contains 'light blue' or n contains 'sky' or n contains 'ciel'
+    assign c = '#a9c2d9'
+  elsif n contains 'blue' or n contains 'bleu' or n contains 'azzurro' or n contains 'blu'
+    assign c = '#3c5a8c'
+  elsif n contains 'khaki' or n contains 'kaki' or n contains 'olive'
+    assign c = '#5c5a3a'
+  elsif n contains 'chocolate' or n contains 'chocolat' or n contains 'coffee' or n contains 'moro'
+    assign c = '#4a3527'
+  elsif n contains 'camel' or n contains 'tan'
+    assign c = '#b98454'
+  elsif n contains 'sand' or n contains 'sabbia' or n contains 'beige' or n contains 'taupe'
+    assign c = '#cbbba0'
+  elsif n contains 'brown' or n contains 'marron' or n contains 'tobacco'
+    assign c = '#6b4c39'
+  elsif n contains 'rame' or n contains 'copper' or n contains 'cuivre'
+    assign c = '#a86a45'
+  elsif n contains 'bordeaux' or n contains 'wine' or n contains 'burgundy'
+    assign c = '#5c1f27'
+  elsif n contains 'rosa' or n contains 'pink' or n contains 'rose'
+    assign c = '#d8a7ae'
+  elsif n contains 'orange'
+    assign c = '#c26234'
+  elsif n contains 'dark grey' or n contains 'dark gray' or n contains 'dark steel' or n contains 'anthracite'
+    assign c = '#5c5f63'
+  elsif n contains 'grey' or n contains 'gray' or n contains 'gris' or n contains 'grigio'
+    assign c = '#8d8d8d'
+  elsif n contains 'silver' or n contains 'argent'
+    assign c = '#c6c8ca'
+  elsif n contains 'gold' or n contains 'doré'
+    assign c = '#b08a3e'
+  elsif n contains 'green' or n contains 'vert' or n contains 'verde'
+    assign c = '#4b5a3a'
+  elsif n contains 'red' or n contains 'rouge' or n contains 'rosso'
+    assign c = '#8c2f2a'
+  else
+    assign tone = n.size | modulo: 5
+    case tone
+      when 0
+        assign c = '#d8d3c8'
+      when 1
+        assign c = '#c9c2b4'
+      when 2
+        assign c = '#b9b0a0'
+      when 3
+        assign c = '#a89e8c'
+      else
+        assign c = '#e0dcd2'
+    endcase
+  endif
+
+  echo c
+-%}

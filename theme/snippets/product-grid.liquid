@@ -1,0 +1,28 @@
+{%- comment -%} Params: products (paginated), paginate, section_id {%- endcomment -%}
+{%- if products.size == 0 -%}
+  <div class="grid-empty">
+    <p class="prose muted">{{ 'sections.collection.empty' | t }}</p>
+  </div>
+{%- else -%}
+  <ul class="grid" data-grid data-dense="false">
+    {%- for product in products -%}
+      {%- liquid
+        assign first_row = false
+        if forloop.index <= 4 and paginate.current_page == 1
+          assign first_row = true
+        endif
+      -%}
+      <li data-reveal="fade" style="--reveal-delay: {{ forloop.index0 | modulo: 4 | times: 55 }}ms;">
+        {% render 'product-card', product: product, layout: 'editorial', section_id: section_id, priority: first_row, sizes: '(min-width: 1600px) 20vw, (min-width: 990px) 25vw, (min-width: 750px) 33vw, 50vw' %}
+      </li>
+    {%- endfor -%}
+  </ul>
+  {%- if paginate.next -%}
+    <div class="grid-more" data-more-wrap>
+      <a href="{{ paginate.next.url }}" class="button button--outline" data-load-more>
+        {%- assign label = 'sections.collection.load_more' | t -%}
+        {%- render 'button-label', text: label -%}
+      </a>
+    </div>
+  {%- endif -%}
+{%- endif -%}

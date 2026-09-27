@@ -1,0 +1,75 @@
+<div class="overlay" data-drawer-overlay="CartDrawer"></div>
+<aside class="cart-drawer" id="CartDrawer" data-drawer role="dialog" aria-modal="true" aria-label="{{ 'sections.cart.title' | t }}" tabindex="-1" inert>
+  <div class="cart-drawer__header">
+    <h2 class="cart-drawer__title">{{ 'sections.cart.title' | t }} <span class="muted">({{ cart.item_count }})</span></h2>
+    <button type="button" class="icon-button" data-close-drawer aria-label="{{ 'general.close' | t }}">{%- render 'icon', name: 'close' -%}</button>
+  </div>
+
+  <div class="cart-drawer__body">
+    {%- if cart.empty? -%}
+      <div class="cart-drawer__empty">
+        <p class="prose muted">{{ 'sections.cart.empty' | t }}</p>
+        <a href="{{ routes.all_products_collection_url }}" class="button button--primary">
+          {%- assign label = 'sections.cart.continue' | t -%}
+          {%- render 'button-label', text: label -%}
+        </a>
+      </div>
+    {%- else -%}
+      <ul class="cart-drawer__lines">
+        {%- for item in cart.items -%}
+          {% render 'cart-line', item: item %}
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+
+  {%- unless cart.empty? -%}
+    <div class="cart-drawer__footer">
+      <div class="cart-drawer__subtotal">
+        <span class="label">{{ 'sections.cart.subtotal' | t }}</span>
+        <span>{{ cart.total_price | money }}</span>
+      </div>
+      <p class="cart-drawer__note">{{ settings.cart_note }}</p>
+      <form action="{{ routes.cart_url }}" method="post">
+        <button type="submit" name="checkout" class="button button--editorial">
+          {%- assign label = 'sections.cart.checkout' | t -%}
+          {%- render 'button-label', text: label -%}
+        </button>
+      </form>
+    </div>
+  {%- endunless -%}
+</aside>
+
+{% stylesheet %}
+.cart-drawer { position: fixed; top: 0; right: 0; bottom: 0; z-index: calc(var(--z-drawer) + 1); display: flex; flex-direction: column; width: min(46rem, 100vw); background-color: rgb(var(--c-bg)); transform: translate3d(100%, 0, 0); visibility: hidden; transition: transform 0.4s var(--ease-in-out-quint), visibility 0.4s; }
+.cart-drawer[data-open="true"] { transform: none; visibility: visible; }
+.cart-drawer__header { display: flex; align-items: center; justify-content: space-between; gap: 1.6rem; padding: 2rem 2.4rem; border-bottom: 0.1rem solid rgb(var(--c-border)); flex-shrink: 0; }
+.cart-drawer__title { font-size: var(--text-label); font-weight: 500; text-transform: uppercase; }
+.cart-drawer__body { flex: 1; overflow-y: auto; overscroll-behavior: contain; }
+.cart-drawer__empty { display: flex; flex-direction: column; align-items: flex-start; gap: 1.6rem; padding: 4rem 2.4rem; }
+.cart-drawer__footer { flex-shrink: 0; display: flex; flex-direction: column; gap: 1.6rem; padding: 2rem 2.4rem calc(2rem + env(safe-area-inset-bottom)); border-top: 0.1rem solid rgb(var(--c-border)); }
+.cart-drawer__subtotal { display: flex; align-items: baseline; justify-content: space-between; }
+.cart-drawer__note { font-size: var(--text-body-xs); color: rgb(var(--c-fg-2)); }
+.cart-line { display: grid; grid-template-columns: 8.8rem 1fr; gap: 1.6rem; padding: 2rem 2.4rem; border-bottom: 0.1rem solid rgb(var(--c-border)); }
+.cart-line__thumb { aspect-ratio: 3 / 4; }
+.cart-line__body { display: flex; flex-direction: column; justify-content: space-between; gap: 1.2rem; min-width: 0; }
+.cart-line__top, .cart-line__bottom { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.2rem; }
+.cart-line__bottom { align-items: center; }
+.cart-line__title { font-size: var(--text-card-title); font-weight: 500; line-height: var(--leading-card); }
+.cart-line__variant { margin-top: 0.4rem; font-size: var(--text-body-xs); color: rgb(var(--c-fg-2)); }
+.cart-line__price { white-space: nowrap; }
+.stepper { display: inline-flex; align-items: center; border: 0.1rem solid rgb(var(--c-border)); border-radius: var(--radius-input); }
+.stepper button { width: 3.2rem; height: 3.2rem; display: grid; place-items: center; background: none; border: none; cursor: pointer; }
+.stepper__qty { min-width: 2.4rem; text-align: center; font-size: var(--text-body-sm); }
+.cart-line__remove { padding: 0; background: none; border: none; cursor: pointer; font-size: var(--text-body-xs); color: rgb(var(--c-fg-2)); text-decoration: underline; text-underline-offset: 0.3rem; }
+.cart-line[aria-busy="true"] { opacity: 0.5; pointer-events: none; }
+@media (max-width: 749px) {
+  .cart-drawer { width: 100vw; }
+  .cart-line { grid-template-columns: 7.2rem 1fr; padding: 1.6rem; }
+  .cart-drawer__header, .cart-drawer__footer { padding-inline: 1.6rem; }
+}
+{% endstylesheet %}
+
+{% schema %}
+{ "name": "Tiroir panier", "settings": [] }
+{% endschema %}

@@ -1,0 +1,125 @@
+<footer class="footer">
+  <div class="footer__main container">
+    <div class="footer__grid">
+      <div>
+        <h2 class="footer__title">{{ section.settings.newsletter_title }}</h2>
+        {%- form 'customer', id: 'FooterNewsletter', class: 'footer__subscribe' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          {%- if form.posted_successfully? -%}
+            <p class="footer__consent" role="status">{{ 'sections.newsletter.success' | t }}</p>
+          {%- else -%}
+            <label class="footer__field">
+              <span class="visually-hidden">{{ 'sections.newsletter.email' | t }}</span>
+              <input type="email" name="contact[email]" placeholder="{{ 'sections.newsletter.email' | t }}" autocomplete="email" required>
+              <button type="submit">{{ 'sections.newsletter.submit' | t }}</button>
+            </label>
+            {%- if form.errors -%}<p class="form-message form-message--error">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>{%- endif -%}
+            <p class="footer__consent">{{ section.settings.newsletter_note }}</p>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+
+      <div class="footer__menus">
+        {%- for block in section.blocks -%}
+          {%- assign menu = linklists[block.settings.menu] -%}
+          <nav class="footer__menu" {{ block.shopify_attributes }} aria-label="{{ block.settings.heading | escape }}">
+            <details open>
+              <summary><h2 class="footer__title">{{ block.settings.heading }}</h2>{%- render 'icon', name: 'plus', size: 12 -%}</summary>
+              <ul class="footer__menu-list">
+                {%- for link in menu.links -%}
+                  <li><a href="{{ link.url }}" class="footer__menu-link">{{ link.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+            </details>
+          </nav>
+        {%- endfor -%}
+      </div>
+
+      <div class="footer__contact">
+        <h2 class="footer__title">{{ section.settings.contact_title }}</h2>
+        <div class="footer__address">{{ section.settings.address }}</div>
+        {%- if section.settings.contact_link != blank -%}
+          <a href="{{ section.settings.contact_link }}" class="footer__contact-link">{{ section.settings.contact_label }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__bottom-inner container">
+      <span>© {{ 'now' | date: '%Y' }} {{ shop.name }}. {{ 'sections.footer.rights' | t }}</span>
+      <div class="footer__payments">
+        {%- for type in shop.enabled_payment_types -%}
+          {{ type | payment_type_svg_tag: class: 'footer__payment' }}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% stylesheet %}
+.footer { border-top: 0.1rem solid rgb(var(--c-border)); }
+.footer__main { padding-block: 4.8rem 4rem; }
+.footer__grid { display: grid; grid-template-columns: minmax(28rem, 42rem) minmax(0, 1fr) minmax(0, 24rem); gap: 4rem 2.4rem; align-items: start; }
+.footer__title { margin-bottom: 1.2rem; font-size: var(--text-label); font-weight: 500; text-transform: uppercase; }
+.footer__subscribe { display: flex; flex-direction: column; gap: 1.2rem; }
+.footer__field { display: flex; align-items: center; border-bottom: 0.1rem solid rgb(var(--c-fg)); }
+.footer__field input { flex: 1; min-width: 0; padding: 1.2rem 0; background: none; border: none; outline: none; font-size: var(--text-body); }
+.footer__field input::placeholder { color: rgb(var(--c-fg-2)); }
+.footer__field button { padding: 1.2rem 0 1.2rem 1.6rem; background: none; border: none; cursor: pointer; font-size: var(--text-label); font-weight: 500; text-transform: uppercase; }
+.footer__consent { font-size: var(--text-body-xs); color: rgb(var(--c-fg-2)); }
+.footer__menus { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.6rem; }
+.footer__menu summary { list-style: none; display: block; }
+.footer__menu summary::-webkit-details-marker { display: none; }
+.footer__menu summary svg { display: none; }
+.footer__menu-list { display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+.footer__menu-link { font-size: var(--text-body); transition: opacity var(--dur-default); }
+.footer__menu-link:hover { opacity: var(--hover-opacity); }
+.footer__contact { display: flex; flex-direction: column; }
+.footer__address { font-size: var(--text-body-sm); line-height: 1.5; color: rgb(var(--c-fg-2)); }
+.footer__contact-link { margin-top: 1.2rem; align-self: flex-start; font-size: var(--text-body-sm); text-decoration: underline; text-underline-offset: 0.3rem; }
+.footer__bottom { background-color: rgb(var(--c-bg-2)); border-top: 0.1rem solid rgb(var(--c-border)); }
+.footer__bottom-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.6rem; min-height: 5rem; padding-block: 1.2rem; font-size: var(--text-body-sm); color: rgb(var(--c-fg-2)); }
+.footer__payments { display: flex; align-items: center; gap: 0.8rem; }
+.footer__payment { width: 3.2rem; height: auto; }
+@media (max-width: 989px) {
+  .footer__grid { grid-template-columns: minmax(0, 1fr); gap: 3.2rem; }
+  .footer__menus { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.4rem 1.6rem; }
+}
+@media (max-width: 575px) {
+  .footer__menus { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .footer__menu { border-bottom: 0.1rem solid rgb(var(--c-border)); }
+  .footer__menu:first-child { border-top: 0.1rem solid rgb(var(--c-border)); }
+  .footer__menu .footer__title { margin-bottom: 0; }
+  .footer__menu summary { display: flex; align-items: center; justify-content: space-between; padding-block: 1.6rem; cursor: pointer; }
+  .footer__menu summary svg { display: block; transition: transform var(--dur-default); }
+  .footer__menu details[open] summary svg { transform: rotate(45deg); }
+  .footer__menu-list { padding-bottom: 1.6rem; }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Pied de page",
+  "class": "section-footer",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "newsletter_title", "label": "Titre newsletter", "default": "Newsletter" },
+    { "type": "text", "id": "newsletter_note", "label": "Mention newsletter", "default": "En vous inscrivant, vous acceptez notre politique de confidentialité." },
+    { "type": "text", "id": "contact_title", "label": "Titre contact", "default": "Contact" },
+    { "type": "richtext", "id": "address", "label": "Adresse", "default": "<p>Sneakers. Style. Attitude.</p>" },
+    { "type": "text", "id": "contact_label", "label": "Lien contact — texte", "default": "Nous écrire" },
+    { "type": "url", "id": "contact_link", "label": "Lien contact" }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Menu",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Titre", "default": "Boutique" },
+        { "type": "link_list", "id": "menu", "label": "Menu", "default": "footer" }
+      ]
+    }
+  ]
+}
+{% endschema %}

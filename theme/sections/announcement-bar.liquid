@@ -1,0 +1,52 @@
+{%- if section.blocks.size > 0 -%}
+<div class="announcement" role="region" aria-label="{{ 'sections.announcement.label' | t }}">
+  <div class="announcement__track" style="--ticker-duration: {{ section.settings.duration }}s;">
+    {%- for pass in (1..2) -%}
+      <div class="announcement__line"{% if pass == 2 %} aria-hidden="true"{% endif %}>
+        {%- for i in (1..4) -%}
+          <div class="announcement__block">
+            {%- for block in section.blocks -%}
+              <span {{ block.shopify_attributes }}>
+                {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{{ block.settings.text }}</a>{%- else -%}{{ block.settings.text }}{%- endif -%}
+                {%- unless forloop.last %}<span class="announcement__sep"> — </span>{% endunless -%}
+              </span>
+            {%- endfor -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+{%- endif -%}
+
+{% stylesheet %}
+.announcement { position: relative; height: var(--announcement-height); display: flex; align-items: center; overflow: hidden; background-color: rgb(13, 13, 13); color: rgb(255, 255, 255); font-size: var(--text-body); }
+.announcement__track { display: flex; width: max-content; animation: announcement-ticker var(--ticker-duration, 100s) linear infinite; }
+.announcement:hover .announcement__track { animation-play-state: paused; }
+.announcement__line { display: flex; flex-shrink: 0; }
+.announcement__block { display: flex; align-items: center; gap: 1.2rem; padding-inline: 1.2rem; white-space: nowrap; }
+.announcement__sep { opacity: 0.4; }
+@keyframes announcement-ticker { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+@media (prefers-reduced-motion: reduce) { .announcement__track { animation: none; } }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Barre d'annonces",
+  "class": "section-announcement",
+  "settings": [
+    { "type": "range", "id": "duration", "label": "Durée du défilement", "min": 20, "max": 200, "step": 10, "unit": "s", "default": 100 }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Annonce",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Texte", "default": "BEYOND PLUS" },
+        { "type": "url", "id": "link", "label": "Lien" }
+      ]
+    }
+  ],
+  "presets": [ { "name": "Barre d'annonces" } ]
+}
+{% endschema %}

@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "info": {
+      "type": "info-columns",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "L’esprit Beyond",
+            "text": "<p>La culture sneaker, à votre façon.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1"
+      ],
+      "settings": {
+        "columns": 1
+      }
+    }
+  },
+  "order": [
+    "main",
+    "info"
+  ]
+}

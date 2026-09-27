@@ -1,0 +1,710 @@
+/* ============================================================================
+   BEYOND PLUS — BASE
+   Tokens, reset, type and layout primitives, and the shared components every
+   template uses (buttons, editorial link, section header, page header, price,
+   badges, drawers). Colour tokens are overridden from the theme settings by an
+   inline <style> in layout/theme.liquid.
+
+   Root font-size is 62.5% so 1rem === 10px.
+   ========================================================================= */
+
+:root {
+  --font-display: "Syne", "Syne Fallback", system-ui, sans-serif;
+  --font-body: "Archivo", "Archivo Fallback", system-ui, -apple-system, sans-serif;
+
+  --display-weight: 500;
+  --display-tracking: -0.04em;
+  --display-leading: 1;
+  --display-transform: uppercase;
+
+  --text-display: clamp(4.26rem, 4.73vw, 6.816rem);
+  --text-display-2: clamp(3.92rem, 3.5vw, 5.04rem);
+  --text-display-3: clamp(2.6rem, 2.5vw, 3.6rem);
+  --text-display-4: 2rem;
+
+  --text-body: 1.4rem;
+  --text-body-sm: 1.3rem;
+  --text-body-xs: 1.2rem;
+  --text-label: 1.2rem;
+  --text-eyebrow: 0.9rem;
+  --text-card-title: 1.4rem;
+  --text-card-title-ag: 1.32rem;
+  --text-page-title: 2.214rem;
+
+  --leading-body: 1.3;
+  --leading-prose: 1.5;
+  --leading-card: 1.285;
+
+  --tracking-card: 0.005em;
+  --tracking-card-ag: -0.02em;
+  --tracking-heading-ag: -0.03em;
+  --tracking-eyebrow: 0.1em;
+
+  --c-bg: 255, 255, 255;
+  --c-bg-2: 245, 245, 245;
+  --c-bg-3: 235, 235, 235;
+  --c-fg: 13, 13, 13;
+  --c-fg-2: 112, 112, 112;
+  --c-border: 230, 230, 230;
+  --c-interface: 232, 232, 232;
+  --c-overlay: 13, 13, 13;
+  --c-error: 208, 22, 22;
+  --c-success: 15, 174, 0;
+  --c-sale: 208, 22, 22;
+
+  --c-button: var(--c-fg);
+  --c-button-text: 255, 255, 255;
+  --c-button-secondary: var(--c-bg-2);
+  --c-button-secondary-text: var(--c-fg);
+
+  --overlay-alpha: 0.15;
+  --hover-opacity: 0.6;
+
+  --radius-button: 4px;
+  --radius-card-info: 2px;
+  --radius-input: 4px;
+
+  --gutter: 1.2rem;
+  --gutter-editorial: 2.5rem;
+  --gutter-editorial-lg: 5rem;
+  --page-max: 139.6rem;
+  --catalog-gutter: 0.4rem;
+
+  --announcement-height: 3rem;
+  --header-inner-height: 4.8rem;
+
+  --dur-short: 100ms;
+  --dur-default: 300ms;
+  --dur-long: 500ms;
+  --dur-image: 700ms;
+
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-in-out-quint: cubic-bezier(0.602, 0.007, 0.374, 0.995);
+  --ease-image: cubic-bezier(0.4, 0, 0.25, 1);
+
+  --transition-image: transform var(--dur-image) var(--ease-image);
+  --transition-label: transform 0.4s var(--ease-out-quart) 0.05s, color 0.4s var(--ease-out-quart);
+
+  --z-header: 60;
+  --z-drawer: 80;
+  --z-modal: 90;
+}
+
+/* html[…] outranks the settings-driven :root block injected by the layout. */
+html[data-scheme="dark"] {
+  --c-bg: 13, 13, 13;
+  --c-bg-2: 26, 26, 26;
+  --c-bg-3: 34, 34, 34;
+  --c-fg: 255, 255, 255;
+  --c-fg-2: 150, 150, 150;
+  --c-border: 48, 48, 48;
+  --c-interface: 40, 40, 40;
+  --c-button: 255, 255, 255;
+  --c-button-text: 13, 13, 13;
+  --c-button-secondary: 34, 34, 34;
+  --c-button-secondary-text: 255, 255, 255;
+  --c-sale: 255, 82, 82;
+}
+
+/* ---- Reset ---------------------------------------------------------------- */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  color: rgb(var(--c-fg));
+  background-color: rgb(var(--c-bg));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+body[data-locked="true"] { overflow: hidden; }
+
+img, svg, video { display: block; max-width: 100%; }
+img { height: auto; }
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; }
+input, select, textarea { font: inherit; color: inherit; }
+
+ul, ol { list-style: none; margin: 0; padding: 0; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: inherit; font-size: inherit; }
+p, figure, blockquote, fieldset { margin: 0; }
+fieldset { padding: 0; border: 0; min-width: 0; }
+legend { padding: 0; }
+
+:focus-visible {
+  outline: 0.1rem solid rgb(var(--c-fg));
+  outline-offset: 0.2rem;
+}
+
+#MainContent:focus { outline: none; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.skip-link:focus {
+  position: fixed !important;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  width: auto;
+  height: auto;
+  clip: auto;
+  clip-path: none;
+  padding: 1rem 1.6rem;
+  background: rgb(var(--c-bg));
+  border: 0.1rem solid rgb(var(--c-fg));
+}
+
+[hidden] { display: none !important; }
+
+/* ---- Layout primitives ---------------------------------------------------- */
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.page-width {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter-editorial);
+}
+@media (min-width: 750px) {
+  .page-width { padding-inline: var(--gutter-editorial-lg); }
+}
+
+.page-narrow {
+  width: 100%;
+  max-width: 96rem;
+  margin-inline: auto;
+  padding-inline: var(--gutter-editorial);
+}
+@media (min-width: 750px) {
+  .page-narrow { padding-inline: var(--gutter-editorial-lg); }
+}
+
+/* ---- Type primitives ------------------------------------------------------ */
+
+.display-1, .display-2, .display-3, .display-4 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  line-height: var(--display-leading);
+  letter-spacing: var(--display-tracking);
+  text-transform: var(--display-transform);
+  word-break: break-word;
+}
+.display-1 { font-size: var(--text-display); }
+.display-2 { font-size: var(--text-display-2); }
+.display-3 { font-size: var(--text-display-3); }
+.display-4 { font-size: var(--text-display-4); line-height: 1.2; }
+
+.eyebrow {
+  font-size: var(--text-eyebrow);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgb(var(--c-fg-2));
+}
+
+.label {
+  font-size: var(--text-label);
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.prose { font-size: var(--text-body); line-height: var(--leading-prose); }
+.muted { color: rgb(var(--c-fg-2)); }
+
+/* ---- Rich text ------------------------------------------------------------ */
+
+.rte { line-height: var(--leading-prose); }
+.rte > * + * { margin-top: 1.2rem; }
+.rte strong { font-weight: 500; }
+.rte ul { list-style: none; margin: 0.8rem 0 0; padding: 0; }
+.rte li { position: relative; padding-left: 1.4rem; margin-bottom: 0.4rem; }
+.rte li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.85em;
+  width: 0.4rem;
+  height: 0.1rem;
+  background: currentColor;
+}
+.rte a { text-decoration: underline; text-underline-offset: 0.3rem; }
+.rte h2, .rte h3 { font-weight: 500; font-size: var(--text-body); text-transform: uppercase; }
+.rte img { margin-block: 2.4rem; }
+
+/* ---- Underline-on-hover link --------------------------------------------- */
+
+.link-line { position: relative; display: inline-block; }
+.link-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.1rem;
+  height: 0.1rem;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-default) var(--ease-out-quart);
+}
+.link-line:hover::after { transform: scaleX(1); transform-origin: left; }
+
+.link-underline {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  transition: opacity var(--dur-default);
+}
+.link-underline:hover { opacity: var(--hover-opacity); }
+
+/* ---- Media ---------------------------------------------------------------- */
+
+.media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background-color: rgb(var(--c-bg-2));
+}
+.media > img,
+.media > video,
+.media > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.placeholder-svg { fill: rgba(var(--c-fg), 0.25); background-color: rgb(var(--c-bg-2)); }
+
+/* ============================================================================
+   LE SEUIL — the signature reveal
+   Every hidden state is gated behind [data-reveal-ready] on <html>, which
+   theme.js sets only once its observer runs. If the script fails, the page
+   renders in its final state.
+   ========================================================================= */
+
+[data-reveal] {
+  --seuil-duration: 900ms;
+  --seuil-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal-ready] [data-reveal="up"] { overflow: hidden; }
+[data-reveal-ready] [data-reveal="up"] > * {
+  display: block;
+  transform: translate3d(0, 105%, 0);
+  transition: transform var(--seuil-duration) var(--seuil-ease) var(--reveal-delay, 0ms);
+}
+[data-reveal="up"][data-inview="true"] > * { transform: none; }
+
+[data-reveal-ready] [data-reveal="frame"] {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path var(--seuil-duration) var(--seuil-ease) var(--reveal-delay, 0ms);
+}
+[data-reveal="frame"][data-inview="true"] { clip-path: inset(0 0 0 0); }
+[data-reveal-ready] [data-reveal="frame"] img,
+[data-reveal-ready] [data-reveal="frame"] video {
+  transform: scale(1.04);
+  transition: transform calc(var(--seuil-duration) + 300ms) var(--seuil-ease) var(--reveal-delay, 0ms);
+}
+[data-reveal="frame"][data-inview="true"] img,
+[data-reveal="frame"][data-inview="true"] video { transform: none; }
+
+[data-reveal-ready] [data-reveal="fade"] {
+  opacity: 0;
+  transform: translate3d(0, 1.2rem, 0);
+  transition:
+    opacity var(--seuil-duration) var(--seuil-ease) var(--reveal-delay, 0ms),
+    transform var(--seuil-duration) var(--seuil-ease) var(--reveal-delay, 0ms);
+}
+[data-reveal="fade"][data-inview="true"] { opacity: 1; transform: none; }
+
+@media (max-width: 749px) {
+  [data-reveal] { --seuil-duration: 700ms; }
+  [data-reveal="frame"] img { transform: none; transition: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal="fade"] { opacity: 1; transform: none; }
+  [data-reveal="up"] > * { transform: none; }
+  [data-reveal="frame"] { clip-path: none; }
+  [data-reveal="frame"] img { transform: none; }
+}
+
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* ============================================================================
+   BUTTON — the label rolls up to a duplicate of itself on hover
+   ========================================================================= */
+
+.button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+  min-height: 3.2rem;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  border-radius: var(--radius-button);
+  transition:
+    color 0.45s var(--ease-out-quart),
+    background-color 0.45s var(--ease-out-quart),
+    border-color 0.45s var(--ease-out-quart);
+}
+.button__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  overflow: hidden;
+}
+.button__label {
+  position: relative;
+  display: block;
+  transform: translateZ(0);
+  transition: var(--transition-label);
+}
+.button__label::after {
+  content: attr(data-label);
+  position: absolute;
+  inset: 100% auto auto 0;
+  white-space: nowrap;
+}
+@media (hover: hover) and (pointer: fine) {
+  .button:hover .button__label { transform: translate3d(0, -100%, 0); }
+}
+
+.button--primary {
+  padding: 0.7rem 2.4rem;
+  color: rgb(var(--c-button-text));
+  background-color: rgb(var(--c-button));
+}
+.button--secondary {
+  padding: 0.7rem 2.4rem;
+  color: rgb(var(--c-button-secondary-text));
+  background-color: rgb(var(--c-button-secondary));
+}
+.button--invert {
+  padding: 0.7rem 2.4rem;
+  color: rgb(13, 13, 13);
+  background-color: rgb(255, 255, 255);
+}
+@media (min-width: 750px) {
+  .button--primary,
+  .button--secondary,
+  .button--invert { padding: 0.7rem 4rem; }
+}
+.button--outline {
+  padding: 0.6rem 1.2rem;
+  color: rgb(var(--c-fg));
+  background-color: transparent;
+  border: 0.1rem solid rgb(var(--c-fg));
+}
+.button--editorial {
+  width: 100%;
+  min-height: 5.2rem;
+  padding: 0 3.2rem;
+  border-radius: 0;
+  color: rgb(var(--c-button-text));
+  background-color: rgb(var(--c-button));
+  font-size: var(--text-body-sm);
+  letter-spacing: 0.02em;
+}
+.button--editorial:disabled,
+.button--editorial[aria-disabled="true"] { background-color: rgba(var(--c-fg), 0.2); opacity: 1; }
+.button--text {
+  min-height: 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: rgb(var(--c-fg));
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 0.1rem;
+}
+.button--text .button__label::after { content: none; }
+@media (hover: hover) and (pointer: fine) {
+  .button--text:hover { opacity: var(--hover-opacity); }
+  .button--text:hover .button__label { transform: none; }
+}
+.button--block { width: 100%; }
+
+.button:disabled,
+.button[aria-disabled="true"] { cursor: not-allowed; opacity: 0.5; }
+
+.button[aria-busy="true"] .button__label { opacity: 0.4; }
+
+/* ============================================================================
+   EDITORIAL LINK — a word, an arrow, and a rule that draws itself
+   ========================================================================= */
+
+.editorial-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-block: 0.4rem;
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+.editorial-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.1rem;
+  background-color: currentColor;
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-out-quart);
+}
+.editorial-link__arrow { display: block; transition: transform 0.5s var(--ease-out-quart); }
+@media (hover: hover) and (pointer: fine) {
+  .editorial-link::after { transform: scaleX(0); transform-origin: right; }
+  .editorial-link:hover::after { transform: scaleX(1); transform-origin: left; }
+  .editorial-link:hover .editorial-link__arrow { transform: translateX(0.4rem); }
+}
+.editorial-link:focus-visible { outline-offset: 0.6rem; }
+.editorial-link--on-image { color: rgb(255, 255, 255); }
+@media (hover: hover) and (pointer: fine) {
+  .editorial-link--on-image::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    opacity: 0.55;
+    transition: opacity 0.4s var(--ease-out-quart), transform 0.5s var(--ease-out-quart);
+  }
+  .editorial-link--on-image:hover::after { opacity: 1; }
+}
+@media (max-width: 749px) {
+  .editorial-link { padding-block: 0.8rem; min-height: 4.4rem; }
+}
+
+/* ============================================================================
+   SECTION HEADER — the rail that opens a homepage section
+   ========================================================================= */
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding-block: 2rem 1.6rem;
+  border-bottom: 0.1rem solid rgb(var(--c-border));
+}
+.section-header__title {
+  font-size: var(--text-eyebrow);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgb(var(--c-fg-2));
+  white-space: nowrap;
+}
+.section-header__link {
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  text-decoration-thickness: 0.1rem;
+  transition: opacity var(--dur-default);
+}
+.section-header__link:hover { opacity: var(--hover-opacity); }
+
+/* ============================================================================
+   PAGE HEADER — breadcrumb + title for collections and content pages
+   ========================================================================= */
+
+.page-header { padding-top: 1.6rem; }
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-block: 0.8rem;
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgb(var(--c-fg-2));
+}
+.breadcrumb a { transition: color var(--dur-default); }
+.breadcrumb a:hover { color: rgb(var(--c-fg)); }
+.breadcrumb__sep { opacity: 0.5; }
+.page-header__title {
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+  font-size: var(--text-page-title);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: var(--tracking-heading-ag);
+}
+.page-header__description {
+  max-width: 56rem;
+  margin-bottom: 2.4rem;
+  font-size: var(--text-body);
+  line-height: var(--leading-prose);
+  color: rgb(var(--c-fg-2));
+}
+
+/* ============================================================================
+   PRICE / BADGES / SWATCHES
+   ========================================================================= */
+
+.price { font-size: var(--text-body); font-variant-numeric: tabular-nums; }
+.price__compare {
+  margin-left: 0.8rem;
+  color: rgb(var(--c-fg-2));
+  text-decoration: line-through;
+}
+.price__saving { margin-left: 0.8rem; font-size: var(--text-body-xs); color: rgb(var(--c-sale)); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 2rem;
+  padding-inline: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background-color: rgb(var(--c-fg));
+  color: rgb(var(--c-bg));
+}
+.badge--sold-out { background-color: rgb(117, 117, 117); color: rgb(255, 255, 255); }
+
+.swatch-dot {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 0.1rem solid rgba(var(--c-fg), 0.2);
+  background: var(--swatch, rgb(var(--c-bg-3)));
+}
+
+/* ============================================================================
+   FORMS — the underline field used across newsletter, contact and account
+   ========================================================================= */
+
+.field { display: flex; flex-direction: column; gap: 0.6rem; }
+.field__label {
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgb(var(--c-fg-2));
+}
+.field__input {
+  width: 100%;
+  padding: 1.2rem 0;
+  background: none;
+  border: none;
+  border-bottom: 0.1rem solid rgb(var(--c-border));
+  border-radius: 0;
+  outline: none;
+  font-size: var(--text-body);
+  transition: border-color var(--dur-default);
+  resize: vertical;
+}
+.field__input:focus { border-color: rgb(var(--c-fg)); }
+.field__input::placeholder { color: rgb(var(--c-fg-2)); }
+
+.form-message {
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-prose);
+}
+.form-message--error { color: rgb(var(--c-error)); }
+.form-message--success { color: rgb(var(--c-fg)); }
+.form-message ul { margin-top: 0.4rem; }
+
+/* ============================================================================
+   DRAWERS — shared by cart, mobile navigation and search
+   ========================================================================= */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-drawer);
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.overlay[data-open="true"] { opacity: 1; visibility: visible; }
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--dur-default);
+}
+.icon-button:hover { opacity: var(--hover-opacity); }
+
+.icon { display: block; flex-shrink: 0; }
+
+/* ---- Pagination ---------------------------------------------------------- */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  padding-top: 6.4rem;
+  font-size: var(--text-label);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.pagination a:hover { opacity: var(--hover-opacity); }
+.pagination [aria-current="page"] { text-decoration: underline; text-underline-offset: 0.4rem; }

@@ -1,0 +1,48 @@
+<section class="newsletter" aria-labelledby="Newsletter-{{ section.id }}">
+  <div class="newsletter__inner container">
+    <p class="eyebrow" data-reveal="up"><span>{{ section.settings.eyebrow }}</span></p>
+    <h2 class="display-3" id="Newsletter-{{ section.id }}" data-reveal="up" style="--reveal-delay: 80ms;"><span>{{ section.settings.heading }}</span></h2>
+    <p class="newsletter__lede" data-reveal="fade" style="--reveal-delay: 160ms;">{{ section.settings.text }}</p>
+    {%- form 'customer', id: 'Newsletter-form', class: 'newsletter__form-wrap' -%}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      {%- if form.posted_successfully? -%}
+        <p class="newsletter__done" role="status">{{ 'sections.newsletter.success' | t }}</p>
+      {%- else -%}
+        <div class="newsletter__form">
+          <label for="NewsletterEmail-{{ section.id }}" class="visually-hidden">{{ 'sections.newsletter.email' | t }}</label>
+          <input id="NewsletterEmail-{{ section.id }}" type="email" name="contact[email]" autocomplete="email" placeholder="{{ 'sections.newsletter.email' | t }}" required>
+          <button type="submit" class="newsletter__submit" aria-label="{{ 'sections.newsletter.submit' | t }}">{%- render 'icon', name: 'arrow-submit' -%}</button>
+        </div>
+        {%- if form.errors -%}<p class="form-message form-message--error">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>{%- endif -%}
+      {%- endif -%}
+    {%- endform -%}
+    <p class="newsletter__note">{{ section.settings.note }}</p>
+  </div>
+</section>
+
+{% stylesheet %}
+.newsletter { border-top: 0.1rem solid rgb(var(--c-border)); }
+.newsletter__inner { display: grid; gap: 4rem; padding-block: 10rem; max-width: 96rem; text-align: center; justify-items: center; }
+@media (max-width: 749px) { .newsletter__inner { padding-block: 6.4rem; gap: 3.2rem; } }
+.newsletter__lede { max-width: 42rem; line-height: var(--leading-prose); color: rgb(var(--c-fg-2)); }
+.newsletter__form-wrap { width: min(48rem, 100%); }
+.newsletter__form { display: flex; align-items: center; gap: 1.6rem; border-bottom: 0.1rem solid rgb(var(--c-fg)); }
+.newsletter__form input { flex: 1; min-width: 0; padding: 1.6rem 0; background: none; border: none; outline: none; font-size: var(--text-body); }
+.newsletter__form input::placeholder { color: rgb(var(--c-fg-2)); }
+.newsletter__submit { display: grid; place-items: center; width: 4.4rem; height: 4.4rem; background: none; border: none; cursor: pointer; transition: transform 0.5s var(--ease-out-quart); }
+.newsletter__submit:hover { transform: translateX(0.4rem); }
+.newsletter__note { font-size: var(--text-body-xs); color: rgb(var(--c-fg-2)); }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Surtitre", "default": "Newsletter" },
+    { "type": "text", "id": "heading", "label": "Titre", "default": "Rejoindre Beyond" },
+    { "type": "text", "id": "text", "label": "Texte", "default": "Les prochaines sélections et les nouvelles de BEYOND PLUS." },
+    { "type": "text", "id": "note", "label": "Mention", "default": "En vous inscrivant, vous acceptez notre politique de confidentialité." }
+  ],
+  "presets": [ { "name": "Newsletter" } ]
+}
+{% endschema %}

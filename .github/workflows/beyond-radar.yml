@@ -1,0 +1,32 @@
+# BEYOND RADAR scheduled jobs. Active once this folder is a GitHub repo with
+# secrets SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY. Free on GitHub Actions.
+# Never publishes anything: jobs only read sources, score, and raise alerts.
+name: beyond-radar
+on:
+  schedule:
+    - cron: "0 6 * * *"   # daily, 06:00 UTC — lightweight, no new crawling
+    - cron: "0 5 * * 1"   # Monday 05:00 UTC — weekly: polite supplier refresh + deeper pass
+  workflow_dispatch:
+concurrency: { group: beyond-radar, cancel-in-progress: false }
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults: { run: { working-directory: storefront } }
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm, cache-dependency-path: storefront/package-lock.json }
+      - run: npm ci
+      - name: Weekly supplier refresh (robots.txt, throttled, cached)
+        if: github.event.schedule == '0 5 * * 1'
+        run: npm run catalog
+      - name: Weekly pass
+        if: github.event.schedule == '0 5 * * 1'
+        run: npm run radar:weekly
+      - name: Daily pass
+        if: github.event.schedule != '0 5 * * 1'
+        run: npm run radar:daily

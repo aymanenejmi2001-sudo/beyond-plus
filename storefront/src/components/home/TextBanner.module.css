@@ -1,0 +1,36 @@
+/* Zenith text-banner: one long display statement, left aligned, with a small
+   portrait image tucked into the right of the block (measured 182 × 247). */
+
+.section { border-block: 0.1rem solid rgb(var(--c-border)); }
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+  padding-block: 9rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.2rem;
+  /* Held to roughly three lines — a manifesto needs to break, not run. */
+  max-width: 68rem;
+}
+
+.image {
+  position: relative;
+  flex-shrink: 0;
+  width: 18.2rem;
+  aspect-ratio: 182 / 247;
+  overflow: hidden;
+  background-color: rgb(var(--c-bg-2));
+}
+.image img { width: 100%; height: 100%; object-fit: cover; }
+
+@media (max-width: 749px) {
+  .wrapper { flex-direction: column; align-items: flex-start; padding-block: 5.6rem; }
+  .image { width: 13.6rem; align-self: flex-end; margin-top: -4rem; }
+}

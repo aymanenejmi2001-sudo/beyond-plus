@@ -1,0 +1,32 @@
+/* Zenith image-with-text: 50/50, a 1px seam between the copy panel and the
+   image so the two halves read as a single plate. */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.1rem;
+  background-color: rgb(var(--c-border));
+}
+@media (max-width: 749px) { .wrapper { grid-template-columns: minmax(0, 1fr); } }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.4rem;
+  padding: 6.4rem 1.2rem;
+  background-color: rgb(var(--c-bg));
+}
+@media (max-width: 749px) { .content { padding: 4rem 1.2rem; } }
+
+.eyebrow { color: rgb(var(--c-fg-2)); }
+.body { max-width: 48rem; font-size: var(--text-body); line-height: var(--leading-prose); }
+
+.media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: rgb(var(--c-bg-2));
+}
+.media img { width: 100%; height: 100%; object-fit: cover; }

@@ -1,0 +1,7 @@
+catalog/.cache
+.env.local
+.radar
+.next-dev
+.next-check
+.env.vercel
+.env.development.local

@@ -1,0 +1,42 @@
+<section class="image-text">
+  {%- if section.settings.label != blank -%}
+    <div class="section-header container"><h2 class="section-header__title">{{ section.settings.label }}</h2></div>
+  {%- endif -%}
+  <div class="image-text__wrapper{% if section.settings.image_first %} image-text__wrapper--reverse{% endif %}">
+    <div class="image-text__content">
+      {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h3 class="display-3" data-reveal="up"><span>{{ section.settings.heading }}</span></h3>
+      <div class="image-text__body rte">{{ section.settings.text }}</div>
+      {%- if section.settings.link_label != blank -%}{% render 'editorial-link', url: section.settings.link, label: section.settings.link_label %}{%- endif -%}
+    </div>
+    <div class="image-text__media media" data-reveal="frame">
+      {%- render 'media-image', image: section.settings.image, fallback: 'beyond-6.jpg', sizes: '(min-width: 750px) 50vw, 100vw', alt: section.settings.heading -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.image-text__wrapper { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.1rem; background-color: rgb(var(--c-border)); }
+.image-text__wrapper--reverse .image-text__media { order: -1; }
+@media (max-width: 749px) { .image-text__wrapper { grid-template-columns: minmax(0, 1fr); } }
+.image-text__content { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 2.4rem; padding: 6.4rem 1.2rem; background-color: rgb(var(--c-bg)); }
+.image-text__body { max-width: 48rem; }
+.image-text__media { aspect-ratio: 1 / 1; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Image avec texte",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Libellé", "default": "L’esprit Beyond" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "checkbox", "id": "image_first", "label": "Image à gauche", "default": false },
+    { "type": "text", "id": "eyebrow", "label": "Surtitre", "default": "Sneakers. Style. Attitude." },
+    { "type": "text", "id": "heading", "label": "Titre", "default": "La paire change. L’attitude reste." },
+    { "type": "richtext", "id": "text", "label": "Texte", "default": "<p>Un blazer, un jean, une silhouette inattendue. Chez BEYOND PLUS, la sneaker ouvre le jeu. À vous de composer la suite.</p>" },
+    { "type": "text", "id": "link_label", "label": "Lien — texte", "default": "Inside Beyond Plus" },
+    { "type": "url", "id": "link", "label": "Lien" }
+  ],
+  "presets": [ { "name": "Image avec texte" } ]
+}
+{% endschema %}

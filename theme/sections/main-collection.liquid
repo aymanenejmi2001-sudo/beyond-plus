@@ -1,0 +1,29 @@
+{{ 'component-collection.css' | asset_url | stylesheet_tag }}
+<div class="catalog">
+  <header class="catalog__head page-header">
+    <nav class="breadcrumb" aria-label="{{ 'general.breadcrumb' | t }}">
+      <a href="{{ routes.root_url }}">{{ 'general.home' | t }}</a><span class="breadcrumb__sep">/</span><span aria-current="page">{{ collection.title }}</span>
+    </nav>
+    <div class="catalog__row">
+      <h1 class="page-header__title">{{ collection.title }}</h1>
+      {%- if collection.description != blank -%}<div class="catalog__description">{{ collection.description | strip_html | truncate: 180 }}</div>{%- endif -%}
+    </div>
+  </header>
+
+  {%- assign current_sort = collection.sort_by | default: collection.default_sort_by -%}
+  {%- paginate collection.products by section.settings.per_page -%}
+    <collection-grid data-section-id="{{ section.id }}">
+      {% render 'facets', results: collection, sort_by: current_sort, count: collection.products_count %}
+      {% render 'product-grid', products: collection.products, paginate: paginate, section_id: section.id %}
+    </collection-grid>
+  {%- endpaginate -%}
+</div>
+
+{% schema %}
+{
+  "name": "Grille collection",
+  "settings": [
+    { "type": "range", "id": "per_page", "label": "Produits par page", "min": 8, "max": 48, "step": 4, "default": 24 }
+  ]
+}
+{% endschema %}

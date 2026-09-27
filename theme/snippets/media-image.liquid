@@ -1,0 +1,43 @@
+{%- comment -%}
+  Responsive image from an image setting, falling back to a photo bundled in
+  the theme's assets so every section looks finished before the merchant has
+  uploaded anything.
+
+  Params:
+    image     image object (section setting) — optional
+    fallback  asset filename, e.g. 'beyond-5.jpg' — optional
+    sizes     sizes attribute
+    class     class on <img>
+    alt       alt text (defaults to the image's own alt)
+    loading   'lazy' (default) | 'eager'
+    priority  true → fetchpriority="high"
+{%- endcomment -%}
+{%- liquid
+  assign img_loading = loading | default: 'lazy'
+  assign img_sizes = sizes | default: '100vw'
+  if priority
+    assign img_loading = 'eager'
+  endif
+-%}
+{%- if image != blank -%}
+  {%- assign img_alt = alt | default: image.alt | escape -%}
+  {%- if priority -%}
+    {{ image | image_url: width: 3200 | image_tag: widths: '375, 550, 750, 1100, 1500, 1780, 2000, 2400, 3000', sizes: img_sizes, class: class, loading: img_loading, alt: img_alt, fetchpriority: 'high' }}
+  {%- else -%}
+    {{ image | image_url: width: 3200 | image_tag: widths: '375, 550, 750, 1100, 1500, 1780, 2000, 2400, 3000', sizes: img_sizes, class: class, loading: img_loading, alt: img_alt }}
+  {%- endif -%}
+{%- elsif fallback != blank -%}
+  <img
+    src="{{ fallback | asset_img_url: '1500x' }}"
+    srcset="{{ fallback | asset_img_url: '550x' }} 550w, {{ fallback | asset_img_url: '1100x' }} 1100w, {{ fallback | asset_img_url: '1500x' }} 1500w, {{ fallback | asset_img_url: '2400x' }} 2400w"
+    sizes="{{ img_sizes }}"
+    width="{{ width | default: 1500 }}"
+    height="{{ height | default: 1875 }}"
+    {% if class != blank %}class="{{ class }}"{% endif %}
+    alt="{{ alt | escape }}"
+    loading="{{ img_loading }}"
+    {% if priority %}fetchpriority="high"{% endif %}
+  >
+{%- else -%}
+  {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+{%- endif -%}

@@ -1,0 +1,27 @@
+{{ 'component-collection.css' | asset_url | stylesheet_tag }}
+<div class="catalog">
+  <header class="catalog__head page-header">
+    <h1 class="page-header__title">{{ 'sections.search.title' | t }}</h1>
+    <form action="{{ routes.search_url }}" method="get" role="search" class="search-page__form">
+      <input type="search" name="q" value="{{ search.terms | escape }}" class="field__input" placeholder="{{ 'sections.search.placeholder' | t }}" aria-label="{{ 'sections.search.placeholder' | t }}">
+      <input type="hidden" name="type" value="product">
+    </form>
+  </header>
+  {%- if search.performed -%}
+    {%- assign current_sort = search.sort_by | default: search.default_sort_by -%}
+  {%- paginate search.results by 24 -%}
+      <collection-grid data-section-id="{{ section.id }}">
+        {% render 'facets', results: search, sort_by: current_sort, count: search.results_count %}
+        {% render 'product-grid', products: search.results, paginate: paginate, section_id: section.id %}
+      </collection-grid>
+    {%- endpaginate -%}
+  {%- endif -%}
+</div>
+
+{% stylesheet %}
+.search-page__form { max-width: 56rem; margin-bottom: 2.4rem; }
+{% endstylesheet %}
+
+{% schema %}
+{ "name": "Résultats de recherche", "settings": [] }
+{% endschema %}

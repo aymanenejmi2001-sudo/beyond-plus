@@ -1,0 +1,54 @@
+/* Almost Gods puts DETAILS / SHIPPING & RETURNS behind modals; an accordion
+   keeps the same restraint while leaving the copy in the reading flow. */
+
+.accordion { border-top: 0.1rem solid rgb(var(--c-border)); }
+
+.item { border-bottom: 0.1rem solid rgb(var(--c-border)); }
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  width: 100%;
+  padding: 1.6rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+}
+.summary svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: transform var(--dur-default) var(--ease-out-quart);
+}
+.item[data-open="true"] .summary svg { transform: rotate(45deg); }
+
+/* Height is driven by --panel-height, measured from the content by a
+   ResizeObserver — exact, reflow-safe, and animatable on every engine. */
+.panel {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition:
+    height var(--dur-default) var(--ease-in-out-quint),
+    visibility var(--dur-default) var(--ease-in-out-quint);
+}
+.item[data-open="true"] .panel {
+  height: var(--panel-height, auto);
+  visibility: visible;
+}
+
+.content {
+  padding-bottom: 1.6rem;
+  font-size: var(--text-body);
+  line-height: var(--leading-prose);
+  color: rgb(var(--c-fg-2));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel { transition: none; }
+}

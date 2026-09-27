@@ -1,0 +1,15 @@
+<div class="page-narrow not-found">
+  <p class="eyebrow">404</p>
+  <h1 class="display-2">{{ 'sections.not_found.title' | t }}</h1>
+  <p class="prose muted">{{ 'sections.not_found.text' | t }}</p>
+  {%- assign label = 'sections.cart.continue' | t -%}
+  {% render 'editorial-link', url: routes.all_products_collection_url, label: label %}
+</div>
+
+{% stylesheet %}
+.not-found { display: flex; flex-direction: column; align-items: flex-start; gap: 2.4rem; padding-block: 10rem 14rem; }
+{% endstylesheet %}
+
+{% schema %}
+{ "name": "Page 404", "settings": [] }
+{% endschema %}

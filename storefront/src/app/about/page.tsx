@@ -1,0 +1,3 @@
+import Link from "next/link";
+export const metadata = {title:"L\u2019esprit Beyond", description:"BEYOND PLUS, concept store sneakers né au Maroc : une sélection courte de silhouettes low profile, retro runners et icônes, pensée comme une garde-robe.", alternates:{canonical:"/about"}};
+export default function Page(){return <section className="beyond-page"><p className="eyebrow">BEYOND PLUS</p><h1>L’esprit Beyond</h1><h2>La sneaker comme point de départ.</h2><p>BEYOND PLUS explore le lien entre sneakers, style et expression personnelle. Des silhouettes qui jouent avec les codes. Une façon de bouger, de s’habiller et de faire les choses à sa manière.</p><Link href="/lookbook" className="beyond-link">Explorer l’éditorial ↗</Link></section>}

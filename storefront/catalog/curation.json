@@ -1,0 +1,92 @@
+{
+  "_doc": "Curation manuelle du catalogue, tenue par l'agent Curateur. add = produits du fournisseur à ajouter (handle fournisseur, 4 photos minimum). remove = pages produit du site à retirer (slug du site) : l'adresse redirige vers la page du modèle. Toujours indiquer la raison.",
+  "add": [
+    {
+      "handle": "adidas-handball-spezial-silver-green-magic-mauve",
+      "style": "terrace",
+      "collections": [
+        "low-profile"
+      ],
+      "reason": "26/09 : coloris Spezial vert/mauve introuvable chez les concurrents marocains, consigne chef de projet (Spezial liée aux guides)"
+    },
+    {
+      "handle": "adidas-gazelle-green",
+      "style": "terrace",
+      "collections": [
+        "low-profile"
+      ],
+      "reason": "26/09 : Gazelle verte, pointures 36 à 44, renforce la page Gazelle (3 → 4) liée aux guides"
+    },
+    {
+      "handle": "adidas-wmns-falcon",
+      "style": "y2k-runner",
+      "collections": [
+        "retro-runners"
+      ],
+      "reason": "26/09 : silhouette Falcon absente des boutiques marocaines concurrentes, runner Y2K femme"
+    },
+    {
+      "handle": "asics-gel-nimbus-10-1-ocean-haze",
+      "style": "retro-runner",
+      "collections": [
+        "retro-runners",
+        "tech-runners"
+      ],
+      "reason": "26/09 : Gel-Nimbus 10.1, silhouette non vendue au Maroc (concurrents : Nimbus 27 running seulement)"
+    },
+    {
+      "handle": "asics-gel-nyc-ivy-smoke-grey",
+      "style": "retro-runner",
+      "collections": [
+        "retro-runners"
+      ],
+      "reason": "26/09 : Gel-NYC vert Ivy, coloris absent des concurrents marocains (remplace la 2002R Rain Cloud : 1 photo rejetée, 3 restantes)"
+    }
+  ],
+  "remove": [
+    {
+      "slug": "nike-p-6000-platinum-violet",
+      "reason": "26/09 : 1 seule photo (P-6000 passe de 4 à 3)"
+    },
+    {
+      "slug": "new-balance-9060-black-castlerock",
+      "reason": "26/09 : 2 photos et doublon du 9060 Black Castlerock Grey 2025, coloris vendu par itsu.ma (9060 passe de 4 à 3)"
+    },
+    {
+      "slug": "nike-air-humara-lx-jacquemus-brown",
+      "reason": "26/09 : collaboration Jacquemus (interdit), 3 photos"
+    },
+    {
+      "slug": "nike-air-humara-lx-jacquemus-beige",
+      "reason": "26/09 : collaboration Jacquemus (interdit), 3 photos"
+    },
+    {
+      "slug": "vans-knu-skool-imran-potato-black",
+      "reason": "26/09 : collaboration Imran Potato (interdit)"
+    },
+    {
+      "slug": "converse-chuck-taylor-all-star-hi-black",
+      "reason": "27/09 : retiré à la demande d'Aymane"
+    },
+    {
+      "slug": "jordan-air-jordan-4-retro-bred-2019",
+      "reason": "27/09 : retiré à la demande d'Aymane"
+    },
+    {
+      "slug": "jordan-air-jordan-4-retro-metallic-orange",
+      "reason": "27/09 : retiré à la demande d'Aymane"
+    },
+    {
+      "slug": "adidas-campus-00s-grey-white",
+      "reason": "27/09 : retiré à la demande d'Aymane"
+    },
+    {
+      "slug": "adidas-campus-00s-core-black",
+      "reason": "27/09 : retiré à la demande d'Aymane"
+    },
+    {
+      "slug": "converse-chuck-taylor-all-star-platform-montante",
+      "reason": "27/09 : retiré à la demande d'Aymane"
+    }
+  ]
+}

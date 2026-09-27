@@ -1,0 +1,8 @@
+.form { display: grid; gap: .8rem; padding: 1.2rem 0; }
+.label { font-size: 1.3rem; }
+.row { display: flex; gap: .6rem; }
+.row input { flex: 1; min-width: 0; height: 4.4rem; padding: 0 1.2rem; font: inherit; font-size: 1.6rem; border: .1rem solid rgb(var(--c-border)); background: transparent; color: inherit; }
+.row button { height: 4.4rem; padding: 0 1.6rem; font: inherit; font-size: 1.2rem; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; background: rgb(var(--c-fg)); color: rgb(var(--c-bg)); border: 0; cursor: pointer; }
+.small { font-size: 1.1rem; color: rgb(var(--c-fg-2)); }
+.error { font-size: 1.2rem; color: rgb(var(--c-error)); }
+.done { font-size: 1.3rem; padding: 1.2rem 0; }

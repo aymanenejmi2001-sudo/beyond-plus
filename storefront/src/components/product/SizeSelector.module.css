@@ -1,0 +1,110 @@
+/* ============================================================================
+   Variant selectors — measured on Almost Gods:
+     chip        48 × 48 · border 1px #e1e1e1 · fill rgba(225,225,225,.3)
+     selected    black fill, black border, white text
+     unavailable line-through, no pointer
+     row         flex · gap 14px · wrap
+   ========================================================================= */
+
+.group { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.label {
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgb(var(--c-fg-2));
+}
+.labelValue { color: rgb(var(--c-fg)); }
+
+.guide {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  color: rgb(var(--c-fg-2));
+  transition: color var(--dur-default);
+}
+.guide:hover { color: rgb(var(--c-fg)); }
+
+.options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+}
+
+.option { position: relative; display: block; }
+.option input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.8rem;
+  height: 4.8rem;
+  padding-inline: 1rem;
+  cursor: pointer;
+  border: 0.1rem solid rgb(var(--c-interface));
+  background-color: rgba(var(--c-interface), 0.3);
+  font-size: var(--text-body-xs);
+  font-weight: 500;
+  line-height: 1;
+  color: rgb(var(--c-fg-2));
+  transition:
+    background-color var(--dur-short) var(--ease-out-quart),
+    border-color var(--dur-short) var(--ease-out-quart),
+    color var(--dur-short) var(--ease-out-quart);
+}
+.chip:hover { border-color: rgb(var(--c-fg)); color: rgb(var(--c-fg)); }
+
+.option input:checked + .chip {
+  background-color: rgb(var(--c-fg));
+  border-color: rgb(var(--c-fg));
+  color: rgb(var(--c-bg));
+}
+.option input:focus-visible + .chip { outline: 0.1rem solid rgb(var(--c-fg)); outline-offset: 0.3rem; }
+
+/* Unavailable combinations stay visible and struck through, so the shopper can
+   see the size exists and is simply out of stock. */
+.option input:disabled + .chip {
+  cursor: not-allowed;
+  color: rgba(var(--c-fg-2), 0.7);
+  text-decoration: line-through;
+  text-decoration-thickness: 0.1rem;
+}
+.option input:disabled + .chip:hover { border-color: rgb(var(--c-interface)); }
+
+/* Colour variant: the same 48px cell, filled with the swatch. */
+.swatch {
+  position: relative;
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  cursor: pointer;
+  background: var(--swatch);
+  border: 0.1rem solid rgba(var(--c-fg), 0.12);
+  transition: outline-color var(--dur-short);
+}
+.option input:checked + .swatch { outline: 0.1rem solid rgb(var(--c-fg)); outline-offset: 0.3rem; }
+.option input:disabled + .swatch { opacity: 0.35; cursor: not-allowed; }
+.option input:focus-visible + .swatch { outline: 0.1rem solid rgb(var(--c-fg)); outline-offset: 0.3rem; }
+/* Out of stock but selectable: opens "Prévenez-moi". */
+.option input[data-unavailable] + .chip { color: rgba(var(--c-fg-2), 0.7); text-decoration: line-through; text-decoration-thickness: 0.1rem; }

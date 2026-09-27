@@ -1,0 +1,281 @@
+/* ============================================================================
+   BEYOND PLUS — BASE / RESET / PRIMITIVES
+   ========================================================================= */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;              /* 1rem = 10px, matches both references */
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  color: rgb(var(--c-fg));
+  background-color: rgb(var(--c-bg));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body[data-locked="true"] { overflow: hidden; }
+
+img, svg, video { display: block; max-width: 100%; }
+img { height: auto; }
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; }
+
+ul, ol { list-style: none; margin: 0; padding: 0; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: inherit; font-size: inherit; }
+p, figure, blockquote, fieldset { margin: 0; }
+fieldset { padding: 0; border: 0; min-width: 0; }
+legend { padding: 0; }
+
+:focus-visible {
+  outline: 0.1rem solid rgb(var(--c-fg));
+  outline-offset: 0.2rem;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---- Layout primitives ---------------------------------------------------
+   .container   → Zenith: 100% wide, 1.2rem gutters (near-edge-to-edge grid)
+   .page-width  → Almost Gods: 139.6rem max, 2.5/5rem gutters (editorial)   */
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.page-width {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter-editorial);
+}
+@media (min-width: 750px) {
+  .page-width { padding-inline: var(--gutter-editorial-lg); }
+}
+
+/* ---- Type primitives ----------------------------------------------------- */
+
+.display-1, .display-2, .display-3, .display-4 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  line-height: var(--display-leading);
+  letter-spacing: var(--display-tracking);
+  text-transform: var(--display-transform);
+  word-break: break-word;
+}
+.display-1 { font-size: var(--text-display); }
+.display-2 { font-size: var(--text-display-2); }
+.display-3 { font-size: var(--text-display-3); }
+.display-4 { font-size: var(--text-display-4); line-height: 1.2; }
+
+/* Section eyebrow used by every Zenith heading-group ("Trending", "Journal") */
+.section-label {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  font-weight: 500;
+  line-height: 1.285;
+  letter-spacing: normal;
+}
+
+/* Almost Gods .subtitle — 9px uppercase, wide tracking, muted */
+.eyebrow {
+  font-size: var(--text-eyebrow);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgb(var(--c-fg-2));
+}
+
+.label {
+  font-size: var(--text-label);
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.body-sm { font-size: var(--text-body-sm); line-height: 1.25; }
+.body-xs { font-size: var(--text-body-xs); line-height: 1.5; }
+.prose   { font-size: var(--text-body); line-height: var(--leading-prose); }
+
+.muted { color: rgb(var(--c-fg-2)); }
+
+/* ---- Rich text ----------------------------------------------------------- */
+.rte p + p { margin-top: 1.2rem; }
+.rte strong { font-weight: 500; }
+.rte ul { list-style: none; margin: 0.8rem 0 0; padding: 0; }
+.rte li { position: relative; padding-left: 1.4rem; margin-bottom: 0.4rem; }
+.rte li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.85em;
+  width: 0.4rem; height: 0.1rem;
+  background: currentColor;
+}
+.rte a { text-decoration: underline; text-underline-offset: 0.3rem; }
+
+/* ---- Underline-on-hover link (both references use this) ------------------- */
+.link-line {
+  position: relative;
+  display: inline-block;
+}
+.link-line::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -0.1rem;
+  height: 0.1rem;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-default) var(--ease-out-quart);
+}
+.link-line:hover::after,
+.link-line[data-active="true"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.link-line[data-active="true"]::after { transition: none; }
+
+/* ---- Media --------------------------------------------------------------- */
+.media {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background-color: rgb(var(--c-bg-2));
+}
+.media > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================================
+   LE SEUIL — the BEYOND PLUS signature reveal
+   ----------------------------------------------------------------------------
+   One movement, used everywhere: things arrive by being *uncovered from below*,
+   never by fading in. A temple is entered through a threshold, so every element
+   crosses one.
+
+   Two expressions of the same idea, sharing one duration and one easing:
+     [data-reveal]        — the element rises from behind its own bottom edge
+     [data-reveal="frame"] — an image opens upward while it settles from 1.04
+
+   Nothing here is scroll-linked. Each element animates once, on entry, so there
+   is no work on the scroll path at all.
+
+   Every hidden state is gated behind [data-reveal-ready], which the observer
+   sets on <html> only once it is actually running. If the script fails, is
+   blocked, or the browser has no IntersectionObserver, the page renders in its
+   final state instead of staying blank — the animation is an enhancement, never
+   a precondition for seeing the content.
+   ========================================================================= */
+
+[data-reveal] {
+  --seuil-duration: 900ms;
+  --seuil-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Text and blocks: masked by the parent, lifted into place. */
+[data-reveal="up"] > *,
+[data-reveal="up"] {
+  will-change: transform;
+}
+[data-reveal-ready] [data-reveal="up"] {
+  overflow: hidden;
+}
+[data-reveal-ready] [data-reveal="up"] > * {
+  display: block;
+  transform: translate3d(0, 105%, 0);
+  transition: transform var(--seuil-duration) var(--seuil-ease) var(--reveal-delay, 0ms);
+}
+[data-reveal="up"][data-inview="true"] > * {
+  transform: none;
+}
+
+/* Images: the frame opens from the bottom edge while the picture settles. */
+[data-reveal-ready] [data-reveal="frame"] {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path var(--seuil-duration) var(--seuil-ease) var(--reveal-delay, 0ms);
+}
+[data-reveal="frame"][data-inview="true"] {
+  clip-path: inset(0 0 0 0);
+}
+[data-reveal-ready] [data-reveal="frame"] img,
+[data-reveal-ready] [data-reveal="frame"] video {
+  transform: scale(1.04);
+  transition: transform calc(var(--seuil-duration) + 300ms) var(--seuil-ease)
+    var(--reveal-delay, 0ms);
+}
+[data-reveal="frame"][data-inview="true"] img,
+[data-reveal="frame"][data-inview="true"] video {
+  transform: none;
+}
+
+/* Plain blocks that only need to arrive quietly. */
+[data-reveal-ready] [data-reveal="fade"] {
+  opacity: 0;
+  transform: translate3d(0, 1.2rem, 0);
+  transition:
+    opacity var(--seuil-duration) var(--seuil-ease) var(--reveal-delay, 0ms),
+    transform var(--seuil-duration) var(--seuil-ease) var(--reveal-delay, 0ms);
+}
+[data-reveal="fade"][data-inview="true"] { opacity: 1; transform: none; }
+
+/* Legacy value used by the catalogue grid. */
+[data-reveal-ready] [data-reveal=""] {
+  opacity: 0;
+  transform: translate3d(0, 1.2rem, 0);
+  transition:
+    opacity var(--dur-long) var(--ease-out-quart) var(--reveal-delay, 0ms),
+    transform var(--dur-long) var(--ease-out-quart) var(--reveal-delay, 0ms);
+}
+[data-reveal=""][data-inview="true"] { opacity: 1; transform: none; }
+
+/* Mobile: same gesture, shorter, and the counter-scale is dropped — it costs
+   more than it reads on a small screen. */
+@media (max-width: 749px) {
+  [data-reveal] { --seuil-duration: 700ms; }
+  [data-reveal="frame"] img { transform: none; transition: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal],
+  [data-reveal="fade"],
+  [data-reveal=""] { opacity: 1; transform: none; }
+  [data-reveal="up"] > * { transform: none; }
+  [data-reveal="frame"] { clip-path: none; }
+  [data-reveal="frame"] img { transform: none; }
+}
+
+/* ---- Utility ------------------------------------------------------------- */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

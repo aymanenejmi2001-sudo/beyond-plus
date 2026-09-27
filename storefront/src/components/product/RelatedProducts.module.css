@@ -1,0 +1,45 @@
+/* Matches the catalogue rhythm: full-bleed, 4px gutters, same 140% plates. */
+
+.section {
+  --catalog-gutter: 0.4rem;
+  padding-block: 6.4rem 8rem;
+  border-top: 0.1rem solid rgb(var(--c-border));
+}
+
+.inner {
+  width: 100%;
+  max-width: 192rem;
+  margin-inline: auto;
+  padding-inline: var(--catalog-gutter);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin-bottom: 2rem;
+  padding-inline: 1.6rem;
+}
+.title {
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgb(var(--c-fg-2));
+}
+.link {
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  transition: opacity var(--dur-default);
+}
+.link:hover { opacity: var(--hover-opacity); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--catalog-gutter);
+}
+@media (min-width: 750px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }

@@ -1,0 +1,395 @@
+/* ============================================================================
+   ProductCard — two layouts, one component.
+
+   "overlay"   → Zenith homepage grid. Card is the image; a bordered white
+                 information box floats inset 12px at the bottom; sizes and
+                 add-to-cart reveal on hover by animating max-height.
+   "editorial" → Almost Gods catalogue. Image on top (140% box), text beneath,
+                 second image cross-fades with a 1.05 scale on hover.
+   ========================================================================= */
+
+.card {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+/* ---------- OVERLAY (Zenith) ---------------------------------------------- */
+
+.overlay { }
+.overlay::after {
+  content: "";
+  display: block;
+  width: 0;
+  /* 359 × 473 measured → 131.8% */
+  padding-bottom: 131.8%;
+}
+
+.overlay .inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
+
+.overlay .media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(var(--c-media));
+}
+
+.overlay .top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.2rem;
+  width: 100%;
+  pointer-events: none;
+}
+
+.overlay .info {
+  position: relative;
+  z-index: 2;
+  width: calc(100% - 2.4rem);
+  margin: 1.2rem;
+  padding: 1rem 1.2rem;
+  background: rgb(var(--c-bg));
+  border: 0.1rem solid rgb(var(--c-border));
+  border-radius: var(--radius-card-info);
+  overflow: hidden;
+}
+
+.infoTop { display: flex; flex-direction: column; gap: 0.2rem; }
+
+.infoBottom { display: none; outline: none; }
+@media (min-width: 576px) {
+  .infoBottom { display: block; }
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 576px) {
+  .infoBottom {
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height var(--dur-default) var(--ease-in-out-quint);
+  }
+  .card:hover .infoBottom,
+  .card:focus-within .infoBottom {
+    max-height: 12rem;
+    pointer-events: auto;
+  }
+}
+
+/* ---------- EDITORIAL (Almost Gods) --------------------------------------- */
+
+.editorial { flex-direction: column; }
+
+.editorial .media {
+  position: relative;
+  display: block;
+  width: 100%;
+  /* Square plate: side-profile sneakers fill it instead of floating. */
+  padding-bottom: 100%;
+  overflow: hidden;
+  background-color: rgb(var(--c-media));
+}
+
+.editorial .info {
+  padding: 1.2rem 0.8rem 2.4rem;
+  pointer-events: none;
+}
+
+.editorial .infoTop {
+  display: flex;
+  /* Vendor above name, price beneath — 6px apart, matching the reference. */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem 1.2rem;
+  width: 100%;
+}
+
+.vendor {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgb(88, 88, 88);
+}
+
+.editorial .title,
+.editorial .price {
+  font-size: var(--text-card-title-ag);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: var(--tracking-card-ag);
+  color: rgb(var(--c-fg));
+}
+.editorial .price { flex-shrink: 0; }
+.editorial .vendor { margin-bottom: -0.2rem; }
+
+.editorial .options {
+  margin-top: 0.8rem;
+  opacity: 0;
+  transition: opacity var(--dur-default) ease;
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 990px) {
+  .editorial:hover .options,
+  .editorial:focus-within .options { opacity: 1; pointer-events: auto; }
+}
+@media (max-width: 989px) { .editorial .options { display: none; } }
+
+/* ---------- Shared media behaviour ---------------------------------------- */
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6%;
+  mix-blend-mode: multiply;
+}
+
+/* Zenith: hard swap, second image simply becomes visible */
+.overlay .imageSecond { visibility: hidden; }
+@media (hover: hover) and (pointer: fine) {
+  .overlay:hover .imageFirst { visibility: hidden; }
+  .overlay:hover .imageSecond { visibility: visible; }
+}
+
+/* Almost Gods: cross-fade + 1.05 scale, 300ms ease */
+.editorial .image { transition: transform var(--dur-default) ease, opacity var(--dur-default) ease; }
+.editorial .imageSecond { opacity: 0; }
+@media (hover: hover) and (pointer: fine) and (min-width: 990px) {
+  .editorial:hover .imageFirst { opacity: 0; transform: scale(1.05); }
+  .editorial:hover .imageSecond { opacity: 1; transform: scale(1.05); }
+}
+
+/* ---------- Badges -------------------------------------------------------- */
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  flex-grow: 1;
+  padding: 1.2rem;
+  pointer-events: none;
+}
+.editorial .badges { position: absolute; top: 0; left: 0; z-index: 2; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 2rem;
+  padding-inline: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  background-color: rgb(var(--c-fg));
+  color: rgb(var(--c-bg));
+}
+.badgeSoldOut { background-color: rgb(117, 117, 117); }
+
+/* Editorial label — type only, no block. BEYOND PICK takes the brand bordeaux. */
+.label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(var(--c-fg));
+}
+.label[data-pick="true"] { color: rgb(var(--c-bordeaux)); }
+
+.sizeRange {
+  font-size: 1.1rem;
+  color: rgb(88, 88, 88);
+  font-variant-numeric: tabular-nums;
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 990px) { .editorial .sizeRange { display: none; } }
+
+/* ---------- Quick view ---------------------------------------------------- */
+
+.quickview {
+  flex-shrink: 0;
+  margin-inline-start: auto;
+  padding: 1.2rem;
+  pointer-events: auto;
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 576px) {
+  .quickview > * { opacity: 0; transition: opacity var(--dur-default), visibility var(--dur-default); }
+  .card:hover .quickview > *,
+  .card:focus-within .quickview > * { opacity: 1; }
+}
+
+/* Almost Gods quick add: a small icon button pinned bottom-right of the media */
+.quickAdd {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: rgb(var(--c-bg));
+  border: 0.1rem solid rgb(var(--c-border));
+  cursor: pointer;
+  opacity: 0;
+  transform: translate3d(0, 0.4rem, 0);
+  transition:
+    opacity var(--dur-default) var(--ease-out-quart),
+    transform var(--dur-default) var(--ease-out-quart),
+    background-color var(--dur-short),
+    color var(--dur-short);
+}
+.quickAdd:hover { background-color: rgb(var(--c-fg)); color: rgb(var(--c-bg)); }
+@media (hover: hover) and (pointer: fine) and (min-width: 990px) {
+  .editorial:hover .quickAdd,
+  .editorial:focus-within .quickAdd { opacity: 1; transform: none; }
+}
+
+
+/* ---------- Text ---------------------------------------------------------- */
+
+.overlay .vendor {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: rgb(var(--c-fg-2));
+  margin-bottom: 0.2rem;
+}
+
+.title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 0;
+  font-size: var(--text-card-title);
+  font-weight: 500;
+  line-height: var(--leading-card);
+  letter-spacing: var(--tracking-card);
+  pointer-events: auto;
+}
+.title a { transition: opacity var(--dur-default); }
+.title a:hover { opacity: var(--hover-opacity); }
+
+.priceGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.2rem 0.8rem;
+  width: 100%;
+}
+.price { font-size: var(--text-body); }
+.priceCompare {
+  margin-left: 0.8rem;
+  color: rgb(var(--c-fg-2));
+  text-decoration: line-through;
+}
+
+.swatches { display: flex; align-items: center; gap: 0.4rem; flex-shrink: 0; }
+.swatch {
+  width: 0.8rem;
+  height: 0.8rem;
+  border: 0.1rem solid rgba(var(--c-fg), 0.2);
+  background: var(--swatch);
+}
+
+/* ---------- Size chips ---------------------------------------------------- */
+
+.sizes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0.6rem 0 0;
+  pointer-events: auto;
+}
+.size {
+  position: relative;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-body-xs);
+  line-height: var(--leading-body);
+  color: rgb(var(--c-fg));
+}
+.size::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0.1rem;
+  height: 0.1rem;
+  background-color: rgb(var(--c-fg));
+  opacity: 0;
+  transition: opacity var(--dur-default);
+}
+.size:hover::after,
+.size[data-selected="true"]::after { opacity: 1; }
+.size[data-available="false"] { opacity: 0.4; cursor: not-allowed; }
+
+.addWrap { padding: 1.2rem 0 0; width: 100%; pointer-events: auto; }
+
+/* ---------- Link overlay -------------------------------------------------- */
+
+.linkOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+}
+
+/* ---------- Mobile density (Zenith --mobile-2) ---------------------------- */
+@media (max-width: 575px) {
+  .overlay .info { padding: 0.8rem; width: calc(100% - 0.8rem); margin: 0.4rem; }
+  .overlay .title { font-size: var(--text-body-xs); }
+  .overlay .price { font-size: var(--text-body-xs); }
+  .overlay .badges, .overlay .quickview { padding: 0.8rem; }
+}
+
+/* ---------- Wishlist + quick add (editorial cards) ------------------------ */
+.wish {
+  position: absolute; top: 1rem; right: 1rem; z-index: 3;
+  display: grid; place-items: center; width: 3.2rem; height: 3.2rem;
+  background: rgba(var(--c-bg), .85); border: 0; border-radius: 50%; color: rgb(var(--c-fg)); cursor: pointer;
+}
+.wish[aria-pressed="true"] { color: rgb(var(--c-bordeaux)); }
+@media (hover: hover) and (pointer: fine) {
+  .wish:not([aria-pressed="true"]) { opacity: 0; transition: opacity .2s; }
+  .editorial:hover .wish, .editorial:focus-within .wish { opacity: 1; }
+}
+@media (max-width: 989px) {
+  .quickAdd { opacity: 1; transform: none; width: 3.2rem; height: 3.2rem; right: .8rem; bottom: .8rem; }
+}
+.quickAdd[data-open] { opacity: 1; transform: none; background-color: rgb(var(--c-fg)); color: rgb(var(--c-bg)); }
+.quickSizes {
+  position: absolute; left: 0; right: 0; z-index: 4;
+  bottom: 0;
+  padding: 1rem; background: rgba(var(--c-bg), .96); border-top: .1rem solid rgb(var(--c-border));
+}
+.quickLabel { display: block; font-size: 1rem; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; margin-bottom: .6rem; }
+.quickGrid { display: flex; flex-wrap: wrap; gap: .4rem; }
+.quickGrid button {
+  min-width: 3.6rem; height: 3.2rem; padding: 0 .6rem; font: inherit; font-size: 1.2rem;
+  background: rgb(var(--c-bg)); border: .1rem solid rgb(var(--c-border)); color: inherit; cursor: pointer;
+}
+.quickGrid button:hover:not(:disabled) { background: rgb(var(--c-fg)); color: rgb(var(--c-bg)); }
+.quickGrid button:disabled { opacity: .35; text-decoration: line-through; cursor: not-allowed; }
+
+.mediaWrap { position: relative; }
+.quickSizes { padding-right: 5rem; }

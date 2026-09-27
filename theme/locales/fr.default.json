@@ -1,0 +1,132 @@
+{
+  "accessibility": { "skip_to_content": "Aller au contenu" },
+  "general": {
+    "breadcrumb": "Fil d'ariane",
+    "close": "Fermer",
+    "home": "Accueil",
+    "pagination": { "page": "Page {{ number }}" },
+    "password": { "enter": "Accès réservé — entrer le mot de passe", "submit": "Entrer" }
+  },
+  "gift_card": { "title": "Carte cadeau", "expired": "Cette carte cadeau n'est plus valable." },
+  "products": {
+    "product": {
+      "add_to_cart": "Ajouter au panier",
+      "add_to_cart_named": "Ajouter {{ title }} au panier",
+      "quick_add": "Ajouter",
+      "sold_out": "Épuisé",
+      "unavailable": "Indisponible",
+      "on_sale": "Promo",
+      "regular_price": "Prix habituel",
+      "in_stock": "En stock",
+      "low_stock": {
+        "one": "Plus qu'une pièce en stock",
+        "other": "Plus que {{ count }} pièces en stock"
+      },
+      "brand": "Marque",
+      "category": "Catégorie",
+      "sku": "Référence",
+      "composition_fallback": "Composition détaillée disponible sur demande auprès du service client."
+    }
+  },
+  "sections": {
+    "announcement": { "label": "Annonces" },
+    "header": {
+      "menu": "Ouvrir le menu",
+      "main_nav": "Navigation principale",
+      "dark_mode": "Mode sombre",
+      "search": "Recherche",
+      "account": "Compte",
+      "cart": "Panier",
+      "cart_count": { "one": "Panier, {{ count }} article", "other": "Panier, {{ count }} articles" },
+      "view_all": "Tout voir"
+    },
+    "footer": { "rights": "Tous droits réservés." },
+    "newsletter": {
+      "email": "Adresse e-mail",
+      "submit": "Envoyer",
+      "success": "Merci — vous recevrez notre prochaine actualité."
+    },
+    "cart": {
+      "title": "Panier",
+      "empty": "Votre panier est vide.",
+      "continue": "Découvrir la collection",
+      "subtotal": "Sous-total",
+      "checkout": "Passer commande",
+      "remove": "Retirer",
+      "increase": "Augmenter la quantité",
+      "decrease": "Diminuer la quantité",
+      "error": "Impossible d'ajouter cet article au panier."
+    },
+    "search": {
+      "title": "Recherche",
+      "placeholder": "Rechercher",
+      "hint": "La recherche sera disponible avec la première sélection sneakers.",
+      "view_all": "Voir tous les résultats",
+      "no_results": "Aucun résultat pour « {{ terms }} »."
+    },
+    "featured": { "view_all": "Voir la collection" },
+    "collection": {
+      "count": { "one": "{{ count }} pièce", "other": "{{ count }} pièces" },
+      "clear": "Effacer ({{ count }})",
+      "sort": "Trier",
+      "grid_large": "Grande grille",
+      "grid_dense": "Grille dense",
+      "empty": "Aucune pièce ne correspond à cette sélection.",
+      "load_more": "Voir plus"
+    },
+    "collections": { "title": "Collections" },
+    "contact": {
+      "name": "Nom",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "success": "Merci, votre message a bien été reçu. Notre équipe reviendra vers vous."
+    },
+    "not_found": {
+      "title": "Page introuvable",
+      "text": "Cette page n'existe pas ou a été déplacée."
+    }
+  },
+  "customer": {
+    "fields": {
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "password_confirm": "Confirmer le mot de passe",
+      "first_name": "Prénom",
+      "last_name": "Nom",
+      "address": "Adresse",
+      "city": "Ville",
+      "zip": "Code postal",
+      "country": "Pays",
+      "phone": "Téléphone"
+    },
+    "login": { "title": "Se connecter", "submit": "Se connecter", "forgot": "Mot de passe oublié ?" },
+    "register": {
+      "title": "Créer un compte",
+      "pitch": "Suivez vos commandes et enregistrez vos adresses.",
+      "submit": "Créer un compte"
+    },
+    "recover": {
+      "title": "Réinitialiser le mot de passe",
+      "submit": "Envoyer le lien",
+      "success": "Un e-mail vous a été envoyé pour réinitialiser votre mot de passe."
+    },
+    "reset": { "title": "Nouveau mot de passe" },
+    "account": {
+      "greeting": "Bonjour {{ name }}",
+      "logout": "Se déconnecter",
+      "orders": "Commandes",
+      "no_orders": "Vous n'avez pas encore passé de commande.",
+      "address": "Adresse par défaut",
+      "addresses": "Adresses",
+      "manage_addresses": "Gérer les adresses",
+      "add_address": "Ajouter une adresse",
+      "set_default": "Définir comme adresse par défaut",
+      "delete": "Supprimer",
+      "save": "Enregistrer",
+      "back": "Retour au compte"
+    },
+    "order": { "total": "Total", "shipping": "Livraison", "billing": "Facturation" }
+  }
+}

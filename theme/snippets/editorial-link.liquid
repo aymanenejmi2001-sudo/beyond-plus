@@ -1,0 +1,23 @@
+{%- comment -%}
+  The house CTA: a word, an arrow, a rule that draws itself.
+  Usage: {% render 'editorial-link', url: '/collections/all', label: 'Explorer', on_image: true, tabindex: -1 %}
+  Pass `tag: 'span'` when the link sits inside a larger clickable card.
+{%- endcomment -%}
+{%- liquid
+  assign el = tag | default: 'a'
+  assign classes = 'editorial-link'
+  if on_image
+    assign classes = classes | append: ' editorial-link--on-image'
+  endif
+-%}
+{%- if el == 'a' -%}
+  <a href="{{ url | default: '#' }}" class="{{ classes }}"{% if tabindex != blank %} tabindex="{{ tabindex }}"{% endif %}>
+    {{- label -}}
+    {%- render 'icon', name: 'arrow-long' -%}
+  </a>
+{%- else -%}
+  <span class="{{ classes }}">
+    {{- label -}}
+    {%- render 'icon', name: 'arrow-long' -%}
+  </span>
+{%- endif -%}

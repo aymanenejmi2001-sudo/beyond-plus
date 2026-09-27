@@ -1,0 +1,93 @@
+/* ============================================================================
+   Catalogue grid — image-first, measured on Almost Gods:
+     container   full-bleed, max 1920, padding-inline 4px
+     grid        4 columns × 355px at 1440, gap 4px
+     dense       6 columns
+     card media  140% box
+   The 4px gutter is what makes the page read as a wall of imagery rather
+   than a product listing. It is the single most defining number here.
+   ========================================================================= */
+
+.page {
+  --catalog-gutter: 0.4rem;
+  width: 100%;
+  max-width: 192rem;
+  margin-inline: auto;
+  padding-inline: var(--catalog-gutter);
+}
+@media (max-width: 749px) { .page { --catalog-gutter: 0.4rem; } }
+
+.wrapper { padding-bottom: 8rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--catalog-gutter);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 750px)  { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 990px)  { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1600px) { .grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+
+/* Density switch — one step tighter at every breakpoint above tablet. */
+.grid[data-dense="true"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 750px)  { .grid[data-dense="true"] { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 990px)  { .grid[data-dense="true"] { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+@media (min-width: 1600px) { .grid[data-dense="true"] { grid-template-columns: repeat(7, minmax(0, 1fr)); } }
+
+/* An editorial plate breaking the rhythm — full-bleed within the grid. */
+.plate {
+  position: relative;
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 6;
+  overflow: hidden;
+  background-color: rgb(var(--c-night));
+}
+/* Guarantees the white title reads whatever the photo does. */
+.plate::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(var(--c-night), .78), rgba(var(--c-night), .2) 55%, transparent);
+  pointer-events: none;
+}
+@media (max-width: 749px) { .plate { aspect-ratio: 4 / 3; } }
+.plate img { width: 100%; height: 100%; object-fit: cover; }
+.plateBody {
+  position: absolute;
+  inset: auto auto 2.4rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 749px) { .plateBody { inset: auto auto 1.6rem 1.6rem; } }
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding-block: 10rem 14rem;
+  text-align: center;
+}
+
+.more { display: flex; justify-content: center; padding-top: 6.4rem; }
+
+/* Cards fade up as their row enters. The stagger is capped at one row so no
+   card ever appears to be waiting its turn. */
+.item { opacity: 0; transform: translate3d(0, 1.2rem, 0); }
+.item[data-inview="true"] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--dur-long) var(--ease-out-quart) var(--reveal-delay, 0ms),
+    transform var(--dur-long) var(--ease-out-quart) var(--reveal-delay, 0ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .item { opacity: 1; transform: none; }
+}

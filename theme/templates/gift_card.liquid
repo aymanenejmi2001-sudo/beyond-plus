@@ -1,0 +1,22 @@
+{%- layout none -%}
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ 'gift_card.title' | t }} — {{ shop.name }}</title>
+    {% render 'theme-styles' %}
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ content_for_header }}
+  </head>
+  <body>
+    <main class="page-narrow" style="padding-block: 8rem; text-align: center; display: grid; gap: 2.4rem; justify-items: center;">
+      <p class="label">{{ shop.name }}</p>
+      <h1 class="display-3">{{ 'gift_card.title' | t }}</h1>
+      <p class="display-2">{{ gift_card.balance | money }}</p>
+      {%- if gift_card.expired or gift_card.enabled == false -%}<p class="muted">{{ 'gift_card.expired' | t }}</p>{%- endif -%}
+      <p class="label" style="letter-spacing: 0.2em;">{{ gift_card.code | format_code }}</p>
+      <a href="{{ shop.url }}" class="button button--primary">{% assign l = 'sections.cart.continue' | t %}{% render 'button-label', text: l %}</a>
+    </main>
+  </body>
+</html>

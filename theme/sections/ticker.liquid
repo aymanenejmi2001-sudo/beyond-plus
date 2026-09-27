@@ -1,0 +1,36 @@
+<section class="ticker">
+  <div class="ticker__marquee">
+    <div class="ticker__track" style="--marquee-duration: {{ section.settings.duration }}s;">
+      {%- for pass in (1..2) -%}
+        <div class="ticker__line"{% if pass == 2 %} aria-hidden="true"{% endif %}>
+          {%- for i in (1..4) -%}<span class="ticker__word">{{ section.settings.word }}</span>{%- endfor -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+  {%- if section.settings.text != blank -%}<p class="ticker__text container">{{ section.settings.text }}</p>{%- endif -%}
+</section>
+
+{% stylesheet %}
+.ticker { padding-block: 4.8rem 4rem; background-color: rgb(var(--c-bg-2)); overflow: hidden; }
+.ticker__marquee { overflow: hidden; }
+.ticker__track { display: flex; width: max-content; animation: ticker-marquee var(--marquee-duration, 38s) linear infinite; }
+.ticker__marquee:hover .ticker__track { animation-play-state: paused; }
+.ticker__line { display: flex; flex-shrink: 0; }
+.ticker__word { display: block; padding-right: 6rem; font-family: var(--font-display); font-size: clamp(6rem, 11vw, 15rem); font-weight: 500; line-height: 0.9; letter-spacing: var(--display-tracking); text-transform: uppercase; white-space: nowrap; }
+.ticker__text { max-width: 49.8rem; margin: 3.2rem auto 0; text-align: center; font-size: var(--text-body-sm); line-height: var(--leading-prose); color: rgb(var(--c-fg-2)); }
+@keyframes ticker-marquee { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+@media (prefers-reduced-motion: reduce) { .ticker__track { animation: none; } }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Défilé du nom",
+  "settings": [
+    { "type": "text", "id": "word", "label": "Mot", "default": "Beyond Plus" },
+    { "type": "range", "id": "duration", "label": "Durée", "min": 10, "max": 90, "step": 2, "unit": "s", "default": 38 },
+    { "type": "textarea", "id": "text", "label": "Texte", "default": "BEYOND PLUS. La culture sneaker, à votre façon." }
+  ],
+  "presets": [ { "name": "Défilé du nom" } ]
+}
+{% endschema %}

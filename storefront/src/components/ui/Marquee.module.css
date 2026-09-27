@@ -1,0 +1,22 @@
+/* Seamless marquee: the track holds two identical lines and translates -50%. */
+
+.marquee { position: relative; overflow: hidden; }
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee var(--marquee-duration, 40s) linear infinite;
+}
+.marquee[data-pause="true"]:hover .track { animation-play-state: paused; }
+.marquee[data-reverse="true"] .track { animation-direction: reverse; }
+
+.line { display: flex; flex-shrink: 0; }
+
+@keyframes marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none; }
+}

@@ -1,0 +1,12 @@
+.section { padding: 4.8rem var(--page-gutter, 1.6rem); border-top: .1rem solid rgb(var(--c-border)); }
+.head { display: flex; justify-content: space-between; align-items: baseline; gap: 1.6rem; margin-bottom: 2.4rem; }
+.title { font-size: var(--text-h4, 2rem); }
+.score { font-size: 1.3rem; }
+.photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: .8rem; margin-bottom: 3.2rem; }
+.photo { margin: 0; }
+.photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.photo figcaption { font-size: 1.1rem; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; padding-top: .6rem; }
+.list { display: grid; gap: 2.4rem; list-style: none; padding: 0; max-width: 72rem; }
+.stars { letter-spacing: .2em; font-size: 1.2rem; }
+.text { font-size: 1.5rem; line-height: 1.6; margin: .6rem 0; }
+.meta { font-size: 1.2rem; color: rgb(var(--c-fg-2)); }

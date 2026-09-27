@@ -1,0 +1,39 @@
+{%- comment -%} Store address / hours / contact, or the brand list — one column per block. {%- endcomment -%}
+<div class="page-narrow">
+  <div class="info-columns" style="--cols: {{ section.settings.columns }};">
+    {%- for block in section.blocks -%}
+      <div class="info-columns__item" {{ block.shopify_attributes }}>
+        <p class="info-columns__title label">
+          {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}" class="link-underline">{{ block.settings.title }}</a>{%- else -%}{{ block.settings.title }}{%- endif -%}
+        </p>
+        <div class="info-columns__text rte">{{ block.settings.text }}</div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% stylesheet %}
+.info-columns { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.4rem; padding-block: 2.4rem 8rem; border-top: 0.1rem solid rgb(var(--c-border)); }
+@media (min-width: 750px) { .info-columns { grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); } }
+.info-columns__title { margin-bottom: 0.8rem; }
+.info-columns__text { font-size: var(--text-body-sm); color: rgb(var(--c-fg-2)); }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Colonnes d'informations",
+  "settings": [ { "type": "range", "id": "columns", "label": "Colonnes (ordinateur)", "min": 1, "max": 4, "step": 1, "default": 3 } ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Colonne",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Titre", "default": "Horaires" },
+        { "type": "richtext", "id": "text", "label": "Texte", "default": "<p>Lundi — Samedi : 10h00 — 20h00</p>" },
+        { "type": "url", "id": "link", "label": "Lien du titre" }
+      ]
+    }
+  ],
+  "presets": [ { "name": "Colonnes d'informations", "blocks": [ { "type": "column" } ] } ]
+}
+{% endschema %}

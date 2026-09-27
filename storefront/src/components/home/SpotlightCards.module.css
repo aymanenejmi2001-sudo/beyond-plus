@@ -1,0 +1,71 @@
+/* Zenith spotlight-cards: two edge-to-edge square blocks (720 × 720 at 1440),
+   image behind, display heading + CTA anchored top-left. */
+
+.grid {
+  display: grid;
+  grid-template-columns: var(--spotlight-columns, repeat(2, minmax(0, 1fr)));
+}
+@media (max-width: 749px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* aspect-ratio is set inline from each photo's real dimensions. width:100% is
+   required: grid items with an aspect-ratio don't stretch to their column. */
+.item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(var(--c-bg-2));
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-image);
+}
+.item:hover .image,
+.item:focus-within .image { transform: scale(1.02); }
+
+.item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 55%);
+  pointer-events: none;
+}
+
+.info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  align-self: flex-start;
+  padding: 2.4rem 2rem;
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+}
+
+/* On phones the plates stack tight under the header, so the title is dropped
+   clear of the band in case the header comes back on an upward scroll. */
+@media (max-width: 749px) {
+  .info { padding: 7.2rem 2rem 2.4rem; gap: 1.6rem; }
+}
+
+/* The CTA is held back until the plate is addressed, so at rest the image
+   carries nothing but its name. */
+.cta {
+  opacity: 1;
+  transform: none;
+}
+
+.link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+.link:focus-visible { outline-offset: -0.4rem; }

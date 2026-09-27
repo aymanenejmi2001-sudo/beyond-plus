@@ -1,0 +1,64 @@
+{%- comment -%}
+  Two tiles at the photos' real proportions: each column is sized by its own
+  image ratio, so both share one height and together span the full width —
+  no crop, no gap.
+{%- endcomment -%}
+{%- capture columns -%}
+  {%- for block in section.blocks -%}
+    {%- if block.settings.image != blank -%}{%- assign r = block.settings.image.aspect_ratio -%}{%- else -%}{%- assign r = block.settings.fallback_ratio -%}{%- endif -%}
+    minmax(0, {{ r }}fr){% unless forloop.last %} {% endunless %}
+  {%- endfor -%}
+{%- endcapture -%}
+<section class="spotlight" style="--spotlight-columns: {{ columns | strip }};" aria-label="{{ section.settings.label | escape }}">
+  {%- for block in section.blocks -%}
+    {%- if block.settings.image != blank -%}{%- assign r = block.settings.image.aspect_ratio -%}{%- else -%}{%- assign r = block.settings.fallback_ratio -%}{%- endif -%}
+    <article class="spotlight__item" data-reveal="fade" style="aspect-ratio: {{ r }};" {{ block.shopify_attributes }}>
+      {%- assign fb = 'beyond-2.jpg' -%}
+      {%- if forloop.index == 2 -%}{%- assign fb = 'beyond-3.jpg' -%}{%- endif -%}
+      {%- render 'media-image', image: block.settings.image, fallback: fb, class: 'spotlight__image', sizes: '(min-width: 750px) 50vw, 100vw' -%}
+      <div class="spotlight__info">
+        <h2 class="display-2">{{ block.settings.title }}</h2>
+        {%- if block.settings.link_label != blank -%}{% render 'editorial-link', tag: 'span', label: block.settings.link_label, on_image: true %}{%- endif -%}
+      </div>
+      <a href="{{ block.settings.link | default: routes.all_products_collection_url }}" class="spotlight__link" aria-label="{{ block.settings.title | escape }}"></a>
+    </article>
+  {%- endfor -%}
+</section>
+
+{% stylesheet %}
+.spotlight { display: grid; grid-template-columns: var(--spotlight-columns, repeat(2, minmax(0, 1fr))); }
+@media (max-width: 749px) { .spotlight { grid-template-columns: minmax(0, 1fr); } }
+.spotlight__item { position: relative; display: flex; width: 100%; overflow: hidden; background-color: rgb(var(--c-bg-2)); }
+.spotlight__image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: var(--transition-image); }
+.spotlight__item:hover .spotlight__image { transform: scale(1.02); }
+.spotlight__item::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 55%); pointer-events: none; }
+.spotlight__info { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 1.2rem; align-self: flex-start; padding: 2.4rem 2rem; color: rgb(255, 255, 255); pointer-events: none; }
+@media (max-width: 749px) { .spotlight__info { padding: 7.2rem 2rem 2.4rem; gap: 1.6rem; } }
+.spotlight__link { position: absolute; inset: 0; z-index: 2; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Deux portes",
+  "max_blocks": 2,
+  "settings": [
+    { "type": "text", "id": "label", "label": "Libellé accessible", "default": "Univers" }
+  ],
+  "blocks": [
+    {
+      "type": "tile",
+      "name": "Tuile",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image", "info": "Affichée entière, à ses proportions réelles." },
+        { "type": "text", "id": "title", "label": "Titre", "default": "New In" },
+        { "type": "text", "id": "link_label", "label": "Lien — texte", "default": "Explorer" },
+        { "type": "url", "id": "link", "label": "Lien" },
+        { "type": "number", "id": "fallback_ratio", "label": "Proportion sans image", "default": 0.8 }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Deux portes", "blocks": [ { "type": "tile", "settings": { "title": "New In" } }, { "type": "tile", "settings": { "title": "Nos marques", "fallback_ratio": 0.744 } } ] }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,188 @@
+{%- comment -%}
+  Product card — two layouts.
+    'overlay'   homepage grid: the card is the image, a white info box floats
+                at the bottom; sizes + add to cart reveal on hover.
+    'editorial' catalogue: image on top (140% box), text beneath, second image
+                cross-fades on hover, small quick-add button.
+
+  Params: product, layout ('overlay' | 'editorial'), section_id, sizes, priority (bool)
+{%- endcomment -%}
+{%- liquid
+  assign card_layout = layout | default: 'editorial'
+  assign img_sizes = sizes | default: '(min-width: 990px) 25vw, (min-width: 750px) 33vw, 50vw'
+  assign img_loading = 'lazy'
+  if priority
+    assign img_loading = 'eager'
+  endif
+
+  assign size_names = settings.option_name_size | downcase | split: ','
+  assign color_names = settings.option_name_color | downcase | split: ','
+  assign size_option = nil
+  assign color_option = nil
+  for option in product.options_with_values
+    assign option_name = option.name | downcase | strip
+    for n in size_names
+      assign n_clean = n | strip
+      if option_name == n_clean
+        assign size_option = option
+      endif
+    endfor
+    for n in color_names
+      assign n_clean = n | strip
+      if option_name == n_clean
+        assign color_option = option
+      endif
+    endfor
+  endfor
+
+  assign variant = product.selected_or_first_available_variant
+  assign first_media = product.featured_media
+  assign second_media = nil
+  if settings.card_show_second_image and product.media.size > 1
+    assign second_media = product.media[1]
+  endif
+
+  assign on_sale = false
+  if product.compare_at_price > product.price
+    assign on_sale = true
+  endif
+
+  assign form_id = 'CardForm-' | append: section_id | append: '-' | append: product.id
+  assign image_alt = product.title | escape
+  if first_media.alt != blank
+    assign image_alt = first_media.alt | escape
+  endif
+  assign label_quick_add = 'products.product.quick_add' | t
+  assign label_add = 'products.product.add_to_cart' | t
+  assign label_sold_out = 'products.product.sold_out' | t
+-%}
+
+{%- capture badges -%}
+  {%- unless product.available -%}
+    <span class="badge badge--sold-out">{{ 'products.product.sold_out' | t }}</span>
+  {%- else -%}
+    {%- if on_sale -%}<span class="badge">{{ 'products.product.on_sale' | t }}</span>{%- endif -%}
+  {%- endunless -%}
+{%- endcapture -%}
+
+{%- capture images -%}
+  {%- if first_media -%}
+    {{ first_media.preview_image | image_url: width: 1400 | image_tag: widths: '240, 360, 480, 640, 800, 1000, 1200, 1400', sizes: img_sizes, class: 'card__image card__image--first', loading: img_loading, alt: image_alt }}
+  {%- else -%}
+    {{ 'product-apparel-1' | placeholder_svg_tag: 'card__image placeholder-svg' }}
+  {%- endif -%}
+  {%- if second_media -%}
+    {{ second_media.preview_image | image_url: width: 1400 | image_tag: widths: '240, 360, 480, 640, 800, 1000, 1200, 1400', sizes: img_sizes, class: 'card__image card__image--second', loading: 'lazy', alt: '' }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- capture swatches -%}
+  {%- if settings.card_show_swatches and color_option -%}
+    <span class="card__swatches">
+      {%- for value in color_option.values limit: 4 -%}
+        {%- capture swatch %}{% render 'swatch-color', value: value %}{% endcapture -%}
+        <span class="swatch-dot" title="{{ value | escape }}" style="--swatch: {{ swatch | strip }};"></span>
+      {%- endfor -%}
+    </span>
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- if card_layout == 'overlay' -%}
+  <article class="card card--overlay">
+    <div class="card__inner">
+      <div class="card__media">{{ images }}</div>
+
+      <div class="card__top">
+        <div class="card__badges">{{ badges }}</div>
+        {%- if product.available -%}
+          <div class="card__quickview">
+            <button type="submit" form="{{ form_id }}" class="button button--primary" name="add">
+              {%- render 'button-label', text: label_quick_add -%}
+            </button>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="card__info">
+        <div class="card__info-top">
+          {%- if settings.card_show_vendor -%}<span class="card__vendor">{{ product.vendor }}</span>{%- endif -%}
+          <h3 class="card__title"><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+          <div class="card__price-group">
+            {% render 'price', product: product %}
+            {{ swatches }}
+          </div>
+        </div>
+
+        <product-form class="card__info-bottom">
+          {%- form 'product', product, id: form_id, class: 'card__form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+            {%- if size_option -%}
+              <div class="card__sizes">
+                {%- for value in size_option.values -%}
+                  {%- if value.variant -%}
+                    <label class="card__size">
+                      <input
+                        type="radio"
+                        class="visually-hidden"
+                        name="id"
+                        value="{{ value.variant.id }}"
+                        {% if value.variant.id == variant.id %}checked{% endif %}
+                        {% unless value.variant.available %}disabled{% endunless %}
+                      >
+                      <span data-available="{{ value.variant.available }}">{{ value }}</span>
+                    </label>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            {%- else -%}
+              <input type="hidden" name="id" value="{{ variant.id }}">
+            {%- endif -%}
+            <div class="card__add">
+              <button type="submit" name="add" class="button button--primary button--block" {% unless product.available %}disabled{% endunless %}>
+                {%- if product.available -%}
+                  {%- render 'button-label', text: label_add -%}
+                {%- else -%}
+                  {%- render 'button-label', text: label_sold_out -%}
+                {%- endif -%}
+              </button>
+            </div>
+          {%- endform -%}
+        </product-form>
+      </div>
+    </div>
+    <a href="{{ product.url }}" class="card__link-overlay" aria-label="{{ product.title | escape }}" tabindex="-1"></a>
+  </article>
+{%- else -%}
+  <article class="card card--editorial">
+    <a href="{{ product.url }}" class="card__media" aria-label="{{ product.title | escape }}">{{ images }}</a>
+
+    {%- if badges != blank -%}<div class="card__badges">{{ badges }}</div>{%- endif -%}
+
+    {%- if product.available -%}
+      <product-form class="card__quick-add-wrap">
+        {%- form 'product', product, id: form_id, novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+          <input type="hidden" name="id" value="{{ variant.id }}">
+          <button type="submit" name="add" class="card__quick-add" aria-label="{{ 'products.product.add_to_cart_named' | t: title: product.title | escape }}">
+            {%- render 'icon', name: 'cart', size: 15 -%}
+          </button>
+        {%- endform -%}
+      </product-form>
+    {%- endif -%}
+
+    <div class="card__info">
+      <div class="card__info-top">
+        {%- if settings.card_show_vendor -%}<span class="card__vendor">{{ product.vendor }}</span>{%- endif -%}
+        <h3 class="card__title"><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+        {% render 'price', product: product %}
+      </div>
+      {%- if size_option -%}
+        <div class="card__options">
+          <div class="card__sizes">
+            {%- for value in size_option.values -%}
+              <span class="card__size-label" data-available="{{ value.available }}">{{ value }}</span>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </article>
+{%- endif -%}

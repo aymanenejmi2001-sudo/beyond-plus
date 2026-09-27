@@ -1,0 +1,109 @@
+/* Zenith mega menu: a panel pinned to the underside of the header box, full
+   container width, white, 1px top border, fading in over 300ms.
+   It is positioned against the sticky header wrapper — 1rem of wrapper padding
+   plus the 4.8rem header box — so it tracks the header once the announcement
+   bar has scrolled away, exactly like the reference. */
+
+.panel {
+  position: absolute;
+  top: 5.8rem;
+  left: 1.2rem;
+  right: 1.2rem;
+  z-index: calc(var(--z-header) - 1);
+  background-color: rgb(var(--c-bg));
+  border: 0.1rem solid rgb(var(--c-border));
+  border-top: 0.1rem solid rgb(var(--c-border));
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  pointer-events: none;
+}
+.panel[data-open="true"] {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 34rem);
+  gap: 3.2rem;
+  padding: 2.4rem;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2.4rem 1.6rem;
+  align-content: start;
+}
+
+.columnTitle {
+  margin-bottom: 1.2rem;
+  font-size: var(--text-label);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgb(var(--c-fg-2));
+}
+
+.columnList { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.columnLink {
+  display: inline-block;
+  font-size: var(--text-body);
+  line-height: 1.4;
+  transition: opacity var(--dur-default);
+}
+.columnLink:hover { opacity: var(--hover-opacity); }
+
+/* Editorial cards on the right */
+.cards { display: grid; grid-auto-flow: column; gap: 1.2rem; }
+
+.card { display: block; }
+.cardMedia {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background-color: rgb(var(--c-bg-2));
+}
+.cardMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-image);
+}
+.card:hover .cardMedia img { transform: scale(1.03); }
+
+.cardTitle {
+  margin-top: 0.8rem;
+  font-size: var(--text-label);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Compact dropdown (Zenith "Explore" — 200 × 140) */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 20rem;
+  padding: 1.2rem 1.6rem;
+  background-color: rgb(var(--c-bg));
+  border: 0.1rem solid rgb(var(--c-border));
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.dropdown[data-open="true"] { opacity: 1; visibility: visible; }
+
+/* Dimming scrim behind the open panel */
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-header) - 2);
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.scrim[data-open="true"] { opacity: 1; visibility: visible; }

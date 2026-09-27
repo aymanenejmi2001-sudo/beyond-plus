@@ -1,0 +1,17 @@
+<div class="page-narrow">
+  <header class="page-header">
+    <nav class="breadcrumb" aria-label="{{ 'general.breadcrumb' | t }}"><a href="{{ routes.root_url }}">{{ 'general.home' | t }}</a><span class="breadcrumb__sep">/</span><span aria-current="page">{{ page.title }}</span></nav>
+    <h1 class="page-header__title">{{ page.title }}</h1>
+  </header>
+  {%- if page.content != blank -%}
+    <div class="page-content rte">{{ page.content }}</div>
+  {%- endif -%}
+</div>
+
+{% stylesheet %}
+.page-content { max-width: 62rem; padding-bottom: 4rem; color: rgb(var(--c-fg-2)); }
+{% endstylesheet %}
+
+{% schema %}
+{ "name": "Contenu de la page", "settings": [] }
+{% endschema %}

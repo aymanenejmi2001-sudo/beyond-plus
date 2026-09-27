@@ -1,0 +1,86 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor"
+        },
+        "title": {
+          "type": "title"
+        },
+        "price": {
+          "type": "price"
+        },
+        "description": {
+          "type": "description"
+        },
+        "fit": {
+          "type": "fit"
+        },
+        "variants": {
+          "type": "variant_picker"
+        },
+        "buy": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "details": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Détails",
+            "source": "details"
+          }
+        },
+        "composition": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Composition & entretien",
+            "source": "composition",
+            "content": "<p>Suivre les indications d’entretien du fabricant.</p>"
+          }
+        },
+        "shipping": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Livraison & retours",
+            "source": "custom",
+            "content": "<p>Les conditions seront précisées à l’ouverture des commandes.</p>"
+          }
+        },
+        "help": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Assistance",
+            "source": "custom",
+            "content": "<p>Les coordonnées du service client seront disponibles au lancement.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "description",
+        "fit",
+        "variants",
+        "buy",
+        "details",
+        "composition",
+        "shipping",
+        "help"
+      ],
+      "settings": {}
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "recommendations"
+  ]
+}

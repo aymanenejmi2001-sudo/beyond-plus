@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "info": {
+      "type": "info-columns",
+      "blocks": {
+        "c1": {
+          "type": "column",
+          "settings": {
+            "title": "À suivre",
+            "text": "<p>Les points de vente seront annoncés ici.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c1"
+      ],
+      "settings": {
+        "columns": 1
+      }
+    }
+  },
+  "order": [
+    "main",
+    "info"
+  ]
+}

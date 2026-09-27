@@ -1,0 +1,31 @@
+{%- comment -%}
+  Usage: {% render 'price', product: product %} or {% render 'price', variant: variant %}
+  show_saving: true → adds the "−20 %" label (product page).
+{%- endcomment -%}
+{%- liquid
+  if variant != blank
+    assign p = variant.price
+    assign cap = variant.compare_at_price
+  else
+    assign p = product.price
+    assign cap = product.compare_at_price
+    if product.selected_or_first_available_variant
+      assign p = product.selected_or_first_available_variant.price
+      assign cap = product.selected_or_first_available_variant.compare_at_price
+    endif
+  endif
+  assign on_sale = false
+  if cap > p
+    assign on_sale = true
+  endif
+-%}
+<span class="price{% if on_sale %} price--on-sale{% endif %}" data-price>
+  <span class="price__regular">{{ p | money }}</span>
+  {%- if on_sale -%}
+    <s class="price__compare"><span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>{{ cap | money }}</s>
+    {%- if show_saving -%}
+      {%- assign saving = cap | minus: p | times: 100.0 | divided_by: cap | round -%}
+      <span class="price__saving">−{{ saving }} %</span>
+    {%- endif -%}
+  {%- endif -%}
+</span>

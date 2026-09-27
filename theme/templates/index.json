@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-video",
+      "settings": {
+        "link": "/collections/femme",
+        "link_label": "Explorer Beyond Women"
+      }
+    },
+    "spotlight": {
+      "type": "spotlight-cards",
+      "blocks": {
+        "t1": {
+          "type": "tile",
+          "settings": {
+            "title": "Beyond Women",
+            "link_label": "Explorer",
+            "link": "/collections/femme",
+            "fallback_ratio": 0.8
+          }
+        },
+        "t2": {
+          "type": "tile",
+          "settings": {
+            "title": "Sneaker Culture",
+            "link_label": "Explorer",
+            "link": "/pages/lookbook",
+            "fallback_ratio": 0.8
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2"
+      ],
+      "settings": {}
+    },
+    "media-banner": {
+      "type": "media-banner",
+      "settings": {}
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "settings": {
+        "link": "/pages/about"
+      }
+    },
+    "text-banner": {
+      "type": "text-banner",
+      "settings": {
+        "link": "/collections/all"
+      }
+    },
+    "ticker": {
+      "type": "ticker",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "spotlight",
+    "media-banner",
+    "image-with-text",
+    "text-banner",
+    "ticker"
+  ]
+}

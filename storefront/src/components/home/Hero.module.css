@@ -1,0 +1,90 @@
+.hero {
+  position: relative;
+  height: calc(100svh - 3rem);
+  min-height: 56rem;
+  max-height: 110rem;
+  margin-top: calc(var(--header-height) * -1);
+  overflow: hidden;
+  background: rgb(var(--c-night));
+  color: #fff;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .9s ease, visibility 0s linear .9s;
+}
+.slide[data-active="true"] { opacity: 1; visibility: visible; transition: opacity .9s ease; }
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.28) 0%, transparent 22%, transparent 45%, rgba(0,0,0,.62) 100%);
+  pointer-events: none;
+}
+
+.image { object-fit: cover; transform: scale(1.04); transition: transform 7s linear; }
+.slide[data-active="true"] .image { transform: scale(1); }
+
+.content {
+  position: absolute;
+  z-index: 1;
+  left: 4vw;
+  right: 4vw;
+  bottom: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+.eyebrow { font-size: 1.1rem; letter-spacing: .16em; text-transform: uppercase; }
+.title { font-size: clamp(6.4rem, 10vw, 17rem); line-height: .86; letter-spacing: -.06em; font-weight: 500; }
+.text { font-size: 1.6rem; line-height: 1.5; max-width: 36rem; margin-bottom: .8rem; }
+
+.nav {
+  position: absolute;
+  z-index: 2;
+  left: 4vw;
+  right: 4vw;
+  bottom: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.dot { display: flex; flex-direction: column; gap: .8rem; padding: .8rem 0; background: none; border: 0; color: #fff; text-align: left; cursor: pointer; opacity: .6; transition: opacity .3s; }
+.dot[data-active="true"], .dot:hover { opacity: 1; }
+.label { font-size: 1rem; letter-spacing: .14em; text-transform: uppercase; }
+.bar { position: relative; display: block; height: 2px; background: rgba(255,255,255,.3); overflow: hidden; }
+.fill { position: absolute; inset: 0; background: #fff; transform: scaleX(0); transform-origin: left; }
+.dot[data-active="true"] .fill { animation: progress 6s linear forwards; }
+.dot[data-active="true"][data-paused="true"] .fill { animation-play-state: paused; }
+@keyframes progress { to { transform: scaleX(1); } }
+
+@media (min-width: 990px) {
+  .image { left: auto !important; width: 54% !important; }
+  .slide::after { display: none; }
+  .content { right: auto; width: 42vw; bottom: auto; top: 50%; transform: translateY(-40%); }
+  .slide[data-tone="light"] .content, .slide[data-tone="light"] .content a { color: rgb(13 13 13); border-color: currentColor; }
+  .hero[data-tone="light"] .dot { color: rgb(13 13 13); }
+  .hero[data-tone="light"] .bar { background: rgba(0,0,0,.18); }
+  .hero[data-tone="light"] .fill { background: rgb(13 13 13); }
+  .nav { right: auto; width: 40vw; }
+}
+
+@media (max-width: 749px) {
+  .hero { height: 100svh; min-height: 60rem; }
+  .content { left: 2rem; right: 2rem; bottom: 8rem; gap: 1.2rem; }
+  .title { font-size: clamp(5.6rem, 17vw, 8.4rem); }
+  .text { font-size: 1.5rem; }
+  .nav { left: 2rem; right: 2rem; bottom: 2.4rem; gap: .8rem; }
+  .label { font-size: .9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide, .image { transition: none; }
+  .dot[data-active="true"] .fill { animation: none; transform: scaleX(1); }
+}
+
+.pause { position: absolute; right: 2rem; bottom: 1rem; z-index: 3; padding: 1rem; background: #fff; color: #111; font-size: 1.2rem; border: 1px solid #aaa; }

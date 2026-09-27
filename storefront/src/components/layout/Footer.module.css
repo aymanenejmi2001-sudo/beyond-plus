@@ -1,0 +1,142 @@
+/* Zenith footer, measured: main row = subscribe 420 | 4 menus 756 | contact 240
+   over 24px gaps, then a 50px bottom bar on a tinted ground. */
+
+.footer { border-top: 0.1rem solid rgb(var(--c-border)); }
+
+.main { padding-block: 4.8rem 4rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(28rem, 42rem) minmax(0, 1fr) minmax(0, 24rem);
+  gap: 4rem 2.4rem;
+  align-items: start;
+}
+
+.blockTitle {
+  margin-bottom: 1.2rem;
+  font-size: var(--text-label);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* ---- Newsletter ---------------------------------------------------------- */
+.subscribe { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.field {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1rem solid rgb(var(--c-fg));
+}
+.field input {
+  flex: 1;
+  min-width: 0;
+  padding: 1.2rem 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: var(--text-body);
+  color: inherit;
+}
+.field input::placeholder { color: rgb(var(--c-fg-2)); }
+.field button {
+  padding: 1.2rem 0 1.2rem 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-label);
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: opacity var(--dur-default);
+}
+.field button:hover { opacity: var(--hover-opacity); }
+
+.consent { font-size: var(--text-body-xs); color: rgb(var(--c-fg-2)); }
+.consent a { text-decoration: underline; text-underline-offset: 0.3rem; }
+
+/* ---- Menus --------------------------------------------------------------- */
+.menus {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+.menu { display: flex; flex-direction: column; }
+
+/* <details> is only an accordion on small screens; above that it is a plain
+   block, so the marker and the toggle affordance are suppressed. */
+.menu summary { list-style: none; display: block; }
+.menu summary::-webkit-details-marker { display: none; }
+.menu summary svg { display: none; }
+.menuList { display: flex; flex-direction: column; gap: 0.6rem; }
+.menuLink {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: var(--text-body);
+  transition: opacity var(--dur-default);
+}
+.menuLink:hover { opacity: var(--hover-opacity); }
+.menuLink { display: inline-block; min-height: 2.4rem; padding-block: 0.3rem; }
+
+/* ---- Contact ------------------------------------------------------------- */
+.contact { display: flex; flex-direction: column; }
+.address { font-size: var(--text-body-sm); line-height: 1.5; color: rgb(var(--c-fg-2)); }
+.contactLink {
+  margin-top: 1.2rem;
+  align-self: flex-start;
+  font-size: var(--text-body-sm);
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+/* ---- Bottom bar ---------------------------------------------------------- */
+.bottom {
+  background-color: rgb(var(--c-bg-2));
+  border-top: 0.1rem solid rgb(var(--c-border));
+}
+.bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  min-height: 5rem;
+  padding-block: 1.2rem;
+  font-size: var(--text-body-sm);
+  color: rgb(var(--c-fg-2));
+  flex-wrap: wrap;
+}
+.payments { display: flex; align-items: center; gap: 0.8rem; }
+.payment {
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 1.8rem;
+  border: 0.1rem solid rgb(var(--c-border));
+  border-radius: 0.2rem;
+  background-color: rgb(var(--c-bg));
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: rgb(var(--c-fg-2));
+}
+
+/* ---- Mobile: menus collapse into accordions ------------------------------ */
+@media (max-width: 989px) {
+  .grid { grid-template-columns: minmax(0, 1fr); gap: 3.2rem; }
+  .menus { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.4rem 1.6rem; }
+}
+@media (max-width: 575px) {
+  .menus { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .menu { border-bottom: 0.1rem solid rgb(var(--c-border)); }
+  .menu:first-child { border-top: 0.1rem solid rgb(var(--c-border)); }
+  .blockTitle { margin-bottom: 0; }
+  .menu summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.6rem;
+    cursor: pointer;
+  }
+  .menu summary svg { display: block; }
+  .menu .menuList { padding-bottom: 1.6rem; }
+  .menu svg { transition: transform var(--dur-default) var(--ease-out-quart); }
+  .menu details[open] summary svg { transform: rotate(45deg); }
+}

@@ -1,0 +1,35 @@
+<section class="text-banner">
+  <div class="text-banner__wrapper container">
+    <div class="text-banner__content">
+      <h2 class="display-2" data-reveal="up"><span>{{ section.settings.heading }}</span></h2>
+      {%- if section.settings.link_label != blank -%}{% render 'editorial-link', url: section.settings.link, label: section.settings.link_label %}{%- endif -%}
+    </div>
+    <div class="text-banner__image media" data-reveal="frame" style="--reveal-delay: 150ms;">
+      {%- render 'media-image', image: section.settings.image, fallback: 'beyond-3.jpg', sizes: '182px' -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.text-banner { border-block: 0.1rem solid rgb(var(--c-border)); }
+.text-banner__wrapper { display: flex; align-items: center; justify-content: space-between; gap: 2.4rem; padding-block: 9rem; }
+.text-banner__content { display: flex; flex-direction: column; align-items: flex-start; gap: 3.2rem; max-width: 68rem; }
+.text-banner__image { flex-shrink: 0; width: 18.2rem; aspect-ratio: 182 / 247; }
+@media (max-width: 749px) {
+  .text-banner__wrapper { flex-direction: column; align-items: flex-start; padding-block: 5.6rem; }
+  .text-banner__image { width: 13.6rem; align-self: flex-end; margin-top: -4rem; }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Manifeste",
+  "settings": [
+    { "type": "textarea", "id": "heading", "label": "Texte", "default": "Votre style n’a pas de ligne d’arrivée." },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "link_label", "label": "Lien — texte", "default": "Explorer les sneakers" },
+    { "type": "url", "id": "link", "label": "Lien" }
+  ],
+  "presets": [ { "name": "Manifeste" } ]
+}
+{% endschema %}

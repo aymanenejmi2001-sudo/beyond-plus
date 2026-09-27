@@ -1,0 +1,133 @@
+/* ============================================================================
+   BEYOND PLUS — DESIGN TOKENS
+   ----------------------------------------------------------------------------
+   Values are measured 1:1 from the two V1 references:
+     • Homepage system  → Zenith (Shopify theme demo)
+     • Catalog / PDP    → Almost Gods (almostgods.com)
+   Root font-size is 62.5% so 1rem === 10px and every rem value below maps
+   directly onto the numbers measured on the references.
+   ========================================================================= */
+
+:root {
+  /* ---- Type families ---------------------------------------------------- */
+  /* Zenith: Syne (display) + Archivo (UI/body). Almost Gods uses Inter, which
+     is visually interchangeable with Archivo, so we run a single UI family. */
+  --font-display: var(--font-syne), "Syne", system-ui, sans-serif;
+  --font-body: var(--font-archivo), "Archivo", system-ui, -apple-system, sans-serif;
+
+  /* ---- Display type (Zenith) -------------------------------------------- */
+  --display-weight: 500;
+  --display-tracking: -0.04em;
+  --display-leading: 1;
+  --display-transform: uppercase;
+
+  /* 1440 → 68.16px · 375 → 42.6px  (measured) */
+  --text-display: clamp(4.26rem, 4.73vw, 6.816rem);
+  /* 1440 → 50.4px · 375 → 39.2px (both measured on the reference) */
+  --text-display-2: clamp(3.92rem, 3.5vw, 5.04rem);
+  /* 1440 → 36px */
+  --text-display-3: clamp(2.6rem, 2.5vw, 3.6rem);
+  /* card / article titles → 20px/24px */
+  --text-display-4: 2rem;
+
+  /* ---- UI type ----------------------------------------------------------- */
+  --text-body: 1.4rem;        /* Zenith body 14px, AG body 14px */
+  --text-body-sm: 1.3rem;
+  --text-body-xs: 1.2rem;
+  --text-label: 1.2rem;       /* header menu, footer headings, buttons */
+  --text-eyebrow: 0.9rem;     /* AG .subtitle — 9px, tracking .1em */
+  --text-card-title: 1.4rem;  /* Zenith product card title */
+  --text-card-title-ag: 1.32rem; /* AG card title (1.1 × 1.2rem) */
+  --text-page-title: 2.214rem;   /* AG collection h1 (1.23 × 1.8rem) */
+
+  --leading-body: 1.3;        /* Zenith */
+  --leading-prose: 1.5;       /* Almost Gods */
+  --leading-card: 1.285;
+
+  --tracking-card: 0.005em;
+  --tracking-card-ag: -0.02em;
+  --tracking-heading-ag: -0.03em;
+  --tracking-eyebrow: 0.1em;
+
+  /* ---- Colour ------------------------------------------------------------ */
+  --c-bg: 255, 255, 255;
+  --c-bg-2: 245, 245, 245;
+  --c-bg-3: 235, 235, 235;
+  /* Packshot plate: light studio grey in every scheme; packshots are
+     multiplied onto it so their white backgrounds disappear. */
+  --c-media: 241, 241, 239;
+  /* BEYOND PLUS art direction: bordeaux signal, cold studio steel, night ink. */
+  --c-bordeaux: 112, 39, 53;
+  --c-steel: 190, 206, 208;
+  --c-night: 13, 14, 16;
+  --c-fg: 13, 13, 13;
+  --c-fg-2: 112, 112, 112;
+  --c-border: 230, 230, 230;
+  --c-interface: 232, 232, 232;
+  --c-overlay: 13, 13, 13;
+  --c-error: 208, 22, 22;
+  --c-success: 15, 174, 0;
+  --c-sale: 208, 22, 22;
+
+  --c-button: var(--c-fg);
+  --c-button-text: 255, 255, 255;
+  --c-button-secondary: var(--c-bg-2);
+  --c-button-secondary-text: var(--c-fg);
+
+  --overlay-alpha: 0.15;      /* Zenith hero/media-banner scrim */
+  --hover-opacity: 0.6;
+
+  /* ---- Radius ------------------------------------------------------------ */
+  --radius-button: 4px;       /* Zenith */
+  --radius-block: 0px;
+  --radius-card-info: 2px;
+  --radius-input: 4px;
+
+  /* ---- Layout ------------------------------------------------------------ */
+  --gutter: 1.2rem;           /* Zenith .container padding — full-bleed grid */
+  --gutter-editorial: 2.5rem; /* Almost Gods .page-width mobile */
+  --gutter-editorial-lg: 5rem;/* Almost Gods .page-width ≥750 */
+  --page-max: 139.6rem;       /* Almost Gods .page-width max-width */
+
+  --announcement-height: 3rem;
+  --header-height: 6.8rem;
+  --header-inner-height: 4.8rem;
+
+  /* ---- Motion ------------------------------------------------------------ */
+  --dur-short: 100ms;
+  --dur-default: 300ms;
+  --dur-long: 500ms;
+  --dur-image: 700ms;
+
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);   /* buttons, labels */
+  --ease-in-out-quint: cubic-bezier(0.602, 0.007, 0.374, 0.995); /* panels */
+  --ease-image: cubic-bezier(0.4, 0, 0.25, 1);            /* image transforms */
+
+  --transition-image: transform var(--dur-image) var(--ease-image);
+  --transition-panel: transform 0.4s var(--ease-in-out-quint),
+    opacity 0.3s ease-in-out;
+  --transition-label: transform 0.4s var(--ease-out-quart) 0.05s,
+    color 0.4s var(--ease-out-quart);
+
+  /* ---- Elevation --------------------------------------------------------- */
+  --z-header: 60;
+  --z-drawer: 80;
+  --z-modal: 90;
+}
+
+/* Dark scheme — Zenith ships a header toggle; we keep the same token contract
+   so switching is a class flip, never a component rewrite. */
+[data-scheme="dark"] {
+  --c-bg: 13, 13, 13;
+  --c-bg-2: 26, 26, 26;
+  --c-bg-3: 34, 34, 34;
+  --c-fg: 255, 255, 255;
+  --c-fg-2: 150, 150, 150;
+  --c-border: 48, 48, 48;
+  --c-interface: 40, 40, 40;
+  --c-button: 255, 255, 255;
+  --c-button-text: 13, 13, 13;
+  --c-button-secondary: 34, 34, 34;
+  --c-button-secondary-text: 255, 255, 255;
+  --c-sale: 255, 82, 82;
+}

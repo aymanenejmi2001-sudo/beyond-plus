@@ -1,0 +1,41 @@
+{%- comment -%} Filter chips + toolbar. Params: results (collection or search), sort_by, count {%- endcomment -%}
+<div class="facets">
+  {%- for filter in results.filters -%}
+    {%- if filter.type == 'list' and filter.values.size > 1 -%}
+      <details class="facets__group" open>
+        <summary class="facets__summary">{{ filter.label }}{%- render 'icon', name: 'chevron-down', size: 10 -%}</summary>
+        <div class="facets__list no-scrollbar">
+          {%- for value in filter.values -%}
+            {%- if value.count > 0 or value.active -%}
+              <a href="{% if value.active %}{{ value.url_to_remove }}{% else %}{{ value.url_to_add }}{% endif %}" class="facets__chip" data-facet-link aria-pressed="{{ value.active }}">
+                {{- value.label -}}<span class="facets__count">{{ value.count }}</span>
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </details>
+    {%- endif -%}
+  {%- endfor -%}
+
+  <div class="facets__toolbar">
+    <span class="facets__result">{{ 'sections.collection.count' | t: count: count }}</span>
+    {%- assign active = 0 -%}
+    {%- for filter in results.filters -%}{%- assign active = active | plus: filter.active_values.size -%}{%- endfor -%}
+    {%- if active > 0 -%}
+      <a href="{{ results.url | default: routes.search_url }}{% if results.terms %}?q={{ results.terms | url_encode }}{% endif %}" class="facets__reset" data-facet-link>{{ 'sections.collection.clear' | t: count: active }}</a>
+    {%- endif -%}
+    <div class="facets__density">
+      <button type="button" data-density="large" aria-pressed="true" aria-label="{{ 'sections.collection.grid_large' | t }}">{%- render 'icon', name: 'grid-large' -%}</button>
+      <button type="button" data-density="dense" aria-pressed="false" aria-label="{{ 'sections.collection.grid_dense' | t }}">{%- render 'icon', name: 'grid-dense' -%}</button>
+    </div>
+    {%- if results.sort_options -%}
+      <label class="facets__sort">{{ 'sections.collection.sort' | t }}
+        <select data-sort>
+          {%- for option in results.sort_options -%}
+            <option value="{{ option.value }}"{% if option.value == sort_by %} selected{% endif %}>{{ option.name }}</option>
+          {%- endfor -%}
+        </select>
+      </label>
+    {%- endif -%}
+  </div>
+</div>

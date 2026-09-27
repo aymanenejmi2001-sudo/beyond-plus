@@ -1,0 +1,35 @@
+<div class="page-narrow">
+  <div class="contact">
+    {%- form 'contact', id: 'ContactForm', class: 'contact__form' -%}
+      {%- if form.posted_successfully? -%}
+        <p class="form-message form-message--success" role="status">{{ 'sections.contact.success' | t }}</p>
+      {%- else -%}
+        {%- if form.errors -%}<div class="form-message form-message--error">{{ form.errors | default_errors }}</div>{%- endif -%}
+        <div class="field"><label class="field__label" for="ContactName">{{ 'sections.contact.name' | t }}</label><input class="field__input" id="ContactName" type="text" name="contact[name]" autocomplete="name" value="{{ form.name }}" required></div>
+        <div class="field"><label class="field__label" for="ContactEmail">{{ 'sections.contact.email' | t }}</label><input class="field__input" id="ContactEmail" type="email" name="contact[email]" autocomplete="email" value="{{ form.email }}" required></div>
+        <div class="field"><label class="field__label" for="ContactPhone">{{ 'sections.contact.phone' | t }}</label><input class="field__input" id="ContactPhone" type="tel" name="contact[phone]" autocomplete="tel" value="{{ form.phone }}"></div>
+        <div class="field"><label class="field__label" for="ContactBody">{{ 'sections.contact.message' | t }}</label><textarea class="field__input" id="ContactBody" name="contact[body]" rows="5" required>{{ form.body }}</textarea></div>
+        <div><button type="submit" class="button button--editorial">{% assign label = 'sections.contact.submit' | t %}{% render 'button-label', text: label %}</button></div>
+      {%- endif -%}
+    {%- endform -%}
+    <div class="contact__info rte">{{ section.settings.info }}</div>
+  </div>
+</div>
+
+{% stylesheet %}
+.contact { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4rem; padding-bottom: 8rem; }
+@media (min-width: 750px) { .contact { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); } }
+.contact__form { display: flex; flex-direction: column; gap: 1.6rem; }
+.contact__info { font-size: var(--text-body-sm); color: rgb(var(--c-fg-2)); }
+.contact__info strong { display: block; margin-top: 1.6rem; color: rgb(var(--c-fg)); text-transform: uppercase; font-size: var(--text-label); }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Formulaire de contact",
+  "settings": [
+    { "type": "richtext", "id": "info", "label": "Coordonnées", "default": "<p>Les coordonnées BEYOND PLUS seront disponibles à l’ouverture.</p>" }
+  ],
+  "presets": [ { "name": "Formulaire de contact" } ]
+}
+{% endschema %}

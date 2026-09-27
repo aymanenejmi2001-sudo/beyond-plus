@@ -1,0 +1,53 @@
+{
+  "name": "beyond-plus-storefront",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "catalog": "node catalog/build.ts",
+    "radar:seed": "node --no-warnings --env-file-if-exists=.env.local --env-file-if-exists=.env.development.local radar/jobs/seed.ts",
+    "radar:daily": "node --no-warnings --env-file-if-exists=.env.local --env-file-if-exists=.env.development.local radar/jobs/daily.ts",
+    "radar:weekly": "node --no-warnings --env-file-if-exists=.env.local --env-file-if-exists=.env.development.local radar/jobs/weekly.ts",
+    "radar:import": "node --no-warnings --env-file-if-exists=.env.local --env-file-if-exists=.env.development.local radar/jobs/import.ts",
+    "radar:test": "node --no-warnings --test radar/tests/radar.test.ts",
+    "radar:typecheck": "tsc -p radar/tsconfig.json",
+    "indexnow": "node catalog/indexnow.ts",
+    "sales": "node catalog/sales.ts",
+    "send-report": "node catalog/send-report.ts",
+    "radar:discover": "node --no-warnings --env-file-if-exists=.env.local --env-file-if-exists=.env.development.local radar/jobs/discover.ts",
+    "radar:local": "NEXT_DIST_DIR=.next-dev next dev -p 4333",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "prebuild": "node --no-warnings --experimental-strip-types radar/jobs/pull-site.ts || echo \"[radar] pull-site ignor\u00e9\""
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.0",
+    "next": "^15.5.26",
+    "nodemailer": "^10.0.10",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "sharp": "^0.35.4"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.7",
+    "@types/node": "^22.10.2",
+    "@types/nodemailer": "^8.0.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^15.5.26",
+    "typescript": "^5.7.2"
+  },
+  "overrides": {
+    "postcss": "^8.5.28"
+  },
+  "browserslist": [
+    "chrome 111",
+    "edge 111",
+    "firefox 111",
+    "safari 16.4"
+  ]
+}

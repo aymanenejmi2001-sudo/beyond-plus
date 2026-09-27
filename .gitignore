@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+.next/
+.next-dev/
+.next-check/
+out/
+*.tsbuildinfo
+.vercel/
+.env*
+!.env.example
+storefront/catalog/.cache/
+.radar/
+.commerce/
+SEO/.deploy.lock

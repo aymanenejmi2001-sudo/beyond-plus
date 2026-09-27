@@ -1,0 +1,23 @@
+{
+  "current": "Default",
+  "presets": {
+    "Default": {
+      "logo_width": 110,
+      "color_background": "#FFFFFF",
+      "color_background_2": "#F5F5F5",
+      "color_foreground": "#0D0D0D",
+      "color_foreground_2": "#707070",
+      "color_border": "#E6E6E6",
+      "color_sale": "#D01616",
+      "show_scheme_toggle": true,
+      "card_show_vendor": true,
+      "card_show_second_image": true,
+      "card_show_swatches": true,
+      "option_name_size": "Taille, Size",
+      "option_name_color": "Couleur, Color, Colour",
+      "cart_type": "drawer",
+      "cart_note": "Frais de port et taxes calculés au paiement.",
+      "enable_reveal": true
+    }
+  }
+}
