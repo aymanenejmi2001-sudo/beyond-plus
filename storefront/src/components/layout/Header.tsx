@@ -49,7 +49,7 @@ export function Header() {
               aria-label="Ouvrir le menu"
               aria-expanded={mobileOpen}
             >
-              <MenuIcon />
+              <MenuIcon size={20} />
             </button>
 
             <nav className={styles.nav} aria-label="Navigation principale">
@@ -123,11 +123,11 @@ export function Header() {
               Recherche
             </button>
             <button type="button" className={styles.actionMobile} onClick={() => setSearchOpen(true)} aria-label="Rechercher">
-              <SearchIcon />
+              <SearchIcon size={20} />
             </button>
 
             <Link href="/wishlist" className={styles.action}>Wishlist</Link>
-            <Link href="/wishlist" className={styles.actionMobile} aria-label="Wishlist"><HeartIcon /></Link>
+            <Link href="/wishlist" className={styles.actionMobile} aria-label="Wishlist"><HeartIcon size={20} /></Link>
             <Link href="/account" className={styles.action}>Suivi</Link>
 
             <Link href="/contact" className={styles.cta}>
@@ -145,7 +145,7 @@ export function Header() {
               aria-label={`Panier, ${cart.totalQuantity} article(s)`}
             >
               <span className={styles.cartLabel}>Panier</span>
-              <CartIcon className={styles.cartIcon} />
+              <CartIcon size={20} className={styles.cartIcon} />
               <span className={styles.cartCount}>{cart.totalQuantity}</span>
             </button>
           </div>

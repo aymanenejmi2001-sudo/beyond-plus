@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { CATALOG } from "@/data/catalog";
 import { COLLECTIONS } from "@/data/collections";
 import { GUIDES, isIndexableGuide } from "@/data/guides";
+import { DROPS } from "@/data/drops";
 
 const site = process.env.NEXT_PUBLIC_SITE_URL || "https://beyondplusmaroc.com";
 
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("/", 1, "daily"),
     ...COLLECTIONS.map((c) => page(`/collections/${c.handle}`, 0.8, "daily")),
     ...CATALOG.map((p) => ({ ...page(`/products/${p.handle}`, 0.6), images: p.images.slice(0, 1).map((i) => `${site}${i.url}`) })),
+    ...DROPS.filter((d) => d.status !== "archived").map((d) => page(`/drops/${d.slug}`, 0.7)),
     page("/marques", 0.8),
     page("/qualite-transparence", 0.5, "monthly"),
     page("/guides", 0.6),

@@ -234,3 +234,8 @@
   transition: transform var(--dur-default) ease-in-out;
 }
 .scheme[data-on="true"] .switch::after { transform: translateX(1rem); }
+
+/* Mobile icons: 20px glyphs in 44px tap targets, same height as the bar. */
+.actionMobile, .burger { min-width: 4.4rem; justify-content: center; padding-inline: 0.2rem; }
+@media (max-width: 749px) { .cart { min-width: 4.4rem; justify-content: center; padding-inline: 0.2rem; } }
+.cartIcon { width: 2rem; height: 2rem; flex-shrink: 0; }

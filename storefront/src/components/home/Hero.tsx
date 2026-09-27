@@ -4,13 +4,14 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { EditorialLink } from "@/components/ui/EditorialLink";
 import { PHOTOS } from "@/data/assets";
+import { HOME_MERCHANDISING } from "@/data/merchandising";
 import styles from "./Hero.module.css";
 
-const SLIDES = [
-  { photo: PHOTOS.womenHero, focus: "68% 40%", bg: "linear-gradient(180deg, rgb(198 227 235), rgb(141 164 167))", tone: "light", eyebrow: "Sneakers au Maroc.", title: <>Go<br />beyond.</>, text: "Des sneakers high copy pour composer vos looks et respecter votre budget.", href: "/collections/femme", cta: "Voir Femme" },
-  { photo: PHOTOS.menChrome, focus: "50% 70%", bg: "rgb(22 30 30)", tone: "dark", eyebrow: "Beyond Men", title: <>Hors des<br />lignes.</>, text: "Chrome, nuit, béton.", href: "/collections/homme", cta: "Voir Homme" },
-  { photo: PHOTOS.womenAir, focus: "40% 60%", bg: "rgb(13 13 13)", tone: "dark", eyebrow: "Nouveautés", title: <>La<br />sélection.</>, text: "De la Samba à la Kayano 14, découvrez notre sélection.", href: "/collections/nouveautes", cta: "Tout voir" },
-];
+const SLIDES = HOME_MERCHANDISING.heroSlides.map((s) => ({
+  ...s,
+  photo: PHOTOS[s.photo],
+  title: <>{s.title[0]}<br />{s.title[1]}</>,
+}));
 const DELAY = 6000;
 
 export function Hero() {
@@ -80,7 +81,13 @@ export function Hero() {
         </div>
       ))}
 
-      <button type="button" className={styles.pause} onClick={() => setPaused(p => !p)} aria-pressed={paused || reducedMotion} disabled={reducedMotion}>{paused || reducedMotion ? "Défilement en pause" : "Mettre en pause"}</button>
+      <button type="button" className={styles.pause} onClick={() => setPaused(p => !p)} aria-label={paused ? "Reprendre le défilement" : "Mettre le défilement en pause"} disabled={reducedMotion}>
+        {paused ? (
+          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 2.5v9l7.5-4.5z" fill="currentColor" /></svg>
+        ) : (
+          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 2.5h2v9H4zM8 2.5h2v9H8z" fill="currentColor" /></svg>
+        )}
+      </button>
       <div className={styles.nav}>
         {SLIDES.map((s, i) => (
           <button

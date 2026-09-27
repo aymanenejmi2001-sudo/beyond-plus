@@ -4,7 +4,8 @@ export const CONSENT_KEY = "beyond.measurement";
 export type EventName =
   | "view_product" | "add_to_cart" | "begin_checkout" | "whatsapp_click"
   | "view_item" | "view_item_list" | "select_item" | "select_size" | "remove_from_cart"
-  | "view_cart" | "purchase" | "search" | "wishlist_add" | "notify_me";
+  | "view_cart" | "purchase" | "search" | "wishlist_add" | "notify_me"
+  | "view_promotion" | "select_promotion";
 /** Events the first-party store keeps (the others would exceed the free Blob quota). */
 const STORED = new Set<EventName>(["view_product", "add_to_cart", "begin_checkout", "whatsapp_click"]);
 const CURRENCY = "MAD";
@@ -45,6 +46,11 @@ export function lineItem(line: CartLine): EcommerceItem {
     price: Number(line.merchandise.price.amount),
     quantity: line.quantity,
   });
+}
+
+/** GA4 promotion (hero, featured drop). */
+export function promotion(p: { id: string; name: string; creative?: string; location: string }): Ecommerce {
+  return clean({ promotion_id: p.id, promotion_name: p.name, creative_name: p.creative, location_id: p.location, items: [] });
 }
 
 export function ecommerce(items: EcommerceItem[], extra: Ecommerce = {}): Ecommerce {
