@@ -95,11 +95,15 @@ export const MODEL_CONTENT: Record<string, ModelContent> = {
     intro: [
       "La Samba est née pour le football en salle et a fini par devenir la sneaker la plus portée de ces dernières années. Profil bas, bout arrondi, trois bandes, semelle en gomme : une ligne simple qui va avec presque tout.",
       "Chez BEYOND PLUS, on garde la Samba classique en blanc et gomme ou en noir, et quelques versions plus affirmées pour ceux qui veulent sortir du rang : imprimés léopard, vache, poil.",
+      "Prix de l’adidas Samba au Maroc chez BEYOND PLUS : de 500 à 750 DH selon le coloris, livraison gratuite partout au Maroc en 12 à 48 h après confirmation. Samba OG blanche, Samba Vegan blanc et gomme, noire, bleu halo, léopard ou vache : ce sont des répliques high copy, pas des paires originales, d’où l’écart avec le prix officiel.",
+      "Samba blanche ou noire ? La blanche et gomme est la plus demandée, lumineuse et facile à accorder. La noire est plus sobre, garde un air propre plus longtemps et passe mieux avec un pantalon de costume.",
     ],
     fit: COMMERCE.fit,
     wear: "Pantalon large qui tombe sur la chaussure, jean droit retroussé, jupe longue : la Samba s’adapte à tout. C’est la paire la plus facile pour commencer une garde-robe sneakers.",
-    related: [{ label: "Tout adidas", href: "/collections/adidas" }, { label: "adidas Handball Spezial", href: "/collections/handball-spezial" }, LOW, SIZE, { label: "Samba ou Handball Spezial ?", href: "/guides/samba-ou-handball-spezial" }],
+    related: [{ label: "Tout adidas", href: "/collections/adidas" }, { label: "adidas Handball Spezial", href: "/collections/handball-spezial" }, { label: "adidas Gazelle", href: "/collections/adidas-gazelle" }, LOW, SIZE, { label: "Samba ou Handball Spezial ?", href: "/guides/samba-ou-handball-spezial" }],
     faq: [
+      { q: "Quel est le prix de l’adidas Samba au Maroc ?", a: "Chez BEYOND PLUS, de 500 à 750 DH selon le coloris, livraison gratuite partout au Maroc. Réplique high copy, non originale." },
+      { q: "Samba ou Gazelle ?", a: "Même famille terrace. La Samba est plus basse et plus fine ; la Gazelle un peu plus ronde, avec des bandes plus contrastées." },
       { q: "La Samba taille-t-elle petit ?", a: COMMERCE.fit },
       { q: "Samba ou Handball Spezial ?", a: "Même esprit terrace. La Samba est plus basse et plus fine ; la Spezial plus douce et plus colorée." },
       { q: "Les Samba BEYOND PLUS sont-elles authentiques ?", a: "Non : ce sont des répliques qualité Master Copy Premium 1:1, et nous l’indiquons sur chaque fiche." },
@@ -109,11 +113,15 @@ export const MODEL_CONTENT: Record<string, ModelContent> = {
     intro: [
       "La Handball Spezial vient du handball en salle et partage l’esprit terrace de la Samba, avec une allure plus douce : tige en daim, semelle en gomme, coloris francs.",
       "Notre sélection va du bleu clair à l’argent violet en passant par le marron, des teintes qui donnent de la couleur à une tenue neutre.",
+      "Prix de l’adidas Handball Spezial au Maroc chez BEYOND PLUS : 700 DH, livraison gratuite partout au Maroc en 12 à 48 h après confirmation. Sept coloris : Silver Violet, Light Blue, Silver Green Magic, Aluminium Black Gum, Shadow Brown Alumina, Earth Strata Gum et Scarlet Gum. Répliques high copy, non originales.",
+      "Quel coloris choisir ? Le bleu clair et le marron sont les plus faciles à porter au quotidien ; l’argent violet et l’argent vert font la pièce forte d’une tenue neutre ; le rouge scarlet réveille un jean brut.",
     ],
     fit: COMMERCE.fit,
     wear: "Jean brut, pantalon large, jupe midi : la Spezial apporte une touche de couleur sans en faire trop. Le daim demande un peu d’entretien, voyez notre guide.",
-    related: [{ label: "Tout adidas", href: "/collections/adidas" }, { label: "adidas Samba", href: "/collections/adidas-samba" }, LOW, { label: "Entretenir ses sneakers", href: "/guides/entretenir-ses-sneakers" }, { label: "Samba ou Handball Spezial ?", href: "/guides/samba-ou-handball-spezial" }],
+    related: [{ label: "Tout adidas", href: "/collections/adidas" }, { label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "adidas Gazelle", href: "/collections/adidas-gazelle" }, LOW, { label: "Entretenir ses sneakers", href: "/guides/entretenir-ses-sneakers" }, { label: "Samba ou Handball Spezial ?", href: "/guides/samba-ou-handball-spezial" }],
     faq: [
+      { q: "Quel est le prix de l’adidas Handball Spezial au Maroc ?", a: "700 DH chez BEYOND PLUS, livraison gratuite partout au Maroc. Réplique high copy, non originale." },
+      { q: "Handball Spezial ou Gazelle ?", a: "La Spezial a une tige en daim plus douce et des coloris plus francs ; la Gazelle une ligne un peu plus ronde et des bandes très contrastées." },
       { q: "Comment entretenir le daim de la Spezial ?", a: "Brosse à daim et gomme, à sec. Évitez l’eau, qui marque le daim." },
       { q: "Quelle pointure choisir ?", a: COMMERCE.fit },
       { q: "Livraison au Maroc ?", a: COMMERCE.shipping },
@@ -211,11 +219,14 @@ export const MODEL_CONTENT: Record<string, ModelContent> = {
     intro: [
       "La Gazelle Indoor est la cousine terrace de la Samba : bout arrondi, trois bandes contrastées, semelle en gomme translucide. Sa ligne est un peu plus ronde et plus rétro, ce qui lui donne une allure douce, entre sport des années 70 et tenue de tous les jours.",
       "Chez BEYOND PLUS, on garde quatre coloris : crème et vert collegiate, noir et blanc, vert franc, gris, blanc et or. Les versions Bold posent la même tige sur une semelle plus épaisse, pour gagner un peu de hauteur sans changer de style.",
+      "Prix de l’adidas Gazelle au Maroc chez BEYOND PLUS : de 650 à 720 DH selon le coloris, livraison gratuite partout au Maroc en 12 à 48 h après confirmation. Répliques high copy, non originales.",
     ],
     fit: COMMERCE.fit,
     wear: "Jean droit ou pantalon large qui tombe sur la chaussure, jupe midi, survêtement rétro : la Gazelle se porte comme une Samba, avec une touche de couleur en plus. Les versions Bold équilibrent bien les coupes amples et les robes longues.",
-    related: [{ label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "adidas Handball Spezial", href: "/collections/handball-spezial" }, LOW, SIZE],
+    related: [{ label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "adidas Handball Spezial", href: "/collections/handball-spezial" }, { label: "adidas Campus 00s", href: "/collections/adidas-campus-00s" }, LOW, SIZE],
     faq: [
+      { q: "Quel est le prix de l’adidas Gazelle au Maroc ?", a: "Chez BEYOND PLUS, de 650 à 720 DH selon le coloris, livraison gratuite partout au Maroc. Réplique high copy, non originale." },
+      { q: "Gazelle Indoor ou Gazelle Bold ?", a: "Même tige ; la Bold ajoute une semelle plus épaisse, pour un peu de hauteur et un style plus affirmé." },
       { q: "Quelle pointure choisir pour la Gazelle ?", a: COMMERCE.fit },
       { q: "Gazelle ou Samba ?", a: "Même famille terrace. À l’œil, la Gazelle est un peu plus ronde et plus colorée, avec des bandes plus contrastées ; la Samba est plus basse et plus fine." },
       { q: "Livrez-vous partout au Maroc ?", a: COMMERCE.shipping },
@@ -224,12 +235,14 @@ export const MODEL_CONTENT: Record<string, ModelContent> = {
   "adidas-campus-00s": {
     intro: [
       "La Campus 00s reprend la silhouette skate des années 2000 avec des volumes plus généreux : tige en daim épaisse, lacets larges, semelle en gomme. Une paire décontractée, entre skate et terrace.",
-      "Notre sélection va du noir au gris, avec des versions plus douces en rose et vert.",
+      "Notre sélection : Campus 00s Pink Strata et Crystal White Dark Green, des versions douces qui changent du noir et du gris.",
+      "Prix de l’adidas Campus 00s au Maroc chez BEYOND PLUS : 700 DH, livraison gratuite partout au Maroc en 12 à 48 h après confirmation. Répliques high copy, non originales.",
     ],
     fit: COMMERCE.fit,
     wear: "Baggy, jean large, pantalon de survêtement : la Campus s’accorde avec les coupes amples.",
-    related: [{ label: "Tout adidas", href: "/collections/adidas" }, { label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "Skate", href: "/collections/skate" }, SIZE],
+    related: [{ label: "Tout adidas", href: "/collections/adidas" }, { label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "adidas Gazelle", href: "/collections/adidas-gazelle" }, LOW, { label: "Skate", href: "/collections/skate" }, SIZE],
     faq: [
+      { q: "Quel est le prix de l’adidas Campus 00s au Maroc ?", a: "700 DH chez BEYOND PLUS, livraison gratuite partout au Maroc. Réplique high copy, non originale." },
       { q: "Campus 00s ou Samba ?", a: "La Campus est plus épaisse et plus décontractée ; la Samba plus fine." },
       { q: "Comment entretenir le daim ?", a: "Brosse à daim, à sec. Voyez notre guide d’entretien." },
       { q: "Livraison ?", a: COMMERCE.shipping },
