@@ -174,6 +174,7 @@ export function ProductGrid({ products, page = 1, basePath }: GridProps) {
                 key={product.id}
                 className={styles.item}
                 data-reveal
+                data-first={i < perRow ? "true" : undefined}
                 style={{ ["--reveal-delay" as string]: `${(i % perRow) * 55}ms` }}
               >
                 <ProductCard

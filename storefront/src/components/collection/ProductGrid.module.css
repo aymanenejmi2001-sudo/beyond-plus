@@ -81,6 +81,8 @@
 /* Cards fade up as their row enters. The stagger is capped at one row so no
    card ever appears to be waiting its turn. */
 .item { opacity: 0; transform: translate3d(0, 1.2rem, 0); }
+/* First row is the LCP: visible from the server HTML, never waiting for hydration. */
+.item[data-first="true"] { opacity: 1; transform: none; }
 .item[data-inview="true"] {
   opacity: 1;
   transform: none;
