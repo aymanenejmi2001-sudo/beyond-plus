@@ -2,6 +2,7 @@ import type { Collection, Product } from "@/lib/shopify/types";
 import { CATALOG } from "./catalog";
 import { BRANDS, MODELS, describeModel } from "./brands";
 import { MODEL_CONTENT, fallbackContent, type ModelContent } from "./model-content";
+import { COMMERCE } from "./commerce";
 
 export const STYLE_LABEL: Record<string, string> = {
   "low-profile": "Low Profile", "retro-runner": "Retro Runner", "y2k-runner": "Y2K Runner", skate: "Skate",
@@ -11,7 +12,7 @@ export const STYLE_LABEL: Record<string, string> = {
 const byRank = (a: Product, b: Product) => (b.merch?.rank ?? 0) - (a.merch?.rank ?? 0);
 const inCollection = (handle: string) => (p: Product) => p.merch?.collections.includes(handle) ?? false;
 
-export interface CollectionSeo { title: string; description: string; heading: string; body: string[]; links: { label: string; href: string }[]; h1?: string; eyebrow?: string }
+export interface CollectionSeo { title: string; description: string; heading: string; body: string[]; links: { label: string; href: string }[]; h1?: string; eyebrow?: string; faq?: { q: string; a: string }[] }
 
 const SIZE_GUIDE = { label: "Guide des pointures", href: "/guides/quelle-pointure-choisir-sneakers" };
 const CARE_GUIDE = { label: "Entretenir ses sneakers", href: "/guides/entretenir-ses-sneakers" };
@@ -68,7 +69,14 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
       "Quelle low profile choisir ? Une seule paire pour tout faire : la Samba blanc et gomme ou noire. Envie de couleur : la Spezial. Un style plus rétro : la Gazelle. Pour les coupes amples : la Campus.",
       "Ce sont des répliques high copy, pas des paires originales. Livraison gratuite partout au Maroc en 12 à 48 h après confirmation. Elles chaussent près du pied : envoyez-nous la longueur de votre pied en centimètres, on confirme la pointure avant l’envoi.",
     ],
-    links: [{ label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "Handball Spezial", href: "/collections/handball-spezial" }, { label: "adidas Gazelle", href: "/collections/adidas-gazelle" }, { label: "Campus 00s", href: "/collections/adidas-campus-00s" }, { label: "Samba ou Handball Spezial ?", href: "/guides/samba-ou-handball-spezial" }, LOW_GUIDE, SIZE_GUIDE] } },
+    links: [{ label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "Handball Spezial", href: "/collections/handball-spezial" }, { label: "adidas Gazelle", href: "/collections/adidas-gazelle" }, { label: "Campus 00s", href: "/collections/adidas-campus-00s" }, { label: "Samba ou Handball Spezial ?", href: "/guides/samba-ou-handball-spezial" }, LOW_GUIDE, SIZE_GUIDE],
+    faq: [
+      { q: "Qu’est-ce qu’une sneaker low profile ?", a: "Une sneaker à semelle fine et à ligne basse, sans gros volume : Samba, Handball Spezial, Gazelle. Elle vient des sports en salle et des tribunes, d’où le nom de famille « terrace »." },
+      { q: "Quelle low profile choisir pour commencer ?", a: "La Samba blanc et gomme ou noire : la plus polyvalente, elle va avec un jean, un pantalon large ou une jupe longue. Pour plus de couleur, la Handball Spezial." },
+      { q: "Quel est le prix d’une Samba ou d’une Spezial au Maroc ?", a: "Chez BEYOND PLUS, la Samba coûte de 500 à 750 DH selon le coloris, la Handball Spezial 700 DH, la Gazelle de 650 à 720 DH, livraison gratuite partout au Maroc. Répliques high copy, non originales." },
+      { q: "Les low profile taillent-elles petit ?", a: COMMERCE.fit },
+      { q: "Combien de temps pour la livraison ?", a: COMMERCE.shipping },
+    ] } },
   { handle: "retro-runners", title: "Retro Runners", description: "L’archive running remise en ville : Kayano, Gel-NYC, 9060, Vomero.", filter: inCollection("retro-runners"), curated: true, seo: {
     h1: "Retro runners au Maroc", eyebrow: "Retro Runners",
     title: "Retro runners Maroc : Kayano 14, Gel-NYC, 9060, Vomero 5",

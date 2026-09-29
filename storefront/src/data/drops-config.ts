@@ -48,7 +48,7 @@ export const DROPS: Drop[] = [
       "adidas-samba-cow-print",
       "adidas-samba-vegan-white-gum",
       "adidas-handball-spezial-shadow-brown-alumina",
-      "adidas-samba-leopard-core-black-1",
+      "adidas-samba-leopard-core-black",
     ],
   },
 ];

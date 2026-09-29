@@ -63,3 +63,5 @@ Mis à jour le 29/09/2026 (chef de projet du matin) par le chef de projet. Ordre
 - Un article par jour impair (8h), sans doublon d'intention. Décision du 26/09 : 9 guides en une journée, c'est trop pour un site jeune (risque « contenu produit en masse ») ; la priorité passe au maillage, aux titles et aux backlinks.
 - Présence de beyondplusmaroc.com sur les requêtes A de l'audit (au 26/09 : absent sur « sneakers femme maroc », « vomero 5 maroc », « kayano 14 maroc prix », « adidas gazelle maroc »).
 - Données : aucune capture Search Console au 26/09 (demandée au fondateur).
+
+- [ ] 01/10 : publier le brouillon prêt SEO/brouillons/comment-porter-handball-spezial.ts (683 mots, photos, tableau), stratégie Low Profile.

@@ -15,6 +15,89 @@ export interface Guide {
 
 export const GUIDES: Guide[] = [
   {
+    slug: "samba-ou-gazelle",
+    title: "Samba ou Gazelle : laquelle choisir ?",
+    description: "Samba ou Gazelle : silhouette, coloris, prix au Maroc et façon de les porter. Le comparatif simple pour choisir entre les deux sneakers terrace.",
+    intro: "Samba si vous cherchez la ligne la plus fine et la plus sobre, Gazelle si vous voulez une allure un peu plus ronde, plus rétro et plus colorée. Les deux viennent du sport en salle, ont trois bandes et une semelle en gomme, et on les confond souvent en photo. Portées, elles ne racontent pourtant pas la même chose. Voici les vraies différences, les coloris disponibles chez BEYOND PLUS et nos conseils pour choisir. Nos paires sont des répliques high copy, jamais présentées comme originales.",
+    published: "2026-09-29",
+    sections: [
+      {
+        heading: "En bref",
+        body: [
+          "La Samba est la plus basse et la plus allongée des deux. Son bout en T contrasté et sa ligne fine en font la paire passe-partout par excellence.",
+          "La Gazelle est un peu plus ronde à l’avant, avec des bandes plus larges et plus contrastées. Elle donne un effet plus rétro, années 70, et assume davantage la couleur.",
+          "Budget chez BEYOND PLUS : la Samba de 500 à 750 DH selon le coloris, la Gazelle de 650 à 720 DH, livraison gratuite partout au Maroc.",
+        ],
+      },
+      {
+        heading: "Tableau comparatif",
+        body: ["Ce que l’on voit et ce que l’on ressent au quotidien, pour les paires en ligne chez nous."],
+        table: {
+          head: ["Critère", "Samba", "Gazelle"],
+          rows: [
+            ["Silhouette", "Très basse, allongée, bout plus pointu", "Un peu plus ronde et plus haute à l’avant"],
+            ["Bandes", "Fines, discrètes sur les versions claires", "Plus larges, souvent en couleur contrastée"],
+            ["Effet porté", "Net, graphique, allonge la jambe", "Rétro, décontracté, plus coloré"],
+            ["Coloris chez nous", "Blanc et gomme, noir, bleu halo, léopard, vache", "Crème et vert, noir et blanc, vert, gris et or"],
+            ["Versions épaisses", "Non", "Oui, la Gazelle Bold (semelle plus haute)"],
+            ["Prix BEYOND PLUS", "500 à 750 DH", "650 à 720 DH"],
+          ],
+        },
+      },
+      {
+        heading: "La Samba : la valeur sûre",
+        image: { src: "/products/adidas-samba-vegan-white-gum-01.webp", alt: "adidas Samba Vegan blanc et gomme, vue de profil" },
+        body: [
+          "Si vous ne deviez avoir qu’une paire terrace, ce serait elle. La Samba blanc et gomme va avec un jean clair, un pantalon noir à pinces, une jupe longue ou un short en été. La noire est encore plus facile à vivre : elle reste propre plus longtemps et passe avec une tenue plus habillée.",
+          "Les versions à motif, léopard ou vache, servent de pièce forte : on les porte avec une tenue neutre, jean brut et haut uni, pour que la chaussure fasse tout le travail.",
+          "Côté forme, la Samba chausse près du pied et reste très basse. C’est ce qui lui donne sa finesse, mais c’est aussi pour cela qu’il faut bien mesurer son pied avant de commander.",
+        ],
+      },
+      {
+        heading: "La Gazelle : plus rétro, plus de couleur",
+        image: { src: "/products/adidas-gazelle-indoor-bold-cream-collegiate-green-01.webp", alt: "adidas Gazelle Indoor Bold crème et vert collegiate" },
+        body: [
+          "La Gazelle se remarque d’abord par ses bandes : larges, souvent vertes, bleues ou noires sur une base claire. Elle apporte de la couleur sans être criarde, et donne tout de suite une allure années 70 à une tenue simple.",
+          "La version Bold pose la même tige sur une semelle plus épaisse. Elle gagne quelques centimètres et équilibre mieux les pantalons très larges et les robes longues, ce que la Samba, très plate, fait moins bien.",
+          "Chez nous, quatre coloris : crème et vert collegiate, noir et blanc, vert franc, et gris, blanc et or pour une version plus lumineuse.",
+        ],
+      },
+      {
+        heading: "Laquelle choisir selon votre style",
+        body: [
+          "Vous voulez une paire pour tout faire, du bureau au week-end : la Samba blanche ou noire.",
+          "Vous portez beaucoup de bas larges, cargo ou baggy : la Gazelle Bold, dont la semelle plus haute tient mieux le volume.",
+          "Vous aimez la couleur : la Gazelle crème et vert, ou la Samba bleu halo pour rester plus discret.",
+          "Vous cherchez une pièce qui se remarque : la Samba léopard ou vache.",
+          "Vous hésitez encore : regardez aussi la Handball Spezial, la troisième terrace, en daim et en couleurs franches. Notre comparatif Samba ou Handball Spezial détaille les différences.",
+        ],
+      },
+      {
+        heading: "Pointure : la méthode qui évite les échanges",
+        body: [
+          "Mesurez votre pied en centimètres, talon contre un mur, en fin de journée et avec vos chaussettes. Choisissez votre pointure habituelle parmi celles affichées sur la fiche, puis donnez-nous votre mesure : on confirme la pointure par téléphone avant l’envoi.",
+          "Samba comme Gazelle ne sont proposées qu’en pointures entières. Si vous avez le pied large, dites-le lors de l’appel : on vous conseille sur la paire la plus adaptée. Et si la pointure ne va pas, l’échange est possible sous 3 jours après la livraison, paire non portée et dans sa boîte d’origine.",
+        ],
+      },
+      {
+        heading: "Checklist avant de commander",
+        body: [
+          "1. Choisir la silhouette : fine (Samba) ou plus ronde (Gazelle).",
+          "2. Choisir la couleur selon vos tenues les plus portées.",
+          "3. Mesurer son pied en centimètres.",
+          "4. Vérifier la pointure disponible sur la fiche.",
+          "5. Commander : on vous appelle pour confirmer, livraison gratuite en 12 à 48 h après confirmation.",
+        ],
+      },
+    ],
+    links: [
+      { label: "adidas Samba au Maroc", href: "/collections/adidas-samba" },
+      { label: "adidas Gazelle au Maroc", href: "/collections/adidas-gazelle" },
+      { label: "Sneakers low profile", href: "/collections/low-profile" },
+      { label: "Samba ou Handball Spezial ?", href: "/guides/samba-ou-handball-spezial" },
+    ],
+  },
+  {
     slug: "reconnaitre-bonne-copie-sneakers",
     title: "Sneakers high copy : comment reconnaître une bonne copie",
     description: "Copie à 250 DH ou à 700 DH : ce qui change vraiment. Les 8 points à vérifier sur une sneaker high copy avant de l’acheter au Maroc.",

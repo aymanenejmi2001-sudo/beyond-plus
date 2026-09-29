@@ -87,6 +87,15 @@ export default async function CollectionPage({ params, searchParams }: Params) {
         <section className="beyond-collection-seo" aria-labelledby="collection-seo">
           <h2 id="collection-seo">{seo.heading}</h2>
           {seo.body.map((p) => <p key={p}>{p}</p>)}
+          {seo.faq && page === 1 && (
+            <>
+              <h3>Questions fréquentes</h3>
+              <dl className="beyond-faq">
+                {seo.faq.map((f) => <div key={f.q}><dt>{f.q}</dt><dd>{f.a}</dd></div>)}
+              </dl>
+              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: seo.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
+            </>
+          )}
           <p className="beyond-collection-seo-links">{[...seo.links, ...guideLinks.filter((g) => !seo.links.some((l) => l.href === g.href))].map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}</p>
         </section>
       )}
