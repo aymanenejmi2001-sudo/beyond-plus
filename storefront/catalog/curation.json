@@ -50,6 +50,70 @@
       ],
       "price": 760,
       "reason": "27/09 : sélection running itsu.ma, seul modèle manquant disponible chez le fournisseur avec 4 photos, prix aligné (760 DH)"
+    },
+    {
+      "handle": "adidas-forum-84-low",
+      "style": "basketball-retro",
+      "collections": [
+        "basketball"
+      ],
+      "reason": "28/09 : Forum 84 Low Magic Mauve, coloris pastel vu chez 1 seule boutique marocaine (Manore), renforce le basketball rétro femme"
+    },
+    {
+      "handle": "converse-run-star-motion-black",
+      "style": "skate",
+      "collections": [
+        "skate"
+      ],
+      "reason": "28/09 : Run Star Motion, silhouette plateforme vendue par 1 seule boutique marocaine, sort des Chuck Taylor banales retirées le 27/09"
+    },
+    {
+      "handle": "puma-classic-xxi",
+      "style": "skate",
+      "collections": [
+        "skate"
+      ],
+      "reason": "28/09 : Puma Suede XXI, 6 photos, pointures 36 à 44, seule Puma Suede du site (1 à 2 boutiques concurrentes)"
+    },
+    {
+      "handle": "adidas-handball-spezial-wmns-earth-strata-gum-prix-de-vente",
+      "style": "terrace",
+      "collections": [
+        "low-profile"
+      ],
+      "reason": "28/09 : ventes : la Spezial est le seul modèle demandé (Silver Violet) ; coloris voisin Earth Strata, 1 boutique concurrente"
+    },
+    {
+      "handle": "adidas-handball-spezial-aluminium-black-gum",
+      "style": "terrace",
+      "collections": [
+        "low-profile"
+      ],
+      "reason": "28/09 : ventes : Spezial demandée ; coloris Aluminium Black Gum, 1 boutique concurrente"
+    },
+    {
+      "handle": "nb-1000-dark-olivine-magnet",
+      "style": "y2k-runner",
+      "collections": [
+        "retro-runners"
+      ],
+      "reason": "28/09 : NB 1000 Dark Olivine, coloris olive vu chez 1 seule boutique, pointures 36 à 45 (homme)"
+    },
+    {
+      "handle": "asics-gel-quantum-kinetic-dark-sepia-shamrock",
+      "style": "technical",
+      "collections": [
+        "tech-runners"
+      ],
+      "reason": "28/09 : Gel-Quantum Kinetic Dark Sepia, coloris absent des 6 boutiques concurrentes, homme 40 à 44"
+    },
+    {
+      "handle": "air-jordan-1-low-black-medium-olive",
+      "style": "basketball-retro",
+      "collections": [
+        "basketball"
+      ],
+      "reason": "28/09 : AJ1 Low Black Medium Olive (coloris non collab), absent des concurrents marocains, homme 40 à 44"
     }
   ],
   "remove": [
@@ -96,6 +160,26 @@
     {
       "slug": "converse-chuck-taylor-all-star-platform-montante",
       "reason": "27/09 : retiré à la demande d'Aymane"
+    },
+    {
+      "slug": "nike-dunk-low-ben-jerry-s-chunky-dunky",
+      "reason": "28/09 : pair du flux Radar, collaboration Ben & Jerry's (interdit), consigne chef de projet ; redirection via retired.json"
+    },
+    {
+      "slug": "nike-dunk-low-sb-parra-2021",
+      "reason": "28/09 : pair du flux Radar, collaboration Parra (interdit) ; redirection via retired.json"
+    },
+    {
+      "slug": "adidas-samba-wales-bonner-x-nylon-fox-brown",
+      "reason": "28/09 : pair du flux Radar, collaboration Wales Bonner (interdit) ; redirection via retired.json"
+    },
+    {
+      "slug": "new-balance-1000-joe-freshgoods-pink-mink",
+      "reason": "28/09 : pair du flux Radar, collaboration Joe Freshgoods (interdit) ; redirection via retired.json"
+    },
+    {
+      "slug": "nike-dunk-low-black-myth-wukong",
+      "reason": "28/09 : pair du flux Radar, collaboration Black Myth: Wukong (interdit) ; redirection via retired.json"
     }
   ]
 }

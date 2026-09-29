@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { COMMERCE, optionLabel } from "@/data/commerce";
+import { optionLabel } from "@/data/commerce";
 import { useEffect, useRef, useState } from "react";
 import type { Product } from "@/lib/shopify/types";
 import { ecommerce, lineItem, track } from "@/lib/commerce/track";
@@ -11,7 +11,7 @@ import { useCart } from "./CartProvider";
 import { useBodyLock } from "@/lib/hooks/useBodyLock";
 import { formatMoney } from "@/lib/shopify/money";
 import { LinkButton } from "@/components/ui/Button";
-import { CloseIcon } from "@/components/ui/icons";
+import { CloseIcon, ReturnIcon, SecureIcon, ShippingIcon } from "@/components/ui/icons";
 import styles from "./CartDrawer.module.css";
 
 export function CartDrawer() {
@@ -217,9 +217,13 @@ export function CartDrawer() {
                 <span>{formatMoney({ amount: String(subtotal - discount), currencyCode: "MAD" })}</span>
               </div>
             )}
-            <p className={styles.note}>
-              {COMMERCE.shipping}
-            </p>
+            {/* Answers the doubts that stop people at "Commander": no card
+                form, a call first, free delivery, size exchange. */}
+            <ul className={styles.assurance} aria-label="Avant de commander">
+              <li><SecureIcon size={16} /><span><strong>Aucun paiement en ligne.</strong> On vous appelle pour confirmer avant l’envoi.</span></li>
+              <li><ShippingIcon size={16} /><span>Livraison gratuite partout au Maroc, 12 à 48 h après confirmation.</span></li>
+              <li><ReturnIcon size={16} /><span>Échange de pointure sous 3 jours après la livraison.</span></li>
+            </ul>
             {/* → window.location.href = cart.checkoutUrl (Storefront Cart API)
                 at go-live. Until then, /checkout reviews the same lines and
                 confirms the order locally. */}

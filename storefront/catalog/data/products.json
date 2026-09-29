@@ -141,7 +141,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-12-02T12:56:58+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-kayano-14-white-fjord-grey",
@@ -285,7 +285,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-12-02T12:49:49+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-kayano-14-triple-black",
@@ -429,7 +429,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-10-23T14:52:02+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-kayano-14-cream-black-metallic-plum",
@@ -563,7 +563,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-10-23T14:36:55+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-kayano-14-cream-sweet-pink",
@@ -707,7 +707,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-10-23T14:33:38+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-nyc-arctic-sky-bleu-ciel",
@@ -851,7 +851,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-12-23T12:41:08+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-nyc-black-graphite",
@@ -995,7 +995,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-09-29T13:50:33+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-nyc-white-steel-grey",
@@ -1147,7 +1147,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-02-03T14:29:18+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-nyc-ivy-smoke-grey",
@@ -1291,7 +1291,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-01-06T14:17:35+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-nyc-cream-oyster-grey",
@@ -1444,7 +1444,7 @@
     "publishable": true,
     "migration": "KEEP_HERO",
     "createdAt": "2024-12-25T14:15:40+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-samba-cow-print",
@@ -1570,7 +1570,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-07-17T14:03:43+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-samba-core-white-halo-blue",
@@ -1705,7 +1705,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2024-07-02T15:58:10+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-samba-vegan-white-gum",
@@ -1849,7 +1849,7 @@
     "publishable": true,
     "migration": "KEEP_HERO",
     "createdAt": "2023-11-07T19:02:04+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-samba-core-black",
@@ -1982,7 +1982,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-11-07T17:51:39+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-handball-spezial-w-silver-violet",
@@ -2117,7 +2117,7 @@
     "publishable": true,
     "migration": "KEEP_HERO",
     "createdAt": "2026-09-08T12:51:21+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-handball-spezial-light-blue",
@@ -2261,7 +2261,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-02-01T15:19:56+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-handball-spezial-silver-green-magic",
@@ -2405,7 +2405,161 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-01-17T13:06:03+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
+  },
+  {
+    "id": "bp-adidas-handball-spezial-aluminium-black-gum",
+    "slug": "adidas-handball-spezial-aluminium-black-gum",
+    "brand": "adidas",
+    "model": "Handball Spezial",
+    "fullName": "adidas Handball Spezial Aluminium Black Gum",
+    "colorway": "Aluminium Black Gum",
+    "colorFamily": "cream",
+    "gender": "women",
+    "category": "Sneakers",
+    "silhouette": "adidas-handball-spezial",
+    "styleFamily": "terrace",
+    "shortDescription": "L’esprit terrace, cuir et gomme.",
+    "description": "L’esprit terrace, cuir et gomme. Des tons crème et beige, doux et faciles à associer. Avec un jean droit, un survêtement ou une jupe midi. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
+    "sourceUrl": "https://www.plumaskicks.com/products/adidas-handball-spezial-aluminium-black-gum",
+    "sourceType": "supplier",
+    "sourceName": "Plumas Kicks",
+    "sourceProductCode": null,
+    "releaseYear": null,
+    "retailPrice": null,
+    "marketReferencePrice": null,
+    "priceMAD": 700,
+    "compareAtPriceMAD": null,
+    "currency": "MAD",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "availableSizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "images": [
+      {
+        "file": "/products/adidas-handball-spezial-aluminium-black-gum-01.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/PLUMAS_49.png",
+        "width": 1000,
+        "height": 1000,
+        "sha256": "2c2ee001fc6b74994ba8f9c8f63035c10b2d4670730fc1a1c8cb48d4076d01bc",
+        "lowRes": true,
+        "alt": "adidas Handball Spezial Aluminium Black Gum, vue 1"
+      },
+      {
+        "file": "/products/adidas-handball-spezial-aluminium-black-gum-02.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Acheter-Adidas-Handball-Spezial-Aluminium-Black-Gum-1.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "0851a73d75c8de6e7253dc59ccd3fd727ed930eba0212683ba89bdb0a704341c",
+        "lowRes": true,
+        "alt": "adidas Handball Spezial Aluminium Black Gum, vue 2"
+      },
+      {
+        "file": "/products/adidas-handball-spezial-aluminium-black-gum-03.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Acheter-Adidas-Handball-Spezial-Aluminium-Black-Gum-2.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "88553279df8a100c9b0f3fa00c0939daa79f470e0ad965432d3fe117b4a33ae1",
+        "lowRes": true,
+        "alt": "adidas Handball Spezial Aluminium Black Gum, vue 3"
+      },
+      {
+        "file": "/products/adidas-handball-spezial-aluminium-black-gum-04.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Acheter-Adidas-Handball-Spezial-Aluminium-Black-Gum-3.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "44be21ad7d16b676ba1082f20574bdbb9b288df5c19cb6ee31446d0d10c87feb",
+        "lowRes": true,
+        "alt": "adidas Handball Spezial Aluminium Black Gum, vue 4"
+      },
+      {
+        "file": "/products/adidas-handball-spezial-aluminium-black-gum-05.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Acheter-Adidas-Handball-Spezial-Aluminium-Black-Gum-4.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "baaae87899abbb899ad7fb561ca548c8b838bc05a61b4cd72851790ab194b676",
+        "lowRes": true,
+        "alt": "adidas Handball Spezial Aluminium Black Gum, vue 5"
+      }
+    ],
+    "heroImage": "/products/adidas-handball-spezial-aluminium-black-gum-01.webp",
+    "gallery": [
+      "/products/adidas-handball-spezial-aluminium-black-gum-01.webp",
+      "/products/adidas-handball-spezial-aluminium-black-gum-02.webp",
+      "/products/adidas-handball-spezial-aluminium-black-gum-03.webp",
+      "/products/adidas-handball-spezial-aluminium-black-gum-04.webp",
+      "/products/adidas-handball-spezial-aluminium-black-gum-05.webp"
+    ],
+    "tags": [
+      "adidas",
+      "handball spezial",
+      "crème / beige",
+      "terrace"
+    ],
+    "collections": [
+      "low-profile"
+    ],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "label": null,
+    "trendTier": "CORE",
+    "trendScore": 71,
+    "scoreBreakdown": {
+      "globalDemand": {
+        "value": 5,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Lecture éditoriale de la demande 2025–26, non mesurée."
+      },
+      "moroccanMarket": {
+        "value": 5,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation éditoriale — aucune donnée de vente BEYOND PLUS."
+      },
+      "supplierBestSeller": {
+        "value": 0,
+        "source": "VERIFIED_DATA",
+        "note": "Présent dans la collection best-sellers du fournisseur au relevé."
+      },
+      "freshness": {
+        "value": 1,
+        "source": "VERIFIED_DATA",
+        "note": "Mise en ligne fournisseur : 2025-01-02."
+      },
+      "versatility": {
+        "value": 5,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Facilité à porter."
+      },
+      "socialPotential": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Potentiel visuel / réseaux."
+      },
+      "marginPotential": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation — prix de revente non fixés."
+      }
+    },
+    "stockStatus": "ON_REQUEST",
+    "supplierStatus": "AVAILABLE_AT_SUPPLIER",
+    "authenticityStatus": "REPLICA_DECLARED_BY_SUPPLIER",
+    "imageRights": "AUTHORIZED_SUPPLIER",
+    "publishable": true,
+    "migration": "NEW",
+    "createdAt": "2025-01-02T12:51:53+01:00",
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-handball-spezial-shadow-brown-alumina",
@@ -2559,23 +2713,23 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-01-02T12:38:11+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
-    "id": "bp-adidas-handball-spezial-navy-gum",
-    "slug": "adidas-handball-spezial-navy-gum",
+    "id": "bp-adidas-handball-spezial-earth-strata-gum",
+    "slug": "adidas-handball-spezial-earth-strata-gum",
     "brand": "adidas",
     "model": "Handball Spezial",
-    "fullName": "adidas Handball Spezial Navy / Gum",
-    "colorway": "Navy / Gum",
+    "fullName": "adidas Handball Spezial Earth Strata Gum",
+    "colorway": "Earth Strata Gum",
     "colorFamily": "cream",
     "gender": "women",
     "category": "Sneakers",
     "silhouette": "adidas-handball-spezial",
     "styleFamily": "terrace",
-    "shortDescription": "Plate, souple, facile.",
-    "description": "Plate, souple, facile. Des tons crème et beige, doux et faciles à associer. Avec un jean droit, un survêtement ou une jupe midi. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
-    "sourceUrl": "https://www.plumaskicks.com/products/adidas-handball-spezial-navy-gum",
+    "shortDescription": "La silhouette des tribunes, devenue uniforme.",
+    "description": "La silhouette des tribunes, devenue uniforme. Des tons crème et beige, doux et faciles à associer. Avec un jean droit, un survêtement ou une jupe midi. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
+    "sourceUrl": "https://www.plumaskicks.com/products/adidas-handball-spezial-wmns-earth-strata-gum-prix-de-vente",
     "sourceType": "supplier",
     "sourceName": "Plumas Kicks",
     "sourceProductCode": null,
@@ -2601,18 +2755,48 @@
     ],
     "images": [
       {
-        "file": "/products/adidas-handball-spezial-navy-gum-01.webp",
-        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/PLUMAS_55.png",
+        "file": "/products/adidas-handball-spezial-earth-strata-gum-01.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/PLUMAS_56.png",
         "width": 1000,
         "height": 1000,
-        "sha256": "0e19c25e95b390b4cf5e8ffbb7a232f46fbcfc8527772778df08bfe22cd1023c",
+        "sha256": "1ea8f32e194be9519cd5069073daa78214e7858c5f24a6b3c135c3155aa012bb",
         "lowRes": true,
-        "alt": "adidas Handball Spezial Navy / Gum, vue 1"
+        "alt": "adidas Handball Spezial Earth Strata Gum, vue 1"
+      },
+      {
+        "file": "/products/adidas-handball-spezial-earth-strata-gum-02.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/adidas-handball-spezial-wmns-earth-strata-gum-23056377_48924975_1000.jpg",
+        "width": 1000,
+        "height": 600,
+        "sha256": "26ab0f30fe95404f454c9c992a4d9c4995301fef3b33ab839765fbdb94c3a96a",
+        "lowRes": true,
+        "alt": "adidas Handball Spezial Earth Strata Gum, vue 2"
+      },
+      {
+        "file": "/products/adidas-handball-spezial-earth-strata-gum-03.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/adidas-handball-spezial-wmns-earth-strata-gum-23056377_48924981_1000.jpg",
+        "width": 1000,
+        "height": 600,
+        "sha256": "3078f996ab579777cbaba65416adc065614ab3de2d0dcbff05c538e41dfb9cd6",
+        "lowRes": true,
+        "alt": "adidas Handball Spezial Earth Strata Gum, vue 3"
+      },
+      {
+        "file": "/products/adidas-handball-spezial-earth-strata-gum-04.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/adidas-handball-spezial-wmns-earth-strata-gum-23056377_48926710_1000.jpg",
+        "width": 1000,
+        "height": 600,
+        "sha256": "2a7ef64aaf45880724d97a61def0ca25338fc4895cf161046af9e68456e69858",
+        "lowRes": true,
+        "alt": "adidas Handball Spezial Earth Strata Gum, vue 4"
       }
     ],
-    "heroImage": "/products/adidas-handball-spezial-navy-gum-01.webp",
+    "heroImage": "/products/adidas-handball-spezial-earth-strata-gum-01.webp",
     "gallery": [
-      "/products/adidas-handball-spezial-navy-gum-01.webp"
+      "/products/adidas-handball-spezial-earth-strata-gum-01.webp",
+      "/products/adidas-handball-spezial-earth-strata-gum-02.webp",
+      "/products/adidas-handball-spezial-earth-strata-gum-03.webp",
+      "/products/adidas-handball-spezial-earth-strata-gum-04.webp"
     ],
     "tags": [
       "adidas",
@@ -2628,7 +2812,7 @@
     "trending": false,
     "label": null,
     "trendTier": "CORE",
-    "trendScore": 86,
+    "trendScore": 71,
     "scoreBreakdown": {
       "globalDemand": {
         "value": 5,
@@ -2641,7 +2825,7 @@
         "note": "Estimation éditoriale — aucune donnée de vente BEYOND PLUS."
       },
       "supplierBestSeller": {
-        "value": 5,
+        "value": 0,
         "source": "VERIFIED_DATA",
         "note": "Présent dans la collection best-sellers du fournisseur au relevé."
       },
@@ -2670,10 +2854,10 @@
     "supplierStatus": "AVAILABLE_AT_SUPPLIER",
     "authenticityStatus": "REPLICA_DECLARED_BY_SUPPLIER",
     "imageRights": "AUTHORIZED_SUPPLIER",
-    "publishable": false,
+    "publishable": true,
     "migration": "NEW",
-    "createdAt": "2025-01-02T12:34:39+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "createdAt": "2025-01-02T12:24:06+01:00",
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-gazelle-indoor-bold-cream-collegiate-green",
@@ -2817,7 +3001,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-01-02T14:02:55+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-gazelle-indoor-bold-core-black-white",
@@ -2951,7 +3135,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2024-09-27T11:37:07+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-gazelle-indoor-green",
@@ -3103,7 +3287,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-02-09T20:59:43+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-gazelle-indoor-grey-three-cloud-white-gold-metallic",
@@ -3245,7 +3429,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-02-09T20:26:27+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-530-white-silver-metallic-sky-blue",
@@ -3379,7 +3563,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-05-28T17:11:39+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-530-steel-grey",
@@ -3503,7 +3687,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-02-26T20:02:22+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-mr530sg-white-blue",
@@ -3656,7 +3840,7 @@
     "publishable": true,
     "migration": "KEEP_HERO",
     "createdAt": "2023-02-25T19:37:22+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-9060-white-taro",
@@ -3805,7 +3989,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2026-06-11T13:03:50+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-9060-black-castlerock-grey-2025",
@@ -3950,7 +4134,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2026-06-11T13:03:11+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-9060-crystal-pink",
@@ -4104,7 +4288,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-01-11T13:41:26+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-vomero-5-photon-dust-pink-foam",
@@ -4249,7 +4433,7 @@
     "publishable": true,
     "migration": "KEEP_HERO",
     "createdAt": "2026-08-19T14:47:01+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-zoom-vomero-5-premium-sail-total-orange",
@@ -4395,7 +4579,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2026-06-09T14:55:38+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-zoom-vomero-5-earth-fossil",
@@ -4559,7 +4743,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-10-25T14:22:19+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-zoom-vomero-5-white-vast-grey",
@@ -4713,7 +4897,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-10-23T15:25:47+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-zoom-vomero-5-pale-ivory-sand-drift",
@@ -4857,7 +5041,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-10-23T15:19:40+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-p-6000-white-silver",
@@ -5002,7 +5186,7 @@
     "publishable": true,
     "migration": "KEEP_HERO",
     "createdAt": "2026-08-19T14:39:20+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-p-6000-premium-washed-pink",
@@ -5156,7 +5340,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-12-02T13:12:23+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-p-6000-black-white",
@@ -5310,7 +5494,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-10-23T14:56:58+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-vans-old-skool",
@@ -5474,7 +5658,7 @@
     "publishable": true,
     "migration": "KEEP_HERO",
     "createdAt": "2022-07-24T22:35:24+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-vans-knu-skool-imran-potato-black",
@@ -5605,7 +5789,7 @@
     "publishable": false,
     "migration": "NEW",
     "createdAt": "2025-01-02T13:50:31+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-jordan-air-jordan-4-retro-black-cat",
@@ -5758,7 +5942,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-07-21T22:07:24+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-jordan-air-jordan-4-retro-cool-grey-2019",
@@ -5903,7 +6087,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-07-21T22:07:04+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-jordan-air-jordan-4-retro-metallic-orange",
@@ -6060,7 +6244,7 @@
     "publishable": false,
     "migration": "NEW",
     "createdAt": "2022-11-15T17:53:03+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-jordan-air-jordan-4-retro-bred-2019",
@@ -6192,7 +6376,7 @@
     "publishable": false,
     "migration": "NEW",
     "createdAt": "2025-04-07T15:43:08+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-dunk-low-se-barber-shop-grey",
@@ -6327,7 +6511,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-11-06T17:40:53+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-dunk-low-ivory-hyper-royal",
@@ -6462,7 +6646,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-11-06T17:33:18+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-dunk-low-paisley-brown",
@@ -6597,7 +6781,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-11-02T17:51:36+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-dunk-low-paisley-black",
@@ -6752,7 +6936,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-10-06T12:35:52+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-dunk-low-sail-coast",
@@ -6897,7 +7081,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-07-24T03:21:29+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-dunk-low-bordeaux",
@@ -7020,7 +7204,162 @@
     "publishable": false,
     "migration": "NEW",
     "createdAt": "2022-12-17T14:48:12+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
+  },
+  {
+    "id": "bp-jordan-air-jordan-1-black-medium-olive",
+    "slug": "jordan-air-jordan-1-black-medium-olive",
+    "brand": "Jordan",
+    "model": "Air Jordan 1",
+    "fullName": "Jordan Air Jordan 1 Black & Medium Olive",
+    "colorway": "Black & Medium Olive",
+    "colorFamily": "black-white",
+    "gender": "men",
+    "category": "Sneakers",
+    "silhouette": "jordan-1",
+    "styleFamily": "basketball-retro",
+    "shortDescription": "Une silhouette qui a fait la culture sneaker.",
+    "description": "Une silhouette qui a fait la culture sneaker. Noir et blanc, le contraste qui ne se démode pas. Laisse-la respirer : pantalon droit, haut sobre. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
+    "sourceUrl": "https://www.plumaskicks.com/products/air-jordan-1-low-black-medium-olive",
+    "sourceType": "supplier",
+    "sourceName": "Plumas Kicks",
+    "sourceProductCode": null,
+    "releaseYear": null,
+    "retailPrice": null,
+    "marketReferencePrice": null,
+    "priceMAD": 620,
+    "compareAtPriceMAD": null,
+    "currency": "MAD",
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "availableSizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "images": [
+      {
+        "file": "/products/jordan-air-jordan-1-black-medium-olive-01.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/imgi_3_product_0d286c70-8c58-47cf-8c76-38ae8aa7575c.jpg",
+        "width": 800,
+        "height": 800,
+        "sha256": "6fd052045a232e4fd6edbfa669fe77cb42f28d82db322f51af0ab6e4fe499e0e",
+        "lowRes": true,
+        "alt": "Jordan Air Jordan 1 Black & Medium Olive, vue 1"
+      },
+      {
+        "file": "/products/jordan-air-jordan-1-black-medium-olive-02.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/imgi_7_product_a3fc0a9c-2d8c-442b-81e0-f71a66175b67.jpg",
+        "width": 800,
+        "height": 800,
+        "sha256": "8510c39f314e8d61350b8e097b011aa853addaefa2fe6ba6168a332105d41099",
+        "lowRes": true,
+        "alt": "Jordan Air Jordan 1 Black & Medium Olive, vue 2"
+      },
+      {
+        "file": "/products/jordan-air-jordan-1-black-medium-olive-03.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/imgi_8_product_2ef8cec9-46cd-416f-afe0-41f7e3b75980.jpg",
+        "width": 800,
+        "height": 800,
+        "sha256": "3b8c6f51045b236636f1eae200ba1c9dc53204bc6049fb82a62ccc0550a8d886",
+        "lowRes": true,
+        "alt": "Jordan Air Jordan 1 Black & Medium Olive, vue 3"
+      },
+      {
+        "file": "/products/jordan-air-jordan-1-black-medium-olive-04.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/imgi_6_product_e196102b-c590-4d9b-af9f-261e72c8e8d4.jpg",
+        "width": 800,
+        "height": 800,
+        "sha256": "c5877fc23ad51acee1cc5ec42406ab587b9017a2955d0c35294ee8bf4e2ec335",
+        "lowRes": true,
+        "alt": "Jordan Air Jordan 1 Black & Medium Olive, vue 4"
+      },
+      {
+        "file": "/products/jordan-air-jordan-1-black-medium-olive-05.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/imgi_4_product_6ec1742a-e254-4c68-bd7e-020f661c70f9.jpg",
+        "width": 800,
+        "height": 800,
+        "sha256": "7d87e048847ef6e914579a76fe13ba9d4d919c1fed9c412f217c2ae05df280f1",
+        "lowRes": true,
+        "alt": "Jordan Air Jordan 1 Black & Medium Olive, vue 5"
+      }
+    ],
+    "heroImage": "/products/jordan-air-jordan-1-black-medium-olive-01.webp",
+    "gallery": [
+      "/products/jordan-air-jordan-1-black-medium-olive-01.webp",
+      "/products/jordan-air-jordan-1-black-medium-olive-02.webp",
+      "/products/jordan-air-jordan-1-black-medium-olive-03.webp",
+      "/products/jordan-air-jordan-1-black-medium-olive-04.webp",
+      "/products/jordan-air-jordan-1-black-medium-olive-05.webp"
+    ],
+    "tags": [
+      "jordan",
+      "air jordan 1",
+      "noir / blanc",
+      "basketball-retro"
+    ],
+    "collections": [
+      "basketball",
+      "icons"
+    ],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "label": null,
+    "trendTier": "CORE",
+    "trendScore": 67,
+    "scoreBreakdown": {
+      "globalDemand": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Lecture éditoriale de la demande 2025–26, non mesurée."
+      },
+      "moroccanMarket": {
+        "value": 5,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation éditoriale — aucune donnée de vente BEYOND PLUS."
+      },
+      "supplierBestSeller": {
+        "value": 0,
+        "source": "VERIFIED_DATA",
+        "note": "Présent dans la collection best-sellers du fournisseur au relevé."
+      },
+      "freshness": {
+        "value": 2,
+        "source": "VERIFIED_DATA",
+        "note": "Mise en ligne fournisseur : 2025-12-17."
+      },
+      "versatility": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Facilité à porter."
+      },
+      "socialPotential": {
+        "value": 5,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Potentiel visuel / réseaux."
+      },
+      "marginPotential": {
+        "value": 3,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation — prix de revente non fixés."
+      }
+    },
+    "stockStatus": "ON_REQUEST",
+    "supplierStatus": "AVAILABLE_AT_SUPPLIER",
+    "authenticityStatus": "REPLICA_DECLARED_BY_SUPPLIER",
+    "imageRights": "AUTHORIZED_SUPPLIER",
+    "publishable": true,
+    "migration": "NEW",
+    "createdAt": "2025-12-17T12:09:04+01:00",
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-jordan-air-jordan-1-light-smoke-grey",
@@ -7183,7 +7522,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-07-15T12:13:33+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-jordan-air-jordan-1-phantom-pastel-multicolor",
@@ -7338,7 +7677,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-07-15T12:13:32+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-jordan-air-jordan-1-court-purple-white",
@@ -7483,7 +7822,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-07-21T21:27:49+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-jordan-air-jordan-1-dark-mocha",
@@ -7640,7 +7979,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-07-21T21:26:46+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-jordan-air-jordan-1-linen",
@@ -7755,130 +8094,7 @@
     "publishable": false,
     "migration": "NEW",
     "createdAt": "2023-07-15T12:13:29+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
-  },
-  {
-    "id": "bp-jordan-air-jordan-1-bordeaux",
-    "slug": "jordan-air-jordan-1-bordeaux",
-    "brand": "Jordan",
-    "model": "Air Jordan 1",
-    "fullName": "Jordan Air Jordan 1 Bordeaux",
-    "colorway": "Bordeaux",
-    "colorFamily": "burgundy",
-    "gender": "unisex",
-    "category": "Sneakers",
-    "silhouette": "jordan-1",
-    "styleFamily": "basketball-retro",
-    "shortDescription": "Un classique du parquet, devenu culte.",
-    "description": "Un classique du parquet, devenu culte. Un bordeaux profond, la couleur signature de l’univers BEYOND. Laisse-la respirer : pantalon droit, haut sobre. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
-    "sourceUrl": "https://www.plumaskicks.com/products/air-jordan-1-retro-high-og-bordeaux",
-    "sourceType": "supplier",
-    "sourceName": "Plumas Kicks",
-    "sourceProductCode": null,
-    "releaseYear": null,
-    "retailPrice": null,
-    "marketReferencePrice": null,
-    "priceMAD": 720,
-    "compareAtPriceMAD": null,
-    "currency": "MAD",
-    "sizes": [
-      "36",
-      "37",
-      "38",
-      "39",
-      "40",
-      "41",
-      "42",
-      "43",
-      "44"
-    ],
-    "availableSizes": [
-      "36",
-      "37",
-      "38",
-      "39",
-      "40",
-      "41",
-      "42",
-      "43",
-      "44"
-    ],
-    "images": [
-      {
-        "file": "/products/jordan-air-jordan-1-bordeaux-01.webp",
-        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Designsanstitre-2023-08-29T183211.496.png",
-        "width": 1000,
-        "height": 1000,
-        "sha256": "85d5f6f136ecfcc57935be49197a1cf85a58594b3d2297679a185f1d1cad9310",
-        "lowRes": true,
-        "alt": "Jordan Air Jordan 1 Bordeaux, vue 1"
-      }
-    ],
-    "heroImage": "/products/jordan-air-jordan-1-bordeaux-01.webp",
-    "gallery": [
-      "/products/jordan-air-jordan-1-bordeaux-01.webp"
-    ],
-    "tags": [
-      "jordan",
-      "air jordan 1",
-      "bordeaux",
-      "basketball-retro"
-    ],
-    "collections": [
-      "basketball",
-      "icons"
-    ],
-    "featured": false,
-    "newArrival": false,
-    "trending": false,
-    "label": null,
-    "trendTier": "CORE",
-    "trendScore": 64,
-    "scoreBreakdown": {
-      "globalDemand": {
-        "value": 4,
-        "source": "EDITORIAL_JUDGMENT",
-        "note": "Lecture éditoriale de la demande 2025–26, non mesurée."
-      },
-      "moroccanMarket": {
-        "value": 5,
-        "source": "EDITORIAL_JUDGMENT",
-        "note": "Estimation éditoriale — aucune donnée de vente BEYOND PLUS."
-      },
-      "supplierBestSeller": {
-        "value": 0,
-        "source": "VERIFIED_DATA",
-        "note": "Présent dans la collection best-sellers du fournisseur au relevé."
-      },
-      "freshness": {
-        "value": 1,
-        "source": "VERIFIED_DATA",
-        "note": "Mise en ligne fournisseur : 2022-07-21."
-      },
-      "versatility": {
-        "value": 4,
-        "source": "EDITORIAL_JUDGMENT",
-        "note": "Facilité à porter."
-      },
-      "socialPotential": {
-        "value": 5,
-        "source": "EDITORIAL_JUDGMENT",
-        "note": "Potentiel visuel / réseaux."
-      },
-      "marginPotential": {
-        "value": 3,
-        "source": "EDITORIAL_JUDGMENT",
-        "note": "Estimation — prix de revente non fixés."
-      }
-    },
-    "stockStatus": "ON_REQUEST",
-    "supplierStatus": "AVAILABLE_AT_SUPPLIER",
-    "authenticityStatus": "REPLICA_DECLARED_BY_SUPPLIER",
-    "imageRights": "AUTHORIZED_SUPPLIER",
-    "publishable": false,
-    "migration": "NEW",
-    "createdAt": "2022-07-21T21:29:33+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-air-force-1-07-low-exoskeletal",
@@ -8022,7 +8238,7 @@
     "publishable": true,
     "migration": "DEPRIORITIZE",
     "createdAt": "2026-08-19T14:51:34+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-air-force-1-lv8-emb-black-silver",
@@ -8156,7 +8372,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-11-10T13:06:32+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-air-force-1-low-07-triple-black",
@@ -8309,7 +8525,7 @@
     "publishable": true,
     "migration": "KEEP_CATALOGUE",
     "createdAt": "2022-07-24T02:49:23+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-air-force-1-low-07-triple-white",
@@ -8472,7 +8688,7 @@
     "publishable": true,
     "migration": "KEEP_CATALOGUE",
     "createdAt": "2022-07-24T02:44:58+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-550-white-summer-fog",
@@ -8596,7 +8812,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2024-06-06T14:29:44+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-550-white-grey",
@@ -8740,7 +8956,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-04-10T22:01:12+00:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-550-white-burgundy",
@@ -8884,7 +9100,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-03-03T18:02:17+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-550-white-green-black",
@@ -9031,7 +9247,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-07-23T16:55:33+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-campus-00s-pink-strata",
@@ -9186,7 +9402,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-10-25T14:14:22+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-campus-00s-crystal-white-dark-green",
@@ -9329,7 +9545,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2024-03-09T16:33:16+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-superstar-core-black-white-gold-metallic",
@@ -9471,7 +9687,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-11-07T20:11:34+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-superstar-white-black",
@@ -9623,7 +9839,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-11-07T19:23:57+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-superstar-canvas-navy-gum",
@@ -9737,7 +9953,7 @@
     "publishable": false,
     "migration": "NEW",
     "createdAt": "2024-10-02T13:22:15+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-stan-smith-cloud-white",
@@ -9909,7 +10125,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-07-24T03:35:51+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-stan-smith-black",
@@ -10071,7 +10287,171 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-07-24T03:35:38+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
+  },
+  {
+    "id": "bp-adidas-forum-low-magic-mauve-multi-color",
+    "slug": "adidas-forum-low-magic-mauve-multi-color",
+    "brand": "adidas",
+    "model": "Forum Low",
+    "fullName": "adidas Forum Low Magic Mauve Multi / Color",
+    "colorway": "Magic Mauve Multi / Color",
+    "colorFamily": "statement",
+    "gender": "women",
+    "category": "Sneakers",
+    "silhouette": "adidas-forum-low",
+    "styleFamily": "basketball-retro",
+    "shortDescription": "Une silhouette qui a fait la culture sneaker.",
+    "description": "Une silhouette qui a fait la culture sneaker. Un coloris affirmé, pour sortir du rang. Laisse-la respirer : pantalon droit, haut sobre. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
+    "sourceUrl": "https://www.plumaskicks.com/products/adidas-forum-84-low",
+    "sourceType": "supplier",
+    "sourceName": "Plumas Kicks",
+    "sourceProductCode": null,
+    "releaseYear": null,
+    "retailPrice": null,
+    "marketReferencePrice": null,
+    "priceMAD": 750,
+    "compareAtPriceMAD": null,
+    "currency": "MAD",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "availableSizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "images": [
+      {
+        "file": "/products/adidas-forum-low-magic-mauve-multi-color-01.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Designsanstitre-2023-09-01T163953.350.png",
+        "width": 1000,
+        "height": 1000,
+        "sha256": "f4d24d881530cc0904e56e42697d5cebe9d9d3d10624d491eed04e82101e3a4b",
+        "lowRes": true,
+        "alt": "adidas Forum Low Magic Mauve Multi / Color, vue 1"
+      },
+      {
+        "file": "/products/adidas-forum-low-magic-mauve-multi-color-02.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/fre_pl_adidas-Originals-Forum-84-Low-GY5723-1032990_1.jpg",
+        "width": 700,
+        "height": 700,
+        "sha256": "edc3de622305b96bcb6b66b1b29411c538d280aa6a6390482538aa8861e8e1ce",
+        "lowRes": true,
+        "alt": "adidas Forum Low Magic Mauve Multi / Color, vue 2"
+      },
+      {
+        "file": "/products/adidas-forum-low-magic-mauve-multi-color-03.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/fre_pl_adidas-Originals-Forum-84-Low-GY5723-1032990_5.jpg",
+        "width": 700,
+        "height": 700,
+        "sha256": "0e08abafb9a821ecea23243d4eb41dff99b9f787e43ea5623fb3a7a06a2db130",
+        "lowRes": true,
+        "alt": "adidas Forum Low Magic Mauve Multi / Color, vue 3"
+      },
+      {
+        "file": "/products/adidas-forum-low-magic-mauve-multi-color-04.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/fre_pl_adidas-Originals-Forum-84-Low-GY5723-1032990_6.jpg",
+        "width": 700,
+        "height": 700,
+        "sha256": "a192c029a50f5fcf569beb67d9b5c4cd72b65cd6471dd7460105b6c6442fdcbd",
+        "lowRes": true,
+        "alt": "adidas Forum Low Magic Mauve Multi / Color, vue 4"
+      },
+      {
+        "file": "/products/adidas-forum-low-magic-mauve-multi-color-05.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/fre_pl_adidas-Originals-Forum-84-Low-GY5723-1032990_7.jpg",
+        "width": 700,
+        "height": 700,
+        "sha256": "48cc8f563824d9b33fa8ac0d74b8f2095ed843a8db009798feabbbddfaf62b1d",
+        "lowRes": true,
+        "alt": "adidas Forum Low Magic Mauve Multi / Color, vue 5"
+      },
+      {
+        "file": "/products/adidas-forum-low-magic-mauve-multi-color-06.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/fre_pl_adidas-Originals-Forum-84-Low-GY5723-1032990_3.jpg",
+        "width": 700,
+        "height": 700,
+        "sha256": "c3ebd1db2afc291708dde075bca36130ba3c97b14ac8370c20474f0d4ea9c5b0",
+        "lowRes": true,
+        "alt": "adidas Forum Low Magic Mauve Multi / Color, vue 6"
+      }
+    ],
+    "heroImage": "/products/adidas-forum-low-magic-mauve-multi-color-01.webp",
+    "gallery": [
+      "/products/adidas-forum-low-magic-mauve-multi-color-01.webp",
+      "/products/adidas-forum-low-magic-mauve-multi-color-02.webp",
+      "/products/adidas-forum-low-magic-mauve-multi-color-03.webp",
+      "/products/adidas-forum-low-magic-mauve-multi-color-04.webp",
+      "/products/adidas-forum-low-magic-mauve-multi-color-05.webp",
+      "/products/adidas-forum-low-magic-mauve-multi-color-06.webp"
+    ],
+    "tags": [
+      "adidas",
+      "forum low",
+      "statement",
+      "basketball-retro"
+    ],
+    "collections": [
+      "basketball"
+    ],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "label": null,
+    "trendTier": "RISING",
+    "trendScore": 51,
+    "scoreBreakdown": {
+      "globalDemand": {
+        "value": 3,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Lecture éditoriale de la demande 2025–26, non mesurée."
+      },
+      "moroccanMarket": {
+        "value": 3,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation éditoriale — aucune donnée de vente BEYOND PLUS."
+      },
+      "supplierBestSeller": {
+        "value": 0,
+        "source": "VERIFIED_DATA",
+        "note": "Présent dans la collection best-sellers du fournisseur au relevé."
+      },
+      "freshness": {
+        "value": 1,
+        "source": "VERIFIED_DATA",
+        "note": "Mise en ligne fournisseur : 2023-05-14."
+      },
+      "versatility": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Facilité à porter."
+      },
+      "socialPotential": {
+        "value": 3,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Potentiel visuel / réseaux."
+      },
+      "marginPotential": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation — prix de revente non fixés."
+      }
+    },
+    "stockStatus": "ON_REQUEST",
+    "supplierStatus": "AVAILABLE_AT_SUPPLIER",
+    "authenticityStatus": "REPLICA_DECLARED_BY_SUPPLIER",
+    "imageRights": "AUTHORIZED_SUPPLIER",
+    "publishable": true,
+    "migration": "NEW",
+    "createdAt": "2023-05-14T18:05:37+01:00",
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-forum-low-white-royal-blue",
@@ -10205,7 +10585,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-11-15T16:18:00+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-forum-low-white-black",
@@ -10319,30 +10699,30 @@
     "publishable": false,
     "migration": "NEW",
     "createdAt": "2023-02-02T21:01:19+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
-    "id": "bp-adidas-forum-low-exhibit-white-pink-blue",
-    "slug": "adidas-forum-low-exhibit-white-pink-blue",
-    "brand": "adidas",
-    "model": "Forum Low",
-    "fullName": "adidas Forum Low Exhibit White / Pink / Blue",
-    "colorway": "Exhibit White / Pink / Blue",
-    "colorFamily": "pink-silver",
+    "id": "bp-converse-run-star-motion-black",
+    "slug": "converse-run-star-motion-black",
+    "brand": "Converse",
+    "model": "Run Star Motion",
+    "fullName": "Converse Run Star Motion Black",
+    "colorway": "Black",
+    "colorFamily": "black-white",
     "gender": "women",
     "category": "Sneakers",
-    "silhouette": "adidas-forum-low",
-    "styleFamily": "basketball-retro",
-    "shortDescription": "Une silhouette qui a fait la culture sneaker.",
-    "description": "Une silhouette qui a fait la culture sneaker. Rose et argent, pour une touche lumineuse. Laisse-la respirer : pantalon droit, haut sobre. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
-    "sourceUrl": "https://www.plumaskicks.com/products/adidas-forum-low-exhibit-white-pink-blue",
+    "silhouette": "converse-run-star-motion",
+    "styleFamily": "skate",
+    "shortDescription": "Toile, daim, semelle gaufrée : l’essentiel.",
+    "description": "Toile, daim, semelle gaufrée : l’essentiel. Noir et blanc, le contraste qui ne se démode pas. Va avec tout, du denim brut au pantalon de costume. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
+    "sourceUrl": "https://www.plumaskicks.com/products/converse-run-star-motion-black",
     "sourceType": "supplier",
     "sourceName": "Plumas Kicks",
     "sourceProductCode": null,
     "releaseYear": null,
     "retailPrice": null,
     "marketReferencePrice": null,
-    "priceMAD": 675,
+    "priceMAD": 630,
     "compareAtPriceMAD": null,
     "currency": "MAD",
     "sizes": [
@@ -10361,37 +10741,87 @@
     ],
     "images": [
       {
-        "file": "/products/adidas-forum-low-exhibit-white-pink-blue-01.webp",
-        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Designsanstitre-2023-09-01T163644.936.png",
+        "file": "/products/converse-run-star-motion-black-01.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Designsanstitre-2023-09-02T160340.533.png",
         "width": 1000,
         "height": 1000,
-        "sha256": "d9610ea09f72926e86d67d2d1658f597df69db701f3062f49e9aadafc5c53969",
+        "sha256": "bdbbb8bd95424fe326a3097f1cd12bbd4c87ca8e5e61bb79e0aab48e16982037",
         "lowRes": true,
-        "alt": "adidas Forum Low Exhibit White / Pink / Blue, vue 1"
+        "alt": "Converse Run Star Motion Black, vue 1"
+      },
+      {
+        "file": "/products/converse-run-star-motion-black-02.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/171545C_A_107X1_81d6221d-94a1-4fc3-9181-0080e1f68e8f.jpg",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "c63e7bcd3861cb14d11dbbd3382bc3a9c0fef68a4e5de7f68b53761600bb085e",
+        "lowRes": false,
+        "alt": "Converse Run Star Motion Black, vue 2"
+      },
+      {
+        "file": "/products/converse-run-star-motion-black-03.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/171545C_D_107X1_f1d485ee-232d-434e-9cee-c885bbdaada6.jpg",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "6dac52afdd5513ab4dde6ea4d738459f02013b1a2aedf5459363253678446ceb",
+        "lowRes": false,
+        "alt": "Converse Run Star Motion Black, vue 3"
+      },
+      {
+        "file": "/products/converse-run-star-motion-black-04.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/171545C_E_107X1_589156bd-3dc0-40fa-898d-c1c41fc790ad.jpg",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "96c125a0e71665356c42e259ba8ca4daf115502bd297c9647af2f8ab7f76865d",
+        "lowRes": false,
+        "alt": "Converse Run Star Motion Black, vue 4"
+      },
+      {
+        "file": "/products/converse-run-star-motion-black-05.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/171545C_B_107X1_2c9366e9-3f37-4152-89ab-e3e5963401a8.jpg",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "d07bd27219699a63ec324d8277620eaac525265c03a8649fb5369c4c8d162a24",
+        "lowRes": false,
+        "alt": "Converse Run Star Motion Black, vue 5"
+      },
+      {
+        "file": "/products/converse-run-star-motion-black-06.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/171545C_F_107X1_80b3eefe-e758-4193-a7f9-bdd2fee0b106.jpg",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "671bc66f5884db76ef7c8061514d53b000c22089817bc03c769a369203a0b146",
+        "lowRes": false,
+        "alt": "Converse Run Star Motion Black, vue 6"
       }
     ],
-    "heroImage": "/products/adidas-forum-low-exhibit-white-pink-blue-01.webp",
+    "heroImage": "/products/converse-run-star-motion-black-01.webp",
     "gallery": [
-      "/products/adidas-forum-low-exhibit-white-pink-blue-01.webp"
+      "/products/converse-run-star-motion-black-01.webp",
+      "/products/converse-run-star-motion-black-02.webp",
+      "/products/converse-run-star-motion-black-03.webp",
+      "/products/converse-run-star-motion-black-04.webp",
+      "/products/converse-run-star-motion-black-05.webp",
+      "/products/converse-run-star-motion-black-06.webp"
     ],
     "tags": [
-      "adidas",
-      "forum low",
-      "rose / argent",
-      "basketball-retro"
+      "converse",
+      "run star motion",
+      "noir / blanc",
+      "skate"
     ],
     "collections": [
-      "basketball"
+      "skate"
     ],
     "featured": false,
     "newArrival": false,
     "trending": false,
     "label": null,
-    "trendTier": "RISING",
-    "trendScore": 51,
+    "trendTier": "EXPERIMENTAL",
+    "trendScore": 46,
     "scoreBreakdown": {
       "globalDemand": {
-        "value": 3,
+        "value": 2,
         "source": "EDITORIAL_JUDGMENT",
         "note": "Lecture éditoriale de la demande 2025–26, non mesurée."
       },
@@ -10408,7 +10838,7 @@
       "freshness": {
         "value": 1,
         "source": "VERIFIED_DATA",
-        "note": "Mise en ligne fournisseur : 2023-02-02."
+        "note": "Mise en ligne fournisseur : 2022-07-24."
       },
       "versatility": {
         "value": 4,
@@ -10430,10 +10860,182 @@
     "supplierStatus": "AVAILABLE_AT_SUPPLIER",
     "authenticityStatus": "REPLICA_DECLARED_BY_SUPPLIER",
     "imageRights": "AUTHORIZED_SUPPLIER",
-    "publishable": false,
+    "publishable": true,
     "migration": "NEW",
-    "createdAt": "2023-02-02T21:12:02+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "createdAt": "2022-07-24T21:07:31+01:00",
+    "updatedAt": "2026-09-28T16:14:25.912Z"
+  },
+  {
+    "id": "bp-puma-suede-xxi-original",
+    "slug": "puma-suede-xxi-original",
+    "brand": "PUMA",
+    "model": "Suede XXI",
+    "fullName": "PUMA Suede XXI",
+    "colorway": "Original",
+    "colorFamily": "statement",
+    "gender": "unisex",
+    "category": "Sneakers",
+    "silhouette": "puma-suede-xxi",
+    "styleFamily": "skate",
+    "shortDescription": "La base skate, intemporelle.",
+    "description": "La base skate, intemporelle. Un coloris affirmé, pour sortir du rang. Va avec tout, du denim brut au pantalon de costume. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
+    "sourceUrl": "https://www.plumaskicks.com/products/puma-classic-xxi",
+    "sourceType": "supplier",
+    "sourceName": "Plumas Kicks",
+    "sourceProductCode": null,
+    "releaseYear": null,
+    "retailPrice": null,
+    "marketReferencePrice": null,
+    "priceMAD": 700,
+    "compareAtPriceMAD": null,
+    "currency": "MAD",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "availableSizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "images": [
+      {
+        "file": "/products/puma-suede-xxi-original-01.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/f8e63f1ab96a47b5a01a44bd9a5b9858.jpg",
+        "width": 1766,
+        "height": 1766,
+        "sha256": "94a07378d43dbf3de9ec26b1c7104de4858d3acbbaa5325bf2e3c539b8c62d71",
+        "lowRes": false,
+        "alt": "PUMA Suede XXI, vue 1"
+      },
+      {
+        "file": "/products/puma-suede-xxi-original-02.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/2817e4c3a12b48c4b9afaff819d7c177.jpg",
+        "width": 1766,
+        "height": 1766,
+        "sha256": "e8f5277d9d27c1623df1b5d7bc471426b13e8b1ad0690cd643a4c49bb817b4ae",
+        "lowRes": false,
+        "alt": "PUMA Suede XXI, vue 2"
+      },
+      {
+        "file": "/products/puma-suede-xxi-original-03.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/e636f6c6fa184634b1cf1c4a8f3331e7.jpg",
+        "width": 1385,
+        "height": 2000,
+        "sha256": "dcf7e8d235db90483d90975d4e1207b581f9bdfcd6a131a6f8fb8f48736c5a6e",
+        "lowRes": false,
+        "alt": "PUMA Suede XXI, vue 3"
+      },
+      {
+        "file": "/products/puma-suede-xxi-original-04.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/puma6_2x_d06f1ad8-b32c-4ca9-9fa0-e91e2d493c35.jpg",
+        "width": 2000,
+        "height": 2000,
+        "sha256": "e973a514a753b79a061b9ba430ed446c6d66f4a6768aacbbc00d5e35a5dd952f",
+        "lowRes": false,
+        "alt": "PUMA Suede XXI, vue 4"
+      },
+      {
+        "file": "/products/puma-suede-xxi-original-05.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/659eb006b5de4e5998376f0ac35807f1.jpg",
+        "width": 1766,
+        "height": 1766,
+        "sha256": "bab93bb0cc6bb4ae0e96bf048265232fd6f41cd79db03dc6ed38180b73d78af1",
+        "lowRes": false,
+        "alt": "PUMA Suede XXI, vue 5"
+      },
+      {
+        "file": "/products/puma-suede-xxi-original-06.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/414438c4bdf7416383c3461ed634cc1a.jpg",
+        "width": 1766,
+        "height": 1766,
+        "sha256": "df2225639b541ade018634d885ef922bda6ce5b7e9327c7fa1ce9ca33bc01721",
+        "lowRes": false,
+        "alt": "PUMA Suede XXI, vue 6"
+      }
+    ],
+    "heroImage": "/products/puma-suede-xxi-original-01.webp",
+    "gallery": [
+      "/products/puma-suede-xxi-original-01.webp",
+      "/products/puma-suede-xxi-original-02.webp",
+      "/products/puma-suede-xxi-original-03.webp",
+      "/products/puma-suede-xxi-original-04.webp",
+      "/products/puma-suede-xxi-original-05.webp",
+      "/products/puma-suede-xxi-original-06.webp"
+    ],
+    "tags": [
+      "puma",
+      "suede xxi",
+      "statement",
+      "skate"
+    ],
+    "collections": [
+      "skate"
+    ],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "label": null,
+    "trendTier": "EXPERIMENTAL",
+    "trendScore": 46,
+    "scoreBreakdown": {
+      "globalDemand": {
+        "value": 2,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Lecture éditoriale de la demande 2025–26, non mesurée."
+      },
+      "moroccanMarket": {
+        "value": 3,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation éditoriale — aucune donnée de vente BEYOND PLUS."
+      },
+      "supplierBestSeller": {
+        "value": 0,
+        "source": "VERIFIED_DATA",
+        "note": "Présent dans la collection best-sellers du fournisseur au relevé."
+      },
+      "freshness": {
+        "value": 1,
+        "source": "VERIFIED_DATA",
+        "note": "Mise en ligne fournisseur : 2022-10-06."
+      },
+      "versatility": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Facilité à porter."
+      },
+      "socialPotential": {
+        "value": 3,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Potentiel visuel / réseaux."
+      },
+      "marginPotential": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation — prix de revente non fixés."
+      }
+    },
+    "stockStatus": "ON_REQUEST",
+    "supplierStatus": "AVAILABLE_AT_SUPPLIER",
+    "authenticityStatus": "REPLICA_DECLARED_BY_SUPPLIER",
+    "imageRights": "AUTHORIZED_SUPPLIER",
+    "publishable": true,
+    "migration": "NEW",
+    "createdAt": "2022-10-06T15:36:36+01:00",
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-converse-chuck-taylor-ox-white",
@@ -10580,7 +11182,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-11-03T13:26:47+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-converse-chuck-taylor-all-star-hi-black",
@@ -10737,7 +11339,7 @@
     "publishable": false,
     "migration": "DEPRIORITIZE",
     "createdAt": "2022-07-24T21:09:18+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-converse-chuck-taylor-all-star-platform-montante",
@@ -10895,7 +11497,7 @@
     "publishable": false,
     "migration": "NEW",
     "createdAt": "2022-07-24T21:07:54+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-1000-angora-moonrock",
@@ -11039,7 +11641,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2026-06-11T13:25:50+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-1000-reflective-pack-raincloud",
@@ -11193,7 +11795,161 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2026-06-11T13:25:45+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
+  },
+  {
+    "id": "bp-new-balance-1000-dark-olivine-magnet",
+    "slug": "new-balance-1000-dark-olivine-magnet",
+    "brand": "New Balance",
+    "model": "1000",
+    "fullName": "New Balance 1000 Dark Olivine Magnet",
+    "colorway": "Dark Olivine Magnet",
+    "colorFamily": "statement",
+    "gender": "unisex",
+    "category": "Sneakers",
+    "silhouette": "nb-1000",
+    "styleFamily": "y2k-runner",
+    "shortDescription": "L’énergie des années 2000, en version quotidienne.",
+    "description": "L’énergie des années 2000, en version quotidienne. Un coloris affirmé, pour sortir du rang. À associer à des pièces simples pour laisser la paire au centre. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
+    "sourceUrl": "https://www.plumaskicks.com/products/nb-1000-dark-olivine-magnet",
+    "sourceType": "supplier",
+    "sourceName": "Plumas Kicks",
+    "sourceProductCode": "NB1000-DOM-36",
+    "releaseYear": null,
+    "retailPrice": null,
+    "marketReferencePrice": null,
+    "priceMAD": 650,
+    "compareAtPriceMAD": null,
+    "currency": "MAD",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "availableSizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "images": [
+      {
+        "file": "/products/new-balance-1000-dark-olivine-magnet-01.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/imgi_26_New-Balance-1000-Dark-Olivine-Magnet-Price-1.jpg",
+        "width": 860,
+        "height": 1080,
+        "sha256": "8ad36aec907d9e5c1c529ba6044bd8447e1cdb3d8a830c492e81adfcbc4464e6",
+        "lowRes": true,
+        "alt": "New Balance 1000 Dark Olivine Magnet, vue 1"
+      },
+      {
+        "file": "/products/new-balance-1000-dark-olivine-magnet-02.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/imgi_29_New-Balance-1000-Dark-Olivine-Magnet-Price-2.jpg",
+        "width": 860,
+        "height": 1080,
+        "sha256": "cbb122f92382873fe2510e16d28bebee766dde6561e8a8d2a4fe0e98bf9d1f80",
+        "lowRes": true,
+        "alt": "New Balance 1000 Dark Olivine Magnet, vue 2"
+      },
+      {
+        "file": "/products/new-balance-1000-dark-olivine-magnet-03.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/imgi_32_New-Balance-1000-Dark-Olivine-Magnet-Price-3.jpg",
+        "width": 860,
+        "height": 1080,
+        "sha256": "7f8a6f895c0ab93eac1a4787f92986fbc28e5eb60a540d967e7b02ab3dcef548",
+        "lowRes": true,
+        "alt": "New Balance 1000 Dark Olivine Magnet, vue 3"
+      },
+      {
+        "file": "/products/new-balance-1000-dark-olivine-magnet-04.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/imgi_35_New-Balance-1000-Dark-Olivine-Magnet-Price-4.jpg",
+        "width": 860,
+        "height": 1080,
+        "sha256": "c90a578cc892a02e08e26c4e052961a65bfa76075041d65d33dd230035ae26c8",
+        "lowRes": true,
+        "alt": "New Balance 1000 Dark Olivine Magnet, vue 4"
+      }
+    ],
+    "heroImage": "/products/new-balance-1000-dark-olivine-magnet-01.webp",
+    "gallery": [
+      "/products/new-balance-1000-dark-olivine-magnet-01.webp",
+      "/products/new-balance-1000-dark-olivine-magnet-02.webp",
+      "/products/new-balance-1000-dark-olivine-magnet-03.webp",
+      "/products/new-balance-1000-dark-olivine-magnet-04.webp"
+    ],
+    "tags": [
+      "new balance",
+      "1000",
+      "statement",
+      "y2k-runner"
+    ],
+    "collections": [
+      "retro-runners"
+    ],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "label": null,
+    "trendTier": "RISING",
+    "trendScore": 64,
+    "scoreBreakdown": {
+      "globalDemand": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Lecture éditoriale de la demande 2025–26, non mesurée."
+      },
+      "moroccanMarket": {
+        "value": 3,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation éditoriale — aucune donnée de vente BEYOND PLUS."
+      },
+      "supplierBestSeller": {
+        "value": 0,
+        "source": "VERIFIED_DATA",
+        "note": "Présent dans la collection best-sellers du fournisseur au relevé."
+      },
+      "freshness": {
+        "value": 3,
+        "source": "VERIFIED_DATA",
+        "note": "Mise en ligne fournisseur : 2026-06-11."
+      },
+      "versatility": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Facilité à porter."
+      },
+      "socialPotential": {
+        "value": 5,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Potentiel visuel / réseaux."
+      },
+      "marginPotential": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation — prix de revente non fixés."
+      }
+    },
+    "stockStatus": "ON_REQUEST",
+    "supplierStatus": "AVAILABLE_AT_SUPPLIER",
+    "authenticityStatus": "REPLICA_DECLARED_BY_SUPPLIER",
+    "imageRights": "AUTHORIZED_SUPPLIER",
+    "publishable": true,
+    "migration": "NEW",
+    "createdAt": "2026-06-11T13:25:37+01:00",
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-1906r-neon-nights",
@@ -11337,7 +12093,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-10-25T15:00:25+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-1906r-metallic-silver-gold",
@@ -11491,7 +12247,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-11-15T16:44:18+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-860v2-black-white-silver",
@@ -11625,7 +12381,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-11-10T14:57:28+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-new-balance-860v2-black-silver",
@@ -11759,7 +12515,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2023-11-10T14:54:46+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-air-max-dn-all-day",
@@ -11895,7 +12651,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-01-17T12:58:47+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-air-max-dn-particle-grey",
@@ -12027,7 +12783,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-01-17T12:51:51+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-air-max-dn-black-white-cool-grey",
@@ -12163,7 +12919,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-01-17T12:40:17+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-quantum-kinetic-grey-pure-silver",
@@ -12307,7 +13063,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-05-10T11:32:40+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-quantum-kinetic-pepper-light-indigo",
@@ -12451,7 +13207,151 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-05-10T11:31:15+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
+  },
+  {
+    "id": "bp-asics-gel-quantum-kinetic-dark-sepia-shamrock",
+    "slug": "asics-gel-quantum-kinetic-dark-sepia-shamrock",
+    "brand": "ASICS",
+    "model": "Gel-Quantum",
+    "fullName": "ASICS Gel-Quantum Kinetic Dark Sepia Shamrock",
+    "colorway": "Kinetic Dark Sepia Shamrock",
+    "colorFamily": "statement",
+    "gender": "men",
+    "category": "Sneakers",
+    "silhouette": "asics-gel-quantum",
+    "styleFamily": "technical",
+    "shortDescription": "Structure, grip, caractère.",
+    "description": "Structure, grip, caractère. Un coloris affirmé, pour sortir du rang. Avec un cargo, un nylon ou un total look sombre. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
+    "sourceUrl": "https://www.plumaskicks.com/products/asics-gel-quantum-kinetic-dark-sepia-shamrock",
+    "sourceType": "supplier",
+    "sourceName": "Plumas Kicks",
+    "sourceProductCode": null,
+    "releaseYear": null,
+    "retailPrice": null,
+    "marketReferencePrice": null,
+    "priceMAD": 750,
+    "compareAtPriceMAD": null,
+    "currency": "MAD",
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "availableSizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "images": [
+      {
+        "file": "/products/asics-gel-quantum-kinetic-dark-sepia-shamrock-01.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Acheter-Asics-Gel-Quantum-Kinetic-Dark-Sepia-Shamrock-1.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "4681d474df5fe85b27ea0b4067bfc0fe98e7d28b9a7befecec27572874fea0a1",
+        "lowRes": true,
+        "alt": "ASICS Gel-Quantum Kinetic Dark Sepia Shamrock, vue 1"
+      },
+      {
+        "file": "/products/asics-gel-quantum-kinetic-dark-sepia-shamrock-02.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Acheter-Asics-Gel-Quantum-Kinetic-Dark-Sepia-Shamrock-2.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "08409da2554718d1908d0601d13a26e7650fe9c4cbeef11a9d305dd87f145d60",
+        "lowRes": true,
+        "alt": "ASICS Gel-Quantum Kinetic Dark Sepia Shamrock, vue 2"
+      },
+      {
+        "file": "/products/asics-gel-quantum-kinetic-dark-sepia-shamrock-03.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Acheter-Asics-Gel-Quantum-Kinetic-Dark-Sepia-Shamrock-3.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "c69ad65153b5adcebfa3e34425a969497ae52ba05a4caa401e0efcd15052c02e",
+        "lowRes": true,
+        "alt": "ASICS Gel-Quantum Kinetic Dark Sepia Shamrock, vue 3"
+      },
+      {
+        "file": "/products/asics-gel-quantum-kinetic-dark-sepia-shamrock-04.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Acheter-Asics-Gel-Quantum-Kinetic-Dark-Sepia-Shamrock-4.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "8550c0309659021a640a5fffc9e435d0cbc8b1e4a2010ce577615de0787a3420",
+        "lowRes": true,
+        "alt": "ASICS Gel-Quantum Kinetic Dark Sepia Shamrock, vue 4"
+      }
+    ],
+    "heroImage": "/products/asics-gel-quantum-kinetic-dark-sepia-shamrock-01.webp",
+    "gallery": [
+      "/products/asics-gel-quantum-kinetic-dark-sepia-shamrock-01.webp",
+      "/products/asics-gel-quantum-kinetic-dark-sepia-shamrock-02.webp",
+      "/products/asics-gel-quantum-kinetic-dark-sepia-shamrock-03.webp",
+      "/products/asics-gel-quantum-kinetic-dark-sepia-shamrock-04.webp"
+    ],
+    "tags": [
+      "asics",
+      "gel-quantum",
+      "statement",
+      "technical"
+    ],
+    "collections": [
+      "tech-runners"
+    ],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "label": null,
+    "trendTier": "EXPERIMENTAL",
+    "trendScore": 47,
+    "scoreBreakdown": {
+      "globalDemand": {
+        "value": 3,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Lecture éditoriale de la demande 2025–26, non mesurée."
+      },
+      "moroccanMarket": {
+        "value": 2,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation éditoriale — aucune donnée de vente BEYOND PLUS."
+      },
+      "supplierBestSeller": {
+        "value": 0,
+        "source": "VERIFIED_DATA",
+        "note": "Présent dans la collection best-sellers du fournisseur au relevé."
+      },
+      "freshness": {
+        "value": 1,
+        "source": "VERIFIED_DATA",
+        "note": "Mise en ligne fournisseur : 2025-05-10."
+      },
+      "versatility": {
+        "value": 3,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Facilité à porter."
+      },
+      "socialPotential": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Potentiel visuel / réseaux."
+      },
+      "marginPotential": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation — prix de revente non fixés."
+      }
+    },
+    "stockStatus": "ON_REQUEST",
+    "supplierStatus": "AVAILABLE_AT_SUPPLIER",
+    "authenticityStatus": "REPLICA_DECLARED_BY_SUPPLIER",
+    "imageRights": "AUTHORIZED_SUPPLIER",
+    "publishable": true,
+    "migration": "NEW",
+    "createdAt": "2025-05-10T11:26:38+01:00",
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-adistar-byd-purple-tint-blue-spark-silver-dawn",
@@ -12605,7 +13505,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2024-09-25T11:46:44+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-adistar-byd-m-cloud-white-core-black-lucid-lemond",
@@ -12759,7 +13659,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2024-09-25T10:50:38+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-adizero-evo-sl-evo-sl-black-iron-metallic",
@@ -12903,7 +13803,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-10-23T13:50:06+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-adizero-evo-sl-evo-sl-black-white",
@@ -13047,7 +13947,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-10-23T13:44:01+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-zoomx-invincible-3-white-cobalt-bliss",
@@ -13201,7 +14101,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-05-05T14:07:20+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-zoomx-invincible-2-sail-black",
@@ -13345,7 +14245,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2024-02-22T19:21:44+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-on-cloudtilt-eclipse-cinder",
@@ -13493,7 +14393,7 @@
     "publishable": true,
     "migration": "REVIEW",
     "createdAt": "2026-09-22T13:48:37+00:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-on-cloudtilt-clove-sand",
@@ -13641,7 +14541,7 @@
     "publishable": true,
     "migration": "REVIEW",
     "createdAt": "2026-09-22T13:39:30+00:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-on-cloudsurfer-white-trail-2",
@@ -13765,7 +14665,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2026-08-19T14:23:58+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-on-cloudtilt",
@@ -13905,7 +14805,151 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2026-05-08T12:57:05+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
+  },
+  {
+    "id": "bp-on-cloudtilt-year-of-the-snake",
+    "slug": "on-cloudtilt-year-of-the-snake",
+    "brand": "On",
+    "model": "",
+    "fullName": "On Cloudtilt Year of the snake",
+    "colorway": "Cloudtilt Year of the snake",
+    "colorFamily": "statement",
+    "gender": "women",
+    "category": "Sneakers",
+    "silhouette": "on-cloud",
+    "styleFamily": "technical",
+    "shortDescription": "Structure, grip, caractère.",
+    "description": "Structure, grip, caractère. Un coloris affirmé, pour sortir du rang. Avec un cargo, un nylon ou un total look sombre. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
+    "sourceUrl": "https://www.plumaskicks.com/products/on-cloudtilt-year-of-the-snake",
+    "sourceType": "supplier",
+    "sourceName": "Plumas Kicks",
+    "sourceProductCode": null,
+    "releaseYear": null,
+    "retailPrice": null,
+    "marketReferencePrice": null,
+    "priceMAD": 760,
+    "compareAtPriceMAD": null,
+    "currency": "MAD",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "availableSizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "images": [
+      {
+        "file": "/products/on-cloudtilt-year-of-the-snake-01.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/On-Running-Cloudtilt-Year-of-the-snake-1_jpg.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "f3bfee7df4a1646b35b9651cf2fe113c502dd83fd9d8b813102a429758410856",
+        "lowRes": true,
+        "alt": "On Cloudtilt Year of the snake, vue 1"
+      },
+      {
+        "file": "/products/on-cloudtilt-year-of-the-snake-02.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/On-Running-Cloudtilt-Year-of-the-snake-2_jpg.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "d127ef6aa0f85a98a6e974856844356f9950d46a480924fe423ddc2dc3289c11",
+        "lowRes": true,
+        "alt": "On Cloudtilt Year of the snake, vue 2"
+      },
+      {
+        "file": "/products/on-cloudtilt-year-of-the-snake-03.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/On-Running-Cloudtilt-Year-of-the-snake-3_jpg.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "97667afe771ad9838052b75efdd0783452f417062a2642828afbfb72b8b16389",
+        "lowRes": true,
+        "alt": "On Cloudtilt Year of the snake, vue 3"
+      },
+      {
+        "file": "/products/on-cloudtilt-year-of-the-snake-04.webp",
+        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/On-Running-Cloudtilt-Year-of-the-snake-4_jpg.webp",
+        "width": 860,
+        "height": 1080,
+        "sha256": "9d38429b01b813328dce7039aa57264589c2d76772e1045b43957b7df3af8f06",
+        "lowRes": true,
+        "alt": "On Cloudtilt Year of the snake, vue 4"
+      }
+    ],
+    "heroImage": "/products/on-cloudtilt-year-of-the-snake-01.webp",
+    "gallery": [
+      "/products/on-cloudtilt-year-of-the-snake-01.webp",
+      "/products/on-cloudtilt-year-of-the-snake-02.webp",
+      "/products/on-cloudtilt-year-of-the-snake-03.webp",
+      "/products/on-cloudtilt-year-of-the-snake-04.webp"
+    ],
+    "tags": [
+      "on",
+      "",
+      "statement",
+      "technical"
+    ],
+    "collections": [
+      "tech-runners"
+    ],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "label": null,
+    "trendTier": "RISING",
+    "trendScore": 55,
+    "scoreBreakdown": {
+      "globalDemand": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Lecture éditoriale de la demande 2025–26, non mesurée."
+      },
+      "moroccanMarket": {
+        "value": 3,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation éditoriale — aucune donnée de vente BEYOND PLUS."
+      },
+      "supplierBestSeller": {
+        "value": 0,
+        "source": "VERIFIED_DATA",
+        "note": "Présent dans la collection best-sellers du fournisseur au relevé."
+      },
+      "freshness": {
+        "value": 1,
+        "source": "VERIFIED_DATA",
+        "note": "Mise en ligne fournisseur : 2025-09-25."
+      },
+      "versatility": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Facilité à porter."
+      },
+      "socialPotential": {
+        "value": 4,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Potentiel visuel / réseaux."
+      },
+      "marginPotential": {
+        "value": 3,
+        "source": "EDITORIAL_JUDGMENT",
+        "note": "Estimation — prix de revente non fixés."
+      }
+    },
+    "stockStatus": "ON_REQUEST",
+    "supplierStatus": "AVAILABLE_AT_SUPPLIER",
+    "authenticityStatus": "REPLICA_DECLARED_BY_SUPPLIER",
+    "imageRights": "AUTHORIZED_SUPPLIER",
+    "publishable": true,
+    "migration": "NEW",
+    "createdAt": "2025-09-25T14:40:29+01:00",
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-puma-cali-cali-emboss",
@@ -14042,7 +15086,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2024-06-08T14:44:03+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-adidas-falcon-falcon",
@@ -14196,7 +15240,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2022-07-24T22:23:39+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-asics-gel-nimbus-10-1-ocean-haze-nimbus-10-1-ocean-haze",
@@ -14351,151 +15395,7 @@
     "publishable": true,
     "migration": "NEW",
     "createdAt": "2025-12-12T12:30:19+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
-  },
-  {
-    "id": "bp-on-cloudtilt-year-of-the-snake",
-    "slug": "on-cloudtilt-year-of-the-snake",
-    "brand": "On",
-    "model": "",
-    "fullName": "On Cloudtilt Year of the snake",
-    "colorway": "Cloudtilt Year of the snake",
-    "colorFamily": "statement",
-    "gender": "women",
-    "category": "Sneakers",
-    "silhouette": "on-cloud",
-    "styleFamily": "technical",
-    "shortDescription": "Structure, grip, caractère.",
-    "description": "Structure, grip, caractère. Un coloris affirmé, pour sortir du rang. Avec un cargo, un nylon ou un total look sombre. Réplique qualité Master Copy Premium 1:1, chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison.",
-    "sourceUrl": "https://www.plumaskicks.com/products/on-cloudtilt-year-of-the-snake",
-    "sourceType": "supplier",
-    "sourceName": "Plumas Kicks",
-    "sourceProductCode": null,
-    "releaseYear": null,
-    "retailPrice": null,
-    "marketReferencePrice": null,
-    "priceMAD": 760,
-    "compareAtPriceMAD": null,
-    "currency": "MAD",
-    "sizes": [
-      "36",
-      "37",
-      "38",
-      "39",
-      "40"
-    ],
-    "availableSizes": [
-      "36",
-      "37",
-      "38",
-      "39",
-      "40"
-    ],
-    "images": [
-      {
-        "file": "/products/on-cloudtilt-year-of-the-snake-01.webp",
-        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/On-Running-Cloudtilt-Year-of-the-snake-1_jpg.webp",
-        "width": 860,
-        "height": 1080,
-        "sha256": "f3bfee7df4a1646b35b9651cf2fe113c502dd83fd9d8b813102a429758410856",
-        "lowRes": true,
-        "alt": "On Cloudtilt Year of the snake, vue 1"
-      },
-      {
-        "file": "/products/on-cloudtilt-year-of-the-snake-02.webp",
-        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/On-Running-Cloudtilt-Year-of-the-snake-2_jpg.webp",
-        "width": 860,
-        "height": 1080,
-        "sha256": "d127ef6aa0f85a98a6e974856844356f9950d46a480924fe423ddc2dc3289c11",
-        "lowRes": true,
-        "alt": "On Cloudtilt Year of the snake, vue 2"
-      },
-      {
-        "file": "/products/on-cloudtilt-year-of-the-snake-03.webp",
-        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/On-Running-Cloudtilt-Year-of-the-snake-3_jpg.webp",
-        "width": 860,
-        "height": 1080,
-        "sha256": "97667afe771ad9838052b75efdd0783452f417062a2642828afbfb72b8b16389",
-        "lowRes": true,
-        "alt": "On Cloudtilt Year of the snake, vue 3"
-      },
-      {
-        "file": "/products/on-cloudtilt-year-of-the-snake-04.webp",
-        "sourceUrl": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/On-Running-Cloudtilt-Year-of-the-snake-4_jpg.webp",
-        "width": 860,
-        "height": 1080,
-        "sha256": "9d38429b01b813328dce7039aa57264589c2d76772e1045b43957b7df3af8f06",
-        "lowRes": true,
-        "alt": "On Cloudtilt Year of the snake, vue 4"
-      }
-    ],
-    "heroImage": "/products/on-cloudtilt-year-of-the-snake-01.webp",
-    "gallery": [
-      "/products/on-cloudtilt-year-of-the-snake-01.webp",
-      "/products/on-cloudtilt-year-of-the-snake-02.webp",
-      "/products/on-cloudtilt-year-of-the-snake-03.webp",
-      "/products/on-cloudtilt-year-of-the-snake-04.webp"
-    ],
-    "tags": [
-      "on",
-      "",
-      "statement",
-      "technical"
-    ],
-    "collections": [
-      "tech-runners"
-    ],
-    "featured": false,
-    "newArrival": false,
-    "trending": false,
-    "label": null,
-    "trendTier": "RISING",
-    "trendScore": 55,
-    "scoreBreakdown": {
-      "globalDemand": {
-        "value": 4,
-        "source": "EDITORIAL_JUDGMENT",
-        "note": "Lecture éditoriale de la demande 2025–26, non mesurée."
-      },
-      "moroccanMarket": {
-        "value": 3,
-        "source": "EDITORIAL_JUDGMENT",
-        "note": "Estimation éditoriale — aucune donnée de vente BEYOND PLUS."
-      },
-      "supplierBestSeller": {
-        "value": 0,
-        "source": "VERIFIED_DATA",
-        "note": "Présent dans la collection best-sellers du fournisseur au relevé."
-      },
-      "freshness": {
-        "value": 1,
-        "source": "VERIFIED_DATA",
-        "note": "Mise en ligne fournisseur : 2025-09-25."
-      },
-      "versatility": {
-        "value": 4,
-        "source": "EDITORIAL_JUDGMENT",
-        "note": "Facilité à porter."
-      },
-      "socialPotential": {
-        "value": 4,
-        "source": "EDITORIAL_JUDGMENT",
-        "note": "Potentiel visuel / réseaux."
-      },
-      "marginPotential": {
-        "value": 3,
-        "source": "EDITORIAL_JUDGMENT",
-        "note": "Estimation — prix de revente non fixés."
-      }
-    },
-    "stockStatus": "ON_REQUEST",
-    "supplierStatus": "AVAILABLE_AT_SUPPLIER",
-    "authenticityStatus": "REPLICA_DECLARED_BY_SUPPLIER",
-    "imageRights": "AUTHORIZED_SUPPLIER",
-    "publishable": true,
-    "migration": "NEW",
-    "createdAt": "2025-09-25T14:40:29+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-forum-low-white-royal-blue-b",
@@ -14613,7 +15513,7 @@
     "publishable": false,
     "migration": "NEW",
     "createdAt": "2024-09-26T16:59:17+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-samba-leopard-core-black-1",
@@ -14757,7 +15657,7 @@
     "publishable": true,
     "migration": "KEEP_CATALOGUE",
     "createdAt": "2025-07-17T14:14:58+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-samba-og-pony-hair-pack-wonder-white",
@@ -14901,7 +15801,7 @@
     "publishable": true,
     "migration": "KEEP_CATALOGUE",
     "createdAt": "2026-08-04T12:38:58+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-blazer-mid-77-vntg-white-black",
@@ -15063,7 +15963,7 @@
     "publishable": true,
     "migration": "DEPRIORITIZE",
     "createdAt": "2022-07-24T22:45:44+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-mind-002-light-khaki",
@@ -15213,7 +16113,7 @@
     "publishable": true,
     "migration": "REVIEW",
     "createdAt": "2026-08-04T12:17:23+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-mind-002-light-smoke-grey",
@@ -15363,7 +16263,7 @@
     "publishable": true,
     "migration": "REVIEW",
     "createdAt": "2026-08-04T12:17:22+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-mind-002-black-hyper-crimson",
@@ -15513,7 +16413,7 @@
     "publishable": true,
     "migration": "REVIEW",
     "createdAt": "2026-08-04T12:17:20+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-wales-bonner-x-samba-pony-leopard",
@@ -15657,7 +16557,7 @@
     "publishable": false,
     "migration": "KEEP_CATALOGUE",
     "createdAt": "2025-01-03T14:02:49+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-air-jordan-x-travis-scott-1-low-og-sp-reverse-mocha",
@@ -15820,7 +16720,7 @@
     "publishable": false,
     "migration": "REVIEW",
     "createdAt": "2022-12-16T19:39:13+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-air-jordan-x-travis-scott-1-low-og-sp-black-phantom",
@@ -15983,7 +16883,7 @@
     "publishable": false,
     "migration": "REVIEW",
     "createdAt": "2022-12-16T18:58:10+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-nike-p-6000-platinum-violet",
@@ -16093,7 +16993,7 @@
     "publishable": false,
     "migration": "KEEP_CATALOGUE",
     "createdAt": "2026-08-19T14:42:11+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   },
   {
     "id": "bp-adidas-samba-x-comme-des-garcons",
@@ -16232,6 +17132,6 @@
     "publishable": false,
     "migration": "REVIEW",
     "createdAt": "2026-08-04T12:37:41+01:00",
-    "updatedAt": "2026-09-27T16:03:33.366Z"
+    "updatedAt": "2026-09-28T16:14:25.912Z"
   }
 ]

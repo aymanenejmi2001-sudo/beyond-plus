@@ -46,7 +46,7 @@
     "tier": "CORE",
     "styleFamily": "terrace",
     "matched": 12,
-    "kept": 5,
+    "kept": 6,
     "status": "SUPPLIER_AUTHORIZED"
   },
   {
@@ -340,12 +340,32 @@
     "status": "SUPPLIER_AUTHORIZED"
   },
   {
+    "id": "converse-run-star-motion",
+    "brand": "Converse",
+    "model": "Run Star Motion",
+    "tier": "EXPERIMENTAL",
+    "styleFamily": "skate",
+    "matched": 1,
+    "kept": 1,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
+    "id": "puma-suede-xxi",
+    "brand": "PUMA",
+    "model": "Suede XXI",
+    "tier": "EXPERIMENTAL",
+    "styleFamily": "skate",
+    "matched": 1,
+    "kept": 1,
+    "status": "SUPPLIER_AUTHORIZED"
+  },
+  {
     "id": "converse-chuck",
     "brand": "Converse",
     "model": "Chuck Taylor",
     "tier": "RISING",
     "styleFamily": "skate",
-    "matched": 19,
+    "matched": 18,
     "kept": 3,
     "status": "SUPPLIER_AUTHORIZED"
   },
@@ -356,7 +376,7 @@
     "tier": "RISING",
     "styleFamily": "y2k-runner",
     "matched": 5,
-    "kept": 2,
+    "kept": 3,
     "status": "SUPPLIER_AUTHORIZED"
   },
   {
@@ -396,7 +416,7 @@
     "tier": "EXPERIMENTAL",
     "styleFamily": "technical",
     "matched": 5,
-    "kept": 2,
+    "kept": 3,
     "status": "SUPPLIER_AUTHORIZED"
   },
   {
@@ -446,7 +466,7 @@
     "tier": "RISING",
     "styleFamily": "technical",
     "matched": 8,
-    "kept": 4,
+    "kept": 5,
     "status": "SUPPLIER_AUTHORIZED"
   },
   {

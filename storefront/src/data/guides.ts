@@ -249,27 +249,80 @@ export const GUIDES: Guide[] = [
     slug: "retro-runners-comment-les-porter",
     title: "Retro runners : comment les porter",
     description: "Les runners d’archive sont partout. Nos conseils pour les associer à un baggy, un short ou un tailleur, et bien choisir sa pointure.",
-    intro: "Plus volumineuses qu’une low profile, les retro runners demandent un peu d’équilibre dans la tenue. Rien de compliqué.",
+    intro: "Une retro runner se porte avec presque tout, à une condition : donner à la tenue assez de volume pour équilibrer la chaussure. Pantalon large ou droit qui tombe sur la paire, short avec chaussettes visibles, ou tailleur un peu ample : ce sont les trois tenues qui marchent à tous les coups. Voici la méthode, les coloris réellement disponibles chez nous et les erreurs qui cassent une silhouette.",
     published: "2026-09-24",
     sections: [
       {
-        heading: "Jouer sur les volumes",
+        heading: "Ce qu’on appelle une retro runner",
+        image: { src: "/products/asics-gel-kayano-14-white-fjord-grey-01.webp", alt: "ASICS Gel-Kayano 14 White Fjord Grey, vue de profil" },
         body: [
-          "Pantalon large ou baggy : le volume du bas répond à celui de la chaussure, la silhouette reste équilibrée.",
-          "Short ou jupe courte avec chaussettes hautes : la runner devient la pièce forte de la tenue.",
-          "Tailleur ou costume trop grand : le contraste sport / habillé est l’un des looks les plus forts du moment.",
+          "C’est une chaussure de course au design des années 2000, ressortie pour la ville. On la reconnaît à l’œil : semelle épaisse et travaillée, tige faite de plusieurs empiècements superposés, beaucoup de mesh, et souvent des touches argentées ou métallisées.",
+          "Chez BEYOND PLUS, la famille compte surtout l’ASICS Gel-Kayano 14, l’ASICS Gel-NYC, la New Balance 9060, la Nike Vomero 5 et la Nike P-6000. Elles n’ont pas toutes le même volume : la 9060 est la plus massive, la P-6000 et la Gel-NYC restent plus contenues, la Kayano 14 et la Vomero 5 sont entre les deux.",
+          "Pour choisir entre deux modèles précis, nos comparatifs Gel-NYC ou Gel-Kayano 14 et Vomero 5 ou P-6000 détaillent les différences. Ici, on part de la tenue.",
         ],
       },
       {
-        heading: "Les coloris qui fonctionnent",
-        body: ["Argent et blanc pour la lumière, noir et argent pour le soir, crème pour la douceur. Gardez le reste de la tenue simple."],
+        heading: "La règle des volumes",
+        body: [
+          "Une retro runner prend de la place au pied. Si tout le reste de la tenue est serré, le regard tombe sur les chaussures et la silhouette paraît coupée en deux. La solution est simple : le volume du bas répond au volume de la paire.",
+          "Pantalon large ou baggy : l’ourlet tombe sur la tige et laisse voir la semelle. C’est la tenue la plus facile, en jean comme en cargo ou en pantalon de toile. Avec la 9060, c’est presque obligatoire.",
+          "Pantalon droit : il fonctionne avec les modèles plus fins, Gel-NYC ou P-6000. Gardez une longueur qui touche la chaussure, sans plis accumulés sur le coup de pied.",
+          "Short ou jupe courte : laissez la chaussure devenir la pièce forte. Des chaussettes blanches ou grises visibles de quelques centimètres font le lien entre la jambe et la paire.",
+          "Tailleur ou costume un peu ample : le contraste entre une veste structurée et une runner technique est l’un des looks les plus forts du moment. Il marche si le pantalon a de la largeur et si la paire reste claire ou argentée.",
+        ],
       },
       {
-        heading: "La pointure",
-        body: ["Le rembourrage prend de la place. Mesurez votre pied en centimètres et envoyez la mesure sur WhatsApp : on confirme la pointure de la paire fournie avant l’envoi."],
+        heading: "Quelle tenue avec quel modèle",
+        body: [
+          "Prix et pointures relevés dans notre catalogue au moment de l’écriture. Les coloris peuvent changer : la page de chaque modèle montre ce qui est en ligne aujourd’hui.",
+        ],
+        table: {
+          head: ["Tenue", "Bas conseillé", "Modèle", "Coloris en ligne"],
+          rows: [
+            ["Bureau décontracté", "Pantalon droit ou chino", "ASICS Gel-NYC", "Cream Oyster Grey (700 DH, du 36 au 44), White Steel Grey (750 DH)"],
+            ["Sortie le soir", "Jean large foncé ou cargo noir", "New Balance 9060", "Black Castlerock Grey (730 DH, homme), White Taro (760 DH, du 38 au 44)"],
+            ["Week-end, café, courses", "Short, jupe courte ou jogging", "Nike Vomero 5", "Pale Ivory & Sand Drift, White & Vast Grey (660 DH, femme), Earth Fossil (660 DH, homme)"],
+            ["Tailleur ou costume ample", "Pantalon de costume large", "ASICS Gel-Kayano 14", "White Fjord Grey, Arctic Sky Pure Silver (750 DH, homme), Cream Sweet Pink (750 DH, femme)"],
+            ["Tenue sport chic", "Pantalon de survêtement droit", "Nike P-6000", "White Silver, Black & White (660 DH, homme), Premium Washed Pink (660 DH, femme)"],
+          ],
+        },
+      },
+      {
+        heading: "Les coloris qui fonctionnent",
+        image: { src: "/products/new-balance-9060-black-castlerock-grey-2025-01.webp", alt: "New Balance 9060 Black Castlerock Grey, vue de profil" },
+        body: [
+          "Blanc et argent : c’est la base de la famille. White Fjord Grey ou Arctic Sky Pure Silver sur la Kayano 14, White Silver sur la P-6000, White Steel Grey sur la Gel-NYC. Ils éclairent une tenue sombre et vont avec toutes les couleurs de pantalon.",
+          "Crème et beige : Cream Oyster Grey sur la Gel-NYC, Pale Ivory & Sand Drift sur la Vomero 5. Plus doux que le blanc pur, ils s’accordent avec le lin, le beige, le kaki et le denim clair, très pratiques quand il fait chaud.",
+          "Noir : Black Castlerock Grey sur la 9060, Black Graphite sur la Gel-NYC, Triple Black sur la Kayano 14. Le choix le plus sobre, idéal le soir ou avec un costume sombre, et le plus simple à garder propre au quotidien.",
+          "Une touche de couleur : White Taro ou Crystal Pink sur la 9060, Cream Sweet Pink sur la Kayano 14, Photon Dust Pink Foam sur la Vomero 5. Dans ce cas, gardez le reste de la tenue neutre et laissez la paire parler.",
+        ],
+      },
+      {
+        heading: "Les erreurs qui cassent la silhouette",
+        body: [
+          "1. Un slim très serré avec une 9060 : la chaussure paraît énorme et la jambe trop fine. Passez au droit ou au large.",
+          "2. Un pantalon trop long qui s’écrase sur la tige : il cache la semelle, c’est-à-dire ce qui fait tout le style de la paire. L’ourlet doit toucher la chaussure, pas l’avaler.",
+          "3. Des chaussettes invisibles avec un short : la cheville nue sous une runner volumineuse déséquilibre la jambe. Préférez une chaussette visible.",
+          "4. Trop de couleurs en même temps : une paire colorée avec un haut imprimé et un pantalon de couleur, c’est trop. Une seule pièce forte par tenue.",
+          "5. Une paire sale avec un tailleur : le contraste sport et habillé ne marche que si la chaussure est nette. Un coup de brosse sur le mesh avant de sortir suffit.",
+        ],
+      },
+      {
+        heading: "Adapter la tenue à la chaleur",
+        body: [
+          "Au Maroc, une retro runner se porte bien au-delà de l’hiver. En été, choisissez un coloris clair (crème, blanc, argent), un pantalon large en lin ou en coton léger, ou un short. Une semelle épaisse reste une chaussure de ville fermée : les jours de forte chaleur, alternez avec une paire plus basse et plus légère, comme une Samba ou une Gazelle.",
+        ],
+      },
+      {
+        heading: "La pointure et la commande",
+        body: [
+          "Ne vous fiez pas à la pointure d’une autre marque. Mesurez votre pied en centimètres, talon contre un mur, du talon au bout du plus long orteil, le soir de préférence. Après votre commande sur le site, nous vous appelons pour confirmer la commande : donnez-nous cette mesure et nous confirmons la pointure de la paire avant l’envoi. Aucun paiement en ligne n’est demandé.",
+          "La livraison est gratuite partout au Maroc, en 12 à 48 h après confirmation. Si la pointure ne va pas, l’échange est possible sous 3 jours après la livraison, paire non portée et dans sa boîte d’origine, retour à la charge du client.",
+          "Nos paires sont des répliques (Master Copy Premium 1:1), pas des paires originales : nous le disons clairement sur chaque fiche.",
+        ],
       },
     ],
-    links: [{ label: "ASICS Gel-Kayano 14", href: "/collections/asics-gel-kayano-14" }, { label: "ASICS Gel-NYC", href: "/collections/asics-gel-nyc" }, { label: "New Balance 9060", href: "/collections/new-balance-9060" }, { label: "Nike Vomero 5", href: "/collections/nike-vomero-5" }],
+    links: [{ label: "Toutes les Retro Runners", href: "/collections/retro-runners" }, { label: "ASICS Gel-Kayano 14", href: "/collections/asics-gel-kayano-14" }, { label: "ASICS Gel-NYC", href: "/collections/asics-gel-nyc" }, { label: "Nike Vomero 5", href: "/collections/nike-vomero-5" }],
   },
   {
     slug: "samba-ou-handball-spezial",
@@ -727,30 +780,91 @@ export const GUIDES: Guide[] = [
     slug: "sneakers-homme-tendance-maroc",
     title: "Sneakers homme tendance au Maroc en 2026",
     description: "Les sneakers et baskets homme tendance au Maroc en 2026 : runners Y2K, classiques du basket, silhouettes techniques, et comment les associer.",
-    intro: "Côté homme, trois directions se partagent la rue cette année. Voici comment choisir selon votre style.",
+    intro: "Côté homme, trois familles se partagent la rue au Maroc en 2026 : les runners d’archive au look Y2K (Gel-Kayano 14, New Balance 9060, Vomero 5), les classiques du basket (Air Jordan 4, Air Jordan 1, New Balance 550) et les silhouettes techniques venues du running (Air Max Dn, On Cloudtilt, Adizero). Les coloris qui dominent : argent, gris, noir et tons terre. Voici les modèles, les prix chez nous et avec quoi les porter. Toutes les paires citées sont des répliques Master Copy Premium 1:1, jamais présentées comme originales.",
     sections: [
       {
-        heading: "Les runners Y2K",
+        heading: "Les runners Y2K : la famille la plus portée",
         body: [
-          "Kayano 14, 9060, Vomero 5 : volume, superpositions, reflets métallisés. À porter avec un baggy, un cargo ou un jogging large."
+          "Ce sont les paires qu’on voit le plus aux pieds des garçons qui suivent la mode : beaucoup de superpositions, du maillage, des reflets métallisés et une semelle épaisse. Un jean et un t-shirt blanc suffisent.",
+          "ASICS Gel-Kayano 14 : la référence du genre. Quatre coloris homme à 750 DH, du 40 au 44 : Arctic Sky Pure Silver (argent et bleu glacier), White Fjord Grey, Triple Black et Cream Black Metallic Plum.",
+          "New Balance 9060 : la plus volumineuse, avec sa semelle sculptée. Black Castlerock Grey à 730 DH (40 à 44) et White Taro à 760 DH (38 à 44).",
+          "Nike Vomero 5 : plus de maillage, un look plus sport. Earth Fossil à 660 DH et Premium Sail Total Orange à 730 DH, cette dernière disponible jusqu’au 45.",
+          "Plus rares dans la rue : Nike P-6000 White Silver ou Black & White (660 DH), ASICS Gel-NYC Black Graphite (710 DH) et Ivy Smoke Grey (700 DH), New Balance 1906R Metallic Silver Gold (720 DH), New Balance 860v2 Black Silver (750 DH)."
+        ],
+        image: { src: "/products/asics-gel-kayano-14-arctic-sky-pure-silver-01.webp", alt: "ASICS Gel-Kayano 14 Arctic Sky Pure Silver, argent et bleu glacier" }
+      },
+      {
+        heading: "Les classiques du basket : la base du vestiaire streetwear",
+        body: [
+          "Tige en cuir, blocs de couleur, semelle plate : ces silhouettes existent depuis des décennies et vont avec presque tout.",
+          "Air Jordan 4 : la plus recherchée de la famille. Black Cat (tout noir, du 36 au 44) et Cool Grey 2019 (40 à 44), toutes deux à 770 DH.",
+          "Air Jordan 1 : la montante. Light Smoke Grey (36 à 44) et Dark Mocha (39 à 44), à 720 DH.",
+          "New Balance 550 : plus sobre, parfaite pour débuter. White Summer Fog à 600 DH, White Green Black à 680 DH, White Grey à 700 DH, toutes du 40 au 44.",
+          "Pour sortir des sentiers battus : adidas Forum Low White Royal Blue (700 DH) ou Air Force 1 LV8 EMB Black Silver (700 DH). À noter, la Nike Dunk Low est en ce moment en ligne uniquement du 36 au 40 : si vous chaussez plus grand, regardez plutôt la 550 ou la Jordan 1."
+        ],
+        image: { src: "/products/jordan-air-jordan-4-retro-cool-grey-2019-01.webp", alt: "Air Jordan 4 Retro Cool Grey 2019, gris et blanc" }
+      },
+      {
+        heading: "Les silhouettes techniques : la nouvelle vague",
+        body: [
+          "Ce sont les lignes les plus récentes : des paires pensées pour la course, portées en ville avec un cargo, un pantalon en nylon ou un total look sombre.",
+          "Nike Air Max Dn : All Day, Particle Grey et Black White Cool Grey, à 680 DH, jusqu’au 45 selon le coloris.",
+          "On Cloudtilt : la silhouette la plus épurée, à 750 DH. La version d’origine va du 38 au 45, Eclipse Cinder (tons terre) et Clove Sand (sable) du 38 au 44.",
+          "adidas Adizero Evo SL (Black Iron Metallic ou Black White) et ASICS Gel-Quantum (Kinetic Grey Pure Silver ou Kinetic Pepper Light Indigo) : 750 DH, du 40 au 44."
+        ],
+        image: { src: "/products/nike-air-max-dn-black-white-cool-grey-01.webp", alt: "Nike Air Max Dn Black White Cool Grey, noir et gris" }
+      },
+      {
+        heading: "Tableau : quelle famille pour quel style",
+        body: [
+          "Un repère rapide pour choisir selon ce que vous portez le plus souvent."
+        ],
+        table: {
+          head: ["Famille", "Modèles chez nous", "Avec quoi la porter", "Prix chez nous"],
+          rows: [
+            ["Runner Y2K", "Gel-Kayano 14, 9060, Vomero 5, P-6000, 1906R", "Baggy, cargo, jogging large, jean droit", "660 à 760 DH"],
+            ["Basket", "Air Jordan 4, Air Jordan 1, 550, Forum Low", "Jean brut, short en jean, survêtement", "600 à 770 DH"],
+            ["Technique", "Air Max Dn, On Cloudtilt, Adizero Evo SL, Gel-Quantum", "Pantalon nylon, cargo, total look noir", "680 à 850 DH"],
+            ["Terrace", "Samba, Gazelle Indoor, Campus 00s", "Pantalon à pinces, chino, jean droit", "650 à 700 DH"]
+          ]
+        }
+      },
+      {
+        heading: "Et les silhouettes basses ?",
+        body: [
+          "La Samba et ses cousines ne sont pas réservées aux femmes. Plusieurs coloris existent jusqu’au 44 : Samba Core Black et Vegan White Gum (700 DH), Gazelle Indoor Green et Grey Three à détails dorés (650 DH), Campus 00s Crystal White Dark Green (700 DH). Avec un pantalon droit ou à pinces, c’est le choix le plus simple pour le bureau ou une soirée."
         ]
       },
       {
-        heading: "Les classiques du basket",
+        heading: "Les coloris qui marchent au Maroc",
         body: [
-          "Dunk Low, Air Jordan 1 et 4, New Balance 550 : cuir, blocs de couleur, semelle plate. La base du vestiaire streetwear."
+          "Noir et argent, gris, tons terre : ce sont les couleurs qui se portent tous les jours et se salissent le moins vite. Le triple noir (Kayano 14 Triple Black, Jordan 4 Black Cat) reste la valeur sûre pour ceux qui veulent une seule paire.",
+          "Le gris clair (Jordan 4 Cool Grey, 550 White Grey, Kayano 14 White Fjord Grey) va avec le denim comme avec le noir. Les tons terre (Vomero 5 Earth Fossil, Jordan 1 Dark Mocha) se marient avec le beige, le kaki et le marron.",
+          "Pour une paire qui se remarque sans être criarde : New Balance 1906R Neon Nights (750 DH) ou Vomero 5 Premium Sail Total Orange."
         ]
       },
       {
-        heading: "Les silhouettes techniques",
+        heading: "Pointures homme : ce qui est disponible",
         body: [
-          "Air Max Dn, On, Adizero : des lignes récentes venues du running, à porter avec du nylon, un cargo ou un total look sombre."
+          "La plupart des paires homme sont en ligne du 40 au 44. Quelques coloris montent jusqu’au 45 : Air Max Dn All Day et Black White Cool Grey, Vomero 5 Premium Sail Total Orange, On Cloudtilt, New Balance 1000 Reflective Pack Raincloud. Les pointures disponibles sont indiquées sur chaque fiche.",
+          "Pour viser juste, mesurez la longueur de votre pied en centimètres, talon contre un mur, le soir, avec les chaussettes que vous porterez. Gardez ce chiffre sous la main : lors de notre appel de confirmation, on vérifie la pointure de la paire fournie avant l’envoi. Les conseils de taille des modèles originaux ne s’appliquent pas forcément à une réplique."
         ]
       },
       {
-        heading: "Pointures",
+        heading: "Checklist avant de commander",
         body: [
-          "Notre sélection homme va du 40 au 47. Mesurez la longueur de votre pied en centimètres et gardez-la sous la main : lors de notre appel de confirmation, on vérifie la pointure de la paire fournie avant l’envoi. Les conseils de taille des modèles originaux ne s’appliquent pas forcément à une réplique."
+          "Je connais la longueur de mon pied en centimètres.",
+          "Ma pointure est en ligne dans le coloris choisi.",
+          "Le volume de la paire va avec mes bas : runner ou basket avec un bas ample, silhouette basse avec une coupe droite.",
+          "Le coloris va avec au moins trois pièces de ma garde-robe.",
+          "Mon téléphone est à portée de main pour l’appel de confirmation."
+        ]
+      },
+      {
+        heading: "Livraison et échange",
+        body: [
+          "La commande se fait sur le site, puis on vous appelle pour confirmer le modèle, la pointure et l’adresse. Aucun paiement en ligne. La livraison est gratuite partout au Maroc, en 12 à 48 heures après la confirmation.",
+          "Si la pointure ne va pas, l’échange est possible sous 3 jours après la livraison, paire non portée et dans sa boîte d’origine, retour à votre charge."
         ]
       }
     ],
@@ -760,12 +874,12 @@ export const GUIDES: Guide[] = [
         href: "/collections/homme"
       },
       {
-        label: "Basketball",
-        href: "/collections/basketball"
+        label: "Retro Runners",
+        href: "/collections/retro-runners"
       },
       {
-        label: "New Balance 9060",
-        href: "/collections/new-balance-9060"
+        label: "Basketball",
+        href: "/collections/basketball"
       },
       {
         label: "Tech Runners",
@@ -833,49 +947,102 @@ export const GUIDES: Guide[] = [
     slug: "porter-sneakers-pantalon-large-robe",
     title: "Porter des sneakers avec un pantalon large, une robe ou un costume",
     description: "Comment porter des sneakers avec un pantalon large, une robe, une jupe longue ou un costume : quelles paires choisir et les erreurs à éviter.",
-    intro: "Les sneakers se portent aujourd’hui avec tout. Encore faut-il accorder le volume de la paire à celui de la tenue.",
+    intro: "Avec un pantalon large, prenez soit une paire basse et fine (Samba, Gazelle) pour un effet élégant, soit une runner volumineuse (9060) pour un effet streetwear. Avec une robe ou une jupe longue, restez sur une paire basse et claire. Avec un costume, choisissez une paire sobre et nette. Tout se joue sur deux réglages : la largeur de l’ourlet et l’endroit où il tombe sur la chaussure. Voici la règle pièce par pièce, pour elle comme pour lui, avec les paires en ligne chez nous.",
     sections: [
       {
-        heading: "Avec un pantalon large",
+        heading: "La règle de base : largeur et longueur",
         body: [
-          "Le pantalon doit tomber sur la chaussure. Une paire fine (Samba, Spezial) crée un contraste élégant ; une runner volumineuse (9060, Kayano 14) donne une silhouette plus streetwear."
-        ]
+          "Regardez d’abord le bas de votre vêtement, pas la chaussure. Plus l’ourlet est large, plus la paire peut avoir de volume. Plus il est étroit, plus la paire doit être fine. C’est ce rapport qui rend une tenue équilibrée ou qui la coupe en deux.",
+          "La longueur compte autant. Un pantalon qui s’accumule sur la tige cache la chaussure et tasse la silhouette. Un pantalon qui s’arrête juste au-dessus de la semelle, ou qui la touche à peine, laisse voir la paire et allonge la jambe. Pour une robe ou une jupe, c’est l’espace de jambe visible entre l’ourlet et la chaussure qui guide le choix.",
+          "Deux familles suffisent pour presque tout : les silhouettes basses et fines (Samba, Gazelle, Handball Spezial, Campus 00s) et les runners plus volumineuses (New Balance 9060, ASICS Gel-NYC, Kayano 14).",
+        ],
       },
       {
-        heading: "Avec une robe ou une jupe longue",
+        heading: "Avec un pantalon large ou un baggy",
+        image: { src: "/products/new-balance-9060-white-taro-01.webp", alt: "New Balance 9060 White Taro, vue de profil" },
         body: [
-          "Choisissez une paire basse et claire : Samba blanc et gomme, Gel-NYC crème, 530 argent. Elle allège la tenue sans la casser."
-        ]
+          "C’est la pièce la plus facile. Deux options, selon l’effet voulu.",
+          "Effet streetwear : une runner volumineuse. La New Balance 9060 est faite pour ça, sa semelle massive tient tête à un jean baggy ou à un cargo. White Taro (760 DH, du 38 au 44) pour une tenue claire, Black Castlerock Grey (730 DH, homme, du 40 au 44) avec un jean foncé.",
+          "Effet plus habillé : une paire basse et fine. Le contraste entre un pantalon ample et une chaussure plate donne une allure nette, presque rétro. La Samba Vegan White Gum (700 DH, du 36 au 44) ou la Gazelle Indoor Green (650 DH, du 36 au 44) fonctionnent avec un pantalon de toile large comme avec un jean droit un peu ample.",
+          "Dans les deux cas, l’ourlet doit tomber sur la chaussure, pas la recouvrir entièrement.",
+        ],
+      },
+      {
+        heading: "Avec un pantalon fluide ou un palazzo",
+        body: [
+          "Le palazzo et les pantalons très fluides bougent à chaque pas. Une chaussure volumineuse alourdit ce mouvement ; une paire fine le laisse vivre. Restez sur les silhouettes basses : Samba, Handball Spezial ou Gazelle.",
+          "Côté couleur, une paire qui reprend un ton de la tenue fait durer la ligne de la jambe. Un palazzo beige avec une Handball Spezial Earth Strata Gum (700 DH, du 36 au 40), un pantalon bleu avec une Handball Spezial Light Blue (700 DH, du 36 au 40), un noir avec une Samba Core Black (700 DH, du 36 au 44).",
+        ],
+      },
+      {
+        heading: "Avec une robe courte",
+        body: [
+          "La jambe est visible, la chaussure devient donc une vraie pièce de la tenue. Les deux familles marchent. Une paire basse garde un esprit léger et vintage ; une runner comme la Gel-NYC Cream Oyster Grey (700 DH, du 36 au 44) donne un contraste plus moderne, surtout avec une chaussette blanche visible de quelques centimètres.",
+        ],
+      },
+      {
+        heading: "Avec une robe longue ou une jupe mi-mollet",
+        image: { src: "/products/adidas-samba-vegan-white-gum-01.webp", alt: "adidas Samba Vegan White Gum, vue de profil" },
+        body: [
+          "Ici, la paire doit rester discrète : on n’en voit que le bout et la cheville. Choisissez une paire basse et claire. La Samba blanche à semelle gomme est le choix le plus sûr ; la New Balance 530 White Silver Metallic Sky Blue (650 DH, du 36 au 40) ajoute une touche argentée sans alourdir.",
+          "Plus la jupe descend, plus la chaussure doit être fine. Une runner massive sous une robe longue fait disparaître la cheville et donne une impression de pieds trop grands.",
+        ],
       },
       {
         heading: "Avec un costume ou un tailleur",
         body: [
-          "Une paire sobre, en cuir ou en tons neutres. Le contraste sport et habillé fonctionne quand la chaussure reste simple."
-        ]
+          "Le contraste sport et habillé fonctionne à deux conditions : un pantalon qui a un peu de largeur, et une chaussure sobre et impeccable. Une Samba Core Black ou une Gazelle Indoor Bold Core Black White (720 DH, du 36 au 40) avec un costume sombre ; une Samba blanche ou une runner argentée avec un costume clair ou un tailleur beige.",
+          "Pour un costume ample, une retro runner claire marche aussi très bien : notre guide Retro runners détaille ces associations. Évitez simplement les coloris très vifs, qui prennent le dessus sur la tenue.",
+        ],
       },
       {
-        heading: "Les erreurs à éviter",
+        heading: "Le tableau pour choisir vite",
+        body: ["Prix et pointures relevés dans notre catalogue au moment de l’écriture. Les coloris en ligne peuvent changer."],
+        table: {
+          head: ["Pièce", "Sneaker conseillée", "Modèle en ligne", "Coloris et prix"],
+          rows: [
+            ["Pantalon large, baggy, cargo", "Runner volumineuse ou paire basse", "New Balance 9060, adidas Samba", "White Taro (760 DH), Vegan White Gum (700 DH)"],
+            ["Palazzo, pantalon fluide", "Paire basse et fine", "adidas Handball Spezial, Gazelle", "Earth Strata Gum (700 DH), Gazelle Indoor Green (650 DH)"],
+            ["Robe courte", "Basse ou runner fine", "ASICS Gel-NYC", "Cream Oyster Grey (700 DH)"],
+            ["Robe longue, jupe mi-mollet", "Paire basse et claire", "adidas Samba, New Balance 530", "Vegan White Gum (700 DH), White Silver Metallic Sky Blue (650 DH)"],
+            ["Costume, tailleur", "Paire sobre, noire ou blanche", "adidas Samba, Gazelle", "Core Black (700 DH), Indoor Bold Core Black White (720 DH)"],
+          ],
+        },
+      },
+      {
+        heading: "Checklist avant de sortir",
         body: [
-          "Une paire très volumineuse sous un pantalon étroit, des coloris qui se battent avec la tenue, des lacets trop serrés qui déforment la paire."
-        ]
-      }
+          "1. L’ourlet touche la chaussure sans s’écraser dessus.",
+          "2. Le volume de la paire suit celui du bas : large avec volumineux ou fin, étroit avec fin uniquement.",
+          "3. Une seule pièce forte : si la paire est colorée, le reste de la tenue reste neutre.",
+          "4. Les lacets sont serrés juste assez, sans plisser la tige.",
+          "5. La paire est propre : avec une robe ou un costume, une semelle sale se voit tout de suite.",
+        ],
+      },
+      {
+        heading: "Pointure, livraison et échange",
+        body: [
+          "Mesurez votre pied en centimètres, talon contre un mur, jusqu’au bout du plus long orteil. Après votre commande sur le site, nous vous appelons pour la confirmer : donnez-nous cette mesure et nous confirmons la pointure de la paire avant l’envoi. Aucun paiement en ligne n’est demandé.",
+          "Livraison gratuite partout au Maroc en 12 à 48 h après confirmation. Échange de pointure possible sous 3 jours après la livraison, paire non portée et dans sa boîte d’origine, retour à la charge du client. Nos paires sont des répliques Master Copy Premium 1:1, jamais présentées comme originales.",
+        ],
+      },
     ],
     links: [
+      {
+        label: "adidas Samba",
+        href: "/collections/adidas-samba"
+      },
+      {
+        label: "New Balance 9060",
+        href: "/collections/new-balance-9060"
+      },
       {
         label: "Sneakers low profile",
         href: "/collections/low-profile"
       },
       {
-        label: "Retro Runners",
-        href: "/collections/retro-runners"
-      },
-      {
         label: "Sneakers femme",
         href: "/collections/femme"
-      },
-      {
-        label: "Sneakers homme",
-        href: "/collections/homme"
       }
     ],
     published: "2026-09-26"
@@ -884,30 +1051,85 @@ export const GUIDES: Guide[] = [
     slug: "sneakers-pied-large",
     title: "Sneakers et pied large : comment bien choisir",
     description: "Pied large : comment choisir ses sneakers, quelles silhouettes éviter, comment mesurer la largeur de son pied et bien confirmer sa pointure avant de commander.",
-    intro: "Avec un pied large, la bonne longueur ne suffit pas : la forme de la paire compte autant que la pointure.",
+    intro: "Avec un pied large, la bonne longueur ne suffit pas : la forme de la paire compte autant que la pointure. En pratique, les silhouettes basket et les runners à l’avant arrondi laissent en général plus de place que les silhouettes basses et allongées comme la Samba. Voici comment mesurer la largeur de votre pied, quelles familles regarder en premier, comment régler le laçage et pourquoi il ne faut pas prendre une pointure au dessus par réflexe. Nos paires sont des répliques Master Copy Premium 1:1 : on confirme toujours la pointure de la paire fournie avant l’envoi.",
     sections: [
       {
-        heading: "Mesurez aussi la largeur",
+        heading: "Pourquoi la largeur compte autant que la longueur",
         body: [
-          "Posez le pied sur une feuille, tracez son contour et mesurez la partie la plus large, au niveau des orteils. Envoyez-nous la longueur et la largeur sur WhatsApp."
+          "Une paire trop étroite se sent tout de suite au niveau des orteils et sur le côté du petit orteil. Elle frotte, elle marque la tige, et elle se déforme vite : le cuir ou le daim finit par pousser vers l’extérieur, la semelle aussi.",
+          "Le réflexe courant est de prendre une pointure au dessus. C’est souvent une erreur : la chaussure devient trop longue, le talon glisse à chaque pas et le pli de la tige tombe au mauvais endroit. Mieux vaut garder la bonne longueur et choisir une forme plus généreuse."
         ]
       },
       {
-        heading: "Les formes qui conviennent souvent mieux",
+        heading: "Mesurer la longueur et la largeur de son pied",
         body: [
-          "Les silhouettes basket et les runners à l’avant arrondi laissent en général plus de place que les silhouettes terrace, fines et allongées. Ce sont des tendances de forme, à confirmer sur la paire fournie."
+          "1. Posez une feuille au sol, contre un mur. Mettez les chaussettes que vous porterez avec vos sneakers.",
+          "2. Placez le talon contre le mur, pied à plat, le poids du corps dessus. Faites-le en fin de journée : le pied est un peu plus volumineux le soir.",
+          "3. Tracez le contour du pied avec un crayon tenu bien droit.",
+          "4. Longueur : mesurez du mur au bout de l’orteil le plus long. Largeur : mesurez la partie la plus large, à la base des orteils.",
+          "5. Recommencez avec l’autre pied : on a souvent un pied un peu plus grand. Gardez la mesure la plus grande.",
+          "Notez les deux chiffres en centimètres. Vous pouvez nous les envoyer sur WhatsApp avant de commander, ou les donner lors de l’appel de confirmation."
         ]
       },
       {
-        heading: "Les bons réflexes",
+        heading: "Les formes à regarder en premier",
         body: [
-          "Desserrez les premiers œillets du laçage. Évitez les chaussettes épaisses si la paire est ajustée. Ne choisissez pas une pointure plus grande par défaut : la chaussure glisserait au talon."
+          "Ce sont des tendances de forme, pas des règles : chaque paire se vérifie. Mais elles aident à trier.",
+          "Les silhouettes basket (Air Jordan 1, Air Jordan 4, New Balance 550, Air Force 1, Forum Low) ont en général un avant plus haut et plus arrondi. C’est souvent la famille la plus simple pour un pied large.",
+          "Les runners au volume généreux (New Balance 9060, Gel-Kayano 14, Vomero 5, Gel-NYC) ont une tige en maillage et en superpositions qui laisse en général un peu de souplesse sur les côtés.",
+          "Les terraces fines (Samba, Handball Spezial, Gazelle Indoor) sont basses et allongées, avec un bout effilé : ce sont elles qui serrent le plus souvent un pied large. Si vous y tenez, dites-le nous à la confirmation."
+        ],
+        image: { src: "/products/jordan-air-jordan-1-dark-mocha-01.webp", alt: "Air Jordan 1 Dark Mocha, marron et blanc, avant arrondi" }
+      },
+      {
+        heading: "Tableau : quelle famille pour un pied large",
+        body: [
+          "Un repère pour orienter votre choix avant de parler pointure avec nous."
+        ],
+        table: {
+          head: ["Famille", "Forme de l’avant", "Pour un pied large", "Exemples chez nous"],
+          rows: [
+            ["Basket", "Arrondie, plutôt haute", "Souvent le meilleur choix", "Air Jordan 1, Air Jordan 4, New Balance 550"],
+            ["Runner Y2K", "Volume généreux, maillage", "Bon choix en général", "9060, Gel-Kayano 14, Vomero 5"],
+            ["Runner rétro fine", "Plus fine, tige souple", "À vérifier avec nous", "Gel-NYC, New Balance 530"],
+            ["Terrace", "Basse, allongée, effilée", "Souvent trop étroite", "Samba, Handball Spezial, Gazelle"]
+          ]
+        },
+        image: { src: "/products/new-balance-550-white-grey-01.webp", alt: "New Balance 550 White Grey, blanc et gris" }
+      },
+      {
+        heading: "Régler le laçage pour gagner de la place",
+        body: [
+          "Le laçage change beaucoup de choses, surtout sur l’avant du pied.",
+          "Desserrez nettement les deux ou trois premiers œillets, côté orteils, et gardez le serrage en haut pour tenir le talon.",
+          "Si la pression vient d’un point précis sur le dessus du pied, sautez l’œillet à cet endroit : passez le lacet directement à l’œillet suivant.",
+          "Évitez les chaussettes épaisses avec une paire déjà ajustée, et ne serrez jamais au point de plisser la tige : c’est ce qui déforme une paire le plus vite."
         ]
       },
       {
-        heading: "On confirme avant l’envoi",
+        heading: "Les erreurs à éviter",
         body: [
-          "Mesurez la longueur de votre pied en centimètres et gardez-la sous la main : lors de notre appel de confirmation, on vérifie la pointure de la paire fournie avant l’envoi. Les conseils de taille des modèles originaux ne s’appliquent pas forcément à une réplique."
+          "Prendre une pointure au dessus par défaut : le talon glisse et la paire se plie mal.",
+          "Choisir une terrace fine parce qu’elle est à la mode, sans vérifier la forme.",
+          "Mesurer le matin ou pieds nus alors que vous portez des chaussettes épaisses.",
+          "Se fier aux conseils de taille des modèles originaux : une réplique peut chausser différemment."
+        ]
+      },
+      {
+        heading: "Checklist avant de commander",
+        body: [
+          "J’ai mesuré la longueur et la largeur de mes deux pieds, en centimètres.",
+          "J’ai choisi une famille adaptée : basket ou runner au volume généreux en priorité.",
+          "Ma pointure est en ligne dans le coloris choisi.",
+          "Je signale que j’ai le pied large, sur WhatsApp ou lors de l’appel de confirmation.",
+          "À la réception, j’essaie la paire sur un sol propre et je garde la boîte d’origine : une paire non portée peut être échangée sous 3 jours."
+        ]
+      },
+      {
+        heading: "On confirme avant l’envoi, et l’échange reste possible",
+        body: [
+          "Après votre commande sur le site, on vous appelle pour confirmer le modèle, la pointure et l’adresse. Donnez-nous vos mesures en centimètres et précisez que vous avez le pied large : on vérifie la pointure de la paire fournie avant l’envoi. Aucun paiement en ligne.",
+          "La livraison est gratuite partout au Maroc, en 12 à 48 heures après la confirmation. Si la paire serre malgré tout, l’échange de pointure est possible sous 3 jours après la livraison, paire non portée et dans sa boîte d’origine, retour à votre charge."
         ]
       }
     ],
@@ -923,13 +1145,17 @@ export const GUIDES: Guide[] = [
       {
         label: "Retro Runners",
         href: "/collections/retro-runners"
+      },
+      {
+        label: "New Balance 550",
+        href: "/collections/new-balance-550"
       }
     ],
     published: "2026-09-26"
   },
   {
     slug: "vomero-5-ou-p-6000",
-    title: "Nike Vomero 5 ou P-6000 : laquelle choisir ?",
+    title: "Nike P-6000 vs Vomero 5 : laquelle choisir ?",
     description: "Vomero 5 ou P-6000 : silhouette, volume, allure, tenues et pointure. Le comparatif clair pour choisir sa runner Nike au Maroc.",
     intro: "En bref : prenez la Vomero 5 si vous voulez une runner généreuse, douce et très visible ; prenez la P-6000 si vous cherchez une ligne plus fine, plus métallique et plus facile à glisser dans une tenue de tous les jours. Les deux viennent de l’archive running de Nike et on nous demande sans arrêt laquelle choisir. Voici comment trancher, sans jargon.",
     published: "2026-09-26",

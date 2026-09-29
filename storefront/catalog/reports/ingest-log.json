@@ -33,6 +33,10 @@
   },
   {
     "level": "warn",
+    "msg": "produit existant introuvable chez le fournisseur : adidas-handball-spezial-earth-strata-gum"
+  },
+  {
+    "level": "warn",
     "msg": "produit existant introuvable chez le fournisseur : nike-zoom-vomero-5-pale-ivory-sand-drift"
   },
   {
@@ -54,6 +58,10 @@
   {
     "level": "warn",
     "msg": "produit existant introuvable chez le fournisseur : nike-dunk-low-sail-coast"
+  },
+  {
+    "level": "warn",
+    "msg": "produit existant introuvable chez le fournisseur : jordan-air-jordan-1-black-medium-olive"
   },
   {
     "level": "warn",
@@ -82,6 +90,10 @@
   {
     "level": "warn",
     "msg": "produit existant introuvable chez le fournisseur : new-balance-1000-reflective-pack-raincloud"
+  },
+  {
+    "level": "warn",
+    "msg": "produit existant introuvable chez le fournisseur : new-balance-1000-dark-olivine-magnet"
   },
   {
     "level": "warn",
@@ -121,6 +133,10 @@
   },
   {
     "level": "warn",
+    "msg": "produit existant introuvable chez le fournisseur : converse-chuck-taylor-motion-black"
+  },
+  {
+    "level": "warn",
     "msg": "produit existant introuvable chez le fournisseur : nike-air-max-dn-all-day"
   },
   {
@@ -142,6 +158,10 @@
   {
     "level": "warn",
     "msg": "produit existant introuvable chez le fournisseur : adidas-adizero-evo-sl-evo-sl-black-white"
+  },
+  {
+    "level": "warn",
+    "msg": "produit existant introuvable chez le fournisseur : adidas-forum-low-magic-mauve-multi-color"
   },
   {
     "level": "warn",
@@ -181,6 +201,10 @@
   },
   {
     "level": "warn",
+    "msg": "produit existant introuvable chez le fournisseur : puma-puma-classic-suede-xxi-classic-suede-xxi"
+  },
+  {
+    "level": "warn",
     "msg": "image rejetée (561px)",
     "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Design_sans_titre_54.png"
   },
@@ -193,26 +217,6 @@
     "level": "warn",
     "msg": "image rejetée (561px)",
     "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/Designsanstitre_68_e209369c-6bf1-4f0c-9dd1-2448c6120a1e.png"
-  },
-  {
-    "level": "warn",
-    "msg": "image rejetée (600px)",
-    "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/adidas-handball-spezial-navy-gum-20195109_45661160_600.jpg"
-  },
-  {
-    "level": "warn",
-    "msg": "image rejetée (600px)",
-    "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/adidas-handball-spezial-navy-gum-20195109_45660658_600.jpg"
-  },
-  {
-    "level": "warn",
-    "msg": "image rejetée (600px)",
-    "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/adidas-handball-spezial-navy-gum-20195109_45662147_600.jpg"
-  },
-  {
-    "level": "warn",
-    "msg": "image rejetée (600px)",
-    "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/adidas-handball-spezial-navy-gum-20195109_45660676_600.jpg"
   },
   {
     "level": "info",
@@ -261,21 +265,6 @@
   },
   {
     "level": "warn",
-    "msg": "image rejetée (608px)",
-    "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/air-jordan-1-retro-high-og-bordeaux-301009_5000x_ba1ac2b5-aa3c-448a-883e-229124f8b580.jpg"
-  },
-  {
-    "level": "warn",
-    "msg": "image rejetée (558px)",
-    "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/air-jordan-1-retro-high-og-bordeaux-301009-3_5000x_0a3a1262-b207-4ee6-8fb1-18186112f959.jpg"
-  },
-  {
-    "level": "warn",
-    "msg": "image rejetée (559px)",
-    "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/air-jordan-1-retro-high-og-bordeaux-301009-4-592134_5000x_98ad8070-4021-4848-baaf-0e943746394c.jpg"
-  },
-  {
-    "level": "warn",
     "msg": "image rejetée (540px)",
     "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/1_540x_0dc77647-2570-4151-8287-b4483bd8f4c2.jpg"
   },
@@ -308,21 +297,6 @@
     "level": "warn",
     "msg": "image rejetée (600px)",
     "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/products/Forum_Low_Shoes_White_FY7757_03_standard.jpg"
-  },
-  {
-    "level": "warn",
-    "msg": "image rejetée (540px)",
-    "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/1_540x_37703b7b-7ee0-4d83-82e9-3d955b876257.jpg"
-  },
-  {
-    "level": "warn",
-    "msg": "image rejetée (540px)",
-    "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/4_540x_92d36192-8f0f-4931-a7a9-0acc3f1983f2.jpg"
-  },
-  {
-    "level": "warn",
-    "msg": "image rejetée (540px)",
-    "url": "https://cdn.shopify.com/s/files/1/0654/4225/1007/files/5_540x_e7536f83-772b-4d72-817c-c6e5f99a5d74.jpg"
   },
   {
     "level": "warn",

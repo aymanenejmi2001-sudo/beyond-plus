@@ -1,4 +1,4 @@
-# Migration catalogue, 2026-09-27
+# Migration catalogue, 2026-09-28
 
 Aucun produit supprimé. Les produits masqués restent dans `catalog/data/products.json`.
 
@@ -39,7 +39,7 @@ Aucun produit supprimé. Les produits masqués restent dans `catalog/data/produc
 | ASICS Gel-Kayano 14 | CORE | 13 | 5 | SUPPLIER_AUTHORIZED |
 | ASICS Gel-NYC | CORE | 12 | 5 | SUPPLIER_AUTHORIZED |
 | adidas Samba | CORE | 10 | 4 | SUPPLIER_AUTHORIZED |
-| adidas Handball Spezial | CORE | 12 | 5 | SUPPLIER_AUTHORIZED |
+| adidas Handball Spezial | CORE | 12 | 6 | SUPPLIER_AUTHORIZED |
 | adidas Gazelle Indoor | CORE | 6 | 4 | SUPPLIER_AUTHORIZED |
 | New Balance 530 | CORE | 4 | 3 | SUPPLIER_AUTHORIZED |
 | New Balance 9060 | CORE | 5 | 3 | SUPPLIER_AUTHORIZED |
@@ -69,17 +69,19 @@ Aucun produit supprimé. Les produits masqués restent dans `catalog/data/produc
 | adidas Superstar | RISING | 8 | 3 | SUPPLIER_AUTHORIZED |
 | adidas Stan Smith | RISING | 7 | 2 | SUPPLIER_AUTHORIZED |
 | adidas Forum Low | RISING | 6 | 3 | SUPPLIER_AUTHORIZED |
-| Converse Chuck Taylor | RISING | 19 | 3 | SUPPLIER_AUTHORIZED |
-| New Balance 1000 | RISING | 5 | 2 | SUPPLIER_AUTHORIZED |
+| Converse Run Star Motion | EXPERIMENTAL | 1 | 1 | SUPPLIER_AUTHORIZED |
+| PUMA Suede XXI | EXPERIMENTAL | 1 | 1 | SUPPLIER_AUTHORIZED |
+| Converse Chuck Taylor | RISING | 18 | 3 | SUPPLIER_AUTHORIZED |
+| New Balance 1000 | RISING | 5 | 3 | SUPPLIER_AUTHORIZED |
 | New Balance 1906R | RISING | 2 | 2 | SUPPLIER_AUTHORIZED |
 | New Balance 860v2 | EXPERIMENTAL | 2 | 2 | SUPPLIER_AUTHORIZED |
 | Nike Air Max Dn | RISING | 3 | 3 | SUPPLIER_AUTHORIZED |
-| ASICS Gel-Quantum | EXPERIMENTAL | 5 | 2 | SUPPLIER_AUTHORIZED |
+| ASICS Gel-Quantum | EXPERIMENTAL | 5 | 3 | SUPPLIER_AUTHORIZED |
 | Nike Air Humara | EXPERIMENTAL | 0 | 0 | NO_AUTHORIZED_SOURCE |
 | adidas Adistar BYD | EXPERIMENTAL | 3 | 2 | SUPPLIER_AUTHORIZED |
 | adidas Adizero Evo SL | RISING | 2 | 2 | SUPPLIER_AUTHORIZED |
 | Nike ZoomX Invincible | EXPERIMENTAL | 8 | 2 | SUPPLIER_AUTHORIZED |
-| On  | RISING | 8 | 4 | SUPPLIER_AUTHORIZED |
+| On  | RISING | 8 | 5 | SUPPLIER_AUTHORIZED |
 | PUMA Cali | EXPERIMENTAL | 2 | 2 | SUPPLIER_AUTHORIZED |
 
 ## Homepage (ordre)
@@ -111,7 +113,9 @@ Aucun produit supprimé. Les produits masqués restent dans `catalog/data/produc
 - adidas Samba Core Black, 700 DH, score 71, images < 1400 px
 - adidas Handball Spezial Light Blue, 700 DH, score 71, images < 1400 px
 - adidas Handball Spezial Silver Green Magic, 700 DH, score 71, images < 1400 px
+- adidas Handball Spezial Aluminium Black Gum, 700 DH, score 71, images < 1400 px
 - adidas Handball Spezial Shadow Brown Alumina, 700 DH, score 71, images < 1400 px
+- adidas Handball Spezial Earth Strata Gum, 700 DH, score 71, images < 1400 px
 - adidas Gazelle Indoor Bold Cream Collegiate Green, 720 DH, score 63, images < 1400 px
 - adidas Gazelle Indoor Bold Core Black White, 720 DH, score 63, images < 1400 px
 - adidas Gazelle Indoor Green, 650 DH, score 63
@@ -134,6 +138,7 @@ Aucun produit supprimé. Les produits masqués restent dans `catalog/data/produc
 - Nike Dunk Low Paisley Brown, 750 DH, score 67, images < 1400 px
 - Nike Dunk Low Paisley Black, 600 DH, score 67, images < 1400 px
 - Nike Dunk Low Sail Coast, 750 DH, score 67, images < 1400 px
+- Jordan Air Jordan 1 Black & Medium Olive, 620 DH, score 67, images < 1400 px
 - Jordan Air Jordan 1 Light Smoke Grey, 720 DH, score 64
 - Jordan Air Jordan 1 Phantom / Pastel Multicolor, 720 DH, score 64
 - Jordan Air Jordan 1 Court Purple White, 720 DH, score 64
@@ -149,10 +154,14 @@ Aucun produit supprimé. Les produits masqués restent dans `catalog/data/produc
 - adidas Superstar White Black, 600 DH, score 56, images < 1400 px
 - adidas Stan Smith Cloud White, 620 DH, score 54, images < 1400 px
 - adidas Stan Smith Black, 620 DH, score 54, images < 1400 px
+- adidas Forum Low Magic Mauve Multi / Color, 750 DH, score 51, images < 1400 px
 - adidas Forum Low White Royal Blue, 700 DH, score 51, images < 1400 px
+- Converse Run Star Motion Black, 630 DH, score 46, images < 1400 px
+- PUMA Suede XXI, 700 DH, score 46
 - Converse Chuck Taylor Ox White, 400 DH, score 59, images < 1400 px
 - New Balance 1000 Angora Moonrock, 620 DH, score 64, images < 1400 px
 - New Balance 1000 Reflective Pack Raincloud, 650 DH, score 64, images < 1400 px
+- New Balance 1000 Dark Olivine Magnet, 650 DH, score 64, images < 1400 px
 - New Balance 1906R Neon Nights, 750 DH, score 62, images < 1400 px
 - New Balance 1906R Metallic Silver Gold, 720 DH, score 59, images < 1400 px
 - New Balance 860v2 Black White Silver, 750 DH, score 49, images < 1400 px
@@ -162,6 +171,7 @@ Aucun produit supprimé. Les produits masqués restent dans `catalog/data/produc
 - Nike Air Max Dn Black White Cool Grey, 680 DH, score 55, images < 1400 px
 - ASICS Gel-Quantum Kinetic Grey Pure Silver, 750 DH, score 47, images < 1400 px
 - ASICS Gel-Quantum Kinetic Pepper Light Indigo, 750 DH, score 47, images < 1400 px
+- ASICS Gel-Quantum Kinetic Dark Sepia Shamrock, 750 DH, score 47, images < 1400 px
 - adidas Adistar BYD Purple Tint / Blue Spark / Silver Dawn, 750 DH, score 45
 - adidas Adistar BYD M Cloud White / Core Black / Lucid Lemond, 750 DH, score 45, images < 1400 px
 - adidas Adizero Evo SL Evo SL Black Iron Metallic, 750 DH, score 54, images < 1400 px
@@ -170,10 +180,10 @@ Aucun produit supprimé. Les produits masqués restent dans `catalog/data/produc
 - Nike ZoomX Invincible 2 Sail / Black, 850 DH, score 43, images < 1400 px
 - On Cloudsurfer White Trail 2, 750 DH, score 65, images < 1400 px
 - On CLOUDTILT, 750 DH, score 60, images < 1400 px
+- On Cloudtilt Year of the snake, 760 DH, score 55, images < 1400 px
 - PUMA Cali Cali Emboss, 500 DH, score 46, images < 1400 px
 - Adidas Falcon, 670 DH, score 36
 - ASICS Gel-Nimbus 10.1 "Ocean Haze", 750 DH, score 38, images < 1400 px
-- On Cloudtilt Year of the snake, 760 DH, score 55, images < 1400 px
 
 ## Limites
 

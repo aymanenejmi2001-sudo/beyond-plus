@@ -53,7 +53,7 @@ const lock = join(SEO, ".deploy.lock");
 if (existsSync(lock)) {
   const m = ageH(lock) * 60;
   log(`**Verrou de déploiement** : présent depuis ${m.toFixed(0)} min (${readFileSync(lock, "utf8").trim()})${m > 20 ? " : PÉRIMÉ (> 20 min), un agent a probablement échoué en cours de publication" : " : un agent publie en ce moment"}.`);
-  if (m > 20) alerts.push("Verrou de déploiement périmé : vérifier le dernier build, puis le supprimer.");
+  if (m > 20) alerts.push("Verrou de déploiement périmé : ne pas le supprimer à la main (verrou.mjs prendre le retire tout seul) ; vérifier que le travail non déployé de son agent passe tsc, tests et build.");
 } else log("**Verrou de déploiement** : aucun.");
 log();
 
@@ -75,6 +75,7 @@ for (const g of guides) (byDay[g.published] ??= []).push(g);
 for (const d of Object.keys(byDay).sort().slice(-4)) log(`- ${d} : ${byDay[d].length} (${byDay[d].map((g) => g.slug).join(", ")})`);
 for (const [d, list] of Object.entries(byDay)) if (d >= shift(today, -7) && list.length > 1) alerts.push(`${list.length} guides publiés le ${d} : au-dessus du rythme (1 article par jour impair).`);
 const sm = await http(`${SITE}/sitemap.xml`);
+let short = []; // guides sous le seuil : pendant le rattrapage, le rédacteur est attendu chaque jour
 if (sm?.status === 200) {
   const live = new Set([...sm.text.matchAll(/\/guides\/([a-z0-9-]+)</g)].map((m) => m[1]));
   // Les guides sous MIN_INDEXABLE_WORDS sont volontairement hors sitemap (noindex) : ce n'est pas un défaut de déploiement.
@@ -84,7 +85,7 @@ if (sm?.status === 200) {
     minWords = m.MIN_INDEXABLE_WORDS ?? 600;
     for (const g of m.GUIDES) words[g.slug] = m.guideWords(g);
   } catch { words = {}; }
-  const short = guides.filter((g) => words[g.slug] !== undefined && words[g.slug] < minWords).sort((a, b) => words[a.slug] - words[b.slug]);
+  short = guides.filter((g) => words[g.slug] !== undefined && words[g.slug] < minWords).sort((a, b) => words[a.slug] - words[b.slug]);
   const notLive = guides.filter((g) => !live.has(g.slug) && !short.includes(g)).map((g) => g.slug);
   const notCode = [...live].filter((s) => !guides.some((g) => g.slug === s));
   log(`Sitemap : ${live.size} guides en ligne, ${sm.text.split("<loc>").length - 1} URL au total.${notLive.length ? ` Dans le code, indexables, mais PAS en ligne : ${notLive.join(", ")} (non déployé ?).` : ""}${notCode.length ? ` En ligne mais absents du code : ${notCode.join(", ")}.` : ""}`);
@@ -117,13 +118,15 @@ log();
 const AGENTS = { rédacteur: /Compte rendu r[ée]dacteur/i, technique: /Compte rendu (agent )?technique/i, backlinks: /Compte rendu backlinks/i, curateur: /Compte rendu curateur/i, designer: /Compte rendu (designer|UX)/i };
 function expected(d) {
   const w = new Date(d + "T12:00:00Z").getUTCDay();
-  return ["technique", "backlinks", "designer", ...(isArticleDay(d) ? ["rédacteur"] : []), ...(w === 1 ? ["curateur"] : [])];
+  return ["technique", "backlinks", "designer", ...(isArticleDay(d) || short.length ? ["rédacteur"] : []), ...(w === 1 ? ["curateur"] : [])];
 }
 for (const [label, d] of [["Hier", yesterday], ["Aujourd'hui", today]]) {
   const f = join(SEO, "missions", `${d}.md`);
   const txt = read(f);
   if (!txt) { log(`**${label} (${d})** : pas de fichier mission.`); continue; }
-  const done = Object.keys(AGENTS).filter((a) => AGENTS[a].test(txt));
+  // Une section « Compte rendu » vide (titre du modèle seul) ne compte pas : il faut du texte avant le titre suivant.
+  const filled = (re) => txt.split(/^## /m).some((sec) => re.test(sec.split("\n")[0]) && sec.split("\n").slice(1).join("").trim().length > 0);
+  const done = Object.keys(AGENTS).filter((a) => filled(AGENTS[a]));
   const journals = { designer: existsSync(join(ROOT, "UX/journal", `${d}.md`)), curateur: existsSync(join(ROOT, "CATALOGUE/journal", `${d}.md`)), backlinks: existsSync(join(SEO, "backlinks", `${d}.md`)) };
   for (const [a, ok] of Object.entries(journals)) if (ok && !done.includes(a)) done.push(a);
   const late = expected(d).filter((a) => !done.includes(a));

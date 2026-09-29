@@ -28,7 +28,7 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
       "Vous commandez en ligne en une minute, puis on vous appelle pour confirmer la pointure et la livraison avant l’envoi, partout au Maroc. Pas de paiement en ligne.",
     ],
     links: [SIZE_GUIDE, { label: "Trending Now", href: "/collections/trending-now" }] } },
-  { handle: "femme", title: "Beyond Women", description: "Du 35 au 40. Une allure bien à soi.", filter: (p) => p.merch?.gender !== "men", seo: {
+  { handle: "femme", title: "Beyond Women", description: "Du 36 au 40. Une allure bien à soi.", filter: (p) => p.merch?.gender !== "men", seo: {
     h1: "Sneakers femme au Maroc", eyebrow: "Beyond Women",
     title: "Sneakers femme Maroc : prix dès 500 DH, livraison gratuite",
     description: "Sneakers femme au Maroc dès 500 DH : Samba, Gel-NYC, Vomero 5 en argent, crème et tons neutres, confortables au quotidien. Livraison gratuite en 12 à 48 h.",
@@ -37,17 +37,17 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
       "Les coloris doux (crème, argent, rose poudré) et les silhouettes fines dominent la sélection femme : faciles avec un jean droit, une jupe longue ou un tailleur.",
       "Entre deux pointures ? Mesurez votre pied en centimètres (le guide des pointures explique comment en deux minutes) et envoyez la mesure sur WhatsApp : on confirme avant l’envoi.",
     ],
-    links: [SIZE_GUIDE, LOW_GUIDE] } },
-  { handle: "homme", title: "Beyond Men", description: "Du 40 au 47. Chrome, nuit, béton.", filter: (p) => p.merch?.gender !== "women", seo: {
+    links: [{ label: "Sneakers femme tendance au Maroc", href: "/guides/sneakers-femme-tendance-maroc" }, SIZE_GUIDE, LOW_GUIDE] } },
+  { handle: "homme", title: "Beyond Men", description: "Du 40 au 45. Chrome, nuit, béton.", filter: (p) => p.merch?.gender !== "women", seo: {
     h1: "Sneakers homme au Maroc", eyebrow: "Beyond Men",
-    title: "Sneakers homme Maroc : espadrilles du 40 au 47",
-    description: "Sneakers et baskets homme au Maroc, du 40 au 47 : Kayano 14, 9060, Jordan 4, Dunk Low. Livraison gratuite en 12 à 48 h, confirmation par téléphone.",
+    title: "Sneakers homme Maroc : prix dès 400 DH, du 40 au 45",
+    description: "Sneakers homme au Maroc, prix dès 400 DH, du 40 au 45 : Kayano 14, 9060, Jordan 4, Dunk Low. Livraison gratuite 12 à 48 h, confirmation par téléphone.",
     heading: "Des sneakers homme, du quotidien au statement",
     body: [
       "Noir et argent, gris, tons terre : la sélection homme mise sur des coloris qui se portent tous les jours, avec quelques paires plus affirmées pour sortir du rang.",
-      "Les runners rembourrées chaussent souvent un peu juste : vérifiez votre longueur de pied avant de commander, on confirme toujours la pointure par téléphone avant l’envoi.",
+      "Pour la pointure, mesurez la longueur de votre pied en centimètres : on confirme toujours la pointure par téléphone avant l’envoi.",
     ],
-    links: [SIZE_GUIDE, CARE_GUIDE] } },
+    links: [{ label: "Sneakers homme tendance au Maroc", href: "/guides/sneakers-homme-tendance-maroc" }, SIZE_GUIDE, CARE_GUIDE] } },
   { handle: "trending-now", title: "Trending Now", description: "Les paires qui font la saison, sélectionnées par BEYOND PLUS.", filter: inCollection("trending-now"), curated: true, seo: {
     title: "Sneakers tendance du moment, Trending Now",
     description: "Les sneakers tendance du moment au Maroc : terrace, retro runners, Y2K. Sélection courte, livraison gratuite en 12 à 48 h.",

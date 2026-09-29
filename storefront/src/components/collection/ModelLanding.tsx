@@ -20,7 +20,7 @@ export function ModelLanding({ name, content, sizes, count, colorways = [], guid
 
       {colorways.length > 0 && (
         <>
-          <h3>Coloris disponibles</h3>
+          <h3 id="coloris" style={{ scrollMarginTop: "6rem" }}>Coloris disponibles</h3>
           <table className="beyond-colorways">
             <thead><tr><th scope="col">Coloris</th><th scope="col">Prix</th><th scope="col">Pointures</th></tr></thead>
             <tbody>

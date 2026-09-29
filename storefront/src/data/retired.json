@@ -83,5 +83,30 @@
   "handle": "air-jordan-4-retro-bred-2019",
   "title": "Air Jordan 4 Retro Bred 2019",
   "brand": "Jordan"
+ },
+ {
+  "handle": "nike-dunk-low-ben-jerry-s-chunky-dunky",
+  "title": "Nike Dunk Low Ben & Jerry's Chunky Dunky",
+  "brand": "Nike"
+ },
+ {
+  "handle": "nike-dunk-low-sb-parra-2021",
+  "title": "Nike Dunk Low SB Parra (2021)",
+  "brand": "Nike"
+ },
+ {
+  "handle": "adidas-samba-wales-bonner-x-nylon-fox-brown",
+  "title": "adidas Samba Wales Bonner x Nylon Fox Brown",
+  "brand": "adidas"
+ },
+ {
+  "handle": "new-balance-1000-joe-freshgoods-pink-mink",
+  "title": "New Balance 1000 Joe Freshgoods Pink Mink",
+  "brand": "New Balance"
+ },
+ {
+  "handle": "nike-dunk-low-black-myth-wukong",
+  "title": "Nike Dunk Low Black Myth Wukong",
+  "brand": "Nike"
  }
 ]

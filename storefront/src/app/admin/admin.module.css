@@ -203,3 +203,8 @@ h2.h2 { font: 600 13px/1 var(--font-archivo), system-ui; letter-spacing: .12em; 
 .thumbs img { width: 40px; height: 40px; object-fit: contain; background: var(--plate); mix-blend-mode: multiply; }
 .ownThumb { position: relative; display: block; outline: 2px solid var(--bordeaux); outline-offset: -2px; }
 .ownThumb button { position: absolute; top: -6px; right: -6px; width: 18px; height: 18px; border-radius: 50%; border: 0; background: var(--ink); color: #fff; font-size: 12px; line-height: 18px; padding: 0; cursor: pointer; }
+.chipFocus { border-color: var(--ink); color: var(--ink); }
+.chipFocus sup { font-size: 9px; margin-left: 3px; color: var(--muted); }
+.chipFocus[data-active="true"] sup { color: #fff; }
+.chipSep { width: 1px; height: 22px; background: var(--line); margin: 0 4px; }
+.tagNew { left: auto; right: 10px; background: var(--ink); color: #fff; }

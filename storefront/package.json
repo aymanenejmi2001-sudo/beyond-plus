@@ -21,7 +21,8 @@
     "radar:discover": "node --no-warnings --env-file-if-exists=.env.local --env-file-if-exists=.env.development.local radar/jobs/discover.ts",
     "radar:local": "NEXT_DIST_DIR=.next-dev next dev -p 4333",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "prebuild": "node --no-warnings --experimental-strip-types radar/jobs/pull-site.ts || echo \"[radar] pull-site ignor\u00e9\""
+    "prebuild": "node --no-warnings --experimental-strip-types radar/jobs/pull-site.ts || echo \"[radar] pull-site ignor\u00e9\"",
+    "radar:footlocker": "node --no-warnings --env-file-if-exists=.env.local --env-file-if-exists=.env.development.local radar/jobs/footlocker.ts"
   },
   "dependencies": {
     "@vercel/blob": "^2.8.0",

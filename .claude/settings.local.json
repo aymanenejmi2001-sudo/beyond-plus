@@ -41,7 +41,25 @@
       "Bash(curl -s https://beyondplusmaroc.com/guides/sneakers-femme-tendance-maroc)",
       "Bash(curl -s https://beyondplusmaroc.com/collections/femme)",
       "Bash(curl -s -o /dev/null -w '%{http_code}\\\\n' https://beyondplusmaroc.com/collections/femme)",
-      "Bash(curl -s https://beyondplusmaroc.com/guides/gel-nyc-ou-gel-kayano-14)"
+      "Bash(curl -s https://beyondplusmaroc.com/guides/gel-nyc-ou-gel-kayano-14)",
+      "Bash(node --env-file=.env.local -e ' *)",
+      "Bash(node SEO/outils/verrou.mjs prendre designer)",
+      "Bash(grep -v \"^\\\\s*$\")",
+      "Bash(vercel rm *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://beyondplusmaroc.com)",
+      "Bash(node SEO/outils/verrou.mjs rendre designer)",
+      "Bash(cd \"/Users/mac/Desktop/BEYOND PLUS\"; TZ=Africa/Casablanca date; sed -n '/## Interdits/,/## Typographie/p' SEO/REGLES.md; echo ====; ls SEO/missions | tail -5; node SEO/outils/etat.mjs)",
+      "Bash(curl -s https://beyondplusmaroc.com/collections/homme)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"https://marocannuaire.org/Annuaire/Details_infos.php?e=beyond+plus+&activite=V%C3%AAtements+professionnels&ville=CASABLANCA&p=beyond-plus&id=337335&ref=\")",
+      "Bash(curl -s \"https://marocannuaire.org/Annuaire/Details_infos.php?e=beyond+plus+&activite=V%C3%AAtements+professionnels&ville=CASABLANCA&p=beyond-plus&id=337335&ref=\")",
+      "Bash(curl -s -A \"Mozilla/5.0\" -o /dev/null -w \"%{http_code}\\\\n\" \"https://www.kerix.net/fr/recherche?q=beyond+plus\")",
+      "Bash(node --env-file=.env.local --input-type=module -e ' *)",
+      "Bash(awk -F'src: \"' '{print $2}')",
+      "Bash(cd \"/Users/mac/Desktop/BEYOND PLUS\" && sed -n '/^\\\\*\\\\*2. porter/,/^## Compte rendu technique/p' SEO/missions/2026-09-28.md | head -80; echo ======; sed -n '/^## Compte rendu rédacteur/,/^## Compte rendu backlinks/p' SEO/missions/2026-09-28.md | head -60; echo =====DESIGNER; sed -n '/^## Compte rendu designer/,$p' SEO/missions/2026-09-28.md)",
+      "WebFetch(domain:bloggers.feedspot.com)",
+      "WebFetch(domain:www.mamanmaroc.ma)",
+      "WebFetch(domain:shoelifer.com)",
+      "Bash(cd \"/Users/mac/Desktop/BEYOND PLUS\" && sed -n '/## Interdits/,/## Typographie/p' SEO/REGLES.md; echo =====; cat SEO/missions/2026-09-29.md; echo ====; TZ=Africa/Casablanca date)"
     ]
   }
 }

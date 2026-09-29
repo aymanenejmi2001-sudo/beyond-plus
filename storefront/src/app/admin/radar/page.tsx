@@ -8,6 +8,7 @@ import { bestOffer } from "../../../../radar/scoring/components.ts";
 import { CATALOG } from "@/data/catalog";
 import { completeAction, decideAction, deployAction, publishAction } from "./actions";
 import { DeployButton } from "./DeployButton";
+import { PublishButton } from "./PublishButton";
 import { PhotosTab, photoGaps } from "./PhotosTab";
 import { canDeploy, deployStatus, pendingChanges } from "../../../../radar/services/deploy.ts";
 import { Flash, Header } from "./ui";
@@ -17,10 +18,20 @@ import { Flash, Header } from "./ui";
 
 const POTENTIAL: Record<string, string> = { LAUNCH: "Fort potentiel", TEST: "À tester", WATCH: "À surveiller" };
 const RANK: Record<string, number> = { LAUNCH: 0, TEST: 1, WATCH: 2 };
-type SP = Promise<{ tab?: string; brand?: string; q?: string; ok?: string; err?: string }>;
+type SP = Promise<{ tab?: string; brand?: string; q?: string; f?: string; ok?: string; err?: string }>;
+
+const NEW_HOURS = 24;
+const COLLAB_RX = /\bx\b|travis|off-white|comme des|wales bonner|sacai|jacquemus|union|fragment|stussy|supreme|aime leon|kiko|concepts|loewe|a ma maniere/i;
+const isNew = (c: Candidate) => Date.now() - Date.parse(c.first_detected_at) < NEW_HOURS * 3600e3;
+const FOCUS: { id: string; label: string; test: (c: Candidate) => boolean }[] = [
+  { id: "new", label: "Nouveautés", test: isNew },
+  { id: "collab", label: "Collabs", test: (c) => /collab/i.test(c.notes ?? "") || COLLAB_RX.test(`${c.model} ${c.colorway ?? ""}`) },
+  { id: "femme", label: "Femme", test: (c) => c.gender === "women" },
+  { id: "enfant", label: "Enfant", test: (c) => /enfant/i.test(c.notes ?? "") },
+];
 
 export default async function Selection({ searchParams }: { searchParams: SP }) {
-  const { tab = "publier", brand = "", q = "", ok, err } = await searchParams;
+  const { tab = "publier", brand = "", q = "", f = "", ok, err } = await searchParams;
   const db = getStore();
   const [all, offers, live, dep, gaps] = await Promise.all([db.list("sneaker_candidates"), db.list("supplier_offers"), Promise.resolve(new Set(CATALOG.map((p) => p.handle))), pendingChanges(), photoGaps()]);
   const ds = await deployStatus();
@@ -51,14 +62,16 @@ export default async function Selection({ searchParams }: { searchParams: SP }) 
   const inTab = all.filter(t.test);
   const brands = [...new Set(inTab.map((c) => c.brand))].sort((a, b) => a.localeCompare(b));
   const needle = q.trim().toLowerCase();
+  const focus = FOCUS.find((x) => x.id === f);
   const rows = inTab
     .filter((c) => !brand || c.brand === brand)
+    .filter((c) => !focus || focus.test(c))
     .filter((c) => !needle || `${c.brand} ${c.model} ${c.colorway ?? ""}`.toLowerCase().includes(needle))
     .map(view)
     .sort((a, b) => Number(!!a.blocker) - Number(!!b.blocker)
       || (RANK[a.c.recommendation ?? ""] ?? 3) - (RANK[b.c.recommendation ?? ""] ?? 3)
       || (b.c.beyond_score ?? -1) - (a.c.beyond_score ?? -1));
-  const qs = (o: Record<string, string>) => "/admin/radar?" + new URLSearchParams({ tab: t.id, ...(brand && { brand }), ...(q && { q }), ...o }).toString();
+  const qs = (o: Record<string, string>) => "/admin/radar?" + new URLSearchParams(Object.fromEntries(Object.entries({ tab: t.id, brand, q, f, ...o }).filter(([, v]) => v))).toString();
   const here = qs({});
   const ready = all.filter((c) => TABS[0].test(c)).map(view).filter((v) => !v.blocker).length;
 
@@ -72,7 +85,8 @@ export default async function Selection({ searchParams }: { searchParams: SP }) 
               <Link href={`/admin/radar/${c.id}`} className={s.plate} aria-label={`Détails ${c.brand} ${c.model}`}>
                 {img ? <img src={img} alt="" loading="lazy" /> : <span className={s.plateEmpty}>Pas de photo<br />autorisée</span>}
                 {c.recommendation && <span className={s.tag} data-tone={c.recommendation}>{POTENTIAL[c.recommendation]}</span>}
-                {c.confidence_level === "LOW" && c.recommendation && <span className={`${s.tag} ${s.tagRight}`} title="Surtout basé sur notre jugement, peu de données mesurées">estimation</span>}
+                {isNew(c) ? <span className={`${s.tag} ${s.tagNew}`}>Nouveau</span>
+                  : c.confidence_level === "LOW" && c.recommendation && <span className={`${s.tag} ${s.tagRight}`} title="Surtout basé sur notre jugement, peu de données mesurées">estimation</span>}
               </Link>
               <div className={s.cardBody}>
                 <span className={s.cardBrand}>{c.brand}</span>
@@ -100,7 +114,7 @@ export default async function Selection({ searchParams }: { searchParams: SP }) 
                   <form action={publishAction} className={s.priceRow}>
                     <input type="hidden" name="id" value={c.id} /><input type="hidden" name="from" value={here} />
                     <label>DH<input name="price" type="number" min="1" required inputMode="numeric" aria-label="Prix de vente en dirhams" defaultValue={c.selling_price_mad ?? o?.supplier_cost_mad ?? ""} /></label>
-                    <button>Publier</button>
+                    <PublishButton />
                   </form>
                 )}
 
@@ -160,10 +174,12 @@ export default async function Selection({ searchParams }: { searchParams: SP }) 
 
       {tab === "photos" ? <PhotosTab here="/admin/radar?tab=photos" /> : (<>
       <div className={s.toolbar}>
+        {FOCUS.map((x) => { const n = inTab.filter(x.test).length; return n ? <Link key={x.id} className={`${s.chip} ${s.chipFocus}`} href={qs({ f: f === x.id ? "" : x.id })} data-active={f === x.id}>{x.label} <sup>{n}</sup></Link> : null; })}
+        <span className={s.chipSep} aria-hidden />
         <Link className={s.chip} href={qs({ brand: "" })} data-active={!brand}>Toutes</Link>
         {brands.map((b) => <Link key={b} className={s.chip} href={qs({ brand: b })} data-active={b === brand}>{b}</Link>)}
         <form method="get" action="/admin/radar" style={{ display: "contents" }}>
-          <input type="hidden" name="tab" value={t.id} />{brand && <input type="hidden" name="brand" value={brand} />}
+          <input type="hidden" name="tab" value={t.id} />{brand && <input type="hidden" name="brand" value={brand} />}{f && <input type="hidden" name="f" value={f} />}
           <input className={s.search} name="q" defaultValue={q} placeholder="Rechercher un modèle…" aria-label="Rechercher" />
         </form>
       </div>

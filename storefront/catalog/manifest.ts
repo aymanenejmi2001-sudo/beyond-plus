@@ -68,7 +68,9 @@ export const FAMILIES: Family[] = [
   { id: "adidas-superstar", brand: "adidas", model: "Superstar", match: /superstar/i, exclude: /camo|allover|\bx\b/i, styleFamily: "icon", tier: "RISING", collections: ["icons"], maxColorways: 3, signals: S(3, 4, 5, 3, 4) },
   { id: "adidas-stan-smith", brand: "adidas", model: "Stan Smith", match: /stan smith/i, exclude: COLLAB, styleFamily: "icon", tier: "RISING", collections: ["icons"], maxColorways: 2, signals: S(3, 4, 5, 2, 4) },
   { id: "adidas-forum-low", brand: "adidas", model: "Forum Low", match: /forum (low|84)/i, exclude: COLLAB, styleFamily: "basketball-retro", tier: "RISING", collections: ["basketball"], maxColorways: 3, signals: S(3, 3, 4, 3, 4) },
-  { id: "converse-chuck", brand: "Converse", model: "Chuck Taylor", match: /chuck (taylor|70)|run star/i, exclude: COLLAB, styleFamily: "skate", tier: "RISING", collections: ["skate", "icons"], maxColorways: 4, signals: S(3, 4, 5, 3, 4) },
+  { id: "converse-run-star-motion", brand: "Converse", model: "Run Star Motion", match: /run star motion/i, exclude: COLLAB, styleFamily: "skate", tier: "EXPERIMENTAL", collections: ["skate"], maxColorways: 1, signals: S(2, 3, 4, 3, 4) },
+  { id: "puma-suede-xxi", brand: "PUMA", model: "Suede XXI", match: /classic suede xxi/i, exclude: COLLAB, styleFamily: "skate", tier: "EXPERIMENTAL", collections: ["skate"], maxColorways: 1, signals: S(2, 3, 4, 3, 4) },
+  { id: "converse-chuck", brand: "Converse", model: "Chuck Taylor", match: /chuck (taylor|70)|run star hike/i, exclude: COLLAB, styleFamily: "skate", tier: "RISING", collections: ["skate", "icons"], maxColorways: 4, signals: S(3, 4, 5, 3, 4) },
 
   // ---- Niche & désirable
   { id: "nb-1000", brand: "New Balance", model: "1000", match: /new balance 1000|\bm1000/i, strip: /\bm?1000\b/i, exclude: COLLAB, styleFamily: "y2k-runner", tier: "RISING", collections: ["retro-runners"], maxColorways: 4, pick: true, signals: S(4, 3, 4, 5, 4) },
