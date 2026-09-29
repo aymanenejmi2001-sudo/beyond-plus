@@ -163,7 +163,7 @@ for (const b of BRANDS) {
   COLLECTION_TRAIL.set(b.handle, [SNEAKERS]);
   COLLECTION_SEO.set(b.handle, {
     h1: `${b.name} au Maroc`, eyebrow: b.name,
-    title: `${b.name} Maroc : ${models.slice(0, 2).map((m) => m.name).join(", ") || "sneakers"}`,
+    title: `${b.name} Maroc : ${models.slice(0, 2).map((m) => m.name).join(", ") || "sneakers"}, prix dès ${Math.min(...b.products.map((p) => Number(p.priceRange.minVariantPrice.amount)))} DH`,
     description: `${b.name} au Maroc : ${b.products.length} paires${models.length ? ` dont ${models.map((m) => m.name).slice(0, 3).join(", ")}` : ""}. Livraison gratuite en 12 à 48 h, confirmation par téléphone.`,
     heading: `${b.name} chez BEYOND PLUS`,
     body: [b.intro, "Répliques qualité Master Copy Premium 1:1. Chaque commande est confirmée avec vous par téléphone : pointure, délai et livraison partout au Maroc."],

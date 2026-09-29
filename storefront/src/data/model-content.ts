@@ -51,11 +51,13 @@ export const MODEL_CONTENT: Record<string, ModelContent> = {
     intro: [
       "La 9060 pousse l’esthétique running des années 2000 vers quelque chose de plus sculpté : une semelle volumineuse, des lignes qui ondulent, un talon affirmé. C’est la New Balance qui se voit, celle qui donne du caractère à une tenue simple.",
       "On a choisi des coloris qui gardent la silhouette lisible : blanc et taro, noir castlerock, gris, rose cristal pour une version plus douce.",
+      "Prix de la New Balance 9060 au Maroc chez BEYOND PLUS : entre 730 et 760 DH selon le coloris, livraison gratuite partout au Maroc. Le prix exact est affiché sur chaque paire, et la pointure est confirmée par téléphone avant l’envoi. Ce sont des répliques high copy, pas des paires originales : c’est ce qui explique l’écart avec le prix officiel.",
     ],
     fit: COMMERCE.fit,
     wear: "Son volume appelle un bas large : jogging, cargo, jean baggy. Avec une jupe longue ou une robe droite, le contraste fonctionne aussi très bien.",
     related: [{ label: "Tout New Balance", href: "/collections/new-balance" }, { label: "New Balance 530", href: "/collections/new-balance-530" }, RETRO, SIZE],
     faq: [
+      { q: "Quel est le prix de la New Balance 9060 au Maroc ?", a: "Chez BEYOND PLUS, entre 730 et 760 DH selon le coloris, livraison gratuite partout au Maroc. Réplique high copy, non originale." },
       { q: "La 9060 taille-t-elle grand ?", a: COMMERCE.fit },
       { q: "9060 ou 530 ?", a: "La 530 est plus fine et plus discrète ; la 9060 plus volumineuse et plus affirmée." },
       { q: "Combien de temps pour la livraison ?", a: COMMERCE.shipping },
