@@ -59,14 +59,16 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
     links: [SIZE_GUIDE, { label: "Nous écrire", href: "/contact" }] } },
   { handle: "low-profile", title: "Low Profile", description: "Silhouettes basses et fines : Samba, Spezial, Gazelle.", filter: inCollection("low-profile"), curated: true, seo: {
     h1: "Sneakers Low Profile au Maroc", eyebrow: "Low Profile",
-    title: "Sneakers low profile Maroc : Samba, Spezial, Gazelle",
-    description: "Sneakers low profile au Maroc : Samba, Handball Spezial, Gazelle, silhouettes basses et fines. Livraison gratuite en 12 à 48 h.",
-    heading: "Au ras du sol",
+    title: "Sneakers low profile Maroc : Samba, Spezial, Gazelle dès 500 DH",
+    description: "Sneakers low profile au Maroc : Samba, Handball Spezial, Gazelle, Campus, de 500 à 750 DH. Silhouettes basses, livraison gratuite en 12 à 48 h.",
+    heading: "Sneakers low profile au Maroc : Samba, Spezial, Gazelle",
     body: [
-      "Semelle fine, ligne allongée, peu de volume : la low profile est la silhouette de la saison. Elle vient des terrains en salle et des tribunes, et se porte aujourd’hui avec un pantalon large ou une jupe longue.",
-      "Elles chaussent près du pied : envoyez-nous la longueur de votre pied en centimètres, on confirme la pointure avant l’envoi.",
+      "Semelle fine, ligne allongée, peu de volume : la low profile est la silhouette de 2026. Elle vient des terrains en salle et des tribunes (la famille « terrace »), et se porte aujourd’hui avec un pantalon large, un jean droit ou une jupe longue.",
+      "Quatre modèles pour commencer. La Samba, la plus fine et la plus demandée, de 500 à 750 DH. La Handball Spezial, en daim et en couleurs franches, à 700 DH. La Gazelle, un peu plus ronde, de 650 à 720 DH. La Campus 00s, plus épaisse et plus décontractée, à 700 DH.",
+      "Quelle low profile choisir ? Une seule paire pour tout faire : la Samba blanc et gomme ou noire. Envie de couleur : la Spezial. Un style plus rétro : la Gazelle. Pour les coupes amples : la Campus.",
+      "Ce sont des répliques high copy, pas des paires originales. Livraison gratuite partout au Maroc en 12 à 48 h après confirmation. Elles chaussent près du pied : envoyez-nous la longueur de votre pied en centimètres, on confirme la pointure avant l’envoi.",
     ],
-    links: [LOW_GUIDE, SIZE_GUIDE] } },
+    links: [{ label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "Handball Spezial", href: "/collections/handball-spezial" }, { label: "adidas Gazelle", href: "/collections/adidas-gazelle" }, { label: "Campus 00s", href: "/collections/adidas-campus-00s" }, { label: "Samba ou Handball Spezial ?", href: "/guides/samba-ou-handball-spezial" }, LOW_GUIDE, SIZE_GUIDE] } },
   { handle: "retro-runners", title: "Retro Runners", description: "L’archive running remise en ville : Kayano, Gel-NYC, 9060, Vomero.", filter: inCollection("retro-runners"), curated: true, seo: {
     h1: "Retro runners au Maroc", eyebrow: "Retro Runners",
     title: "Retro runners Maroc : Kayano 14, Gel-NYC, 9060, Vomero 5",
