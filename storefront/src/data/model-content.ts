@@ -192,12 +192,16 @@ export const MODEL_CONTENT: Record<string, ModelContent> = {
   "nike-air-force-1": {
     intro: [
       "L’Air Force 1 est probablement la sneaker la plus portée au monde : une tige en cuir, une semelle épaisse et plate, une ligne qui n’a presque pas bougé depuis ses débuts.",
-      "Notre sélection reste sur les versions qui se portent partout, en blanc total et en noir total notamment.",
+      "Notre sélection reste sur les versions qui se portent partout : l’Air Force 1 ’07 blanche (triple white) et noire (triple black), la version Exoskeletal et une LV8 noir et argent brodée.",
+      "Prix de l’Air Force 1 au Maroc chez BEYOND PLUS : de 590 DH pour les versions blanche et noire à 700 DH pour la LV8, livraison gratuite partout au Maroc en 12 à 48 h après confirmation. Ce sont des répliques high copy, pas des paires originales Nike, d’où l’écart avec le prix en boutique officielle.",
+      "AF1 blanche ou noire ? La blanche est la plus polyvalente et la plus demandée, elle éclaire une tenue mais se marque plus vite. La noire pardonne tout, se porte sous la pluie comme en soirée, et reste nette sans entretien.",
     ],
     fit: COMMERCE.fit,
-    wear: "Elle va avec absolument tout : jean, jogging, costume. Le blanc total demande un peu d’entretien pour rester net.",
+    wear: "Elle va avec absolument tout : jean droit ou baggy, jogging, cargo, costume large. La semelle épaisse équilibre les bas amples ; avec un pantalon slim, laissez voir la cheville. Le blanc total demande un peu d’entretien pour rester net.",
     related: [{ label: "Tout Nike", href: "/collections/nike" }, { label: "Nike Dunk Low", href: "/collections/nike-dunk-low" }, { label: "Icons", href: "/collections/icons" }, { label: "Entretenir ses sneakers", href: "/guides/entretenir-ses-sneakers" }],
     faq: [
+      { q: "Quel est le prix de la Nike Air Force 1 au Maroc ?", a: "Chez BEYOND PLUS, de 590 DH (blanche ou noire) à 700 DH (LV8), livraison gratuite partout au Maroc. Réplique high copy, non originale." },
+      { q: "Air Force 1 blanche ou noire ?", a: "La blanche va avec tout et reste la plus demandée ; la noire est plus facile à garder propre au quotidien." },
       { q: "L’Air Force 1 taille-t-elle grand ?", a: COMMERCE.fit },
       { q: "Comment garder des AF1 blanches ?", a: "Brossage régulier et semelles nettoyées au bicarbonate ; voyez notre guide d’entretien." },
       { q: "Livraison ?", a: COMMERCE.shipping },

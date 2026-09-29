@@ -88,7 +88,7 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
     description: "Les sneakers icônes au Maroc : Air Force 1, Superstar, Stan Smith, Jordan. Les classiques, livraison gratuite en 12 à 48 h.",
     heading: "Les classiques",
     body: ["Des silhouettes qui ont fait la culture sneaker et qu’on ne présente plus. Les valeurs sûres du placard."],
-    links: [CARE_GUIDE, SIZE_GUIDE] } },
+    links: [{ label: "Nike Air Force 1", href: "/collections/nike-air-force-1" }, CARE_GUIDE, SIZE_GUIDE] } },
   { handle: "basketball", title: "Basketball", description: "Dunk, Jordan 1, Jordan 4, 550 : l’héritage du parquet.", filter: inCollection("basketball"), curated: true, seo: {
     h1: "Sneakers basket au Maroc", eyebrow: "Basketball",
     title: "Sneakers basket Maroc : Dunk Low, Jordan 1, Jordan 4, 550",
