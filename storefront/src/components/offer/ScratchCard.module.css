@@ -25,3 +25,22 @@
 .cta { min-height: 4.8rem; background: #e2c46e; color: #111; border-radius: .4rem; border: 0; font: inherit; font-size: 1.2rem; letter-spacing: var(--tracking-eyebrow, .14em); text-transform: uppercase; cursor: pointer; }
 .error { font-size: 1.2rem; color: #ff9a9a; }
 .sheet :focus-visible { outline: 2px solid #e2c46e; outline-offset: 2px; }
+
+/* Phone teaser: a pill parked bottom-left, above the product buy bar (6.4rem),
+   so the size picker and add-to-cart stay reachable. Tap opens the sheet. */
+.teaser {
+  position: fixed; z-index: 60; left: 1.2rem; bottom: calc(7.6rem + env(safe-area-inset-bottom));
+  display: flex; align-items: center;
+  background: #0b0b0c; color: #fff; border-radius: 999px;
+  box-shadow: 0 .6rem 2rem rgba(0, 0, 0, .22);
+  animation: rise .35s ease both;
+}
+@media (prefers-reduced-motion: reduce) { .teaser { animation: none; } }
+.teaserOpen {
+  display: flex; align-items: center; gap: .8rem; min-height: 4.4rem; padding: 0 .4rem 0 1.6rem;
+  background: none; border: 0; color: inherit; font: inherit; font-size: 1.1rem;
+  letter-spacing: var(--tracking-eyebrow, .14em); text-transform: uppercase; cursor: pointer;
+}
+.dot { width: .8rem; height: .8rem; border-radius: 50%; background: #e2c46e; flex-shrink: 0; }
+.teaserClose { display: grid; place-items: center; width: 4.4rem; height: 4.4rem; background: none; border: 0; color: rgba(255, 255, 255, .7); cursor: pointer; }
+.teaser :focus-visible { outline: 2px solid #e2c46e; outline-offset: -2px; border-radius: 999px; }

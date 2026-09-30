@@ -11,6 +11,10 @@ import styles from "./ScratchCard.module.css";
 // scroll, never on checkout/admin, never if an offer is already saved. The
 // amount is unknown to the page until the card is scratched: it comes from the
 // server (/api/offer), which also signs the code applied at checkout.
+// On phones it first appears as a small pill above the buy bar (the full sheet
+// covered the size picker and the add-to-cart button); a tap opens the sheet.
+// On a phone product page it waits for the scroll, so the first screen (sizes,
+// add-to-cart) stays clear.
 const DELAY = 4_000;
 const SCROLL = 600;
 const REVEAL_AT = 0.45;
@@ -19,6 +23,7 @@ const PROMO = promotion({ id: "first-order-scratch", name: "Surprise première c
 export function ScratchCard() {
   const path = usePathname();
   const [open, setOpen] = useState(false);
+  const [teaser, setTeaser] = useState(false);
   const [revealed, setRevealed] = useState<StoredOffer | null>(null);
   const [error, setError] = useState("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -34,23 +39,25 @@ export function ScratchCard() {
     const show = () => {
       if (done) return; done = true;
       try { sessionStorage.setItem(OFFER_SEEN_KEY, "1"); } catch { /* private mode */ }
-      setOpen(true);
+      if (window.matchMedia("(max-width: 749px)").matches) setTeaser(true); else setOpen(true);
       track("view_promotion", undefined, { ecommerce: PROMO });
     };
-    const t = setTimeout(show, DELAY);
+    const phone = window.matchMedia("(max-width: 749px)").matches;
+    const t = phone && path?.startsWith("/products/") ? undefined : setTimeout(show, DELAY);
     const onScroll = () => { if (window.scrollY > SCROLL) show(); };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => { clearTimeout(t); window.removeEventListener("scroll", onScroll); };
-  }, [blocked]);
+  }, [blocked, path]);
 
-  const close = useCallback(() => setOpen(false), []);
+  const close = useCallback(() => { setOpen(false); setTeaser(false); }, []);
+  const expand = useCallback(() => { setTeaser(false); setOpen(true); }, []);
   useEffect(() => {
-    if (!open) return;
+    if (!open && !teaser) return;
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") close(); };
     document.addEventListener("keydown", onKey);
-    panelRef.current?.focus();
+    if (open) panelRef.current?.focus();
     return () => document.removeEventListener("keydown", onKey);
-  }, [open, close]);
+  }, [open, teaser, close]);
 
   const reveal = useCallback(async () => {
     if (busy.current || revealed) return;
@@ -131,7 +138,16 @@ export function ScratchCard() {
     };
   }, [open, revealed, reveal]);
 
-  if (!open || blocked) return null;
+  if (blocked) return null;
+  if (teaser) return (
+    <div className={styles.teaser}>
+      <button type="button" className={styles.teaserOpen} onClick={expand} aria-haspopup="dialog">
+        <span className={styles.dot} aria-hidden="true" />Surprise 1re commande
+      </button>
+      <button type="button" className={styles.teaserClose} onClick={close} aria-label="Fermer la surprise"><CloseIcon size={14} /></button>
+    </div>
+  );
+  if (!open) return null;
   return (
     <div ref={panelRef} className={styles.sheet} role="dialog" aria-modal="false" aria-labelledby="scratch-title" tabIndex={-1}>
       <button type="button" className={styles.close} onClick={close} aria-label="Fermer"><CloseIcon size={18} /></button>
