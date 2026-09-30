@@ -297,36 +297,83 @@ export const GUIDES: Guide[] = [
   {
     slug: "sneakers-tendance-2026",
     title: "Sneakers tendance en 2026 : ce qui se porte",
-    description: "Low profile, runners d’archive, reflets argentés : les tendances sneakers de 2026, et comment les adopter sans suivre la mode à l’aveugle.",
-    intro: "Trois familles dominent la rue cette année. Voici ce qui les définit, et comment choisir celle qui vous ressemble.",
+    description: "Low profile, runners d’archive, runners techniques, argent et tons doux : les tendances sneakers 2026, les modèles, les prix au Maroc et comment les porter.",
+    intro: "En 2026, quatre familles de sneakers tiennent la rue : les silhouettes basses façon terrace (Samba, Handball Spezial, Gazelle), les runners d’archive des années 2000 (Gel-Kayano 14, Vomero 5, 9060), les runners techniques portés en ville (Air Max Dn, On Cloudtilt, Adizero) et, toujours là, les classiques du basket (Dunk Low, Jordan 1, 550). Côté couleurs, l’argent, le crème et les gris clairs prennent la place du blanc pur. Ce guide explique ce qui définit chaque tendance, ce qu’elle coûte chez BEYOND PLUS et comment l’adopter sans acheter une paire qu’on ne portera plus dans un an. Nos paires sont des répliques high copy, jamais présentées comme originales.",
     published: "2026-09-24",
     sections: [
       {
-        heading: "Les silhouettes basses",
+        heading: "1. Les silhouettes basses : la tendance la plus facile",
+        image: { src: "/products/adidas-handball-spezial-silver-green-magic-01.webp", alt: "adidas Handball Spezial Silver Green Magic, vue de profil" },
         body: [
-          "Semelle fine, esprit terrace ou racing : après des années de semelles épaisses, la sneaker redescend. C’est la tendance la plus facile à porter, du jean droit à la jupe longue.",
+          "Après des années de semelles épaisses, la sneaker redescend. Semelle fine en gomme, empeigne en daim ou en cuir, bout allongé : c’est l’esprit terrace, venu du sport en salle et adopté par les tribunes de foot anglaises. La Samba en est le symbole, la Handball Spezial en est la version plus colorée, la Gazelle la version plus ronde et plus rétro.",
+          "Pourquoi elle dure : une paire basse ne décide pas de la tenue à votre place. Elle passe avec un jean droit, un pantalon à pinces, une jupe longue, une robe ou un short. C’est la tendance qui vieillit le moins mal, parce que ces modèles existent depuis des décennies.",
+          "Ce qui change en 2026 : les coloris. Le blanc et gomme reste la base, mais les versions argent, bleu clair, marron ou à motif (léopard, vache) sont celles qui donnent l’effet « de la saison ».",
         ],
       },
       {
-        heading: "Les runners d’archive",
+        heading: "2. Les runners d’archive : le volume assumé",
+        image: { src: "/products/asics-gel-kayano-14-arctic-sky-pure-silver-01.webp", alt: "ASICS Gel-Kayano 14 Arctic Sky Pure Silver" },
         body: [
-          "Les modèles de running des années 2000 reviennent, avec leur mesh, leurs overlays et leurs semelles techniques. Ils apportent du volume à une tenue sobre.",
+          "Mesh aéré, renforts superposés, touches métallisées et semelle marquée : les modèles de running des années 2000 sont devenus des sneakers de ville. La Gel-Kayano 14 et la Gel-NYC chez ASICS, la Vomero 5 et la P-6000 chez Nike, la 9060, la 530 et la 1906R chez New Balance.",
+          "Elles apportent du volume à une tenue simple : un jogging droit, un cargo, un jean large, une robe en maille. Ce sont des paires qu’on choisit aussi pour le confort de marche, d’où leur succès pour les longues journées.",
+          "Le piège : les porter avec un pantalon très étroit, qui fait paraître le pied énorme. Un bas droit ou large qui tombe sur la chaussure équilibre la silhouette.",
         ],
       },
       {
-        heading: "L’argent et les tons doux",
+        heading: "3. Les runners techniques : la nouvelle vague",
         body: [
-          "Côté couleurs, l’argent métallisé, le crème et les gris clairs remplacent le blanc pur. Le bordeaux et les tons terre servent de touche forte.",
+          "Troisième famille, plus récente dans la rue : des chaussures de course actuelles, pas d’archive, portées avec une tenue de ville. Air Max Dn, On Cloudtilt, adidas Adizero Evo SL ou Adistar BYD, ASICS Gel-Quantum. Lignes nettes, semelles travaillées, coloris souvent sobres avec un détail vif.",
+          "Elles plaisent à ceux qui veulent une paire moderne sans passer par les classiques. Elles se portent comme un runner d’archive, avec un bas droit ou un short, et vont bien avec des vêtements techniques ou très simples.",
         ],
       },
       {
-        heading: "Comment choisir",
+        heading: "4. Les classiques du basket : la base qui ne bouge pas",
         body: [
-          "Une seule paire ? Prenez une silhouette basse dans un coloris neutre : elle ira avec tout. Deuxième paire : une runner, pour varier les volumes.",
+          "Dunk Low, Air Jordan 1, Air Jordan 4, New Balance 550, Air Force 1 : ce ne sont pas des nouveautés, mais elles restent la base du vestiaire streetwear. En 2026, on les choisit plutôt dans des coloris doux ou chauds (crème, gris, marron, bordeaux) que dans les associations très contrastées des années précédentes.",
+          "Si vous avez déjà une paire basket blanche, la tendance ne vous oblige pas à la remplacer : elle vous invite plutôt à ajouter une silhouette basse ou une runner pour varier.",
+        ],
+      },
+      {
+        heading: "Tableau : les tendances 2026 en un coup d’œil",
+        body: ["Prix relevés sur les paires en ligne chez BEYOND PLUS au moment de la mise à jour, livraison gratuite partout au Maroc."],
+        table: {
+          head: ["Tendance", "Modèles chez nous", "Prix BEYOND PLUS", "Avec quoi la porter", "Durée de vie du style"],
+          rows: [
+            ["Silhouette basse", "Samba, Handball Spezial, Gazelle, Campus 00s", "500 à 750 DH", "Jean droit, pantalon à pinces, jupe longue", "Très longue : modèles installés depuis des décennies"],
+            ["Runner d’archive", "Gel-Kayano 14, Gel-NYC, Vomero 5, P-6000, 9060, 530", "650 à 760 DH", "Bas droit ou large, jogging, cargo", "Longue : la famille est installée"],
+            ["Runner technique", "Air Max Dn, On Cloudtilt, Adizero Evo SL, Gel-Quantum", "680 à 760 DH", "Tenue simple ou technique, short", "À suivre : tendance plus récente"],
+            ["Classique basket", "Dunk Low, Jordan 1, Jordan 4, 550", "600 à 770 DH", "Jean, jogging, cargo", "Intemporelle"],
+          ],
+        },
+      },
+      {
+        heading: "Les couleurs de l’année : argent, crème et tons terre",
+        image: { src: "/products/nike-zoom-vomero-5-earth-fossil-01.webp", alt: "Nike Zoom Vomero 5 Earth Fossil, tons terre" },
+        body: [
+          "Le blanc pur laisse la place à des blancs cassés, du crème, du gris clair et de l’argent métallisé. Ces teintes vont avec autant de choses que le blanc, mais paraissent moins « neuves » et se salissent moins vite à l’œil.",
+          "Pour la touche forte, deux familles : les tons terre (marron, kaki, olive, sable) et le bordeaux. Ils se marient bien avec le denim, le noir et le beige, donc avec la plupart des garde-robes.",
+          "Les motifs animaux (léopard, vache) sont la tendance la plus marquée de la saison. À réserver à une deuxième ou troisième paire, portée avec une tenue unie.",
+        ],
+      },
+      {
+        heading: "Checklist : adopter une tendance sans se tromper",
+        body: [
+          "Regardez votre bas le plus porté : pantalon fin ou jupe, choisissez une silhouette basse ; bas large ou jogging, une runner.",
+          "Une seule paire dans l’année ? Prenez un coloris neutre (blanc, crème, noir, gris) dans la famille qui vous va. Le coloris fort vient ensuite.",
+          "Vérifiez que la paire existe depuis plusieurs saisons : une silhouette installée se démode moins vite qu’un coloris du moment.",
+          "Pensez à l’usage : pour marcher beaucoup, une runner ; pour une allure plus habillée, une silhouette basse.",
+          "Pour un choix par genre, nos guides sneakers femme tendance et sneakers homme tendance au Maroc détaillent les modèles et les pointures disponibles.",
+          "Mesurez votre pied en centimètres avant de commander : on confirme la pointure de la paire par téléphone avant l’envoi. Les conseils de taille des modèles originaux ne s’appliquent pas forcément à une réplique.",
+        ],
+      },
+      {
+        heading: "Commander et échanger",
+        body: [
+          "Vous commandez sur le site, on vous appelle pour confirmer la paire et la pointure, puis la livraison est gratuite partout au Maroc en 12 à 48 h après confirmation. Aucun paiement en ligne. Si la pointure ne va pas, l’échange est possible sous 3 jours après la livraison : paire non portée, dans sa boîte d’origine, retour à votre charge.",
         ],
       },
     ],
-    links: [{ label: "ASICS Gel-Kayano 14", href: "/collections/asics-gel-kayano-14" }, { label: "New Balance 9060", href: "/collections/new-balance-9060" }, { label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "Nike Vomero 5", href: "/collections/nike-vomero-5" }],
+    links: [{ label: "Low Profile", href: "/collections/low-profile" }, { label: "Retro Runners", href: "/collections/retro-runners" }, { label: "Basketball", href: "/collections/basketball" }, { label: "Trending Now", href: "/collections/trending-now" }],
   },
   {
     slug: "retro-runners-comment-les-porter",
@@ -974,46 +1021,98 @@ export const GUIDES: Guide[] = [
   {
     slug: "comment-choisir-ses-sneakers",
     title: "Comment choisir ses sneakers : le guide simple",
-    description: "Comment choisir ses sneakers ou baskets : silhouette, coloris, pointure, usage. Cinq questions à se poser avant d’acheter, avec des exemples concrets.",
-    intro: "Avant de choisir une paire, cinq questions suffisent. Elles évitent l’achat qu’on ne porte jamais.",
+    description: "Comment choisir ses sneakers ou baskets : silhouette, coloris, volume, pointure en cm, entretien. Cinq questions, un tableau et une checklist avant d’acheter.",
+    intro: "Pour bien choisir ses sneakers, partez de ce que vous portez déjà, pas de la paire à la mode. Cinq questions suffisent : quelle silhouette pour votre style, quel coloris vous porterez le plus, quel volume va avec vos pantalons, quelle pointure en centimètres et quel entretien vous êtes prêt à faire. Ce guide les reprend une par une, avec les modèles de la sélection BEYOND PLUS, leurs prix et une checklist à suivre avant de commander. Nos paires sont des répliques high copy, jamais présentées comme originales.",
     sections: [
       {
         heading: "1. Quelle silhouette pour votre style ?",
+        image: { src: "/products/adidas-samba-core-black-01.webp", alt: "adidas Samba Core Black, silhouette basse terrace" },
         body: [
-          "Style minimaliste ou habillé : une silhouette basse (Samba, Gazelle).",
-          "Style streetwear : une paire basket (Dunk, Jordan 1).",
-          "Style sportif ou Y2K : une runner (Kayano 14, 9060, Vomero 5)."
-        ]
+          "La silhouette, c’est la forme générale de la paire : sa hauteur, sa semelle, son volume. C’est elle qui décide si la chaussure se fond dans la tenue ou la domine. On peut ranger presque toutes les sneakers dans quatre familles.",
+          "Style minimaliste, habillé ou féminin : une silhouette basse, dite low profile ou terrace. Samba, Handball Spezial, Gazelle, Campus 00s. Semelle fine, ligne allongée, elles passent avec un pantalon à pinces, une jupe ou une robe.",
+          "Style streetwear : une paire issue du basket. Dunk Low, Air Jordan 1, New Balance 550, Air Force 1. Plus larges, plus présentes, elles vont avec un jean, un jogging ou un cargo.",
+          "Style sportif ou Y2K : une runner d’archive. Gel-Kayano 14, Gel-NYC, Vomero 5, P-6000, 9060, 530. Du mesh, des renforts, parfois de l’argent : du volume et du confort pour marcher.",
+          "Style moderne et épuré : une runner technique actuelle. Air Max Dn, On Cloudtilt, Adizero Evo SL. Lignes nettes, semelles travaillées, souvent dans des coloris sobres.",
+        ],
       },
       {
-        heading: "2. Quel coloris porter le plus souvent ?",
-        body: [
-          "Pour une première paire, choisissez un neutre : blanc, crème, noir ou gris. Gardez les coloris forts pour la deuxième paire."
-        ]
+        heading: "Tableau : quel profil, quelle paire",
+        body: ["Prix relevés sur les paires en ligne chez BEYOND PLUS au moment de la mise à jour. Livraison gratuite partout au Maroc."],
+        table: {
+          head: ["Votre profil", "Famille", "Modèles chez nous", "Prix BEYOND PLUS"],
+          rows: [
+            ["Tenues sobres, pantalons fins, jupes", "Silhouette basse", "Samba, Handball Spezial, Gazelle, Campus 00s", "500 à 750 DH"],
+            ["Jean, jogging, streetwear", "Classique basket", "Dunk Low, Air Jordan 1, 550, Air Force 1", "590 à 750 DH"],
+            ["Beaucoup de marche, bas larges", "Runner d’archive", "Gel-Kayano 14, Gel-NYC, Vomero 5, 9060, 530", "650 à 760 DH"],
+            ["Look moderne, vêtements techniques", "Runner technique", "Air Max Dn, On Cloudtilt, Adizero Evo SL", "680 à 760 DH"],
+            ["Budget serré", "Toutes familles", "Sélection moins de 600 DH", "Moins de 600 DH"],
+            ["Budget moyen", "Toutes familles", "Sélection moins de 700 DH", "Moins de 700 DH"],
+          ],
+        },
       },
       {
-        heading: "3. Quel volume ?",
+        heading: "2. Quel coloris porterez-vous le plus souvent ?",
         body: [
-          "Une paire volumineuse demande un bas ample. Une paire fine s’accorde avec tout, y compris les coupes ajustées."
-        ]
+          "Pour une première paire, choisissez un neutre : blanc, crème, noir ou gris. Ce sont les coloris qui vont avec le plus de vêtements, donc ceux que vous porterez vraiment. Le crème et le gris clair ont un avantage : ils paraissent propres plus longtemps que le blanc pur.",
+          "Le noir est le choix le plus pratique au quotidien, notamment en ville et en hiver. Il passe aussi avec une tenue plus habillée.",
+          "Gardez les coloris forts (bleu, rose, vert, motif léopard ou vache) pour la deuxième paire. Une règle simple : si la paire est colorée, le reste de la tenue reste neutre.",
+        ],
+      },
+      {
+        heading: "3. Quel volume pour vos pantalons ?",
+        image: { src: "/products/new-balance-9060-white-taro-01.webp", alt: "New Balance 9060 White Taro, runner volumineuse" },
+        body: [
+          "C’est la question qu’on oublie le plus, et celle qui explique la plupart des paires jamais portées. Une chaussure volumineuse, comme la 9060 ou la Kayano 14, demande un bas qui a lui aussi du volume : jean droit ou large, cargo, jogging. Avec un slim, le pied paraît énorme.",
+          "Une paire fine, comme la Samba ou la Spezial, s’accorde avec presque tout, y compris les coupes ajustées, les jupes et les robes. C’est pour cela qu’on la conseille souvent comme première paire.",
+          "Ouvrez votre armoire : si la majorité de vos pantalons sont larges, une runner vous ira naturellement. S’ils sont fins ou si vous portez souvent des jupes, commencez par une silhouette basse.",
+        ],
       },
       {
         heading: "4. Quelle pointure ?",
         body: [
-          "Mesurez la longueur de votre pied en centimètres et gardez-la sous la main : lors de notre appel de confirmation, on vérifie la pointure de la paire fournie avant l’envoi. Les conseils de taille des modèles originaux ne s’appliquent pas forcément à une réplique."
-        ]
+          "Mesurez la longueur de votre pied en centimètres : talon contre un mur, pied posé sur une feuille, trait au bout du plus long orteil, puis mesure du mur au trait. Faites-le en fin de journée, avec les chaussettes que vous porterez, et mesurez les deux pieds.",
+          "Gardez cette mesure sous la main : lors de notre appel de confirmation, on vérifie la pointure de la paire choisie avant l’envoi. Les conseils de taille des modèles originaux ne s’appliquent pas forcément à une réplique, et il n’existe pas de correspondance universelle entre centimètres et pointures. Si vous avez le pied large, dites-le au moment de l’appel : notre guide sneakers et pied large indique les silhouettes les plus confortables.",
+        ],
       },
       {
-        heading: "5. Quel entretien ?",
+        heading: "5. Quel entretien êtes-vous prêt à faire ?",
         body: [
-          "Le daim demande une brosse et de l’attention, le cuir lisse se nettoie facilement, le mesh se lave doucement. Voyez notre guide d’entretien."
-        ]
-      }
+          "Le daim et le nubuck donnent un bel aspect mais craignent l’eau et les taches : il faut une brosse et un peu d’attention. Le cuir lisse est le plus simple, un chiffon humide suffit le plus souvent. Le mesh des runners respire bien mais attrape la poussière : il se nettoie doucement, à la brosse souple.",
+          "Si vous voulez zéro contrainte, préférez un cuir lisse ou un coloris foncé. Notre guide d’entretien détaille chaque matière.",
+        ],
+      },
+      {
+        heading: "Checklist avant de commander",
+        body: [
+          "J’ai choisi une famille qui va avec mes pantalons les plus portés.",
+          "J’ai choisi un coloris que je peux porter au moins trois jours par semaine.",
+          "J’ai mesuré mes deux pieds en centimètres, en fin de journée.",
+          "Je sais quel entretien demande la matière de la paire.",
+          "Je connais les conditions : commande sur le site, appel de confirmation, livraison gratuite partout au Maroc en 12 à 48 h après confirmation, aucun paiement en ligne.",
+          "Je sais que l’échange de pointure est possible sous 3 jours après la livraison, paire non portée, dans sa boîte d’origine, retour à ma charge.",
+        ],
+      },
     ],
     links: [
       {
         label: "Toutes les sneakers",
         href: "/collections/nouveautes"
+      },
+      {
+        label: "Low Profile",
+        href: "/collections/low-profile"
+      },
+      {
+        label: "Moins de 700 DH",
+        href: "/collections/sneakers-moins-de-700-dh"
+      },
+      {
+        label: "Sneakers femme",
+        href: "/collections/femme"
+      },
+      {
+        label: "Moins de 600 DH",
+        href: "/collections/sneakers-moins-de-600-dh"
       },
       {
         label: "Guide des pointures",
