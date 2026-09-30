@@ -29,3 +29,8 @@ Relevé WebSearch (top 10 environ). « absent » = hors des résultats renvoyés
 | 29/09 | sneakers femme maroc | absent | absent (Zara, Jumia x4 dont SLP « argent » et « confort », keyza.ma) |
 | 29/09 | gel nyc maroc | absent | 4e à 9e (1 catégorie + 3 fiches + catégorie ASICS) |
 | 29/09 | samba prix maroc | absent | 9e (catégorie Samba) ; adidas.co.ma affiche 1 299 DH |
+| 30/09 | adidas samba maroc prix | absent | absent (leboncoin, stockx, pricespy : moteur US) |
+| 30/09 | handball spezial maroc | absent | absent (actualité handball) |
+| 30/09 | adidas campus 00s maroc | absent | absent (endclothing, sneakernews) |
+| 30/09 | sneakers low profile maroc | absent | absent (charleskeith, freepeople : aucun site marocain) |
+| 30/09 | new balance 9060 prix maroc | absent | absent (decathlon, stockx) |

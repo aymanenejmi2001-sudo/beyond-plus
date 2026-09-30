@@ -146,7 +146,7 @@ log();
 
 // 6. Search Console
 const scDir = join(SEO, "search-console");
-const caps = existsSync(scDir) ? readdirSync(scDir).filter((f) => /^\d{4}-\d{2}-\d{2}\.(png|jpe?g)$/i.test(f)).sort() : [];
+const caps = existsSync(scDir) ? readdirSync(scDir).filter((f) => /^\d{4}-\d{2}-\d{2}(-[\w-]+)?\.(png|jpe?g|webp)$/i.test(f)).sort() : [];
 if (caps.length) {
   const last = caps.at(-1); const days = (Date.parse(today) - Date.parse(last.slice(0, 10))) / 864e5;
   log(`## Search Console : dernière capture ${last} (${days} j). ${days > 10 ? "Trop ancienne : se rabattre sur la veille WebSearch et la redemander dans le bilan." : "À lire avec l'outil Read."}`);

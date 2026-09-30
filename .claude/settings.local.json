@@ -59,7 +59,20 @@
       "WebFetch(domain:bloggers.feedspot.com)",
       "WebFetch(domain:www.mamanmaroc.ma)",
       "WebFetch(domain:shoelifer.com)",
-      "Bash(cd \"/Users/mac/Desktop/BEYOND PLUS\" && sed -n '/## Interdits/,/## Typographie/p' SEO/REGLES.md; echo =====; cat SEO/missions/2026-09-29.md; echo ====; TZ=Africa/Casablanca date)"
+      "Bash(cd \"/Users/mac/Desktop/BEYOND PLUS\" && sed -n '/## Interdits/,/## Typographie/p' SEO/REGLES.md; echo =====; cat SEO/missions/2026-09-29.md; echo ====; TZ=Africa/Casablanca date)",
+      "Bash(cd \"/Users/mac/Desktop/BEYOND PLUS\" && TZ=Africa/Casablanca date && sed -n '/## Interdits/,/## Données Search Console/p' SEO/REGLES.md && node SEO/outils/etat.mjs)",
+      "Bash(cd /private/tmp/claude-501/-Users-mac-Desktop-BEYOND-PLUS/f25f92cc-e65d-4920-a5e4-f266156e3c9e/scratchpad && sed -i '' 's/\"Samba, Handball Spezial, Gazelle, Campus 00s\", \"650 à 750 DH\"/\"Samba, Handball Spezial, Gazelle, Campus 00s\", \"500 à 750 DH\"/; s/\"680 à 850 DH\"/\"680 à 760 DH\"/; s/c’est l’esprit terrace, né dans les salles de sport et adopté par les tribunes de foot anglaises/c’est l’esprit terrace, venu du sport en salle et adopté par les tribunes de foot anglaises/' tendance.ts && grep -c \"500 à 750\\\\|680 à 760\\\\|venu du sport\" tendance.ts; ls \"/Users/mac/Desktop/BEYOND PLUS/storefront/public/products\" | grep -E \"^\\(adidas-samba-core-black|nike-dunk-low-ivory|new-balance-9060-white-taro\\)-01\")",
+      "Bash(sed -n '/Mission technique/,/## Mission backlinks/p' missions/2026-09-29.md)",
+      "Bash(sed -n '/Compte rendu technique/,$p' missions/2026-09-29.md)",
+      "Bash(grep -oE \"https?://[^ \\)|>\\\\`]+\")",
+      "WebFetch(domain:www.cylex.ma)",
+      "WebFetch(domain:www.infobel.com)",
+      "WebFetch(domain:www.bing.com)",
+      "WebFetch(domain:yalaho.ma)",
+      "WebFetch(domain:www.annuaire-gratuit.ma)",
+      "WebFetch(domain:maentreprise.com)",
+      "WebFetch(domain:www.charika.ma)",
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 Chrome/128 Safari/537.36' https://www.charika.ma/)"
     ]
   }
 }

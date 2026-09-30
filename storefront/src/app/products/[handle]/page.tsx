@@ -24,8 +24,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   if (!product) return {};
   const price = Math.round(Number(product.priceRange.minVariantPrice.amount));
   const description = `${product.title} au Maroc, ${price} DH. High copy, non original. Livraison gratuite en 12 à 48 h, pointure confirmée par téléphone.`.replace(/\s+/g, " ");
+  // Price in the Google title: first variant that fits ~65 characters, brand suffix dropped when it does not fit.
+  const title = [`${product.title} Maroc : prix ${price} DH`, `${product.title} : ${price} DH`, `${product.title} au Maroc`].find((t) => t.length <= 65) ?? product.title;
   return {
-    title: `${product.title} au Maroc`.length + 15 > 65 ? { absolute: `${product.title} au Maroc`.length > 65 ? product.title : `${product.title} au Maroc` } : `${product.title} au Maroc`,
+    title: title.length + 15 > 65 ? { absolute: title } : title,
     description,
     alternates: { canonical: `/products/${handle}` },
     openGraph: {
