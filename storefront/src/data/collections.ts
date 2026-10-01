@@ -38,7 +38,7 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
       "Les coloris doux (crème, argent, rose poudré) et les silhouettes fines dominent la sélection femme : faciles avec un jean droit, une jupe longue ou un tailleur.",
       "Entre deux pointures ? Mesurez votre pied en centimètres (le guide des pointures explique comment en deux minutes) et envoyez la mesure sur WhatsApp : on confirme avant l’envoi.",
     ],
-    links: [{ label: "Sneakers femme tendance au Maroc", href: "/guides/sneakers-femme-tendance-maroc" }, SIZE_GUIDE, LOW_GUIDE] } },
+    links: [{ label: "Sneakers femme tendance au Maroc", href: "/guides/sneakers-femme-tendance-maroc" }, { label: "Sneakers avec une robe ou un pantalon large", href: "/guides/porter-sneakers-pantalon-large-robe" }, SIZE_GUIDE, LOW_GUIDE] } },
   { handle: "homme", title: "Beyond Men", description: "Du 40 au 45. Chrome, nuit, béton.", filter: (p) => p.merch?.gender !== "women", seo: {
     h1: "Sneakers homme au Maroc", eyebrow: "Beyond Men",
     title: "Sneakers homme Maroc : prix dès 400 DH, du 40 au 45",
@@ -50,18 +50,18 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
     ],
     links: [{ label: "Sneakers homme tendance au Maroc", href: "/guides/sneakers-homme-tendance-maroc" }, SIZE_GUIDE, CARE_GUIDE] } },
   { handle: "trending-now", title: "Trending Now", description: "Les paires qui font la saison, sélectionnées par BEYOND PLUS.", filter: inCollection("trending-now"), curated: true, seo: {
-    title: "Sneakers tendance du moment, Trending Now",
-    description: "Les sneakers tendance du moment au Maroc : terrace, retro runners, Y2K. Sélection courte, livraison gratuite en 12 à 48 h.",
+    title: "Sneakers tendance Maroc : Trending Now, prix dès {min} DH",
+    description: "Sneakers tendance au Maroc, prix dès {min} DH : terrace, retro runners, Y2K. Sélection courte, livraison gratuite en 12 à 48 h.",
     heading: "Ce qui se porte maintenant",
     body: [
       "Trending Now réunit les modèles les plus demandés du moment chez notre fournisseur et ceux que nous voyons monter : silhouettes terrace, runners d’archive, reflets argentés.",
       "La sélection bouge régulièrement : revenez voir, ou écrivez-nous pour une paire précise.",
     ],
-    links: [SIZE_GUIDE, { label: "Nous écrire", href: "/contact" }] } },
+    links: [{ label: "Sneakers tendance en 2026", href: "/guides/sneakers-tendance-2026" }, { label: "Retro runners : comment les porter", href: "/guides/retro-runners-comment-les-porter" }, SIZE_GUIDE, { label: "Nous écrire", href: "/contact" }] } },
   { handle: "low-profile", title: "Low Profile", description: "Silhouettes basses et fines : Samba, Spezial, Gazelle.", filter: inCollection("low-profile"), curated: true, seo: {
     h1: "Sneakers Low Profile au Maroc", eyebrow: "Low Profile",
-    title: "Sneakers low profile Maroc : Samba, Spezial, Gazelle dès 500 DH",
-    description: "Sneakers low profile au Maroc : Samba, Handball Spezial, Gazelle, Campus, de 500 à 750 DH. Silhouettes basses, livraison gratuite en 12 à 48 h.",
+    title: "Sneakers low profile Maroc : Samba, Spezial, Gazelle dès {min} DH",
+    description: "Sneakers low profile au Maroc, prix dès {min} DH : Samba, Handball Spezial, Gazelle, Campus. Silhouettes basses, livraison gratuite en 12 à 48 h.",
     heading: "Sneakers low profile au Maroc : Samba, Spezial, Gazelle",
     body: [
       "Semelle fine, ligne allongée, peu de volume : la low profile est la silhouette de 2026. Elle vient des terrains en salle et des tribunes (la famille « terrace »), et se porte aujourd’hui avec un pantalon large, un jean droit ou une jupe longue.",
@@ -69,7 +69,7 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
       "Quelle low profile choisir ? Une seule paire pour tout faire : la Samba blanc et gomme ou noire. Envie de couleur : la Spezial. Un style plus rétro : la Gazelle. Pour les coupes amples : la Campus.",
       "Ce sont des répliques high copy, pas des paires originales. Livraison gratuite partout au Maroc en 12 à 48 h après confirmation. Elles chaussent près du pied : envoyez-nous la longueur de votre pied en centimètres, on confirme la pointure avant l’envoi.",
     ],
-    links: [{ label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "Handball Spezial", href: "/collections/handball-spezial" }, { label: "adidas Gazelle", href: "/collections/adidas-gazelle" }, { label: "Campus 00s", href: "/collections/adidas-campus-00s" }, { label: "Samba ou Handball Spezial ?", href: "/guides/samba-ou-handball-spezial" }, LOW_GUIDE, SIZE_GUIDE],
+    links: [{ label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "Handball Spezial", href: "/collections/handball-spezial" }, { label: "adidas Gazelle", href: "/collections/adidas-gazelle" }, { label: "Campus 00s", href: "/collections/adidas-campus-00s" }, { label: "Samba ou Handball Spezial ?", href: "/guides/samba-ou-handball-spezial" }, { label: "Samba ou Gazelle ?", href: "/guides/samba-ou-gazelle" }, { label: "Porter ses sneakers avec un pantalon large ou une robe", href: "/guides/porter-sneakers-pantalon-large-robe" }, LOW_GUIDE, SIZE_GUIDE],
     faq: [
       { q: "Qu’est-ce qu’une sneaker low profile ?", a: "Une sneaker à semelle fine et à ligne basse, sans gros volume : Samba, Handball Spezial, Gazelle. Elle vient des sports en salle et des tribunes, d’où le nom de famille « terrace »." },
       { q: "Quelle low profile choisir pour commencer ?", a: "La Samba blanc et gomme ou noire : la plus polyvalente, elle va avec un jean, un pantalon large ou une jupe longue. Pour plus de couleur, la Handball Spezial." },
@@ -79,8 +79,8 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
     ] } },
   { handle: "retro-runners", title: "Retro Runners", description: "L’archive running remise en ville : Kayano, Gel-NYC, 9060, Vomero.", filter: inCollection("retro-runners"), curated: true, seo: {
     h1: "Retro runners au Maroc", eyebrow: "Retro Runners",
-    title: "Retro runners Maroc : Kayano 14, Gel-NYC, 9060, Vomero 5",
-    description: "Retro runners au Maroc : Kayano 14, Gel-NYC, 9060, 530, Vomero 5, P-6000. Baskets running rétro, livraison gratuite en 12 à 48 h.",
+    title: "Retro runners Maroc : Kayano 14, Gel-NYC, 9060 dès {min} DH",
+    description: "Retro runners au Maroc, prix dès {min} DH : Kayano 14, Gel-NYC, 9060, 530, Vomero 5, P-6000. Baskets running rétro, livraison gratuite en 12 à 48 h.",
     heading: "Le running d’archive, en ville",
     body: [
       "Mesh, overlays métallisés, semelles marquées : les runners des années 2000 sont devenues la base du vestiaire. Elles apportent du volume à une tenue simple.",
@@ -88,21 +88,21 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
     ],
     links: [SIZE_GUIDE, CARE_GUIDE] } },
   { handle: "skate", title: "Skate", description: "Les bases skate, intemporelles.", filter: inCollection("skate"), curated: true, seo: {
-    title: "Sneakers skate au Maroc, Old Skool, Knu Skool",
-    description: "Sneakers skate au Maroc : Vans Old Skool, Knu Skool, Campus 00s, Chuck Taylor. Livraison gratuite en 12 à 48 h, confirmation par téléphone.",
+    title: "Sneakers skate Maroc : Old Skool, Knu Skool dès {min} DH",
+    description: "Sneakers skate au Maroc, prix dès {min} DH : Vans Old Skool, Knu Skool, Campus 00s, Chuck Taylor. Livraison gratuite en 12 à 48 h.",
     heading: "Les bases skate",
     body: ["Toile, daim, semelle gaufrée : des modèles simples, solides, qui vont avec tout, du denim brut au pantalon de costume."],
     links: [CARE_GUIDE, SIZE_GUIDE] } },
   { handle: "icons", title: "Icons", description: "Les classiques qui ont fait la culture sneaker.", filter: inCollection("icons"), curated: true, seo: {
-    title: "Sneakers icônes, les classiques de la culture sneaker",
-    description: "Les sneakers icônes au Maroc : Air Force 1, Superstar, Stan Smith, Jordan. Les classiques, livraison gratuite en 12 à 48 h.",
+    title: "Sneakers icônes Maroc : Air Force 1, Jordan, prix dès {min} DH",
+    description: "Sneakers icônes au Maroc, prix dès {min} DH : Air Force 1, Superstar, Stan Smith, Jordan. Les classiques, livraison gratuite en 12 à 48 h.",
     heading: "Les classiques",
     body: ["Des silhouettes qui ont fait la culture sneaker et qu’on ne présente plus. Les valeurs sûres du placard."],
     links: [{ label: "Nike Air Force 1", href: "/collections/nike-air-force-1" }, CARE_GUIDE, SIZE_GUIDE] } },
   { handle: "basketball", title: "Basketball", description: "Dunk, Jordan 1, Jordan 4, 550 : l’héritage du parquet.", filter: inCollection("basketball"), curated: true, seo: {
     h1: "Sneakers basket au Maroc", eyebrow: "Basketball",
-    title: "Sneakers basket Maroc : Dunk Low, Jordan 1, Jordan 4, 550",
-    description: "Baskets basket au Maroc : Dunk Low, Air Jordan 1 et 4, New Balance 550, Forum Low. Livraison gratuite en 12 à 48 h.",
+    title: "Sneakers basket Maroc : Dunk Low, Jordan 1, 550 dès {min} DH",
+    description: "Baskets basket au Maroc, prix dès {min} DH : Dunk Low, Air Jordan 1 et 4, New Balance 550, Forum Low. Livraison gratuite en 12 à 48 h.",
     heading: "L’héritage du parquet",
     body: [
       "Nées sur les terrains dans les années 80, les silhouettes basket sont devenues les classiques de la rue : tige en cuir, semelle plate, blocs de couleurs francs.",
@@ -111,11 +111,11 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
     links: [SIZE_GUIDE, CARE_GUIDE] } },
   { handle: "tech-runners", title: "Tech Runners", description: "Air Max Dn, Adizero, On, Gel-Quantum : la technique portée en ville.", filter: inCollection("tech-runners"), curated: true, seo: {
     h1: "Sneakers techniques au Maroc", eyebrow: "Tech Runners",
-    title: "Sneakers techniques Maroc : Air Max Dn, On, Adizero",
-    description: "Sneakers techniques au Maroc : Air Max Dn, On, Adizero, Gel-Quantum, Air Humara. Livraison gratuite en 12 à 48 h, confirmation par téléphone.",
+    title: "Sneakers techniques Maroc : Air Max Dn, On dès {min} DH",
+    description: "Sneakers techniques au Maroc, prix dès {min} DH : Air Max Dn, On, Adizero, Gel-Quantum, Air Humara. Livraison gratuite en 12 à 48 h.",
     heading: "La technique, portée en ville",
     body: [
-      "Semelles sculptées, mousses récentes, lignes de course : ces modèles viennent du running et du trail, et se portent aujourd’hui avec un cargo, un nylon ou un total look sombre.",
+      "Semelles sculptées, lignes de course : ces modèles viennent du running et du trail, et se portent aujourd’hui avec un cargo, un nylon ou un total look sombre.",
     ],
     links: [{ label: "Retro runners : comment les porter", href: "/guides/retro-runners-comment-les-porter" }, SIZE_GUIDE] } },  { handle: "sneakers-moins-de-600-dh", title: "Moins de 600 DH", description: "Les paires de la sélection à moins de 600 DH.", filter: (p) => Number(p.priceRange.minVariantPrice.amount) < 600, seo: {
     h1: "Sneakers à moins de 600 DH au Maroc", eyebrow: "Petits prix",
@@ -138,6 +138,16 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
     ],
     links: [SIZE_GUIDE, { label: "Paires à moins de 600 DH", href: "/collections/sneakers-moins-de-600-dh" }] } },
 ];
+
+// "{min}" in a collection's SEO copy becomes its real floor price: lowest price of
+// its products and of the model pages it links to (Radar pairs carry no style tag).
+for (const d of DEFS) {
+  const linked = MODELS.filter((m) => d.seo.links.some((l) => l.href === `/collections/${m.handle}`)).flatMap((m) => m.products);
+  const prices = [...CATALOG.filter(d.filter), ...linked].map((p) => Number(p.priceRange.minVariantPrice.amount));
+  const min = prices.length ? String(Math.round(Math.min(...prices))) : "";
+  d.seo.title = d.seo.title.replaceAll("{min}", min);
+  d.seo.description = d.seo.description.replaceAll("{min}", min);
+}
 
 export const COLLECTION_SEO = new Map<string, CollectionSeo>(DEFS.map((d) => [d.handle, d.seo]));
 

@@ -34,3 +34,15 @@ Relevé WebSearch (top 10 environ). « absent » = hors des résultats renvoyés
 | 30/09 | adidas campus 00s maroc | absent | absent (endclothing, sneakernews) |
 | 30/09 | sneakers low profile maroc | absent | absent (charleskeith, freepeople : aucun site marocain) |
 | 30/09 | new balance 9060 prix maroc | absent | absent (decathlon, stockx) |
+| 01/10 | adidas samba maroc | absent | absent (avito, goat, sneakersnstuff : moteur US) |
+| 01/10 | samba blanche maroc prix | absent | absent (stockx x3, touslesprix, yoox) |
+| 01/10 | adidas gazelle maroc prix | absent | absent (stockx, hespress maillot, ebay) |
+| 01/10 | samba ou spezial | absent | absent (thelaststep.fr, complex, highsnobiety, gearpatrol) |
+| 01/10 | samba taille petit ou grand | absent | absent (adidas.com, résultats hors sujet) |
+| 01/10 | reconnaître une bonne copie samba | absent | absent (requête captée par le logiciel Samba) |
+| 01/10 | comment porter handball spezial | absent (guide publié ce jour) | absent (wikipedia, abargenteuil.fr x3, decathlon) |
+| 01/10 | sneakers femme maroc | absent | absent (marjanemall, avito, decathlon.fr x6) |
+| 01/10 | asics gel kayano 14 maroc | absent | absent (highxtar, decathlon.ch, glamcult : moteur US) |
+| 01/10 | nike vomero 5 maroc prix | absent | absent (stockx, decathlon.be, zalando, nike.com) |
+| 01/10 | sneakers techniques maroc | absent | absent (jumia.ma x5, le360) |
+| 01/10 | sneakers basket maroc prix | absent | absent (jumia, marjanemall SLP « basket nike », avito) |
