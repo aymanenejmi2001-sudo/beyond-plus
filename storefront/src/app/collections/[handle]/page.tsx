@@ -62,6 +62,7 @@ export default async function CollectionPage({ params, searchParams }: Params) {
   // Guides that point to this page get a link back: guides and shop pages feed each other.
   const guideLinks = GUIDES.filter((g) => g.links.some((l) => l.href === `/collections/${handle}`)).map((g) => ({ label: g.title, href: `/guides/${g.slug}` }));
   const seo = COLLECTION_SEO.get(handle);
+  const featured = page === 1 ? (seo?.featuredGuides ?? []).map((slug) => GUIDES.find((g) => g.slug === slug)).filter((g) => g !== undefined).slice(0, 2) : [];
   const site = process.env.NEXT_PUBLIC_SITE_URL || "https://beyondplusmaroc.com";
   const trail = COLLECTION_TRAIL.get(handle) ?? (handle === "nouveautes" ? [] : [{ title: "Sneakers", href: "/collections/nouveautes" }]);
   const breadcrumbs = {
@@ -82,6 +83,12 @@ export default async function CollectionPage({ params, searchParams }: Params) {
       />
       <CollectionNav current={handle} />
       <p className="beyond-catalog-note">Répliques qualité Master Copy Premium 1:1 · Commande confirmée par téléphone</p>
+      {featured.length > 0 && (
+        <nav className="beyond-collection-guides" aria-label="Guides à lire">
+          <span>À lire</span>
+          {featured.map((g) => <Link key={g.slug} href={`/guides/${g.slug}`}>{g.title}</Link>)}
+        </nav>
+      )}
       <ProductGrid products={collection.products.map(toCard)} page={page} basePath={`/collections/${handle}`} />
       {MODEL_LANDING.has(handle) ? <ModelLanding {...MODEL_LANDING.get(handle)!} guides={guideLinks} /> : seo && (
         <section className="beyond-collection-seo" aria-labelledby="collection-seo">

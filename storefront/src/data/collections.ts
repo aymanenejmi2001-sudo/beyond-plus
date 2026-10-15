@@ -12,7 +12,7 @@ export const STYLE_LABEL: Record<string, string> = {
 const byRank = (a: Product, b: Product) => (b.merch?.rank ?? 0) - (a.merch?.rank ?? 0);
 const inCollection = (handle: string) => (p: Product) => p.merch?.collections.includes(handle) ?? false;
 
-export interface CollectionSeo { title: string; description: string; heading: string; body: string[]; links: { label: string; href: string }[]; h1?: string; eyebrow?: string; faq?: { q: string; a: string }[] }
+export interface CollectionSeo { title: string; description: string; heading: string; body: string[]; links: { label: string; href: string }[]; h1?: string; eyebrow?: string; faq?: { q: string; a: string }[]; /** Guide slugs shown under the header on page 1 (max 2). */ featuredGuides?: string[] }
 
 const SIZE_GUIDE = { label: "Guide des pointures", href: "/guides/quelle-pointure-choisir-sneakers" };
 const CARE_GUIDE = { label: "Entretenir ses sneakers", href: "/guides/entretenir-ses-sneakers" };
@@ -60,6 +60,7 @@ const DEFS: { handle: string; title: string; description: string; filter: (p: Pr
     links: [{ label: "Sneakers tendance en 2026", href: "/guides/sneakers-tendance-2026" }, { label: "Retro runners : comment les porter", href: "/guides/retro-runners-comment-les-porter" }, SIZE_GUIDE, { label: "Nous écrire", href: "/contact" }] } },
   { handle: "low-profile", title: "Low Profile", description: "Silhouettes basses et fines : Samba, Spezial, Gazelle.", filter: inCollection("low-profile"), curated: true, seo: {
     h1: "Sneakers Low Profile au Maroc", eyebrow: "Low Profile",
+    featuredGuides: ["sneakers-low-profile-comment-les-porter", "comment-porter-handball-spezial"],
     title: "Sneakers low profile Maroc : Samba, Spezial, Gazelle dès {min} DH",
     description: "Sneakers low profile au Maroc, prix dès {min} DH : Samba, Handball Spezial, Gazelle, Campus. Silhouettes basses, livraison gratuite en 12 à 48 h.",
     heading: "Sneakers low profile au Maroc : Samba, Spezial, Gazelle",

@@ -15,6 +15,111 @@ export interface Guide {
 
 export const GUIDES: Guide[] = [
   {
+    slug: "comment-porter-handball-spezial",
+    title: "Comment porter la Handball Spezial : 6 tenues faciles",
+    description: "Comment porter la adidas Handball Spezial : 6 tenues femme et homme, le bon coloris selon vos vêtements, l’entretien du daim et le prix au Maroc.",
+    intro: "La Handball Spezial se porte comme une Samba, avec un avantage : sa couleur. Tige le plus souvent en daim, semelle en gomme, ligne basse et un peu arrondie, elle donne du caractère à une tenue simple sans en faire trop. Le secret : laisser la chaussure être le seul point de couleur, et accorder la longueur du bas à sa silhouette basse. Voici six tenues qui marchent, le coloris à choisir selon votre garde-robe, comment la porter avec le climat marocain et comment garder le daim propre. Chez BEYOND PLUS, la Spezial coûte 700 DH, livraison gratuite partout au Maroc ; ce sont des répliques high copy, non originales.",
+    published: "2026-10-01",
+    sections: [
+      {
+        heading: "1. Jean brut droit, t-shirt blanc",
+        image: { src: "/products/adidas-handball-spezial-light-blue-01.webp", alt: "adidas Handball Spezial Light Blue, daim bleu clair et bandes blanches, vue de profil" },
+        body: [
+          "La tenue la plus simple et la plus efficace. Un jean brut coupe droite, légèrement retroussé pour laisser voir la cheville, un t-shirt blanc. Avec la Spezial bleu clair à bandes blanches, la chaussure devient le détail qui fait la tenue. C’est aussi la plus facile pour un homme : jean, t-shirt ou chemise en jean, rien d’autre.",
+        ],
+      },
+      {
+        heading: "2. Pantalon large qui tombe sur la chaussure",
+        body: [
+          "Un pantalon large en toile ou un baggy clair qui vient casser sur le coup de pied. La Spezial étant basse, elle disparaît en partie sous le tissu et ne laisse voir que la pointe et la gomme : un effet très actuel. Évitez les ourlets qui traînent au sol, ils usent le daim au talon.",
+        ],
+      },
+      {
+        heading: "3. Jupe midi ou robe longue",
+        image: { src: "/products/adidas-handball-spezial-w-silver-violet-01.webp", alt: "adidas Handball Spezial Silver Violet, daim lilas et bandes crème" },
+        body: [
+          "Avec une jupe midi en satin ou une robe longue unie, la Spezial casse le côté habillé. Le lilas (Silver Violet) et le vert sauge (Silver Green Magic) se marient très bien avec les teintes pastel ; le marron (Earth Strata Gum) avec les tons crème, beige et les robes en lin.",
+        ],
+      },
+      {
+        heading: "4. Survêtement rétro",
+        body: [
+          "Veste zippée et pantalon de survêtement à bandes : c’est la tenue d’origine de la famille terrace, celle des tribunes. Pour éviter l’effet déguisement, gardez une seule couleur forte, celle de la chaussure, et un survêtement noir, gris ou marine.",
+        ],
+      },
+      {
+        heading: "5. Costume large, sans cravate",
+        body: [
+          "Un costume ample, gris ou marine, une chemise ou un t-shirt col rond : la Spezial marron (Earth Strata Gum) ou crème à bandes noires (Aluminium Black Gum) rend la tenue plus décontractée tout en restant nette. C’est l’option pour le travail le vendredi ou un dîner.",
+        ],
+      },
+      {
+        heading: "6. Short et chaussettes blanches en été",
+        body: [
+          "Short en toile ou en jean, chaussettes blanches basses ou mi-hautes : la Spezial bleu clair ou vert sauge fonctionne très bien en été, quand les tenues sont simples et claires.",
+        ],
+      },
+      {
+        heading: "Tableau : la tenue, le coloris, le prix",
+        body: ["Nos six coloris de Handball Spezial en ligne, et avec quoi ils vont le mieux. Tous à 700 DH, du 36 au 40."],
+        table: {
+          head: ["Coloris", "Ce qu’on voit", "Idéal avec", "Tenue conseillée"],
+          rows: [
+            ["Light Blue", "Daim bleu clair, bandes blanches", "Jean brut, blanc, gris", "Jean droit et t-shirt blanc"],
+            ["Silver Violet", "Daim lilas, bandes crème", "Pastel, noir, jean clair", "Jupe midi satinée"],
+            ["Silver Green Magic", "Vert sauge et marron, talon rose", "Blanc, kaki, jean", "Short et chaussettes blanches"],
+            ["Earth Strata Gum", "Daim marron taupe, bandes crème", "Crème, beige, marine", "Costume large ou robe en lin"],
+            ["Aluminium Black Gum", "Daim crème, bandes noires", "Tout, y compris costume", "Pantalon large noir ou gris"],
+            ["Shadow Brown Alumina", "Coloris doux et clair", "Crème, beige, jean", "Pantalon large en toile"],
+          ],
+        },
+      },
+      {
+        heading: "Femme ou homme : la Spezial chez BEYOND PLUS",
+        body: [
+          "Chez nous, la Handball Spezial est proposée du 36 au 40. Elle s’adresse donc surtout aux femmes, et aux hommes qui chaussent jusqu’au 40. Au-delà, la Samba noire ou blanche et la Gazelle Indoor verte, de la même famille terrace, montent jusqu’au 44.",
+          "Vous hésitez avec la Samba ? Notre comparatif Samba ou Handball Spezial détaille les différences. Pour la famille low profile dans son ensemble, voyez notre guide « Sneakers low profile : comment les porter ».",
+        ],
+      },
+      {
+        heading: "Avec le climat marocain",
+        body: [
+          "En été, à Marrakech ou à Agadir, la Spezial se porte avec des tenues légères et claires : short, robe en lin, pantalon large en coton. Le daim respire moins qu’une toile, alors préférez des chaussettes fines plutôt que pieds nus.",
+          "En hiver, sur la côte nord ou à Rabat, la pluie est l’ennemie du daim : un spray imperméabilisant avant la première sortie, et une paire de rechange les jours de forte pluie.",
+        ],
+      },
+      {
+        heading: "Les erreurs à éviter",
+        body: [
+          "Multiplier les couleurs : si la Spezial est lilas ou bleue, gardez le reste de la tenue neutre. Deux pièces fortes se font concurrence.",
+          "Le pantalon trop serré et trop court : avec une chaussure aussi basse, il raccourcit la silhouette. Préférez une coupe droite ou large, ou un slim qui s’arrête juste à la cheville.",
+          "Les chaussettes de sport épaisses avec une jupe ou une robe : choisissez des chaussettes fines, blanches ou de la couleur des bandes, ou des socquettes invisibles.",
+          "Sortir le daim neuf sous la pluie : un passage de spray imperméabilisant avant la première sortie évite bien des taches.",
+        ],
+      },
+      {
+        heading: "Garder le daim propre",
+        body: [
+          "Le daim se nettoie à sec : brosse à daim dans un seul sens, gomme pour les taches légères. Évitez l’eau et la machine, qui marquent et durcissent le daim. La semelle en gomme se nettoie à l’éponge humide. Notre guide d’entretien détaille la méthode.",
+        ],
+      },
+      {
+        heading: "La pointure et la commande",
+        body: [
+          "Comme toutes les silhouettes basses, la Spezial laisse peu de volume au pied. Mesurez votre pied en centimètres, en fin de journée, choisissez votre pointure habituelle parmi celles affichées, et on la confirme avec vous par téléphone avant l’envoi. Commande sur le site, aucun paiement en ligne, livraison gratuite partout au Maroc en 12 à 48 h après confirmation. Échange de pointure possible sous 3 jours après la livraison, paire non portée et dans sa boîte d’origine, retour à votre charge.",
+        ],
+      },
+    ],
+    links: [
+      { label: "adidas Handball Spezial au Maroc", href: "/collections/handball-spezial" },
+      { label: "Sneakers low profile", href: "/collections/low-profile" },
+      { label: "Sneakers femme", href: "/collections/femme" },
+      { label: "Samba ou Handball Spezial ?", href: "/guides/samba-ou-handball-spezial" },
+      { label: "Sneakers low profile : comment les porter", href: "/guides/sneakers-low-profile-comment-les-porter" },
+      { label: "Entretenir ses sneakers", href: "/guides/entretenir-ses-sneakers" },
+    ],
+  },
+  {
     slug: "samba-ou-gazelle",
     title: "Samba ou Gazelle : laquelle choisir ?",
     description: "Samba ou Gazelle : silhouette, coloris, prix au Maroc et façon de les porter. Le comparatif simple pour choisir entre les deux sneakers terrace.",
@@ -162,64 +267,153 @@ export const GUIDES: Guide[] = [
   {
     slug: "quelle-pointure-choisir-sneakers",
     title: "Quelle pointure choisir pour ses sneakers",
-    description: "Mesurez votre pied en centimètres et faites confirmer la pointure de votre paire high copy avant de commander chez BEYOND PLUS.",
-    intro: "La mauvaise pointure est la première raison d’un échange. Bonne nouvelle : cinq minutes et une règle suffisent pour viser juste.",
+    description: "Quelle pointure choisir pour ses sneakers : mesurer son pied en cm, les pointures disponibles au Maroc (36 à 45) et la confirmation par téléphone.",
+    intro: "Pour choisir la bonne pointure de sneakers, mesurez votre pied en centimètres, en fin de journée, puis gardez votre pointure habituelle parmi celles affichées sur la fiche : chez BEYOND PLUS, on la vérifie avec vous par téléphone avant l’envoi. La mauvaise pointure est la première raison d’un échange, et presque toujours pour la même cause : on commande de mémoire, sans mesurer. Voici la méthode en cinq minutes, les pointures réellement disponibles chez nous, ce qu’il faut nous dire quand on hésite et une checklist avant de commander.",
     published: "2026-09-24",
     sections: [
       {
-        heading: "Mesurer son pied, en centimètres",
+        heading: "Mesurer son pied en 5 minutes",
         body: [
-          "Posez une feuille contre un mur, le talon collé au mur. Tracez la pointe du pied le plus long (on a souvent un pied plus grand que l’autre) et mesurez du mur au trait.",
-          "Faites-le en fin de journée, avec les chaussettes que vous porterez : le pied gonfle légèrement dans la journée.",
+          "Il vous faut une feuille A4, un crayon, un mètre ou une règle, et les chaussettes que vous porterez avec la paire.",
+          "1. Posez la feuille au sol, collée contre un mur.",
+          "2. Placez le talon contre le mur, debout, le poids réparti sur les deux pieds. Ne mesurez pas assis : le pied s’allonge un peu quand on se tient debout.",
+          "3. Demandez à quelqu’un de tracer un trait au bout de l’orteil le plus long (ce n’est pas toujours le gros orteil).",
+          "4. Mesurez du mur au trait, en centimètres, au millimètre près.",
+          "5. Recommencez avec l’autre pied. On a souvent un pied plus long que l’autre : c’est la plus grande mesure qui compte.",
+          "Faites-le en fin de journée, quand le pied est à son volume maximal, surtout en été où la chaleur le fait gonfler.",
         ],
       },
       {
-        heading: "Confirmer la pointure de la paire choisie",
-        body: ["Il n’existe pas de correspondance universelle entre centimètres et pointures. Les mesures d’une réplique peuvent différer de celles du modèle original. Envoyez-nous la longueur de vos deux pieds et la référence choisie pour vérifier la taille avant validation."],
+        heading: "Pourquoi les centimètres plutôt qu’un tableau",
+        body: [
+          "Il n’existe pas de correspondance universelle entre centimètres et pointures : chaque marque, et parfois chaque modèle, a sa propre forme. Une 40 en running et une 40 en sneaker basse ne chaussent pas forcément pareil. Les mesures d’une réplique peuvent aussi différer de celles du modèle original.",
+          "C’est pourquoi nous ne publions pas de tableau de conversion qui donnerait une fausse précision. Votre longueur de pied, elle, ne ment pas : avec elle et la référence choisie, on peut vérifier la taille de la paire avant de l’envoyer.",
+        ],
       },
       {
-        heading: "Entre deux pointures ?",
-        body: ["Précisez si vous avez le pied large et quelles chaussettes vous porterez. Ne choisissez pas automatiquement une demi-pointure supplémentaire : seules les pointures affichées pour cette paire peuvent être demandées."],
+        heading: "Les pointures disponibles chez BEYOND PLUS",
+        body: ["Les pointures dépendent du modèle et du coloris : la fiche de chaque paire n’affiche que celles en stock. Les grandes tendances du catalogue :"],
+        table: {
+          head: ["Type de paire", "Pointures en ligne", "Exemples"],
+          rows: [
+            ["Modèles femme", "36 à 40", "Handball Spezial, Samba Cow Print, Campus 00s Pink Strata"],
+            ["Modèles mixtes", "36 à 44, parfois 45", "Samba Core Black, Gazelle Indoor Green, Campus 00s Crystal White Dark Green"],
+            ["Modèles homme", "40 à 44, parfois 45", "La plupart des runners et des modèles basket"],
+          ],
+        },
       },
       {
-        heading: "Le plus simple : demandez-nous",
-        body: ["Notez votre longueur de pied et votre pointure habituelle : on vous appelle après la commande pour confirmer la pointure avant l’envoi."],
+        heading: "Ce qu’il faut nous dire quand on hésite",
+        body: [
+          "Vous êtes entre deux pointures, ou votre mesure tombe pile entre deux habitudes ? Ne prenez pas automatiquement la taille au-dessus : seules les pointures affichées pour cette paire peuvent être demandées, et une paire trop grande glisse au talon.",
+          "Lors de l’appel de confirmation, donnez-nous plutôt : la longueur de vos deux pieds en centimètres, votre pointure habituelle et dans quelle marque, si vous avez le pied large ou le cou-de-pied haut, et le type de chaussettes que vous porterez (fines ou épaisses).",
+          "Avec ces quatre informations, on vérifie la pointure de la paire choisie avant l’envoi. Si vous avez le pied large, notre guide dédié explique quelles silhouettes laissent le plus de place.",
+        ],
+      },
+      {
+        heading: "Une silhouette fine ou un runner, ça change quoi ?",
+        image: { src: "/products/adidas-samba-vegan-white-gum-01.webp", alt: "adidas Samba Vegan blanc et gomme, silhouette basse et fine" },
+        body: [
+          "Les sneakers basses et fines, comme la Samba ou la Handball Spezial, suivent la forme du pied et laissent peu de volume. On y sent tout de suite si la longueur ou la largeur ne va pas.",
+          "Les runners plus volumineux, comme la New Balance 9060 ou l’ASICS Gel-Kayano 14, ont une tige plus enveloppante. La longueur reste la même règle : votre mesure en centimètres, confirmée par téléphone.",
+        ],
+      },
+      {
+        heading: "Checklist avant de commander",
+        body: [
+          "Ma mesure en centimètres est prise debout, en fin de journée, sur les deux pieds.",
+          "Je retiens la plus grande des deux mesures.",
+          "Ma pointure habituelle figure dans les pointures affichées sur la fiche.",
+          "Je note si j’ai le pied large et quelles chaussettes je porterai.",
+          "Je garde ces informations sous la main pour l’appel de confirmation.",
+        ],
+      },
+      {
+        heading: "Si la pointure ne va pas",
+        body: [
+          "L’échange de pointure est possible sous 3 jours après la livraison, à condition que la paire n’ait pas été portée et soit renvoyée dans sa boîte d’origine ; le retour est à votre charge. Essayez-la à l’intérieur, sur un sol propre, avec vos chaussettes habituelles.",
+          "Pour le reste : commande sur le site, appel de confirmation, aucun paiement en ligne, livraison gratuite partout au Maroc en 12 à 48 h après confirmation. Nos paires sont des répliques high copy, non originales.",
+        ],
       },
     ],
-    links: [{ label: "Toutes les sneakers", href: "/collections/nouveautes" }, { label: "Sneakers femme", href: "/collections/femme" }, { label: "Sneakers homme", href: "/collections/homme" }],
+    links: [{ label: "Toutes les sneakers", href: "/collections/nouveautes" }, { label: "Sneakers femme", href: "/collections/femme" }, { label: "Sneakers homme", href: "/collections/homme" }, { label: "Sneakers et pied large", href: "/guides/sneakers-pied-large" }],
   },
   {
     slug: "sneakers-low-profile-comment-les-porter",
     title: "Sneakers low profile : comment les porter",
-    description: "Silhouettes basses, semelle fine, esprit terrace : pourquoi les sneakers low profile sont partout, et comment les associer au quotidien.",
-    intro: "Après des années de semelles épaisses, la sneaker est redescendue au ras du sol. Fine, plate, souvent en daim ou en cuir : c’est la low profile.",
+    description: "Sneakers low profile : la règle de l’ourlet, 4 modèles (Samba, Spezial, Gazelle, Campus), tenues femme et homme et prix au Maroc dès 500 DH.",
+    intro: "Une sneaker low profile se porte en montrant sa ligne : un bas qui s’arrête à la cheville ou qui casse juste sur le coup de pied, une tenue simple, et la chaussure comme seul détail fort. C’est tout le secret. La suite dépend du modèle : la Samba est la plus fine, la Spezial la plus colorée, la Gazelle la plus rétro, la Campus 00s la plus épaisse de la famille. Voici la règle des proportions, le bon modèle selon votre style, un tableau de tenues avec les paires en ligne et leur prix, et les erreurs qui alourdissent une silhouette basse. Chez BEYOND PLUS, ce sont des répliques high copy, non originales, livrées gratuitement partout au Maroc.",
     published: "2026-09-24",
     sections: [
       {
         heading: "Ce qui fait une low profile",
         body: [
-          "Une semelle fine, souvent en gomme. Une ligne allongée qui suit la forme du pied. Peu de volume, peu de rembourrage.",
-          "Beaucoup viennent du football en salle ou des tribunes (l’esprit « terrace »), d’autres du sport automobile : des chaussures pensées pour sentir le sol.",
+          "Une semelle fine, souvent en gomme. Une ligne allongée qui suit la forme du pied. Peu de volume, peu de rembourrage. Posée à côté d’une 9060 ou d’une Kayano 14, une Samba paraît presque plate : c’est voulu.",
+          "La plupart viennent du football en salle et du handball, puis des tribunes anglaises des années 80 : c’est l’esprit « terrace ». On les portait pour leur allure, pas pour courir, et c’est encore le cas aujourd’hui.",
+          "Conséquence pour le style : une chaussure basse ne donne aucun volume au pied. Tout se joue donc sur ce qui l’entoure, la longueur du bas et la couleur.",
         ],
       },
       {
-        heading: "Avec quoi les porter",
+        heading: "La règle de l’ourlet : montrer la ligne",
         body: [
-          "Pantalon large ou baggy qui tombe sur la chaussure : le contraste entre le volume du pantalon et la finesse de la sneaker fait tout.",
-          "Jupe longue ou midi : la low profile allège une tenue habillée sans la casser.",
-          "Jean droit, légèrement retroussé : la version la plus simple, qui montre toute la ligne.",
+          "Avec une silhouette basse, l’erreur la plus courante est de la cacher. Trois longueurs marchent :",
+          "À la cheville : jean droit, pantalon à pinces ou chino qui s’arrête au-dessus de l’os de la cheville, ou retroussé d’un ou deux tours. On voit toute la chaussure, la jambe paraît plus longue.",
+          "Qui casse sur le coup de pied : pantalon large ou baggy qui tombe sur la chaussure et ne laisse voir que la pointe et la gomme. Le contraste entre le volume du tissu et la finesse de la sneaker fait l’effet. Notre guide pantalon large, robe et costume détaille ces tenues pièce par pièce.",
+          "Bien au-dessus : jupe midi, robe longue, short. La jambe ou la cheville dégagée met la chaussure en valeur.",
+          "À éviter : le bas qui traîne au sol et couvre toute la chaussure. On perd l’intérêt de la low profile et on use le talon.",
         ],
       },
       {
-        heading: "Quels coloris choisir en premier",
+        heading: "Quel modèle selon votre style",
+        image: { src: "/products/adidas-samba-core-black-01.webp", alt: "adidas Samba Core Black noire et blanche, vue de profil" },
         body: [
-          "Blanc et gomme : la base, qui va avec tout.",
-          "Noir et blanc : plus graphique, facile en ville.",
-          "Un coloris affirmé (bleu ciel, bordeaux, argent) en deuxième paire, pour donner le ton à une tenue neutre.",
+          "Samba : la plus fine et la plus allongée. Pour un style net et sobre, au bureau comme le week-end. En noir et blanc ou blanc et gomme, elle va avec presque tout. 500 à 750 DH selon le coloris.",
+          "Handball Spezial : même esprit, ligne un peu plus arrondie, et surtout la couleur. Bleu clair, marron, argent et violet : c’est la paire qui donne le ton à une tenue neutre. 700 DH, six coloris. Notre guide « Comment porter la Handball Spezial » propose six tenues dédiées.",
+          "Gazelle Indoor : plus rétro, bandes larges et contrastées, avec une version Bold à semelle plus haute pour celles et ceux qui veulent un peu de hauteur sans quitter la famille. 650 à 720 DH.",
+          "Campus 00s : la plus épaisse et la plus rembourrée, d’esprit skate années 2000. Elle supporte mieux les jeans larges et les tenues streetwear. 700 DH.",
+          "Vous hésitez entre deux d’entre elles ? Nos comparatifs Samba ou Gazelle et Samba ou Handball Spezial tranchent point par point.",
+        ],
+      },
+      {
+        heading: "Tableau : 6 tenues et la paire qui va avec",
+        body: ["Les coloris cités sont en ligne chez BEYOND PLUS au moment de l’écriture, prix livraison comprise."],
+        table: {
+          head: ["Tenue", "Longueur du bas", "Paire conseillée", "Prix"],
+          rows: [
+            ["Jean brut droit, t-shirt blanc", "À la cheville, retroussé", "Samba Core Black ou Vegan White Gum", "700 DH"],
+            ["Pantalon large en toile, chemise ouverte", "Casse sur le coup de pied", "Handball Spezial Shadow Brown Alumina", "700 DH"],
+            ["Jupe midi ou robe longue", "Mollet ou cheville dégagés", "Handball Spezial Silver Violet ou Light Blue", "700 DH"],
+            ["Survêtement rétro noir ou marine", "Resserré à la cheville", "Gazelle Indoor Green", "650 DH"],
+            ["Baggy et sweat à capuche", "Casse sur la chaussure", "Campus 00s Crystal White Dark Green", "700 DH"],
+            ["Short en été, chaussettes blanches", "Au-dessus du genou", "Gazelle Indoor Grey Three Gold Metallic", "650 DH"],
+          ],
+        },
+      },
+      {
+        heading: "Femme et homme : ce qui change",
+        image: { src: "/products/adidas-campus-00s-crystal-white-dark-green-01.webp", alt: "adidas Campus 00s blanc cristal et vert foncé" },
+        body: [
+          "Côté femme, la low profile a remplacé la grosse semelle comme chaussure de tous les jours : avec une jupe satinée, une robe en lin, un jean droit. Les coloris pastel et argentés de la Spezial et le léopard de la Samba sont pensés pour ça. Chez nous, les six Spezial sont proposées du 36 au 40.",
+          "Côté homme, on reste sur des coloris sobres : Samba noire ou blanche, Gazelle verte ou grise, Campus 00s blanche et verte. Ces modèles sont disponibles du 36 au 44. Avec un costume ample sans cravate, la Samba noire est l’option la plus sûre.",
+        ],
+      },
+      {
+        heading: "Les erreurs qui alourdissent une silhouette basse",
+        body: [
+          "Le slim trop long qui plisse sur la chaussure : il écrase la cheville. Coupez-le ou retroussez-le.",
+          "Deux pièces fortes : une Spezial violette avec un pantalon imprimé, c’est trop. Une seule couleur vive par tenue.",
+          "Les grosses chaussettes de sport avec une jupe : préférez des chaussettes fines blanches ou des socquettes invisibles.",
+          "Le daim neuf sous la pluie : en hiver, à Tanger ou à Rabat, un spray imperméabilisant avant la première sortie évite les taches. En été, les modèles en cuir comme la Samba se nettoient plus vite après une journée de poussière.",
+        ],
+      },
+      {
+        heading: "Avant de commander",
+        body: [
+          "Mesurez votre pied en centimètres, en fin de journée, et choisissez votre pointure habituelle parmi celles affichées sur la fiche. On vous appelle pour confirmer la commande et la pointure avant l’envoi. Livraison gratuite partout au Maroc en 12 à 48 h après confirmation, aucun paiement en ligne. Échange de pointure possible sous 3 jours après la livraison, paire non portée et dans sa boîte d’origine, retour à votre charge.",
         ],
       },
     ],
-    links: [{ label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "adidas Handball Spezial", href: "/collections/handball-spezial" }, { label: "adidas Gazelle", href: "/collections/adidas-gazelle" }, { label: "Sneakers low profile", href: "/collections/low-profile" }],
+    links: [{ label: "Sneakers low profile", href: "/collections/low-profile" }, { label: "adidas Samba", href: "/collections/adidas-samba" }, { label: "adidas Handball Spezial", href: "/collections/handball-spezial" }, { label: "adidas Gazelle", href: "/collections/adidas-gazelle" }, { label: "adidas Campus 00s", href: "/collections/adidas-campus-00s" }],
   },
   {
     slug: "entretenir-ses-sneakers",

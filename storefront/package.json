@@ -22,7 +22,9 @@
     "radar:local": "NEXT_DIST_DIR=.next-dev next dev -p 4333",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "prebuild": "node --no-warnings --experimental-strip-types radar/jobs/pull-site.ts || echo \"[radar] pull-site ignor\u00e9\"",
-    "radar:footlocker": "node --no-warnings --env-file-if-exists=.env.local --env-file-if-exists=.env.development.local radar/jobs/footlocker.ts"
+    "radar:footlocker": "node --no-warnings --env-file-if-exists=.env.local --env-file-if-exists=.env.development.local radar/jobs/footlocker.ts",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:deploy": "opennextjs-cloudflare build && wrangler deploy"
   },
   "dependencies": {
     "@vercel/blob": "^2.8.0",
@@ -34,13 +36,15 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.7",
+    "@opennextjs/cloudflare": "^1.20.12",
     "@types/node": "^22.10.2",
     "@types/nodemailer": "^8.0.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "eslint": "^9.39.5",
     "eslint-config-next": "^15.5.26",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "wrangler": "^4.151.0"
   },
   "overrides": {
     "postcss": "^8.5.28"

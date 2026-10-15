@@ -1,12 +1,14 @@
 // JPEG thumbnails for e-mails: product photos are WebP, which Outlook and some
 // mail apps don't display. Only /products/*.webp from this site is accepted.
-import sharp from "sharp";
+import { loadSharp } from "@/lib/commerce/sharp-optional";
 
 const SITE = process.env.NEXT_PUBLIC_SITE_URL || "https://beyondplusmaroc.com";
 
 export async function GET(request: Request) {
   const src = new URL(request.url).searchParams.get("src") ?? "";
   if (!/^\/products\/[a-z0-9-]+\.webp$/.test(src)) return new Response("Bad request", { status: 400 });
+  const sharp = await loadSharp();
+  if (!sharp) return Response.redirect(SITE + src, 302); // no image converter on this host: serve the WebP as is
   const res = await fetch(SITE + src);
   if (!res.ok) return new Response("Not found", { status: 404 });
   const jpeg = await sharp(Buffer.from(await res.arrayBuffer()))

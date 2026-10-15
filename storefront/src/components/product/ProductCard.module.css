@@ -393,3 +393,20 @@
 
 .mediaWrap { position: relative; }
 .quickSizes { padding-right: 5rem; }
+
+/* ---------- Touch targets 44 px (écrans tactiles) -------------------------
+   Aspect visuel inchangé : la zone cliquable est agrandie par un pseudo-élément. */
+@media (pointer: coarse) {
+  .wish::after,
+  .quickAdd::after {
+    content: "";
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width: 4.4rem;
+    height: 4.4rem;
+    transform: translate(-50%, -50%);
+  }
+  .wish { top: .6rem; right: .6rem; }
+  .quickGrid button { min-width: 4.4rem; height: 4.4rem; }
+  .quickGrid { gap: .6rem; }
+}

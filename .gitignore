@@ -12,3 +12,9 @@ storefront/catalog/.cache/
 .radar/
 .commerce/
 SEO/.deploy.lock
+
+# Local Netlify folder
+.netlify
+
+storefront/.open-next/
+storefront/.wrangler/

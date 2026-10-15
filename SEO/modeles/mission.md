@@ -40,6 +40,9 @@
 ## Consigne curateur (lundi uniquement)
 {… ou « Aucune »}
 
+## Consigne designer (17h)
+{une amélioration de conversion prioritaire, ou « Choix libre »}
+
 ## Critère de réussite
 - {vérifiable en ligne ou dans un fichier}
 

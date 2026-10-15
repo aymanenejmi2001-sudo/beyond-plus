@@ -1,6 +1,6 @@
 import "server-only";
 import nodemailer from "nodemailer";
-import sharp from "sharp";
+import { loadSharp } from "./sharp-optional";
 import { LOGO_PNG, LOGO_PNG_WHITE } from "./email-logo";
 
 
@@ -82,6 +82,8 @@ async function productJpeg(url?: string): Promise<Buffer | null> {
   try {
     const res = await fetch(SITE + url, { signal: AbortSignal.timeout(4000) });
     if (!res.ok) return null;
+    const sharp = await loadSharp();
+    if (!sharp) return null;
     return await sharp(Buffer.from(await res.arrayBuffer()))
       .resize({ width: 400, height: 400, fit: "contain", background: "#f1f1ef" })
       .flatten({ background: "#f1f1ef" }).jpeg({ quality: 80 }).toBuffer();

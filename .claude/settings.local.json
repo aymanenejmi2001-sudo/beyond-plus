@@ -72,7 +72,17 @@
       "WebFetch(domain:www.annuaire-gratuit.ma)",
       "WebFetch(domain:maentreprise.com)",
       "WebFetch(domain:www.charika.ma)",
-      "Bash(curl -sL -A 'Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 Chrome/128 Safari/537.36' https://www.charika.ma/)"
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 Chrome/128 Safari/537.36' https://www.charika.ma/)",
+      "Bash(cd \"/Users/mac/Desktop/BEYOND PLUS/SEO\" && sed -n '/## Article/,/## Compte rendu technique/p' missions/2026-09-30.md | tail -40; echo \"#####\"; cat backlinks/A-ENVOYER-2026-09-30.md | head -80; echo \"#####\"; grep -n \"envoyé\" backlinks/A-ENVOYER-*.md)",
+      "Bash(curl -s https://beyondplusmaroc.com/collections/low-profile)",
+      "Bash(curl -s https://beyondplusmaroc.com/collections/adidas-samba)",
+      "WebFetch(domain:telquel.ma)",
+      "WebFetch(domain:fr.le360.ma)",
+      "WebFetch(domain:mwnlifestyle.com)",
+      "Bash(vercel inspect *)",
+      "Bash(node SEO/outils/verrou.mjs rendre technique)",
+      "Bash(curl -sI https://beyondplusmaroc.com/)",
+      "Bash(curl -s https://beyondplusmaroc.com/)"
     ]
   }
 }
