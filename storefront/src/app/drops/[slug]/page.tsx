@@ -9,7 +9,6 @@ interface Params { params: Promise<{ slug: string }> }
 
 // Static, refreshed every 5 minutes; a real drop also switches client-side at launchAt.
 export const revalidate = 300;
-export const dynamicParams = false;
 
 export function generateStaticParams() {
   return DROPS.map((d) => ({ slug: d.slug }));
